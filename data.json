@@ -130,5 +130,11 @@
     { "title": "SSO users with residual login issues", "workstream": "SSO – GUI & Fiori", "impact": "Medium", "likelihood": "Medium", "status": "Open", "mitigation": "Work session Monday with SME for affected users (M. Bracamontez, E. Hay, K. Geddie); escalate via SAP case if unresolved.", "owner": "Crescent SAP", "due": "2026-05-11" },
     { "title": "Hyper-care VPN certificate issue (SSO)", "workstream": "SSO – GUI & Fiori", "impact": "Medium", "likelihood": "Low", "status": "Resolved", "mitigation": "IT resolved the VPN issue with certificates.", "owner": "Crescent IT", "due": "2026-04-24" },
     { "title": "Go-live conflict with month-end close", "workstream": "SSO – GUI & Fiori", "impact": "Medium", "likelihood": "Low", "status": "Resolved", "mitigation": "SSO Production go-live moved to April 3rd to avoid conflict with month-end close activities.", "owner": "Crescent SAP", "due": "2026-04-03" }
+  ],
+  "decisions": [
+    { "title": "Move SSO Production go-live to April 3rd", "date": "2026-02-10", "decidedBy": "Crescent SAP / IT Steering", "workstream": "SSO – GUI & Fiori", "status": "Approved", "summary": "Production cutover moved from February 14th to April 3rd to avoid conflict with month-end close activities and allow additional UAT." },
+    { "title": "Schedule Sandbox SUM upgrade for May 11th", "date": "2026-04-28", "decidedBy": "Crescent SAP / SAP ECS", "workstream": "S/4HANA Upgrade 2025", "status": "Approved", "summary": "Sandbox technical upgrade (SUM) scheduled with SAP ECS to begin May 11th, following completion of sandbox preparation activities." },
+    { "title": "Confirm DS4 Development upgrade for May 29th", "date": "2026-05-01", "decidedBy": "Crescent SAP", "workstream": "S/4HANA Upgrade 2025", "status": "Approved", "summary": "Development system (DS4) upgrade confirmed for May 29th. DS4110, DS4100, and QS4100 refreshes from PS4 to begin syncing environments prior to upgrade." },
+    { "title": "Resolve SSO Hyper-care VPN via certificate refresh", "date": "2026-04-22", "decidedBy": "Crescent IT", "workstream": "SSO – GUI & Fiori", "status": "Approved", "summary": "IT to resolve VPN authentication issues for a small group of SSO hyper-care users by refreshing certificates rather than reconfiguring the VPN client." }
   ]
 }
