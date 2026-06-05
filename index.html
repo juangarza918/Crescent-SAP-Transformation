@@ -191,6 +191,7 @@
   <button class="tab" data-tab="timeline">Timeline</button>
   <button class="tab" data-tab="milestones">Milestones</button>
   <button class="tab" data-tab="risks">Risks &amp; Issues</button>
+  <button class="tab" data-tab="decisions">Decisions</button>
   <button class="tab" data-tab="edit">Edit data</button>
   <div class="toolbar">
     <button class="btn" id="btn-print" title="Print or save as PDF">Print / PDF</button>
@@ -206,6 +207,7 @@
   <section class="view" id="view-timeline"></section>
   <section class="view" id="view-milestones"></section>
   <section class="view" id="view-risks"></section>
+  <section class="view" id="view-decisions"></section>
   <section class="view" id="view-edit"></section>
   <div class="footer">Crescent SAP Transformation Dashboard &middot; <span id="footer-auth">Sign in to publish edits online</span></div>
 </div>
@@ -350,13 +352,24 @@ const DEFAULT_DATA = {
      mitigation:"IT resolved the VPN issue with certificates.", owner:"Crescent IT", due:"2026-04-24"},
     {title:"Go-live conflict with month-end close", workstream:"SSO – GUI & Fiori", impact:"Medium", likelihood:"Low", status:"Resolved",
      mitigation:"SSO Production go-live moved to April 3rd to avoid conflict with month-end close activities.", owner:"Crescent SAP", due:"2026-04-03"}
+  ],
+  decisions:[
+    {title:"Move SSO Production go-live to April 3rd", date:"2026-02-10", decidedBy:"Crescent SAP / IT Steering", workstream:"SSO – GUI & Fiori", status:"Approved",
+     summary:"Production cutover moved from February 14th to April 3rd to avoid conflict with month-end close activities and allow additional UAT."},
+    {title:"Schedule Sandbox SUM upgrade for May 11th", date:"2026-04-28", decidedBy:"Crescent SAP / SAP ECS", workstream:"S/4HANA Upgrade 2025", status:"Approved",
+     summary:"Sandbox technical upgrade (SUM) scheduled with SAP ECS to begin May 11th, following completion of sandbox preparation activities."},
+    {title:"Confirm DS4 Development upgrade for May 29th", date:"2026-05-01", decidedBy:"Crescent SAP", workstream:"S/4HANA Upgrade 2025", status:"Approved",
+     summary:"Development system (DS4) upgrade confirmed for May 29th. DS4110, DS4100, and QS4100 refreshes from PS4 to begin syncing environments prior to upgrade."},
+    {title:"Resolve SSO Hyper-care VPN via certificate refresh", date:"2026-04-22", decidedBy:"Crescent IT", workstream:"SSO – GUI & Fiori", status:"Approved",
+     summary:"IT to resolve VPN authentication issues for a small group of SSO hyper-care users by refreshing certificates rather than reconfiguring the VPN client."}
   ]
 };
 
 /* ---------- state ---------- */
 let state = load();
 function clone(o){ return JSON.parse(JSON.stringify(o)); }
-function load(){ try{ const s=localStorage.getItem(KEY); return s?JSON.parse(s):clone(DEFAULT_DATA); }catch(e){ return clone(DEFAULT_DATA); } }
+function load(){ try{ const s=localStorage.getItem(KEY); const d=s?JSON.parse(s):clone(DEFAULT_DATA); normalize(d); return d; }catch(e){ return clone(DEFAULT_DATA); } }
+function normalize(d){ if(d && !Array.isArray(d.decisions)) d.decisions=[]; return d; }
 function persist(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
 
 /* ---------- helpers ---------- */
@@ -544,6 +557,25 @@ function renderRisks(){
     </table></div>`;
 }
 
+/* ---------- decisions ---------- */
+function decisionStatusClass(s){ return s==="Approved"?"s-G":(s==="Pending"?"s-Y":(s==="Reversed"?"s-R":"s-C")); }
+function renderDecisions(){
+  const list = (state.decisions||[]).slice().sort((a,b)=>(parseD(b.date)||0)-(parseD(a.date)||0));
+  const rows = list.map(d=>`<tr>
+      <td><b>${esc(d.title)}</b>${d.summary?`<br><span style="color:#475569;font-size:12.5px">${esc(d.summary)}</span>`:""}</td>
+      <td class="num">${d.date?fmtD(d.date):"—"}</td>
+      <td>${esc(d.decidedBy)||"<span style='color:var(--muted)'>—</span>"}</td>
+      <td><span class="ws-tag">${esc(d.workstream)||"&nbsp;"}</span></td>
+      <td><span class="pill ${decisionStatusClass(d.status)}"><span class="dot"></span>${esc(d.status)||"—"}</span></td>
+    </tr>`).join("");
+  document.getElementById("view-decisions").innerHTML=`
+    <div class="sechead"><h2>Key Decisions</h2><span class="count">${list.length} ${list.length===1?"decision":"decisions"}</span></div>
+    <div class="tablecard"><table>
+      <thead><tr><th style="width:38%">Decision</th><th class="num" style="width:11%">Date</th><th style="width:18%">Decided by</th><th style="width:18%">Workstream</th><th>Status</th></tr></thead>
+      <tbody>${rows||"<tr><td colspan='5' style='color:var(--muted);text-align:center;padding:24px'>No decisions captured yet. Add some from the Edit data tab.</td></tr>"}</tbody>
+    </table></div>`;
+}
+
 /* ---------- edit ---------- */
 function statusOptions(v){ return ["C","G","Y","R"].map(k=>`<option value="${k}" ${v===k?"selected":""}>${k} – ${STATUS[k].label}</option>`).join(""); }
 function selOptions(list,v){ return list.map(k=>`<option value="${k}" ${v===k?"selected":""}>${k}</option>`).join(""); }
@@ -625,6 +657,22 @@ function renderEdit(){
   });
   html+=`</tbody></table></div></div>`;
 
+  // decisions
+  html+=`<div class="editsec"><h3>Decisions <button class="btn primary" data-act="addDecision">+ Add decision</button></h3>
+    <div class="tablecard"><table class="ms-table"><thead><tr><th style="width:22%">Title</th><th>Date</th><th>Decided by</th><th>Workstream</th><th>Status</th><th style="width:30%">Summary</th><th></th></tr></thead><tbody>`;
+  state.decisions.forEach((d,i)=>{
+    html+=`<tr>
+      <td><input data-path="decisions|${i}|title" value="${esc(d.title)}"></td>
+      <td><input type="date" data-path="decisions|${i}|date" value="${esc(d.date)}"></td>
+      <td><input data-path="decisions|${i}|decidedBy" value="${esc(d.decidedBy)}"></td>
+      <td><input data-path="decisions|${i}|workstream" value="${esc(d.workstream)}"></td>
+      <td><select data-path="decisions|${i}|status">${selOptions(["Approved","Pending","Reversed"],d.status)}</select></td>
+      <td><input data-path="decisions|${i}|summary" value="${esc(d.summary)}"></td>
+      <td><button class="iconbtn" title="Delete decision" data-act="delDecision|${i}">&times;</button></td>
+    </tr>`;
+  });
+  html+=`</tbody></table></div></div>`;
+
   html+=`<div class="savebar">
     <span class="ok" id="saveok">All changes saved automatically</span>
     <span class="spacer" style="flex:1"></span>
@@ -648,6 +696,7 @@ function blankWs(){ return {name:"New Workstream",status:"G",summary:"",mileston
 function blankMs(){ return {name:"New milestone",pct:0,end:"",revised:"",status:"G",comment:""}; }
 function blankSch(){ return {project:"New Group",task:"New task",start:"",end:"",owner:""}; }
 function blankRisk(){ return {title:"New risk",workstream:"",impact:"Medium",likelihood:"Medium",status:"Open",mitigation:"",owner:"",due:""}; }
+function blankDecision(){ return {title:"New decision",date:state.meta.reportDate||"",decidedBy:"",workstream:"",status:"Approved",summary:""}; }
 
 const editRoot=document.getElementById("view-edit");
 editRoot.addEventListener("input",e=>{
@@ -667,6 +716,8 @@ editRoot.addEventListener("click",e=>{
   else if(act==="delSch"){ state.schedule.splice(+parts[1],1); }
   else if(act==="addRisk"){ state.risks.push(blankRisk()); }
   else if(act==="delRisk"){ state.risks.splice(+parts[1],1); }
+  else if(act==="addDecision"){ state.decisions.push(blankDecision()); }
+  else if(act==="delDecision"){ state.decisions.splice(+parts[1],1); }
   else if(act==="export2"){ doExport(); return; }
   else if(act==="publishOnline"){
     if(!loadAuth()){ openAuthModal(); return; }
@@ -712,7 +763,7 @@ document.getElementById("file-import").addEventListener("change",e=>{
   const rd=new FileReader();
   rd.onload=()=>{ try{ const d=JSON.parse(rd.result);
       if(!d.meta||!Array.isArray(d.workstreams)||!Array.isArray(d.schedule)||!Array.isArray(d.risks)) throw new Error("bad");
-      state=d; persist(); renderAll(); alert("Data imported successfully.");
+      normalize(d); state=d; persist(); renderAll(); alert("Data imported successfully.");
     }catch(err){ alert("Could not import: the file is not a valid dashboard JSON export."); } };
   rd.readAsText(f); e.target.value="";
 });
@@ -769,7 +820,7 @@ async function pullLatest(){
   }
   if(!data){ const r=await fetch("data.json?_="+Date.now(),{cache:"no-store"}); if(r.ok) data=await r.json(); }
   if(!data) throw new Error("Could not load latest data.");
-  state=data; persist(); renderAll();
+  normalize(data); state=data; persist(); renderAll();
 }
 function toast(msg, kind){ const t=document.getElementById("toast"); if(!t) return; t.textContent=msg; t.className="toast"+(kind?" "+kind:""); t.style.display="block"; clearTimeout(t._tm); t._tm=setTimeout(function(){ t.style.display="none"; },4000); }
 function openAuthModal(){ document.getElementById("auth-error").textContent=""; document.getElementById("auth-token").value=""; document.getElementById("auth-modal").style.display="flex"; setTimeout(function(){ document.getElementById("auth-token").focus(); },50); }
@@ -789,15 +840,15 @@ document.getElementById("auth-signin").addEventListener("click",async function()
 document.getElementById("auth-token").addEventListener("keydown",function(e){ if(e.key==="Enter") document.getElementById("auth-signin").click(); });
 
 /* ---------- render orchestration ---------- */
-function renderReadViews(){ renderOverview(); renderMilestones(); renderRisks(); if(document.getElementById("view-timeline").classList.contains("active")) renderTimeline(); }
-function renderAll(){ renderTop(); renderOverview(); renderTimeline(); renderMilestones(); renderRisks(); renderEdit(); }
+function renderReadViews(){ renderOverview(); renderMilestones(); renderRisks(); renderDecisions(); if(document.getElementById("view-timeline").classList.contains("active")) renderTimeline(); }
+function renderAll(){ renderTop(); renderOverview(); renderTimeline(); renderMilestones(); renderRisks(); renderDecisions(); renderEdit(); }
 
 // Load order: this browser's saved edits win; otherwise published data.json (when hosted); otherwise the built-in baseline.
 async function init(){
   try{
     if(localStorage.getItem(KEY)===null){
       const r=await fetch("data.json?_="+Date.now(),{cache:"no-store"});
-      if(r.ok){ const d=await r.json(); if(d&&d.meta&&Array.isArray(d.workstreams)&&Array.isArray(d.schedule)&&Array.isArray(d.risks)){ state=d; } }
+      if(r.ok){ const d=await r.json(); if(d&&d.meta&&Array.isArray(d.workstreams)&&Array.isArray(d.schedule)&&Array.isArray(d.risks)){ normalize(d); state=d; } }
     }
   }catch(e){/* no data.json (e.g. opened as a local file) — use built-in data */}
   renderAll();
