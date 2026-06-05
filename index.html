@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Crescent SAP Transformation — Executive Dashboard</title>
+<style>
+  :root{
+    --navy:#0f2a44; --navy2:#1d3f63; --accent:#1f5fa6; --accent2:#3a78bd;
+    --gold:#c8a24b; --gold2:#b08d3c;
+    --bg:#eef1f6; --card:#ffffff; --line:#e3e7ef; --ink:#1b2533; --muted:#64748b;
+    --g:#16a34a; --gbg:#e7f6ec; --y:#e0a106; --ybg:#fdf3da; --r:#dc2626; --rbg:#fbe7e7;
+    --c:#2563eb; --cbg:#e6edfd; --grid:#eef1f6; --done:#22a45d; --active:#1f5fa6; --upcoming:#cfd8e6;
+    --shadow:0 1px 3px rgba(16,32,64,.06),0 6px 24px rgba(16,32,64,.06);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.45}
+  h1,h2,h3,h4{margin:0;font-weight:650}
+  a{color:var(--accent)}
+  .topbar{background:linear-gradient(120deg,var(--navy),var(--navy2));color:#fff;padding:16px 26px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;box-shadow:var(--shadow);border-top:3px solid var(--gold)}
+  .topbar .brand{display:flex;flex-direction:column;gap:2px}
+  .topbar .brand .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .topbar h1{font-size:20px;letter-spacing:.2px}
+  .topbar .spacer{flex:1}
+  .topbar .reportdate{font-size:12.5px;color:#c4d3ea;text-align:right}
+  .topbar .reportdate b{color:#fff;font-weight:600}
+  .overallpill{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;font-weight:700;font-size:13px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25)}
+  .overallpill .dot{width:11px;height:11px;border-radius:50%}
+  .tabs{display:flex;gap:4px;padding:10px 26px 0;background:transparent;flex-wrap:wrap}
+  .tab{appearance:none;border:none;background:transparent;color:var(--muted);font-weight:600;font-size:13.5px;padding:11px 16px;border-radius:9px 9px 0 0;cursor:pointer;font-family:inherit}
+  .tab:hover{color:var(--ink);background:rgba(255,255,255,.55)}
+  .tab.active{color:var(--navy);background:var(--card);box-shadow:0 -3px 0 var(--gold) inset}
+  .toolbar{margin-left:auto;display:flex;gap:8px;align-items:center;padding-bottom:6px}
+  .btn{appearance:none;border:1px solid var(--line);background:#fff;color:var(--ink);font-family:inherit;font-size:12.5px;font-weight:600;padding:8px 13px;border-radius:8px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+  .btn:hover{border-color:var(--accent);color:var(--accent)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .btn.primary:hover{background:#085bb0;color:#fff}
+  .wrap{padding:22px 26px 60px}
+  .view{display:none}
+  .view.active{display:block}
+  /* hero */
+  .hero{display:grid;grid-template-columns:1.4fr 1fr;gap:16px;margin-bottom:18px}
+  @media(max-width:880px){.hero{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+  .hero .narr{padding:20px 22px}
+  .hero .narr h2{font-size:15px;margin-bottom:8px;color:var(--navy)}
+  .hero .narr p{margin:0;color:#3c4a5e}
+  .golive{padding:20px 22px;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(135deg,#0f2545,#23467a);color:#fff;border:none}
+  .golive .lbl{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .golive .big{font-size:40px;font-weight:750;line-height:1.05;margin:6px 0 2px}
+  .golive .sub{color:#cdddf2;font-size:13px}
+  .golive .milestone{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.18);font-size:13px;color:#dce8f7}
+  .golive .milestone b{color:#fff}
+  /* kpis */
+  .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:18px}
+  @media(max-width:1050px){.kpis{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:620px){.kpis{grid-template-columns:repeat(2,1fr)}}
+  .kpi{padding:16px 18px}
+  .kpi .v{font-size:30px;font-weight:750;line-height:1}
+  .kpi .l{color:var(--muted);font-size:12px;font-weight:600;margin-top:7px;text-transform:uppercase;letter-spacing:.05em}
+  .kpi .bar{height:6px;border-radius:4px;background:var(--grid);margin-top:11px;overflow:hidden}
+  .kpi .bar>span{display:block;height:100%;background:var(--accent);border-radius:4px}
+  /* section heads */
+  .sechead{display:flex;align-items:center;gap:10px;margin:6px 0 12px}
+  .sechead h2{font-size:16px;color:var(--navy);border-left:3px solid var(--gold);padding-left:10px}
+  .sechead .count{color:var(--muted);font-weight:600;font-size:13px}
+  /* workstream cards */
+  .ws-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  @media(max-width:880px){.ws-grid{grid-template-columns:1fr}}
+  .ws{padding:18px 20px}
+  .ws .top{display:flex;align-items:flex-start;gap:10px;margin-bottom:4px}
+  .ws .top h3{font-size:15px;flex:1}
+  .ws .pctline{display:flex;align-items:center;gap:10px;margin:10px 0 4px}
+  .ws .pctline .bar{flex:1;height:8px;border-radius:5px;background:var(--grid);overflow:hidden}
+  .ws .pctline .bar>span{display:block;height:100%;border-radius:5px}
+  .ws .pctline .num{font-weight:700;font-size:13px;min-width:38px;text-align:right}
+  .ws .summary{color:#475569;font-size:12.8px;margin:8px 0 0}
+  .ws .mini{display:flex;gap:14px;margin-top:12px;font-size:12px;color:var(--muted)}
+  .ws .mini b{color:var(--ink)}
+  /* status pill */
+  .pill{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;font-size:11.5px;font-weight:700;white-space:nowrap}
+  .pill .dot{width:8px;height:8px;border-radius:50%}
+  .s-G{background:var(--gbg);color:#11823b}.s-G .dot{background:var(--g)}
+  .s-Y{background:var(--ybg);color:#9a6a00}.s-Y .dot{background:var(--y)}
+  .s-R{background:var(--rbg);color:#b91c1c}.s-R .dot{background:var(--r)}
+  .s-C{background:var(--cbg);color:#1d4ed8}.s-C .dot{background:var(--c)}
+  /* tables */
+  table{width:100%;border-collapse:collapse;background:var(--card)}
+  .tablecard{border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+  th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top;font-size:13px}
+  th{background:#f7f9fc;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.05em;font-weight:700;position:sticky;top:0}
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:hover{background:#fafbfe}
+  td.num,th.num{text-align:right;white-space:nowrap}
+  .ws-tag{font-size:11px;color:var(--muted);font-weight:600}
+  .progress-cell{display:flex;align-items:center;gap:8px;min-width:120px}
+  .progress-cell .bar{flex:1;height:7px;background:var(--grid);border-radius:4px;overflow:hidden}
+  .progress-cell .bar>span{display:block;height:100%;border-radius:4px}
+  .progress-cell .n{font-size:12px;font-weight:700;min-width:34px;text-align:right}
+  .strike{color:var(--muted);text-decoration:line-through;font-size:11.5px}
+  .revised{color:var(--ink);font-weight:600}
+  /* gantt */
+  .legend{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 12px;font-size:12px;color:var(--muted);align-items:center}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .legend i{width:14px;height:10px;border-radius:3px;display:inline-block}
+  .ganttscroll{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--card);box-shadow:var(--shadow)}
+  .gantt{display:flex;min-width:980px}
+  .g-left{width:248px;flex:none;border-right:1px solid var(--line);background:#fbfcfe}
+  .g-right{flex:1;position:relative}
+  .g-head{height:42px;display:flex;align-items:center;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding:0 14px;border-bottom:1px solid var(--line)}
+  .g-monthrow{height:42px;display:flex;border-bottom:1px solid var(--line);position:relative;z-index:2}
+  .g-month{font-size:11px;font-weight:600;color:var(--muted);display:flex;align-items:center;justify-content:center;border-left:1px solid var(--line);overflow:hidden;white-space:nowrap}
+  .g-month:first-child{border-left:none}
+  .g-group{height:30px;display:flex;align-items:center;font-size:11.5px;font-weight:750;color:var(--navy);background:#f1f4f9;padding:0 14px;border-bottom:1px solid var(--line);text-transform:uppercase;letter-spacing:.03em}
+  .g-grouptrack{height:30px;background:#f1f4f9;border-bottom:1px solid var(--line)}
+  .g-task{height:30px;display:flex;align-items:center;font-size:12px;color:#33425a;padding:0 14px;border-bottom:1px solid var(--grid);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;gap:8px}
+  .g-task .dates{color:var(--muted);font-size:10.5px;flex:none}
+  .g-track{height:30px;position:relative;border-bottom:1px solid var(--grid)}
+  .g-bar{position:absolute;top:7px;height:16px;border-radius:5px;min-width:5px;display:flex;align-items:center;cursor:default}
+  .g-bar.done{background:var(--done)}
+  .g-bar.active{background:var(--active);box-shadow:0 0 0 2px rgba(10,110,209,.18)}
+  .g-bar.upcoming{background:var(--upcoming)}
+  .g-overlay{position:absolute;left:0;right:0;top:42px;bottom:0;pointer-events:none;z-index:1}
+  .g-line{position:absolute;top:0;bottom:0;width:1px;background:var(--line)}
+  .g-asof{position:absolute;top:0;bottom:0;width:2px;background:var(--r);z-index:3}
+  .g-asof .lbl{position:absolute;top:-1px;left:4px;font-size:10px;font-weight:700;color:var(--r);background:var(--card);padding:0 3px;border-radius:3px}
+  /* risks */
+  .sev{font-weight:700}
+  .sev-High{color:var(--r)}.sev-Medium{color:var(--y)}.sev-Low{color:var(--muted)}
+  /* edit */
+  .edit-intro{background:#eaf2fc;border:1px solid #cfe0f7;color:#1c3a63;border-radius:12px;padding:14px 18px;margin-bottom:18px;font-size:13px}
+  .edit-intro b{color:var(--navy)}
+  .editsec{margin-bottom:26px}
+  .editsec>h3{font-size:14px;color:var(--navy);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+  .field{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}
+  .field label{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+  input,select,textarea{font-family:inherit;font-size:13px;border:1px solid var(--line);border-radius:7px;padding:7px 9px;color:var(--ink);background:#fff;width:100%}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(31,95,166,.14)}
+  textarea{min-height:54px;resize:vertical}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  @media(max-width:760px){.grid2,.grid3{grid-template-columns:1fr}}
+  .ws-edit{border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px;background:#fff;box-shadow:var(--shadow)}
+  .ws-edit .ws-head{display:flex;gap:10px;align-items:flex-end;margin-bottom:8px}
+  .ms-table input,.ms-table select{padding:5px 7px;font-size:12px}
+  .ms-table td,.ms-table th{padding:5px 6px}
+  .iconbtn{appearance:none;border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:7px;width:30px;height:30px;cursor:pointer;font-size:15px;line-height:1;flex:none}
+  .iconbtn:hover{border-color:var(--r);color:var(--r)}
+  .addrow{margin-top:8px}
+  .savebar{position:sticky;bottom:0;background:rgba(255,255,255,.94);backdrop-filter:blur(4px);border-top:1px solid var(--line);padding:12px 26px;display:flex;gap:10px;align-items:center;margin:0 -26px -60px;z-index:5}
+  .savebar .ok{color:var(--g);font-weight:600;font-size:12.5px}
+  .danger{color:var(--r);border-color:#f1c6c6}
+  .danger:hover{background:var(--rbg);color:var(--r)}
+  .hint{color:var(--muted);font-size:11.5px}
+  .footer{color:var(--muted);font-size:11.5px;text-align:center;padding:24px 0 6px}
+  .modal{position:fixed;inset:0;background:rgba(15,42,68,.5);display:flex;align-items:center;justify-content:center;z-index:100;padding:20px}
+  .modal-card{background:#fff;border-radius:14px;padding:22px;max-width:480px;width:100%;box-shadow:0 10px 40px rgba(15,42,68,.25)}
+  .modal-card h3{font-size:16px;margin-bottom:10px;color:var(--navy)}
+  .modal-card p{color:#475569;font-size:13px;margin:0 0 10px}
+  .modal-card code{background:#eef1f6;padding:1px 5px;border-radius:3px;font-family:Consolas,monospace;font-size:12px}
+  .modal-card .error-msg{color:var(--r);font-size:12px;margin-top:8px;min-height:14px}
+  .modal-card .modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:14px}
+  .toast{position:fixed;bottom:20px;right:20px;background:var(--navy);color:#fff;padding:11px 16px;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.25);font-size:13px;font-weight:600;z-index:200;max-width:380px}
+  .toast.success{background:var(--g)}
+  .toast.error{background:var(--r)}
+  #btn-auth.signed-in{background:var(--gbg);border-color:var(--g);color:#11823b}
+  @media print{
+    .tabs,.toolbar,.topbar .overallpill,.savebar,.editsec{display:none!important}
+    body{background:#fff}
+    .view{display:none!important}
+    #print-all{display:block!important}
+    .card,.tablecard,.ganttscroll{box-shadow:none;break-inside:avoid}
+    .topbar{box-shadow:none}
+  }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand">
+    <span class="eyebrow">Crescent &middot; SAP S/4HANA Program</span>
+    <h1 id="t-projname">SAP Transformation</h1>
+  </div>
+  <div class="spacer"></div>
+  <div class="overallpill"><span class="dot" id="t-overalldot"></span><span id="t-overalltext">On Track</span></div>
+  <div class="reportdate">Status as of<br><b id="t-reportdate">—</b></div>
+</div>
+
+<div class="tabs">
+  <button class="tab active" data-tab="overview">Overview</button>
+  <button class="tab" data-tab="timeline">Timeline</button>
+  <button class="tab" data-tab="milestones">Milestones</button>
+  <button class="tab" data-tab="risks">Risks &amp; Issues</button>
+  <button class="tab" data-tab="edit">Edit data</button>
+  <div class="toolbar">
+    <button class="btn" id="btn-print" title="Print or save as PDF">Print / PDF</button>
+    <button class="btn" id="btn-export" title="Download all data as a JSON file">Export</button>
+    <button class="btn" id="btn-import" title="Load data from a JSON file">Import</button>
+    <input type="file" id="file-import" accept="application/json" style="display:none" />
+    <button class="btn" id="btn-auth" title="Sign in with a GitHub token to publish edits online">Sign in to edit</button>
+  </div>
+</div>
+
+<div class="wrap">
+  <section class="view active" id="view-overview"></section>
+  <section class="view" id="view-timeline"></section>
+  <section class="view" id="view-milestones"></section>
+  <section class="view" id="view-risks"></section>
+  <section class="view" id="view-edit"></section>
+  <div class="footer">Crescent SAP Transformation Dashboard &middot; <span id="footer-auth">Sign in to publish edits online</span></div>
+</div>
+
+<div id="auth-modal" class="modal" style="display:none">
+  <div class="modal-card">
+    <h3>Sign in to publish edits</h3>
+    <p>Paste a GitHub <b>Personal Access Token</b> with <code>repo</code> scope. It is stored only in this browser and is used to commit your edits back to the dashboard repo.</p>
+    <p style="font-size:12px;color:var(--muted)">Need one? <a href="https://github.com/settings/tokens/new" target="_blank" rel="noopener">Create a PAT</a> &mdash; Note: "Crescent SAP Dashboard", scope <code>repo</code>.</p>
+    <input type="password" id="auth-token" placeholder="ghp_..." autocomplete="off" />
+    <div id="auth-error" class="error-msg"></div>
+    <div class="modal-actions">
+      <button class="btn" id="auth-cancel">Cancel</button>
+      <button class="btn primary" id="auth-signin">Sign in</button>
+    </div>
+  </div>
+</div>
+<div id="toast" class="toast" style="display:none"></div>
+
+<script>
+"use strict";
+const KEY = "crescentSapDashboard_v1";
+const PAT_KEY = "crescentSapGithubPat_v1";
+const REPO_CONFIG = {owner:"juangarza918", repo:"Crescent-SAP-Transformation", branch:"main", dataPath:"data.json"};
+let serverSha = null;
+
+const DEFAULT_DATA = {
+  meta:{
+    projectName:"Crescent SAP Transformation",
+    reportDate:"2026-05-08",
+    overallStatus:"G",
+    goLiveDate:"2026-09-07",
+    goLiveLabel:"S/4HANA 2025 Production Go-Live",
+    narrative:"The S/4HANA 2025 sandbox preparation is complete and the technical SUM upgrade is scheduled to begin May 11th, keeping the program on track for the September production go-live. SSO (GUI and Fiori) is live and in hyper-care. Joule activation, Fiori roles/apps, and end-user training remain on schedule for the second half of 2026."
+  },
+  workstreams:[
+    {name:"SSO – GUI & Fiori", status:"C",
+     summary:"GUI and Fiori SSO are live. Post go-live cutover users being disabled (completing Monday). A few users still have login issues (M. Bracamontez, E. Hay, K. Geddie) — work session Monday with SME, then escalate. Fiori–SSO completed.",
+     milestones:[
+       {name:"SSO – Dev", pct:100, end:"2026-02-07", revised:"2026-02-20", status:"C", comment:"End date updated from 2/7 to 2/20 based on adjusted timeline."},
+       {name:"SSO – Quality", pct:100, end:"2026-02-13", revised:"2026-02-27", status:"C", comment:"User acceptance testing and resolve C: drive issue."},
+       {name:"SSO – Production", pct:100, end:"2026-02-14", revised:"2026-04-03", status:"C", comment:"Moved to April 3rd to avoid go-live during month-end close activities."},
+       {name:"SSO – Hyper Care VPN Issue", pct:0, end:"2026-04-24", revised:"", status:"Y", comment:"IT resolved VPN issue with certificates."}
+     ]},
+    {name:"S/4HANA Upgrade 2025", status:"G",
+     summary:"Sandbox preparation complete. SUM technical upgrade on track to start May 11th; DS4 development upgrade confirmed for May 29th. System refreshes (DS4110/DS4100/QS4100 from PS4) underway; Fiori app transports available in SS4 sandbox.",
+     milestones:[
+       {name:"Sandbox Copy", pct:100, end:"2026-03-27", revised:"2026-04-15", status:"C", comment:"Actual completion ran to Wednesday."},
+       {name:"Sandbox – Set up Release Upgrade Mgmt Tool", pct:100, end:"2026-03-27", revised:"", status:"C", comment:"Setup completed and being reviewed by SAP."},
+       {name:"Sandbox – Apply Required Notes", pct:100, end:"2026-04-10", revised:"", status:"C", comment:"Completed."},
+       {name:"Sandbox – Run Maintenance Planner", pct:100, end:"2026-04-25", revised:"", status:"C", comment:"Completed. Only Divestiture workplaces flagged as a warning (expected)."},
+       {name:"Sandbox – Validate GUI & Fiori Compatibility", pct:100, end:"2026-04-25", revised:"", status:"C", comment:"Completed."},
+       {name:"Sandbox – Custom Code Remediation", pct:100, end:"2026-04-25", revised:"", status:"C", comment:"Completed. ATC ran and validated."},
+       {name:"Sandbox – Run SI Simplification Check", pct:100, end:"2026-05-08", revised:"", status:"C", comment:"Completed."},
+       {name:"Sandbox – Service Request SUM to SAP", pct:50, end:"2026-05-29", revised:"", status:"G", comment:"Created and working with SAP directly. Upgrade scheduled for May 11th."},
+       {name:"Sandbox – Regression Testing", pct:0, end:"2026-06-26", revised:"", status:"G", comment:""},
+       {name:"Start DEV / QA / Prod upgrade", pct:0, end:"2026-05-29", revised:"", status:"G", comment:""}
+     ]},
+    {name:"Joule Activation", status:"G",
+     summary:"Joule activated in Dev (pending connection to S/4HANA). Testing and Quality/Prod activation scheduled for Oct 2026. No new updates this period.",
+     milestones:[
+       {name:"Joule Activation in Dev", pct:100, end:"2026-09-18", revised:"", status:"G", comment:"Fully active, just needs connection to S/4HANA."},
+       {name:"Joule Testing", pct:0, end:"2026-10-02", revised:"", status:"G", comment:""},
+       {name:"Joule Activation & Testing in Quality", pct:0, end:"2026-10-16", revised:"", status:"G", comment:""},
+       {name:"Joule Activation in Prod", pct:0, end:"2026-10-23", revised:"", status:"G", comment:""}
+     ]},
+    {name:"Fiori Business Roles Assignment", status:"G",
+     summary:"App-to-role mappings complete. 2021 business role assignments 75% done; Treasury role assignments in progress. 2025 assignments and testing to follow.",
+     milestones:[
+       {name:"Apps Assignment Mappings", pct:100, end:"2026-02-06", revised:"2026-03-31", status:"C", comment:"Provide to Michael B / Michael M this week."},
+       {name:"Business Roles Assignments 2021", pct:75, end:"2026-05-18", revised:"", status:"G", comment:"Treasury role assignments in progress."},
+       {name:"Business Roles Assignments 2025", pct:0, end:"2026-05-18", revised:"", status:"G", comment:""},
+       {name:"Business Roles Testing", pct:0, end:"2026-08-24", revised:"", status:"G", comment:""}
+     ]},
+    {name:"Fiori Apps Activation", status:"G",
+     summary:"2021 catalogues identified; custom catalogues built (areas 1–4 of 7 activated). New 2025 catalogues to be created post Dev upgrade.",
+     milestones:[
+       {name:"Identify All Catalogues", pct:100, end:"2026-02-13", revised:"", status:"C", comment:"For the 2021 version. New ones from 2025 added after Dev upgrade."},
+       {name:"Create Custom Catalogues (Existing Version)", pct:100, end:"2026-05-18", revised:"", status:"C", comment:"7 areas. 1 through 4 activated."},
+       {name:"Create Custom Catalogues Post Go-live 2025", pct:0, end:"2026-08-03", revised:"", status:"G", comment:""}
+     ]},
+    {name:"SAP New Features Trainings", status:"G",
+     summary:"Fiori / Joule / new-functionality trainings to be scheduled for Oct 2026 and delivered through Q1 2027.",
+     milestones:[
+       {name:"Schedule Trainings", pct:0, end:"2026-10-05", revised:"", status:"G", comment:""},
+       {name:"Trainings", pct:0, end:"2027-03-01", revised:"", status:"G", comment:""}
+     ]}
+  ],
+  schedule:[
+    {project:"SAP SSO", task:"Activate SSO in Dev", start:"2026-01-12", end:"2026-01-16", owner:"Crescent SAP / Crescent IT"},
+    {project:"SAP SSO", task:"Test SSO in Dev", start:"2026-01-19", end:"2026-01-20", owner:"Crescent SAP"},
+    {project:"SAP SSO", task:"Activate SSO in QA", start:"2026-01-21", end:"2026-01-22", owner:"Crescent SAP"},
+    {project:"SAP SSO", task:"Test SSO in Quality", start:"2026-01-23", end:"2026-01-23", owner:"Crescent SAP"},
+    {project:"SAP SSO", task:"Go-Live Prod", start:"2026-01-26", end:"2026-01-26", owner:"Crescent SAP"},
+    {project:"FIORI Activation", task:"Activate PRA", start:"2026-01-12", end:"2026-01-23", owner:"Crescent SAP"},
+    {project:"FIORI Activation", task:"Security Assignment", start:"2026-01-12", end:"2026-01-30", owner:"Crescent SAP"},
+    {project:"SAP 2025 Upgrade – Sandbox", task:"Sandbox – Copy", start:"2026-02-16", end:"2026-02-27", owner:"SAP ECS"},
+    {project:"SAP 2025 Upgrade – Sandbox", task:"Sandbox – Set Up RUM (Release Upgrade Mgmt)", start:"2026-03-02", end:"2026-03-06", owner:"Crescent SAP"},
+    {project:"SAP 2025 Upgrade – Sandbox", task:"Sandbox – Apply Sandbox Notes", start:"2026-03-02", end:"2026-03-13", owner:"SAP ECS (technical) / Crescent SAP (application)"},
+    {project:"SAP 2025 Upgrade – Sandbox", task:"Sandbox – Run Maintenance Planner", start:"2026-03-16", end:"2026-03-27", owner:"SAP ECS"},
+    {project:"SAP 2025 Upgrade – Sandbox", task:"Sandbox – Validate GUI Compatibility", start:"2026-03-16", end:"2026-03-20", owner:"Crescent SAP"},
+    {project:"SAP 2025 Upgrade – Sandbox", task:"Sandbox – Validate FIORI Compatibility", start:"2026-03-16", end:"2026-03-20", owner:"Crescent SAP"},
+    {project:"SAP 2025 Upgrade – Sandbox", task:"Sandbox – Run SI-Check (Simplification Item)", start:"2026-03-23", end:"2026-04-03", owner:"Crescent SAP"},
+    {project:"SAP 2025 Upgrade – Sandbox", task:"Sandbox – Custom Code Validation / Remediation", start:"2026-04-06", end:"2026-04-17", owner:"Crescent SAP"},
+    {project:"SAP 2025 Upgrade – Sandbox", task:"Sandbox – Service Request SUM", start:"2026-04-20", end:"2026-04-24", owner:"SAP ECS"},
+    {project:"SAP 2025 Upgrade – Sandbox", task:"Sandbox – Regression Testing / New Functionality", start:"2026-04-27", end:"2026-05-22", owner:"SAP ECS"},
+    {project:"SAP 2025 Upgrade – Dev/QA/Prod", task:"Set Up RUM (Release Upgrade Mgmt)", start:"2026-05-04", end:"2026-05-08", owner:"Crescent SAP"},
+    {project:"SAP 2025 Upgrade – Dev/QA/Prod", task:"Apply Notes", start:"2026-05-11", end:"2026-05-22", owner:"SAP ECS (technical) / Crescent SAP (application)"},
+    {project:"SAP 2025 Upgrade – Dev/QA/Prod", task:"Run Maintenance Planner", start:"2026-05-25", end:"2026-06-05", owner:"SAP ECS"},
+    {project:"SAP 2025 Upgrade – Dev/QA/Prod", task:"Validate GUI Compatibility", start:"2026-05-25", end:"2026-05-29", owner:"Crescent SAP"},
+    {project:"SAP 2025 Upgrade – Dev/QA/Prod", task:"Validate FIORI Compatibility", start:"2026-05-25", end:"2026-05-29", owner:"Crescent SAP"},
+    {project:"SAP 2025 Upgrade – Dev/QA/Prod", task:"Run SI-Check (Simplification Item)", start:"2026-06-08", end:"2026-06-19", owner:"Crescent SAP"},
+    {project:"SAP 2025 Upgrade – Dev/QA/Prod", task:"Custom Code Validation", start:"2026-06-22", end:"2026-06-26", owner:"Crescent SAP"},
+    {project:"SAP 2025 Upgrade – Dev/QA/Prod", task:"SUM – Dev (account for downtime)", start:"2026-06-29", end:"2026-07-03", owner:"SAP ECS"},
+    {project:"SAP 2025 Upgrade – Dev/QA/Prod", task:"Regression Testing – Dev", start:"2026-07-06", end:"2026-07-17", owner:"Crescent SAP"},
+    {project:"SAP 2025 Upgrade – Dev/QA/Prod", task:"SUM – QA (account for downtime)", start:"2026-07-20", end:"2026-07-24", owner:"SAP ECS"},
+    {project:"SAP 2025 Upgrade – Dev/QA/Prod", task:"Regression Testing – QA", start:"2026-07-27", end:"2026-08-28", owner:"Crescent SAP"},
+    {project:"SAP 2025 Upgrade – Dev/QA/Prod", task:"SUM – PROD (account for downtime)", start:"2026-08-31", end:"2026-09-04", owner:"SAP ECS"},
+    {project:"SAP 2025 Upgrade – Dev/QA/Prod", task:"GO-LIVE and validations", start:"2026-09-07", end:"2026-09-07", owner:"Crescent SAP / SAP ECS"},
+    {project:"SAP Joule Activation", task:"Activate Joule in Dev", start:"2026-09-14", end:"2026-09-18", owner:"Crescent SAP"},
+    {project:"SAP Joule Activation", task:"Test Joule in Dev", start:"2026-09-21", end:"2026-10-02", owner:"Crescent SAP"},
+    {project:"SAP Joule Activation", task:"Activate Joule in Quality", start:"2026-10-05", end:"2026-10-09", owner:"Crescent SAP"},
+    {project:"SAP Joule Activation", task:"Test Joule in Quality", start:"2026-10-12", end:"2026-10-16", owner:"Crescent SAP"},
+    {project:"SAP Joule Activation", task:"Joule Go-Live", start:"2026-10-19", end:"2026-10-23", owner:"Crescent SAP"},
+    {project:"Fiori / Joule / New Functionality Training", task:"AP", start:"2026-10-26", end:"2026-10-30", owner:"Crescent SAP"},
+    {project:"Fiori / Joule / New Functionality Training", task:"Treasury", start:"2026-10-26", end:"2026-10-30", owner:"Crescent SAP"},
+    {project:"Fiori / Joule / New Functionality Training", task:"Corporate", start:"2026-10-26", end:"2026-10-30", owner:"Crescent SAP"},
+    {project:"Fiori / Joule / New Functionality Training", task:"Property", start:"2026-11-02", end:"2026-11-06", owner:"Crescent SAP"},
+    {project:"Fiori / Joule / New Functionality Training", task:"DO", start:"2026-11-02", end:"2026-11-06", owner:"Crescent SAP"},
+    {project:"ABAP Code Remediation", task:"Get Approved Objects to Remediate", start:"2026-12-07", end:"2026-12-11", owner:"Crescent SAP"},
+    {project:"SAP Archiving", task:"Strategy / Archiving Plan for Objects", start:"2026-12-07", end:"2026-12-11", owner:"Crescent SAP"},
+    {project:"SAP Archiving", task:"Method Selection", start:"2027-01-04", end:"2027-01-15", owner:"Crescent SAP"},
+    {project:"SAP Archiving", task:"Method Implementation", start:"2027-01-18", end:"2027-02-05", owner:"Crescent SAP"},
+    {project:"SAP Archiving", task:"Archiving of Objects", start:"2027-02-08", end:"2027-02-26", owner:"Crescent SAP"}
+  ],
+  risks:[
+    {title:"SAP may delay the Sandbox SUM upgrade", workstream:"S/4HANA Upgrade 2025", impact:"High", likelihood:"Medium", status:"Mitigating",
+     mitigation:"SPAU objects already identified; will confirm to SAP. SUM scheduled to start May 11th and coordinated directly with SAP.", owner:"Crescent SAP", due:"2026-05-11"},
+    {title:"SSO users with residual login issues", workstream:"SSO – GUI & Fiori", impact:"Medium", likelihood:"Medium", status:"Open",
+     mitigation:"Work session Monday with SME for affected users (M. Bracamontez, E. Hay, K. Geddie); escalate via SAP case if unresolved.", owner:"Crescent SAP", due:"2026-05-11"},
+    {title:"Hyper-care VPN certificate issue (SSO)", workstream:"SSO – GUI & Fiori", impact:"Medium", likelihood:"Low", status:"Resolved",
+     mitigation:"IT resolved the VPN issue with certificates.", owner:"Crescent IT", due:"2026-04-24"},
+    {title:"Go-live conflict with month-end close", workstream:"SSO – GUI & Fiori", impact:"Medium", likelihood:"Low", status:"Resolved",
+     mitigation:"SSO Production go-live moved to April 3rd to avoid conflict with month-end close activities.", owner:"Crescent SAP", due:"2026-04-03"}
+  ]
+};
+
+/* ---------- state ---------- */
+let state = load();
+function clone(o){ return JSON.parse(JSON.stringify(o)); }
+function load(){ try{ const s=localStorage.getItem(KEY); return s?JSON.parse(s):clone(DEFAULT_DATA); }catch(e){ return clone(DEFAULT_DATA); } }
+function persist(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
+
+/* ---------- helpers ---------- */
+const STATUS={ C:{label:"Complete",cls:"s-C"}, G:{label:"On Track",cls:"s-G"}, Y:{label:"At Risk",cls:"s-Y"}, R:{label:"Off Track",cls:"s-R"} };
+const RAGCOLOR={ C:"var(--c)", G:"var(--g)", Y:"var(--y)", R:"var(--r)" };
+function esc(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+function parseD(s){ if(!s) return null; const p=String(s).split("-"); return new Date(+p[0],+p[1]-1,+p[2]); }
+function fmtD(s){ const d=parseD(s); if(!d||isNaN(d)) return "—"; return d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}); }
+function fmtShort(s){ const d=parseD(s); if(!d||isNaN(d)) return ""; return d.toLocaleDateString("en-US",{month:"short",day:"numeric"}); }
+function effEnd(m){ return m.revised && m.revised.trim() ? m.revised : m.end; }
+function statusPill(code){ const st=STATUS[code]||STATUS.G; return `<span class="pill ${st.cls}"><span class="dot"></span>${st.label}</span>`; }
+function wsPct(ws){ if(!ws.milestones.length) return 0; return Math.round(ws.milestones.reduce((a,m)=>a+(+m.pct||0),0)/ws.milestones.length); }
+function allMs(){ const out=[]; state.workstreams.forEach(w=>w.milestones.forEach(m=>out.push({...m,ws:w.name}))); return out; }
+function overallPct(){ const ms=allMs(); if(!ms.length) return 0; return Math.round(ms.reduce((a,m)=>a+(+m.pct||0),0)/ms.length); }
+
+/* ---------- top bar ---------- */
+function renderTop(){
+  document.getElementById("t-projname").textContent=state.meta.projectName||"SAP Transformation";
+  document.getElementById("t-reportdate").textContent=fmtD(state.meta.reportDate);
+  const st=STATUS[state.meta.overallStatus]||STATUS.G;
+  document.getElementById("t-overalltext").textContent="Overall: "+st.label;
+  document.getElementById("t-overalldot").style.background=RAGCOLOR[state.meta.overallStatus]||"var(--g)";
+}
+
+/* ---------- overview ---------- */
+function renderOverview(){
+  const asOf=parseD(state.meta.reportDate);
+  const ms=allMs();
+  const wsTotal=state.workstreams.length;
+  const onTrack=state.workstreams.filter(w=>w.status==="G").length;
+  const atRisk=state.workstreams.filter(w=>w.status==="Y"||w.status==="R").length;
+  const complete=state.workstreams.filter(w=>w.status==="C").length;
+  const msDone=ms.filter(m=>(+m.pct)>=100).length;
+  // next milestone (incomplete, earliest effective end on/after asOf, else earliest incomplete)
+  const incomplete=ms.filter(m=>(+m.pct)<100).map(m=>({...m,d:parseD(effEnd(m))})).filter(m=>m.d).sort((a,b)=>a.d-b.d);
+  const upcoming=incomplete.filter(m=>m.d>=asOf);
+  const next=(upcoming[0]||incomplete[0]);
+  // go-live countdown
+  const gl=parseD(state.meta.goLiveDate);
+  let glDays=gl?Math.round((gl-asOf)/86400000):null;
+  const op=overallPct();
+
+  const glHtml=`
+    <div class="card golive">
+      <span class="lbl">${esc(state.meta.goLiveLabel||"Production Go-Live")}</span>
+      <div class="big">${gl?fmtD(state.meta.goLiveDate):"—"}</div>
+      <div class="sub">${glDays==null?"":(glDays>0?glDays+" days from status date":(glDays===0?"Go-live is today":Math.abs(glDays)+" days ago"))}</div>
+      ${next?`<div class="milestone">Next milestone &middot; <b>${esc(next.name)}</b> — ${fmtD(effEnd(next))} <span style="opacity:.8">(${esc(next.ws)})</span></div>`:""}
+    </div>`;
+
+  function kpi(v,l,barPct,color){
+    return `<div class="card kpi"><div class="v">${v}</div><div class="l">${l}</div>${barPct!=null?`<div class="bar"><span style="width:${barPct}%;background:${color||'var(--accent)'}"></span></div>`:""}</div>`;
+  }
+  const kpis=`<div class="kpis">
+    ${kpi(op+"%","Overall Complete",op,"var(--gold)")}
+    ${kpi(wsTotal,"Workstreams")}
+    ${kpi(onTrack,"On Track",wsTotal?Math.round(onTrack/wsTotal*100):0,"var(--g)")}
+    ${kpi(atRisk,"At Risk / Off Track",wsTotal?Math.round(atRisk/wsTotal*100):0,"var(--y)")}
+    ${kpi(msDone+"/"+ms.length,"Milestones Done",ms.length?Math.round(msDone/ms.length*100):0,"var(--c)")}
+  </div>`;
+
+  const cards=state.workstreams.map(w=>{
+    const p=wsPct(w);
+    const done=w.milestones.filter(m=>(+m.pct)>=100).length;
+    const prog=w.milestones.filter(m=>(+m.pct)>0&&(+m.pct)<100).length;
+    const ns=w.milestones.filter(m=>(+m.pct)<=0).length;
+    return `<div class="card ws">
+      <div class="top"><h3>${esc(w.name)}</h3>${statusPill(w.status)}</div>
+      <div class="pctline"><div class="bar"><span style="width:${p}%;background:${RAGCOLOR[w.status]||'var(--accent)'}"></span></div><div class="num">${p}%</div></div>
+      <div class="mini"><span><b>${done}</b> done</span><span><b>${prog}</b> in progress</span><span><b>${ns}</b> not started</span></div>
+      <p class="summary">${esc(w.summary)}</p>
+    </div>`;
+  }).join("");
+
+  document.getElementById("view-overview").innerHTML=`
+    <div class="hero">
+      <div class="card narr"><h2>Executive Summary</h2><p>${esc(state.meta.narrative)}</p></div>
+      ${glHtml}
+    </div>
+    ${kpis}
+    <div class="sechead"><h2>Workstream Status</h2><span class="count">${wsTotal} workstreams</span></div>
+    <div class="ws-grid">${cards}</div>`;
+}
+
+/* ---------- timeline (gantt) ---------- */
+function renderTimeline(){
+  const items=state.schedule.map(s=>({...s,sd:parseD(s.start),ed:parseD(s.end)})).filter(s=>s.sd&&s.ed);
+  const host=document.getElementById("view-timeline");
+  if(!items.length){ host.innerHTML="<p>No schedule items.</p>"; return; }
+  let minD=new Date(Math.min(...items.map(i=>i.sd.getTime())));
+  let maxD=new Date(Math.max(...items.map(i=>i.ed.getTime())));
+  minD=new Date(minD.getFullYear(),minD.getMonth(),1);
+  maxD=new Date(maxD.getFullYear(),maxD.getMonth()+1,1); // first of month after last
+  const span=maxD-minD;
+  const P=d=>(d-minD)/span*100;
+  const asOf=parseD(state.meta.reportDate);
+  const asOfPct=Math.max(0,Math.min(100,P(asOf)));
+
+  // months
+  const monthStarts=[]; let c=new Date(minD);
+  while(c<maxD){ monthStarts.push(new Date(c)); c=new Date(c.getFullYear(),c.getMonth()+1,1); }
+  const monthHtml=monthStarts.map((ms,i)=>{
+    const next=monthStarts[i+1]||maxD;
+    const w=P(next)-P(ms);
+    return `<div class="g-month" style="width:${w}%">${ms.toLocaleDateString("en-US",{month:"short"})} '${String(ms.getFullYear()).slice(2)}</div>`;
+  }).join("");
+
+  // groups preserving order
+  const groups=[]; const idx={};
+  items.forEach(it=>{ if(!(it.project in idx)){ idx[it.project]=groups.length; groups.push({name:it.project,tasks:[]}); } groups[idx[it.project]].tasks.push(it); });
+
+  let left=`<div class="g-head">Workstream / Task</div>`;
+  let right=`<div class="g-monthrow">${monthHtml}</div>`;
+  groups.forEach(g=>{
+    left+=`<div class="g-group" title="${esc(g.name)}">${esc(g.name)}</div>`;
+    right+=`<div class="g-grouptrack"></div>`;
+    g.tasks.forEach(t=>{
+      left+=`<div class="g-task" title="${esc(t.task)}"><span style="overflow:hidden;text-overflow:ellipsis">${esc(t.task)}</span><span class="dates">${fmtShort(t.start)}–${fmtShort(t.end)}</span></div>`;
+      const l=P(t.sd); const wRaw=P(new Date(t.ed.getTime()+86400000))-l; const w=Math.max(wRaw,0.7);
+      let klass="upcoming"; if(t.ed<asOf) klass="done"; else if(t.sd<=asOf&&t.ed>=asOf) klass="active";
+      const tip=`${t.task}\n${fmtD(t.start)} → ${fmtD(t.end)}\n${t.owner||""}`;
+      right+=`<div class="g-track"><div class="g-bar ${klass}" style="left:${l}%;width:${w}%" title="${esc(tip)}"></div></div>`;
+    });
+  });
+
+  // gridlines overlay
+  let lines="";
+  monthStarts.forEach((ms,i)=>{ if(i===0) return; lines+=`<div class="g-line" style="left:${P(ms)}%"></div>`; });
+  lines+=`<div class="g-asof" style="left:${asOfPct}%"><span class="lbl">Status date</span></div>`;
+
+  host.innerHTML=`
+    <div class="legend">
+      <span><i style="background:var(--done)"></i> Complete</span>
+      <span><i style="background:var(--active)"></i> In progress</span>
+      <span><i style="background:var(--upcoming)"></i> Upcoming</span>
+      <span><i style="background:var(--r);width:3px"></i> Status date (${fmtD(state.meta.reportDate)})</span>
+    </div>
+    <div class="ganttscroll"><div class="gantt">
+      <div class="g-left">${left}</div>
+      <div class="g-right">${right}<div class="g-overlay">${lines}</div></div>
+    </div></div>`;
+}
+
+/* ---------- milestones ---------- */
+function renderMilestones(){
+  const rows=allMs().map(m=>{
+    const rev=m.revised&&m.revised.trim();
+    return `<tr>
+      <td><span class="ws-tag">${esc(m.ws)}</span><br>${esc(m.name)}</td>
+      <td class="num"><div class="progress-cell"><div class="bar"><span style="width:${+m.pct||0}%;background:${RAGCOLOR[m.status]||'var(--accent)'}"></span></div><span class="n">${+m.pct||0}%</span></div></td>
+      <td class="num">${rev?`<span class="strike">${fmtD(m.end)}</span><br><span class="revised">${fmtD(m.revised)}</span>`:fmtD(m.end)}</td>
+      <td>${statusPill(m.status)}</td>
+      <td>${esc(m.comment)||"<span style='color:var(--muted)'>—</span>"}</td>
+    </tr>`;
+  }).join("");
+  document.getElementById("view-milestones").innerHTML=`
+    <div class="sechead"><h2>Key Milestones &amp; Deliverables</h2><span class="count">${allMs().length} items</span></div>
+    <div class="tablecard"><table>
+      <thead><tr><th style="width:26%">Milestone</th><th class="num" style="width:14%">% Complete</th><th class="num" style="width:15%">Target Date</th><th style="width:11%">Status</th><th>Comments / Interdependencies</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table></div>`;
+}
+
+/* ---------- risks ---------- */
+function renderRisks(){
+  const order={Open:0,Mitigating:1,Resolved:2};
+  const rows=[...state.risks].sort((a,b)=>(order[a.status]??9)-(order[b.status]??9)).map(r=>{
+    const rstatus=r.status==="Resolved"?"s-G":(r.status==="Open"?"s-R":"s-Y");
+    return `<tr>
+      <td><b>${esc(r.title)}</b><br><span class="ws-tag">${esc(r.workstream)}</span></td>
+      <td class="sev sev-${esc(r.impact)}">${esc(r.impact)}</td>
+      <td>${esc(r.likelihood)}</td>
+      <td><span class="pill ${rstatus}"><span class="dot"></span>${esc(r.status)}</span></td>
+      <td>${esc(r.mitigation)}</td>
+      <td>${esc(r.owner)}</td>
+      <td class="num">${r.due?fmtD(r.due):"—"}</td>
+    </tr>`;
+  }).join("");
+  const open=state.risks.filter(r=>r.status!=="Resolved").length;
+  document.getElementById("view-risks").innerHTML=`
+    <div class="sechead"><h2>Risks &amp; Issues</h2><span class="count">${open} open / ${state.risks.length} total</span></div>
+    <div class="tablecard"><table>
+      <thead><tr><th style="width:22%">Risk / Issue</th><th>Impact</th><th>Likelihood</th><th>Status</th><th style="width:30%">Mitigation / Comments</th><th>Owner</th><th class="num">Target</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table></div>`;
+}
+
+/* ---------- edit ---------- */
+function statusOptions(v){ return ["C","G","Y","R"].map(k=>`<option value="${k}" ${v===k?"selected":""}>${k} – ${STATUS[k].label}</option>`).join(""); }
+function selOptions(list,v){ return list.map(k=>`<option value="${k}" ${v===k?"selected":""}>${k}</option>`).join(""); }
+
+function renderEdit(){
+  const m=state.meta;
+  let html=`<div class="edit-intro"><b>Edit everything here.</b> Changes save automatically in this browser and update every view instantly. Use <b>Export</b> (top right) to download a backup or share the data file; use <b>Import</b> to load it on another machine. Status codes: <b>C</b>=Complete, <b>G</b>=On Track, <b>Y</b>=At Risk, <b>R</b>=Off Track.</div>`;
+
+  // project
+  html+=`<div class="editsec"><h3>Project Details</h3>
+    <div class="grid3">
+      <div class="field"><label>Project name</label><input data-path="meta|projectName" value="${esc(m.projectName)}"></div>
+      <div class="field"><label>Status date</label><input type="date" data-path="meta|reportDate" value="${esc(m.reportDate)}"></div>
+      <div class="field"><label>Overall status</label><select data-path="meta|overallStatus">${statusOptions(m.overallStatus)}</select></div>
+    </div>
+    <div class="grid2">
+      <div class="field"><label>Go-live date</label><input type="date" data-path="meta|goLiveDate" value="${esc(m.goLiveDate)}"></div>
+      <div class="field"><label>Go-live label</label><input data-path="meta|goLiveLabel" value="${esc(m.goLiveLabel)}"></div>
+    </div>
+    <div class="field"><label>Executive summary</label><textarea data-path="meta|narrative">${esc(m.narrative)}</textarea></div>
+  </div>`;
+
+  // workstreams
+  html+=`<div class="editsec"><h3>Workstreams &amp; Milestones <button class="btn primary" data-act="addWs">+ Add workstream</button></h3>`;
+  state.workstreams.forEach((w,i)=>{
+    html+=`<div class="ws-edit">
+      <div class="ws-head">
+        <div class="field" style="flex:1"><label>Workstream name</label><input data-path="workstreams|${i}|name" value="${esc(w.name)}"></div>
+        <div class="field" style="width:180px"><label>Status</label><select data-path="workstreams|${i}|status">${statusOptions(w.status)}</select></div>
+        <button class="iconbtn" title="Delete workstream" data-act="delWs|${i}">&times;</button>
+      </div>
+      <div class="field"><label>Summary</label><textarea data-path="workstreams|${i}|summary">${esc(w.summary)}</textarea></div>
+      <table class="ms-table"><thead><tr><th style="width:30%">Milestone</th><th style="width:8%">%</th><th>End date</th><th>Revised</th><th style="width:13%">Status</th><th>Comment</th><th></th></tr></thead><tbody>`;
+    w.milestones.forEach((ms,j)=>{
+      html+=`<tr>
+        <td><input data-path="workstreams|${i}|milestones|${j}|name" value="${esc(ms.name)}"></td>
+        <td><input type="number" min="0" max="100" data-type="num" data-path="workstreams|${i}|milestones|${j}|pct" value="${+ms.pct||0}"></td>
+        <td><input type="date" data-path="workstreams|${i}|milestones|${j}|end" value="${esc(ms.end)}"></td>
+        <td><input type="date" data-path="workstreams|${i}|milestones|${j}|revised" value="${esc(ms.revised)}"></td>
+        <td><select data-path="workstreams|${i}|milestones|${j}|status">${statusOptions(ms.status)}</select></td>
+        <td><input data-path="workstreams|${i}|milestones|${j}|comment" value="${esc(ms.comment)}"></td>
+        <td><button class="iconbtn" title="Delete milestone" data-act="delMs|${i}|${j}">&times;</button></td>
+      </tr>`;
+    });
+    html+=`</tbody></table><div class="addrow"><button class="btn" data-act="addMs|${i}">+ Add milestone</button></div></div>`;
+  });
+  html+=`</div>`;
+
+  // schedule
+  html+=`<div class="editsec"><h3>Schedule / Timeline Tasks <button class="btn primary" data-act="addSch">+ Add task</button></h3>
+    <div class="tablecard"><table class="ms-table"><thead><tr><th style="width:22%">Project / Group</th><th style="width:28%">Task</th><th>Start</th><th>End</th><th>Owner / Notes</th><th></th></tr></thead><tbody>`;
+  state.schedule.forEach((s,i)=>{
+    html+=`<tr>
+      <td><input data-path="schedule|${i}|project" value="${esc(s.project)}"></td>
+      <td><input data-path="schedule|${i}|task" value="${esc(s.task)}"></td>
+      <td><input type="date" data-path="schedule|${i}|start" value="${esc(s.start)}"></td>
+      <td><input type="date" data-path="schedule|${i}|end" value="${esc(s.end)}"></td>
+      <td><input data-path="schedule|${i}|owner" value="${esc(s.owner)}"></td>
+      <td><button class="iconbtn" title="Delete task" data-act="delSch|${i}">&times;</button></td>
+    </tr>`;
+  });
+  html+=`</tbody></table></div></div>`;
+
+  // risks
+  html+=`<div class="editsec"><h3>Risks &amp; Issues <button class="btn primary" data-act="addRisk">+ Add risk</button></h3>
+    <div class="tablecard"><table class="ms-table"><thead><tr><th style="width:20%">Title</th><th>Workstream</th><th>Impact</th><th>Likelihood</th><th>Status</th><th style="width:24%">Mitigation</th><th>Owner</th><th>Target</th><th></th></tr></thead><tbody>`;
+  state.risks.forEach((r,i)=>{
+    html+=`<tr>
+      <td><input data-path="risks|${i}|title" value="${esc(r.title)}"></td>
+      <td><input data-path="risks|${i}|workstream" value="${esc(r.workstream)}"></td>
+      <td><select data-path="risks|${i}|impact">${selOptions(["High","Medium","Low"],r.impact)}</select></td>
+      <td><select data-path="risks|${i}|likelihood">${selOptions(["High","Medium","Low"],r.likelihood)}</select></td>
+      <td><select data-path="risks|${i}|status">${selOptions(["Open","Mitigating","Resolved"],r.status)}</select></td>
+      <td><input data-path="risks|${i}|mitigation" value="${esc(r.mitigation)}"></td>
+      <td><input data-path="risks|${i}|owner" value="${esc(r.owner)}"></td>
+      <td><input type="date" data-path="risks|${i}|due" value="${esc(r.due)}"></td>
+      <td><button class="iconbtn" title="Delete risk" data-act="delRisk|${i}">&times;</button></td>
+    </tr>`;
+  });
+  html+=`</tbody></table></div></div>`;
+
+  html+=`<div class="savebar">
+    <span class="ok" id="saveok">All changes saved automatically</span>
+    <span class="spacer" style="flex:1"></span>
+    <button class="btn" data-act="pull" title="Discard local edits and reload the latest published data from the server">Pull latest</button>
+    <button class="btn" data-act="export2" title="Download a JSON backup of all data">Download backup</button>
+    <button class="btn primary" data-act="publishOnline" title="Publish to the server so the team sees these updates">↑ Publish to team</button>
+    <button class="btn danger" data-act="reset" title="Reset all data back to the original baseline">Reset</button>
+  </div>`;
+
+  document.getElementById("view-edit").innerHTML=html;
+  refreshAuthUI();
+}
+
+/* ---------- path setter & edit events ---------- */
+function setByPath(obj,path,val){
+  const parts=path.split("|"); let o=obj;
+  for(let k=0;k<parts.length-1;k++){ let key=parts[k]; if(/^\d+$/.test(key)) key=+key; o=o[key]; }
+  let last=parts[parts.length-1]; if(/^\d+$/.test(last)) last=+last; o[last]=val;
+}
+function blankWs(){ return {name:"New Workstream",status:"G",summary:"",milestones:[]}; }
+function blankMs(){ return {name:"New milestone",pct:0,end:"",revised:"",status:"G",comment:""}; }
+function blankSch(){ return {project:"New Group",task:"New task",start:"",end:"",owner:""}; }
+function blankRisk(){ return {title:"New risk",workstream:"",impact:"Medium",likelihood:"Medium",status:"Open",mitigation:"",owner:"",due:""}; }
+
+const editRoot=document.getElementById("view-edit");
+editRoot.addEventListener("input",e=>{
+  const p=e.target.dataset.path; if(!p) return;
+  let v=e.target.value; if(e.target.dataset.type==="num"){ v=Math.max(0,Math.min(100,Number(v)||0)); }
+  setByPath(state,p,v); persist(); flashSaved();
+  renderTop(); renderReadViews();
+});
+editRoot.addEventListener("click",e=>{
+  const btn=e.target.closest("[data-act]"); if(!btn) return;
+  const parts=btn.dataset.act.split("|"); const act=parts[0];
+  if(act==="addWs"){ state.workstreams.push(blankWs()); }
+  else if(act==="delWs"){ if(confirm("Delete this workstream and its milestones?")) state.workstreams.splice(+parts[1],1); else return; }
+  else if(act==="addMs"){ state.workstreams[+parts[1]].milestones.push(blankMs()); }
+  else if(act==="delMs"){ state.workstreams[+parts[1]].milestones.splice(+parts[2],1); }
+  else if(act==="addSch"){ state.schedule.push(blankSch()); }
+  else if(act==="delSch"){ state.schedule.splice(+parts[1],1); }
+  else if(act==="addRisk"){ state.risks.push(blankRisk()); }
+  else if(act==="delRisk"){ state.risks.splice(+parts[1],1); }
+  else if(act==="export2"){ doExport(); return; }
+  else if(act==="publishOnline"){
+    if(!loadAuth()){ openAuthModal(); return; }
+    const orig=btn.textContent; btn.disabled=true; btn.textContent="Publishing…";
+    publishOnline().then(function(){ toast("Published. Live URL will refresh in ~1 minute.","success"); }).catch(function(e){ toast(e.message,"error"); }).finally(function(){ btn.disabled=false; btn.textContent=orig; });
+    return;
+  }
+  else if(act==="pull"){
+    if(!confirm("Pull latest data from the server? Any unpublished local edits will be replaced.")) return;
+    const orig=btn.textContent; btn.disabled=true; btn.textContent="Loading…";
+    pullLatest().then(function(){ toast("Pulled latest data.","success"); }).catch(function(e){ toast(e.message,"error"); }).finally(function(){ btn.disabled=false; btn.textContent=orig; });
+    return;
+  }
+  else if(act==="reset"){ if(confirm("Reset ALL data back to the original baseline? This cannot be undone.")){ state=clone(DEFAULT_DATA); } else return; }
+  else return;
+  persist(); flashSaved(); renderTop(); renderReadViews(); renderEdit();
+});
+let savedTimer=null;
+function flashSaved(){ const el=document.getElementById("saveok"); if(!el) return; el.textContent="Saved ✓"; clearTimeout(savedTimer); savedTimer=setTimeout(()=>{el.textContent="All changes saved automatically";},1200); }
+
+/* ---------- tabs ---------- */
+document.querySelectorAll(".tab").forEach(t=>{
+  t.addEventListener("click",()=>{
+    document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
+    document.querySelectorAll(".view").forEach(x=>x.classList.remove("active"));
+    t.classList.add("active");
+    document.getElementById("view-"+t.dataset.tab).classList.add("active");
+    if(t.dataset.tab==="timeline") renderTimeline();
+  });
+});
+
+/* ---------- export / import / print ---------- */
+function doExport(name){
+  const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob);
+  a.download=(typeof name==="string"&&name)?name:("crescent-sap-dashboard-"+(state.meta.reportDate||"data")+".json");
+  document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(a.href);
+}
+document.getElementById("btn-export").addEventListener("click",()=>doExport());
+document.getElementById("btn-import").addEventListener("click",()=>document.getElementById("file-import").click());
+document.getElementById("file-import").addEventListener("change",e=>{
+  const f=e.target.files[0]; if(!f) return;
+  const rd=new FileReader();
+  rd.onload=()=>{ try{ const d=JSON.parse(rd.result);
+      if(!d.meta||!Array.isArray(d.workstreams)||!Array.isArray(d.schedule)||!Array.isArray(d.risks)) throw new Error("bad");
+      state=d; persist(); renderAll(); alert("Data imported successfully.");
+    }catch(err){ alert("Could not import: the file is not a valid dashboard JSON export."); } };
+  rd.readAsText(f); e.target.value="";
+});
+document.getElementById("btn-print").addEventListener("click",()=>{ buildPrintAll(); window.print(); });
+
+function buildPrintAll(){
+  let host=document.getElementById("print-all");
+  if(!host){ host=document.createElement("div"); host.id="print-all"; host.style.display="none"; document.querySelector(".wrap").appendChild(host); }
+}
+
+/* ---------- github online edit ---------- */
+function loadAuth(){ try{ const s=localStorage.getItem(PAT_KEY); return s?JSON.parse(s):null; }catch(e){ return null; } }
+function saveAuth(a){ if(a) localStorage.setItem(PAT_KEY, JSON.stringify(a)); else localStorage.removeItem(PAT_KEY); refreshAuthUI(); }
+function refreshAuthUI(){
+  const a=loadAuth();
+  const b=document.getElementById("btn-auth"); if(b){
+    if(a){ b.textContent="✓ "+a.login+" — sign out"; b.classList.add("signed-in"); b.title="Signed in — click to sign out"; }
+    else { b.textContent="Sign in to edit"; b.classList.remove("signed-in"); b.title="Sign in with a GitHub token to publish edits online"; }
+  }
+  const fa=document.getElementById("footer-auth"); if(fa){ fa.textContent = a?("Signed in as "+a.login+" · click Publish in the Edit tab to push changes live"):"Sign in to publish edits online (top-right)"; }
+  const sv=document.getElementById("saveok"); if(sv){ sv.textContent = a?("Signed in as "+a.login+" — click Publish to push live"):"Local edits saved — sign in (top-right) to publish to the team"; }
+}
+function b64enc(s){ return btoa(unescape(encodeURIComponent(s))); }
+function b64dec(b){ return decodeURIComponent(escape(atob(b.replace(/\s/g,"")))); }
+async function ghApi(path, opts){
+  opts=opts||{}; const a=loadAuth();
+  const headers=Object.assign({"Accept":"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28"}, opts.headers||{});
+  if(a) headers["Authorization"]="Bearer "+a.token;
+  return fetch("https://api.github.com"+path, Object.assign({}, opts, {headers}));
+}
+async function signIn(token){
+  const r=await fetch("https://api.github.com/user",{headers:{"Authorization":"Bearer "+token,"Accept":"application/vnd.github+json"}});
+  if(!r.ok) throw new Error("Token rejected by GitHub ("+r.status+"). Use a PAT with the 'repo' scope.");
+  const u=await r.json();
+  saveAuth({token:token, login:u.login});
+  try{ const g=await ghApi("/repos/"+REPO_CONFIG.owner+"/"+REPO_CONFIG.repo+"/contents/"+REPO_CONFIG.dataPath+"?ref="+REPO_CONFIG.branch); if(g.ok){ const d=await g.json(); serverSha=d.sha; } }catch(e){}
+}
+function signOut(){ saveAuth(null); serverSha=null; }
+async function publishOnline(){
+  if(!loadAuth()) throw new Error("Not signed in.");
+  try{ const g=await ghApi("/repos/"+REPO_CONFIG.owner+"/"+REPO_CONFIG.repo+"/contents/"+REPO_CONFIG.dataPath+"?ref="+REPO_CONFIG.branch); if(g.ok){ const d=await g.json(); serverSha=d.sha; } }catch(e){}
+  const body={ message:"Update dashboard data — "+(state.meta.reportDate||""), content:b64enc(JSON.stringify(state,null,2)), branch:REPO_CONFIG.branch };
+  if(serverSha) body.sha=serverSha;
+  const r=await ghApi("/repos/"+REPO_CONFIG.owner+"/"+REPO_CONFIG.repo+"/contents/"+REPO_CONFIG.dataPath,{method:"PUT",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});
+  if(r.status===409) throw new Error("Conflict: someone else updated the data. Click 'Pull latest' first, then republish.");
+  if(!r.ok){ const t=await r.text(); throw new Error("Publish failed ("+r.status+"): "+t.slice(0,180)); }
+  const out=await r.json(); serverSha=out.content&&out.content.sha;
+}
+async function pullLatest(){
+  let data=null;
+  if(loadAuth()){
+    const r=await ghApi("/repos/"+REPO_CONFIG.owner+"/"+REPO_CONFIG.repo+"/contents/"+REPO_CONFIG.dataPath+"?ref="+REPO_CONFIG.branch);
+    if(r.ok){ const d=await r.json(); data=JSON.parse(b64dec(d.content)); serverSha=d.sha; }
+  }
+  if(!data){ const r=await fetch("data.json?_="+Date.now(),{cache:"no-store"}); if(r.ok) data=await r.json(); }
+  if(!data) throw new Error("Could not load latest data.");
+  state=data; persist(); renderAll();
+}
+function toast(msg, kind){ const t=document.getElementById("toast"); if(!t) return; t.textContent=msg; t.className="toast"+(kind?" "+kind:""); t.style.display="block"; clearTimeout(t._tm); t._tm=setTimeout(function(){ t.style.display="none"; },4000); }
+function openAuthModal(){ document.getElementById("auth-error").textContent=""; document.getElementById("auth-token").value=""; document.getElementById("auth-modal").style.display="flex"; setTimeout(function(){ document.getElementById("auth-token").focus(); },50); }
+function closeAuthModal(){ document.getElementById("auth-modal").style.display="none"; }
+document.getElementById("btn-auth").addEventListener("click",function(){
+  if(loadAuth()){ if(confirm("Sign out of online editing? (Local edits stay in this browser.)")) signOut(); return; }
+  openAuthModal();
+});
+document.getElementById("auth-cancel").addEventListener("click",closeAuthModal);
+document.getElementById("auth-signin").addEventListener("click",async function(){
+  const tok=document.getElementById("auth-token").value.trim(); const err=document.getElementById("auth-error");
+  if(!tok){ err.textContent="Please paste a token."; return; }
+  err.textContent="Checking…";
+  try{ await signIn(tok); closeAuthModal(); toast("Signed in. You can now publish edits.","success"); }
+  catch(e){ err.textContent=e.message; }
+});
+document.getElementById("auth-token").addEventListener("keydown",function(e){ if(e.key==="Enter") document.getElementById("auth-signin").click(); });
+
+/* ---------- render orchestration ---------- */
+function renderReadViews(){ renderOverview(); renderMilestones(); renderRisks(); if(document.getElementById("view-timeline").classList.contains("active")) renderTimeline(); }
+function renderAll(){ renderTop(); renderOverview(); renderTimeline(); renderMilestones(); renderRisks(); renderEdit(); }
+
+// Load order: this browser's saved edits win; otherwise published data.json (when hosted); otherwise the built-in baseline.
+async function init(){
+  try{
+    if(localStorage.getItem(KEY)===null){
+      const r=await fetch("data.json?_="+Date.now(),{cache:"no-store"});
+      if(r.ok){ const d=await r.json(); if(d&&d.meta&&Array.isArray(d.workstreams)&&Array.isArray(d.schedule)&&Array.isArray(d.risks)){ state=d; } }
+    }
+  }catch(e){/* no data.json (e.g. opened as a local file) — use built-in data */}
+  renderAll();
+  refreshAuthUI();
+  if(loadAuth()){ try{ const r=await ghApi("/repos/"+REPO_CONFIG.owner+"/"+REPO_CONFIG.repo+"/contents/"+REPO_CONFIG.dataPath+"?ref="+REPO_CONFIG.branch); if(r.ok){ const d=await r.json(); serverSha=d.sha; } }catch(e){} }
+}
+init();
+</script>
+</body>
+</html>
