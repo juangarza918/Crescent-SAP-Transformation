@@ -1,71 +1,278 @@
 {
   "meta": {
     "projectName": "Crescent SAP Transformation",
-    "reportDate": "2026-05-08",
+    "reportDate": "2026-06-05",
     "overallStatus": "G",
-    "goLiveDate": "2026-09-07",
+    "goLiveDate": "2026-09-11",
     "goLiveLabel": "S/4HANA 2025 Production Go-Live",
-    "narrative": "The S/4HANA 2025 sandbox preparation is complete and the technical SUM upgrade is scheduled to begin May 11th, keeping the program on track for the September production go-live. SSO (GUI and Fiori) is live and in hyper-care. Joule activation, Fiori roles/apps, and end-user training remain on schedule for the second half of 2026."
+    "narrative": "Sandbox upgrade and regression testing of core 233 GUI transactions completed and no major issues encountered. Started Dev SUM phase and expecting 5 business days to complete. After 1 week validation, Quality upgrade will start, we were able to move up Quality for additional UAT of both GUI and Fiori. We will have a transport freeze (no changes going into Prod) but will continue with development in Dev and testing in Quality when both are in 2025 version. During this phase there will be a service request to work with SAP on Joule. The SSO issue was moved from IT to SAP, and a case was created and is the main focus this upcoming week. On track to provide Fiori security mappings on  06/08."
   },
   "workstreams": [
     {
       "name": "SSO – GUI & Fiori",
-      "status": "C",
-      "summary": "GUI and Fiori SSO are live. Post go-live cutover users being disabled (completing Monday). A few users still have login issues (M. Bracamontez, E. Hay, K. Geddie) — work session Monday with SME, then escalate. Fiori–SSO completed.",
+      "status": "R",
+      "summary": "- Moved resolution support from IT to SAP. Case was 735274 for SAP SNC and they are running trace. It is still related to certificate setup and SAP providing solution by Tuesday. This is main focus to resolve with SAP next week.",
       "milestones": [
-        { "name": "SSO – Dev", "pct": 100, "end": "2026-02-07", "revised": "2026-02-20", "status": "C", "comment": "End date updated from 2/7 to 2/20 based on adjusted timeline." },
-        { "name": "SSO – Quality", "pct": 100, "end": "2026-02-13", "revised": "2026-02-27", "status": "C", "comment": "User acceptance testing and resolve C: drive issue." },
-        { "name": "SSO – Production", "pct": 100, "end": "2026-02-14", "revised": "2026-04-03", "status": "C", "comment": "Moved to April 3rd to avoid go-live during month-end close activities." },
-        { "name": "SSO – Hyper Care VPN Issue", "pct": 0, "end": "2026-04-24", "revised": "", "status": "Y", "comment": "IT resolved VPN issue with certificates." }
+        {
+          "name": "SSO – Dev",
+          "pct": 100,
+          "end": "2026-02-07",
+          "revised": "2026-02-20",
+          "status": "C",
+          "comment": "End date updated from 2/7 to 2/20 based on adjusted timeline."
+        },
+        {
+          "name": "SSO – Quality",
+          "pct": 100,
+          "end": "2026-02-13",
+          "revised": "2026-02-27",
+          "status": "C",
+          "comment": "User acceptance testing and resolve C: drive issue."
+        },
+        {
+          "name": "SSO – Production",
+          "pct": 100,
+          "end": "2026-02-14",
+          "revised": "2026-04-03",
+          "status": "C",
+          "comment": "Moved to April 3rd to avoid go-live during month-end close activities."
+        },
+        {
+          "name": "SSO – Hyper Care VPN Issue",
+          "pct": 80,
+          "end": "2026-04-24",
+          "revised": "2026-06-12",
+          "status": "Y",
+          "comment": "Case 735274 was created for SAP SNC team. "
+        }
       ]
     },
     {
       "name": "S/4HANA Upgrade 2025",
       "status": "G",
-      "summary": "Sandbox preparation complete. SUM technical upgrade on track to start May 11th; DS4 development upgrade confirmed for May 29th. System refreshes (DS4110/DS4100/QS4100 from PS4) underway; Fiori app transports available in SS4 sandbox.",
+      "summary": "- Sandbox Regression Testing of 233 transactions was completed, with minor remediations resolved. JIB PPAs and Equity Adjustments, Cost Allocations.\n- SAP Development Pre-Requisites completed. (Simplification Check, Notes, SNP Glue deactivation). \n- SAP Development SUM Upgrade started on 06/05.\n",
       "milestones": [
-        { "name": "Sandbox Copy", "pct": 100, "end": "2026-03-27", "revised": "2026-04-15", "status": "C", "comment": "Actual completion ran to Wednesday." },
-        { "name": "Sandbox – Set up Release Upgrade Mgmt Tool", "pct": 100, "end": "2026-03-27", "revised": "", "status": "C", "comment": "Setup completed and being reviewed by SAP." },
-        { "name": "Sandbox – Apply Required Notes", "pct": 100, "end": "2026-04-10", "revised": "", "status": "C", "comment": "Completed." },
-        { "name": "Sandbox – Run Maintenance Planner", "pct": 100, "end": "2026-04-25", "revised": "", "status": "C", "comment": "Completed. Only Divestiture workplaces flagged as a warning (expected)." },
-        { "name": "Sandbox – Validate GUI & Fiori Compatibility", "pct": 100, "end": "2026-04-25", "revised": "", "status": "C", "comment": "Completed." },
-        { "name": "Sandbox – Custom Code Remediation", "pct": 100, "end": "2026-04-25", "revised": "", "status": "C", "comment": "Completed. ATC ran and validated." },
-        { "name": "Sandbox – Run SI Simplification Check", "pct": 100, "end": "2026-05-08", "revised": "", "status": "C", "comment": "Completed." },
-        { "name": "Sandbox – Service Request SUM to SAP", "pct": 50, "end": "2026-05-29", "revised": "", "status": "G", "comment": "Created and working with SAP directly. Upgrade scheduled for May 11th." },
-        { "name": "Sandbox – Regression Testing", "pct": 0, "end": "2026-06-26", "revised": "", "status": "G", "comment": "" },
-        { "name": "Start DEV / QA / Prod upgrade", "pct": 0, "end": "2026-05-29", "revised": "", "status": "G", "comment": "" }
+        {
+          "name": "Sandbox Copy",
+          "pct": 100,
+          "end": "2026-03-27",
+          "revised": "2026-04-15",
+          "status": "C",
+          "comment": "Actual completion ran to Wednesday."
+        },
+        {
+          "name": "Sandbox – Set up Release Upgrade Mgmt Tool",
+          "pct": 100,
+          "end": "2026-03-27",
+          "revised": "",
+          "status": "C",
+          "comment": "Setup completed and being reviewed by SAP."
+        },
+        {
+          "name": "Sandbox – Apply Required Notes",
+          "pct": 100,
+          "end": "2026-04-10",
+          "revised": "",
+          "status": "C",
+          "comment": "Completed."
+        },
+        {
+          "name": "Sandbox – Run Maintenance Planner",
+          "pct": 100,
+          "end": "2026-04-25",
+          "revised": "",
+          "status": "C",
+          "comment": "Completed. Only Divestiture workplaces flagged as a warning (expected)."
+        },
+        {
+          "name": "Sandbox – Validate GUI & Fiori Compatibility",
+          "pct": 100,
+          "end": "2026-04-25",
+          "revised": "",
+          "status": "C",
+          "comment": "Completed."
+        },
+        {
+          "name": "Sandbox – Custom Code Remediation",
+          "pct": 100,
+          "end": "2026-04-25",
+          "revised": "",
+          "status": "C",
+          "comment": "Completed. ATC ran and validated."
+        },
+        {
+          "name": "Sandbox – Run SI Simplification Check",
+          "pct": 100,
+          "end": "2026-05-08",
+          "revised": "",
+          "status": "C",
+          "comment": "Completed."
+        },
+        {
+          "name": "Sandbox – Service Request SUM to SAP",
+          "pct": 100,
+          "end": "2026-05-29",
+          "revised": "",
+          "status": "C",
+          "comment": "Created and working with SAP directly. Upgrade scheduled for May 11th."
+        },
+        {
+          "name": "Sandbox – Regression Testing",
+          "pct": 90,
+          "end": "2026-06-19",
+          "revised": "",
+          "status": "G",
+          "comment": "233 transactions tested. Re running month end close transactions after remediation."
+        },
+        {
+          "name": "Dev Upgrade Preparations",
+          "pct": 100,
+          "end": "2026-06-05",
+          "revised": "",
+          "status": "C",
+          "comment": "Simplification Items, Notes, SNP Glue"
+        },
+        {
+          "name": "Development – Service Request SUM to SAP",
+          "pct": 10,
+          "end": "2026-06-12",
+          "revised": "",
+          "status": "G",
+          "comment": "SAP starting process. We expect 3 stops, one for Divestiture Workplace remediation, one for SPAU objects remediation, one for scheduled job."
+        },
+        {
+          "name": "Quality Upgrade Preparations",
+          "pct": 0,
+          "end": "2026-06-23",
+          "revised": "",
+          "status": "G",
+          "comment": ""
+        },
+        {
+          "name": "Quality - Service Request SUM to SAP",
+          "pct": 0,
+          "end": "2026-07-02",
+          "revised": "",
+          "status": "G",
+          "comment": ""
+        },
+        {
+          "name": "Quality UAT Regression Testing",
+          "pct": 0,
+          "end": "2026-08-28",
+          "revised": "",
+          "status": "G",
+          "comment": ""
+        }
       ]
     },
     {
       "name": "Joule Activation",
       "status": "G",
-      "summary": "Joule activated in Dev (pending connection to S/4HANA). Testing and Quality/Prod activation scheduled for Oct 2026. No new updates this period.",
+      "summary": "Joule activated in Dev (pending connection to S/4HANA). Will start work with SAP on July for Dev and Quality S4HANA connection. Testing and Quality/Prod activation scheduled for Oct 2026. ",
       "milestones": [
-        { "name": "Joule Activation in Dev", "pct": 100, "end": "2026-09-18", "revised": "", "status": "G", "comment": "Fully active, just needs connection to S/4HANA." },
-        { "name": "Joule Testing", "pct": 0, "end": "2026-10-02", "revised": "", "status": "G", "comment": "" },
-        { "name": "Joule Activation & Testing in Quality", "pct": 0, "end": "2026-10-16", "revised": "", "status": "G", "comment": "" },
-        { "name": "Joule Activation in Prod", "pct": 0, "end": "2026-10-23", "revised": "", "status": "G", "comment": "" }
+        {
+          "name": "Joule Activation in Dev",
+          "pct": 90,
+          "end": "2026-09-18",
+          "revised": "",
+          "status": "G",
+          "comment": "Creating Services Request to SAP."
+        },
+        {
+          "name": "Joule Testing",
+          "pct": 0,
+          "end": "2026-10-02",
+          "revised": "",
+          "status": "G",
+          "comment": ""
+        },
+        {
+          "name": "Joule Activation & Testing in Quality",
+          "pct": 0,
+          "end": "2026-10-16",
+          "revised": "",
+          "status": "G",
+          "comment": ""
+        },
+        {
+          "name": "Joule Activation in Prod",
+          "pct": 0,
+          "end": "2026-10-23",
+          "revised": "",
+          "status": "G",
+          "comment": ""
+        }
       ]
     },
     {
       "name": "Fiori Business Roles Assignment",
       "status": "G",
-      "summary": "App-to-role mappings complete. 2021 business role assignments 75% done; Treasury role assignments in progress. 2025 assignments and testing to follow.",
+      "summary": "App-to-role mappings complete. Sending file for approval on 06/08.",
       "milestones": [
-        { "name": "Apps Assignment Mappings", "pct": 100, "end": "2026-02-06", "revised": "2026-03-31", "status": "C", "comment": "Provide to Michael B / Michael M this week." },
-        { "name": "Business Roles Assignments 2021", "pct": 75, "end": "2026-05-18", "revised": "", "status": "G", "comment": "Treasury role assignments in progress." },
-        { "name": "Business Roles Assignments 2025", "pct": 0, "end": "2026-05-18", "revised": "", "status": "G", "comment": "" },
-        { "name": "Business Roles Testing", "pct": 0, "end": "2026-08-24", "revised": "", "status": "G", "comment": "" }
+        {
+          "name": "Apps Assignment Mappings",
+          "pct": 100,
+          "end": "2026-02-06",
+          "revised": "2026-03-31",
+          "status": "C",
+          "comment": "Provide to Michael B / Michael M this week."
+        },
+        {
+          "name": "Business Roles Assignments 2021",
+          "pct": 90,
+          "end": "2026-06-08",
+          "revised": "",
+          "status": "G",
+          "comment": "Treasury role assignments in progress."
+        },
+        {
+          "name": "Business Roles Assignments 2025",
+          "pct": 0,
+          "end": "2026-05-18",
+          "revised": "",
+          "status": "G",
+          "comment": ""
+        },
+        {
+          "name": "Business Roles Testing",
+          "pct": 0,
+          "end": "2026-08-24",
+          "revised": "",
+          "status": "G",
+          "comment": ""
+        }
       ]
     },
     {
       "name": "Fiori Apps Activation",
       "status": "G",
-      "summary": "2021 catalogues identified; custom catalogues built (areas 1–4 of 7 activated). New 2025 catalogues to be created post Dev upgrade.",
+      "summary": "Will start 2025 applications activation after Dev upgrade. Starting on 06/15.",
       "milestones": [
-        { "name": "Identify All Catalogues", "pct": 100, "end": "2026-02-13", "revised": "", "status": "C", "comment": "For the 2021 version. New ones from 2025 added after Dev upgrade." },
-        { "name": "Create Custom Catalogues (Existing Version)", "pct": 100, "end": "2026-05-18", "revised": "", "status": "C", "comment": "7 areas. 1 through 4 activated." },
-        { "name": "Create Custom Catalogues Post Go-live 2025", "pct": 0, "end": "2026-08-03", "revised": "", "status": "G", "comment": "" }
+        {
+          "name": "Identify All Catalogues",
+          "pct": 100,
+          "end": "2026-02-13",
+          "revised": "",
+          "status": "C",
+          "comment": "For the 2021 version. New ones from 2025 added after Dev upgrade."
+        },
+        {
+          "name": "Create Custom Catalogues (Existing Version)",
+          "pct": 100,
+          "end": "2026-05-18",
+          "revised": "",
+          "status": "C",
+          "comment": "7 areas. 1 through 4 activated."
+        },
+        {
+          "name": "Create Custom Catalogues Post Go-live 2025",
+          "pct": 0,
+          "end": "2026-08-03",
+          "revised": "",
+          "status": "G",
+          "comment": ""
+        }
       ]
     },
     {
@@ -73,68 +280,353 @@
       "status": "G",
       "summary": "Fiori / Joule / new-functionality trainings to be scheduled for Oct 2026 and delivered through Q1 2027.",
       "milestones": [
-        { "name": "Schedule Trainings", "pct": 0, "end": "2026-10-05", "revised": "", "status": "G", "comment": "" },
-        { "name": "Trainings", "pct": 0, "end": "2027-03-01", "revised": "", "status": "G", "comment": "" }
+        {
+          "name": "Schedule Trainings",
+          "pct": 0,
+          "end": "2026-10-05",
+          "revised": "",
+          "status": "G",
+          "comment": ""
+        },
+        {
+          "name": "Trainings",
+          "pct": 0,
+          "end": "2027-03-01",
+          "revised": "",
+          "status": "G",
+          "comment": ""
+        }
       ]
     }
   ],
   "schedule": [
-    { "project": "SAP SSO", "task": "Activate SSO in Dev", "start": "2026-01-12", "end": "2026-01-16", "owner": "Crescent SAP / Crescent IT" },
-    { "project": "SAP SSO", "task": "Test SSO in Dev", "start": "2026-01-19", "end": "2026-01-20", "owner": "Crescent SAP" },
-    { "project": "SAP SSO", "task": "Activate SSO in QA", "start": "2026-01-21", "end": "2026-01-22", "owner": "Crescent SAP" },
-    { "project": "SAP SSO", "task": "Test SSO in Quality", "start": "2026-01-23", "end": "2026-01-23", "owner": "Crescent SAP" },
-    { "project": "SAP SSO", "task": "Go-Live Prod", "start": "2026-01-26", "end": "2026-01-26", "owner": "Crescent SAP" },
-    { "project": "FIORI Activation", "task": "Activate PRA", "start": "2026-01-12", "end": "2026-01-23", "owner": "Crescent SAP" },
-    { "project": "FIORI Activation", "task": "Security Assignment", "start": "2026-01-12", "end": "2026-01-30", "owner": "Crescent SAP" },
-    { "project": "SAP 2025 Upgrade – Sandbox", "task": "Sandbox – Copy", "start": "2026-02-16", "end": "2026-02-27", "owner": "SAP ECS" },
-    { "project": "SAP 2025 Upgrade – Sandbox", "task": "Sandbox – Set Up RUM (Release Upgrade Mgmt)", "start": "2026-03-02", "end": "2026-03-06", "owner": "Crescent SAP" },
-    { "project": "SAP 2025 Upgrade – Sandbox", "task": "Sandbox – Apply Sandbox Notes", "start": "2026-03-02", "end": "2026-03-13", "owner": "SAP ECS (technical) / Crescent SAP (application)" },
-    { "project": "SAP 2025 Upgrade – Sandbox", "task": "Sandbox – Run Maintenance Planner", "start": "2026-03-16", "end": "2026-03-27", "owner": "SAP ECS" },
-    { "project": "SAP 2025 Upgrade – Sandbox", "task": "Sandbox – Validate GUI Compatibility", "start": "2026-03-16", "end": "2026-03-20", "owner": "Crescent SAP" },
-    { "project": "SAP 2025 Upgrade – Sandbox", "task": "Sandbox – Validate FIORI Compatibility", "start": "2026-03-16", "end": "2026-03-20", "owner": "Crescent SAP" },
-    { "project": "SAP 2025 Upgrade – Sandbox", "task": "Sandbox – Run SI-Check (Simplification Item)", "start": "2026-03-23", "end": "2026-04-03", "owner": "Crescent SAP" },
-    { "project": "SAP 2025 Upgrade – Sandbox", "task": "Sandbox – Custom Code Validation / Remediation", "start": "2026-04-06", "end": "2026-04-17", "owner": "Crescent SAP" },
-    { "project": "SAP 2025 Upgrade – Sandbox", "task": "Sandbox – Service Request SUM", "start": "2026-04-20", "end": "2026-04-24", "owner": "SAP ECS" },
-    { "project": "SAP 2025 Upgrade – Sandbox", "task": "Sandbox – Regression Testing / New Functionality", "start": "2026-04-27", "end": "2026-05-22", "owner": "SAP ECS" },
-    { "project": "SAP 2025 Upgrade – Dev/QA/Prod", "task": "Set Up RUM (Release Upgrade Mgmt)", "start": "2026-05-04", "end": "2026-05-08", "owner": "Crescent SAP" },
-    { "project": "SAP 2025 Upgrade – Dev/QA/Prod", "task": "Apply Notes", "start": "2026-05-11", "end": "2026-05-22", "owner": "SAP ECS (technical) / Crescent SAP (application)" },
-    { "project": "SAP 2025 Upgrade – Dev/QA/Prod", "task": "Run Maintenance Planner", "start": "2026-05-25", "end": "2026-06-05", "owner": "SAP ECS" },
-    { "project": "SAP 2025 Upgrade – Dev/QA/Prod", "task": "Validate GUI Compatibility", "start": "2026-05-25", "end": "2026-05-29", "owner": "Crescent SAP" },
-    { "project": "SAP 2025 Upgrade – Dev/QA/Prod", "task": "Validate FIORI Compatibility", "start": "2026-05-25", "end": "2026-05-29", "owner": "Crescent SAP" },
-    { "project": "SAP 2025 Upgrade – Dev/QA/Prod", "task": "Run SI-Check (Simplification Item)", "start": "2026-06-08", "end": "2026-06-19", "owner": "Crescent SAP" },
-    { "project": "SAP 2025 Upgrade – Dev/QA/Prod", "task": "Custom Code Validation", "start": "2026-06-22", "end": "2026-06-26", "owner": "Crescent SAP" },
-    { "project": "SAP 2025 Upgrade – Dev/QA/Prod", "task": "SUM – Dev (account for downtime)", "start": "2026-06-29", "end": "2026-07-03", "owner": "SAP ECS" },
-    { "project": "SAP 2025 Upgrade – Dev/QA/Prod", "task": "Regression Testing – Dev", "start": "2026-07-06", "end": "2026-07-17", "owner": "Crescent SAP" },
-    { "project": "SAP 2025 Upgrade – Dev/QA/Prod", "task": "SUM – QA (account for downtime)", "start": "2026-07-20", "end": "2026-07-24", "owner": "SAP ECS" },
-    { "project": "SAP 2025 Upgrade – Dev/QA/Prod", "task": "Regression Testing – QA", "start": "2026-07-27", "end": "2026-08-28", "owner": "Crescent SAP" },
-    { "project": "SAP 2025 Upgrade – Dev/QA/Prod", "task": "SUM – PROD (account for downtime)", "start": "2026-08-31", "end": "2026-09-04", "owner": "SAP ECS" },
-    { "project": "SAP 2025 Upgrade – Dev/QA/Prod", "task": "GO-LIVE and validations", "start": "2026-09-07", "end": "2026-09-07", "owner": "Crescent SAP / SAP ECS" },
-    { "project": "SAP Joule Activation", "task": "Activate Joule in Dev", "start": "2026-09-14", "end": "2026-09-18", "owner": "Crescent SAP" },
-    { "project": "SAP Joule Activation", "task": "Test Joule in Dev", "start": "2026-09-21", "end": "2026-10-02", "owner": "Crescent SAP" },
-    { "project": "SAP Joule Activation", "task": "Activate Joule in Quality", "start": "2026-10-05", "end": "2026-10-09", "owner": "Crescent SAP" },
-    { "project": "SAP Joule Activation", "task": "Test Joule in Quality", "start": "2026-10-12", "end": "2026-10-16", "owner": "Crescent SAP" },
-    { "project": "SAP Joule Activation", "task": "Joule Go-Live", "start": "2026-10-19", "end": "2026-10-23", "owner": "Crescent SAP" },
-    { "project": "Fiori / Joule / New Functionality Training", "task": "AP", "start": "2026-10-26", "end": "2026-10-30", "owner": "Crescent SAP" },
-    { "project": "Fiori / Joule / New Functionality Training", "task": "Treasury", "start": "2026-10-26", "end": "2026-10-30", "owner": "Crescent SAP" },
-    { "project": "Fiori / Joule / New Functionality Training", "task": "Corporate", "start": "2026-10-26", "end": "2026-10-30", "owner": "Crescent SAP" },
-    { "project": "Fiori / Joule / New Functionality Training", "task": "Property", "start": "2026-11-02", "end": "2026-11-06", "owner": "Crescent SAP" },
-    { "project": "Fiori / Joule / New Functionality Training", "task": "DO", "start": "2026-11-02", "end": "2026-11-06", "owner": "Crescent SAP" },
-    { "project": "ABAP Code Remediation", "task": "Get Approved Objects to Remediate", "start": "2026-12-07", "end": "2026-12-11", "owner": "Crescent SAP" },
-    { "project": "SAP Archiving", "task": "Strategy / Archiving Plan for Objects", "start": "2026-12-07", "end": "2026-12-11", "owner": "Crescent SAP" },
-    { "project": "SAP Archiving", "task": "Method Selection", "start": "2027-01-04", "end": "2027-01-15", "owner": "Crescent SAP" },
-    { "project": "SAP Archiving", "task": "Method Implementation", "start": "2027-01-18", "end": "2027-02-05", "owner": "Crescent SAP" },
-    { "project": "SAP Archiving", "task": "Archiving of Objects", "start": "2027-02-08", "end": "2027-02-26", "owner": "Crescent SAP" }
+    {
+      "project": "SAP SSO",
+      "task": "Activate SSO in Dev",
+      "start": "2026-01-12",
+      "end": "2026-01-16",
+      "owner": "Crescent SAP / Crescent IT"
+    },
+    {
+      "project": "SAP SSO",
+      "task": "Test SSO in Dev",
+      "start": "2026-01-19",
+      "end": "2026-01-20",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP SSO",
+      "task": "Activate SSO in QA",
+      "start": "2026-01-21",
+      "end": "2026-01-22",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP SSO",
+      "task": "Test SSO in Quality",
+      "start": "2026-01-23",
+      "end": "2026-01-23",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP SSO",
+      "task": "Go-Live Prod",
+      "start": "2026-01-26",
+      "end": "2026-01-26",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "FIORI Activation",
+      "task": "Activate PRA",
+      "start": "2026-01-12",
+      "end": "2026-01-23",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "FIORI Activation",
+      "task": "Security Assignment",
+      "start": "2026-01-12",
+      "end": "2026-01-30",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Sandbox",
+      "task": "Sandbox – Copy",
+      "start": "2026-02-16",
+      "end": "2026-02-27",
+      "owner": "SAP ECS"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Sandbox",
+      "task": "Sandbox – Set Up RUM (Release Upgrade Mgmt)",
+      "start": "2026-03-02",
+      "end": "2026-03-06",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Sandbox",
+      "task": "Sandbox – Apply Sandbox Notes",
+      "start": "2026-03-02",
+      "end": "2026-03-13",
+      "owner": "SAP ECS (technical) / Crescent SAP (application)"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Sandbox",
+      "task": "Sandbox – Run Maintenance Planner",
+      "start": "2026-03-16",
+      "end": "2026-03-27",
+      "owner": "SAP ECS"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Sandbox",
+      "task": "Sandbox – Validate GUI Compatibility",
+      "start": "2026-03-16",
+      "end": "2026-03-20",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Sandbox",
+      "task": "Sandbox – Validate FIORI Compatibility",
+      "start": "2026-03-16",
+      "end": "2026-03-20",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Sandbox",
+      "task": "Sandbox – Run SI-Check (Simplification Item)",
+      "start": "2026-03-23",
+      "end": "2026-04-03",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Sandbox",
+      "task": "Sandbox – Custom Code Validation / Remediation",
+      "start": "2026-04-06",
+      "end": "2026-04-17",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Sandbox",
+      "task": "Sandbox – Service Request SUM",
+      "start": "2026-05-12",
+      "end": "2026-05-28",
+      "owner": "SAP ECS"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Sandbox",
+      "task": "Sandbox – Regression Testing / New Functionality",
+      "start": "2026-06-01",
+      "end": "2026-06-05",
+      "owner": "SAP ECS"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Dev/QA/Prod",
+      "task": "Set Up RUM (Release Upgrade Mgmt)",
+      "start": "2026-06-01",
+      "end": "2026-06-05",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Dev/QA/Prod",
+      "task": "Apply Notes",
+      "start": "2026-06-01",
+      "end": "2026-06-05",
+      "owner": "SAP ECS (technical) / Crescent SAP (application)"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Dev/QA/Prod",
+      "task": "Run Maintenance Planner",
+      "start": "2026-06-01",
+      "end": "2026-06-02",
+      "owner": "SAP ECS"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Dev/QA/Prod",
+      "task": "Validate GUI Compatibility",
+      "start": "2026-05-25",
+      "end": "2026-06-05",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Dev/QA/Prod",
+      "task": "Validate FIORI Compatibility",
+      "start": "2026-06-01",
+      "end": "2026-06-05",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Dev/QA/Prod",
+      "task": "Run SI-Check (Simplification Item)",
+      "start": "2026-06-01",
+      "end": "2026-06-05",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Dev/QA/Prod",
+      "task": "Custom Code Validation",
+      "start": "2026-06-01",
+      "end": "2026-06-05",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Dev/QA/Prod",
+      "task": "SUM – Dev (account for downtime)",
+      "start": "2026-06-05",
+      "end": "2026-06-12",
+      "owner": "SAP ECS"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Dev/QA/Prod",
+      "task": "Regression Testing – Dev",
+      "start": "2026-06-15",
+      "end": "2026-06-19",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Dev/QA/Prod",
+      "task": "SUM – QA (account for downtime)",
+      "start": "2026-06-25",
+      "end": "2026-07-02",
+      "owner": "SAP ECS"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Dev/QA/Prod",
+      "task": "Regression Testing – QA",
+      "start": "2026-07-06",
+      "end": "2026-08-28",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Dev/QA/Prod",
+      "task": "SUM – PROD (account for downtime)",
+      "start": "2026-09-04",
+      "end": "2026-09-11",
+      "owner": "SAP ECS"
+    },
+    {
+      "project": "SAP 2025 Upgrade – Dev/QA/Prod",
+      "task": "GO-LIVE and validations",
+      "start": "2026-09-11",
+      "end": "2026-09-13",
+      "owner": "Crescent SAP / SAP ECS"
+    },
+    {
+      "project": "SAP Joule Activation",
+      "task": "Activate Joule in Dev",
+      "start": "2026-09-14",
+      "end": "2026-09-18",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP Joule Activation",
+      "task": "Test Joule in Dev",
+      "start": "2026-09-21",
+      "end": "2026-10-02",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP Joule Activation",
+      "task": "Activate Joule in Quality",
+      "start": "2026-10-05",
+      "end": "2026-10-09",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP Joule Activation",
+      "task": "Test Joule in Quality",
+      "start": "2026-10-12",
+      "end": "2026-10-16",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP Joule Activation",
+      "task": "Joule Go-Live",
+      "start": "2026-10-19",
+      "end": "2026-10-23",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "Fiori / Joule / New Functionality Training",
+      "task": "AP",
+      "start": "2026-10-26",
+      "end": "2026-10-30",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "Fiori / Joule / New Functionality Training",
+      "task": "Treasury",
+      "start": "2026-10-26",
+      "end": "2026-10-30",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "Fiori / Joule / New Functionality Training",
+      "task": "Corporate",
+      "start": "2026-10-26",
+      "end": "2026-10-30",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "Fiori / Joule / New Functionality Training",
+      "task": "Property",
+      "start": "2026-11-02",
+      "end": "2026-11-06",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "Fiori / Joule / New Functionality Training",
+      "task": "DO",
+      "start": "2026-11-02",
+      "end": "2026-11-06",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "ABAP Code Remediation",
+      "task": "Get Approved Objects to Remediate",
+      "start": "2026-12-07",
+      "end": "2026-12-11",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP Archiving",
+      "task": "Strategy / Archiving Plan for Objects",
+      "start": "2026-12-07",
+      "end": "2026-12-11",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP Archiving",
+      "task": "Method Selection",
+      "start": "2027-01-04",
+      "end": "2027-01-15",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP Archiving",
+      "task": "Method Implementation",
+      "start": "2027-01-18",
+      "end": "2027-02-05",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP Archiving",
+      "task": "Archiving of Objects",
+      "start": "2027-02-08",
+      "end": "2027-02-26",
+      "owner": "Crescent SAP"
+    }
   ],
   "risks": [
-    { "title": "SAP may delay the Sandbox SUM upgrade", "workstream": "S/4HANA Upgrade 2025", "impact": "High", "likelihood": "Medium", "status": "Mitigating", "mitigation": "SPAU objects already identified; will confirm to SAP. SUM scheduled to start May 11th and coordinated directly with SAP.", "owner": "Crescent SAP", "due": "2026-05-11" },
-    { "title": "SSO users with residual login issues", "workstream": "SSO – GUI & Fiori", "impact": "Medium", "likelihood": "Medium", "status": "Open", "mitigation": "Work session Monday with SME for affected users (M. Bracamontez, E. Hay, K. Geddie); escalate via SAP case if unresolved.", "owner": "Crescent SAP", "due": "2026-05-11" },
-    { "title": "Hyper-care VPN certificate issue (SSO)", "workstream": "SSO – GUI & Fiori", "impact": "Medium", "likelihood": "Low", "status": "Resolved", "mitigation": "IT resolved the VPN issue with certificates.", "owner": "Crescent IT", "due": "2026-04-24" },
-    { "title": "Go-live conflict with month-end close", "workstream": "SSO – GUI & Fiori", "impact": "Medium", "likelihood": "Low", "status": "Resolved", "mitigation": "SSO Production go-live moved to April 3rd to avoid conflict with month-end close activities.", "owner": "Crescent SAP", "due": "2026-04-03" }
+    {
+      "title": "SSO GUI 3 users causing go-live delay. Case created with SAP",
+      "workstream": "SSO – GUI & Fiori",
+      "impact": "High",
+      "likelihood": "Low",
+      "status": "Mitigating",
+      "mitigation": "Case created with SAP SNC team. Case #735274",
+      "owner": "Crescent IT",
+      "due": "2026-04-24"
+    }
   ],
-  "decisions": [
-    { "title": "Move SSO Production go-live to April 3rd", "date": "2026-02-10", "decidedBy": "Crescent SAP / IT Steering", "workstream": "SSO – GUI & Fiori", "status": "Approved", "summary": "Production cutover moved from February 14th to April 3rd to avoid conflict with month-end close activities and allow additional UAT." },
-    { "title": "Schedule Sandbox SUM upgrade for May 11th", "date": "2026-04-28", "decidedBy": "Crescent SAP / SAP ECS", "workstream": "S/4HANA Upgrade 2025", "status": "Approved", "summary": "Sandbox technical upgrade (SUM) scheduled with SAP ECS to begin May 11th, following completion of sandbox preparation activities." },
-    { "title": "Confirm DS4 Development upgrade for May 29th", "date": "2026-05-01", "decidedBy": "Crescent SAP", "workstream": "S/4HANA Upgrade 2025", "status": "Approved", "summary": "Development system (DS4) upgrade confirmed for May 29th. DS4110, DS4100, and QS4100 refreshes from PS4 to begin syncing environments prior to upgrade." },
-    { "title": "Resolve SSO Hyper-care VPN via certificate refresh", "date": "2026-04-22", "decidedBy": "Crescent IT", "workstream": "SSO – GUI & Fiori", "status": "Approved", "summary": "IT to resolve VPN authentication issues for a small group of SSO hyper-care users by refreshing certificates rather than reconfiguring the VPN client." }
-  ]
+  "decisions": []
 }
