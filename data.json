@@ -443,7 +443,7 @@
     {
       "project": "SAP 2025 Upgrade – Dev/QA/Prod",
       "task": "Validate GUI Compatibility",
-      "start": "2026-05-25",
+      "start": "2026-06-01",
       "end": "2026-06-05",
       "owner": "Crescent SAP"
     },
