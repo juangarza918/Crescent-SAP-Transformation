@@ -257,7 +257,7 @@
   <button class="tab" data-tab="milestones">Milestones</button>
   <button class="tab" data-tab="risks">Risks &amp; Issues</button>
   <button class="tab" data-tab="decisions">Decisions</button>
-  <button class="tab" data-tab="edit">Edit data</button>
+  <button class="tab" data-tab="edit" style="display:none">Edit data</button>
   <div class="toolbar">
     <button class="btn" id="btn-print" title="Print or save as PDF">Print / PDF</button>
     <button class="btn" id="btn-export" title="Download all data as a JSON file">Export</button>
@@ -930,6 +930,15 @@ function refreshAuthUI(){
   }
   const fa=document.getElementById("footer-auth"); if(fa){ fa.textContent = a?("Signed in as "+a.login+" · click Publish in the Edit tab to push changes live"):"Sign in to publish edits online (top-right)"; }
   const sv=document.getElementById("saveok"); if(sv){ sv.textContent = a?("Signed in as "+a.login+" — click Publish to push live"):"Local edits saved — sign in (top-right) to publish to the team"; }
+  // Hide the Edit tab from external viewers; show only when signed in
+  const editTab=document.querySelector('.tab[data-tab="edit"]');
+  if(editTab){
+    editTab.style.display = a ? "" : "none";
+    if(!a && editTab.classList.contains("active")){
+      const ov=document.querySelector('.tab[data-tab="overview"]');
+      if(ov) ov.click();
+    }
+  }
 }
 function b64enc(s){ return btoa(unescape(encodeURIComponent(s))); }
 function b64dec(b){ return decodeURIComponent(escape(atob(b.replace(/\s/g,"")))); }
