@@ -165,6 +165,19 @@
   .toast.success{background:var(--g)}
   .toast.error{background:var(--r)}
   #btn-auth.signed-in{background:var(--gbg);border-color:var(--g);color:#11823b}
+  .history-banner{background:linear-gradient(90deg,#fff7df,#fdecb6);color:#3d2e0a;padding:10px 26px;display:flex;align-items:center;justify-content:space-between;font-size:13px;font-weight:600;border-bottom:1px solid var(--gold2)}
+  .history-banner .ico{font-size:15px;margin-right:6px}
+  .history-banner b{color:#000;font-weight:700}
+  .history-banner button{appearance:none;border:1px solid #b08d3c;background:#fff;color:#3d2e0a;padding:6px 12px;border-radius:7px;font-weight:700;cursor:pointer;font-family:inherit;font-size:12.5px}
+  .history-banner button:hover{background:#fffae6;border-color:#8a6e2c}
+  .history-list{max-height:60vh;overflow-y:auto;border:1px solid var(--line);border-radius:8px;margin-top:6px}
+  .history-row{display:flex;align-items:center;gap:14px;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer}
+  .history-row:last-child{border-bottom:none}
+  .history-row:hover{background:#f4f7fc}
+  .history-row .when{font-weight:700;font-size:13px;color:var(--navy);min-width:170px;flex:none}
+  .history-row .who{font-size:11.5px;color:var(--muted);min-width:120px;flex:none}
+  .history-row .what{flex:1;font-size:13px;color:#33425a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .history-row .tag{font-size:10.5px;font-weight:700;color:#11823b;background:var(--gbg);padding:2px 7px;border-radius:999px;flex:none}
   @media print{
     .tabs,.toolbar,.topbar .overallpill,.savebar,.editsec{display:none!important}
     body{background:#fff}
@@ -186,6 +199,11 @@
   <div class="reportdate">Status as of<br><b id="t-reportdate">—</b></div>
 </div>
 
+<div id="history-banner" class="history-banner" style="display:none">
+  <span><span class="ico">📅</span> Viewing snapshot from <b id="history-banner-when">—</b> &middot; published by <b id="history-banner-who">—</b></span>
+  <button id="history-back">← Back to live</button>
+</div>
+
 <div class="tabs">
   <button class="tab active" data-tab="overview">Overview</button>
   <button class="tab" data-tab="timeline">Timeline</button>
@@ -198,6 +216,7 @@
     <button class="btn" id="btn-export" title="Download all data as a JSON file">Export</button>
     <button class="btn" id="btn-import" title="Load data from a JSON file">Import</button>
     <input type="file" id="file-import" accept="application/json" style="display:none" />
+    <button class="btn" id="btn-history" title="View the dashboard as it was on a previous date">History</button>
     <button class="btn" id="btn-auth" title="Sign in with a GitHub token to publish edits online">Sign in to edit</button>
   </div>
 </div>
@@ -222,6 +241,16 @@
     <div class="modal-actions">
       <button class="btn" id="auth-cancel">Cancel</button>
       <button class="btn primary" id="auth-signin">Sign in</button>
+    </div>
+  </div>
+</div>
+<div id="history-modal" class="modal" style="display:none">
+  <div class="modal-card" style="max-width:680px">
+    <h3>View a previous version of the dashboard</h3>
+    <p>Each row below is a published snapshot. Click any row to load that version as a read-only view. Click <b>← Back to live</b> in the gold banner to return.</p>
+    <div id="history-list" class="history-list">Loading…</div>
+    <div class="modal-actions">
+      <button class="btn" id="history-cancel">Close</button>
     </div>
   </div>
 </div>
@@ -370,7 +399,7 @@ let state = load();
 function clone(o){ return JSON.parse(JSON.stringify(o)); }
 function load(){ try{ const s=localStorage.getItem(KEY); const d=s?JSON.parse(s):clone(DEFAULT_DATA); normalize(d); return d; }catch(e){ return clone(DEFAULT_DATA); } }
 function normalize(d){ if(d && !Array.isArray(d.decisions)) d.decisions=[]; return d; }
-function persist(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
+function persist(){ if(historyMode) return; try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
 
 /* ---------- helpers ---------- */
 const STATUS={ C:{label:"Complete",cls:"s-C"}, G:{label:"On Track",cls:"s-G"}, Y:{label:"At Risk",cls:"s-Y"}, R:{label:"Off Track",cls:"s-R"} };
@@ -557,6 +586,69 @@ function renderRisks(){
     </table></div>`;
 }
 
+/* ---------- snapshot history ---------- */
+let historyMode = null;     // null = live; { sha, when, who } when viewing a snapshot
+let savedLiveState = null;  // backup of live state while viewing a snapshot
+
+async function fetchHistoryList(){
+  const r = await ghApi("/repos/"+REPO_CONFIG.owner+"/"+REPO_CONFIG.repo+"/commits?path="+REPO_CONFIG.dataPath+"&per_page=50");
+  if(!r.ok) throw new Error("History load failed ("+r.status+")");
+  return await r.json();
+}
+function fmtWhen(iso){ const d=new Date(iso); return d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})+" · "+d.toLocaleTimeString("en-US",{hour:"numeric",minute:"2-digit"}); }
+function openHistoryModal(){
+  const list=document.getElementById("history-list");
+  document.getElementById("history-modal").style.display="flex";
+  list.textContent="Loading…";
+  fetchHistoryList().then(function(commits){
+    if(!commits.length){ list.textContent="No history yet."; return; }
+    list.innerHTML=commits.map(function(c,i){
+      const when=fmtWhen(c.commit.author.date);
+      const who=c.commit.author.name;
+      const what=c.commit.message.split("\n")[0];
+      const tag=i===0?'<span class="tag">CURRENT</span>':'';
+      return '<div class="history-row" data-sha="'+esc(c.sha)+'" data-when="'+esc(when)+'" data-who="'+esc(who)+'">'+
+        '<span class="when">'+esc(when)+'</span>'+
+        '<span class="who">'+esc(who)+'</span>'+
+        '<span class="what">'+esc(what)+'</span>'+tag+'</div>';
+    }).join("");
+  }).catch(function(e){ list.textContent="Error: "+e.message+(loadAuth()?"":"  (Tip: signing in raises the GitHub API rate limit.)"); });
+}
+function closeHistoryModal(){ document.getElementById("history-modal").style.display="none"; }
+
+async function viewSnapshot(sha, when, who){
+  closeHistoryModal();
+  try{
+    const r=await ghApi("/repos/"+REPO_CONFIG.owner+"/"+REPO_CONFIG.repo+"/contents/"+REPO_CONFIG.dataPath+"?ref="+sha);
+    if(!r.ok) throw new Error("Snapshot load failed ("+r.status+")");
+    const d=await r.json();
+    const snap=JSON.parse(b64dec(d.content));
+    normalize(snap);
+    if(!historyMode){ savedLiveState=JSON.parse(JSON.stringify(state)); }
+    state=snap; historyMode={sha:sha,when:when,who:who};
+    document.getElementById("history-banner-when").textContent=when;
+    document.getElementById("history-banner-who").textContent=who;
+    document.getElementById("history-banner").style.display="flex";
+    renderAll();
+    document.querySelector('.tab[data-tab="overview"]').click();
+    toast("Viewing snapshot — click ← Back to live to return","success");
+  }catch(e){ toast(e.message,"error"); }
+}
+function backToLive(){
+  if(savedLiveState){ state=savedLiveState; savedLiveState=null; }
+  historyMode=null;
+  document.getElementById("history-banner").style.display="none";
+  renderAll();
+  toast("Back to live","success");
+}
+document.getElementById("btn-history").addEventListener("click",openHistoryModal);
+document.getElementById("history-cancel").addEventListener("click",closeHistoryModal);
+document.getElementById("history-back").addEventListener("click",backToLive);
+document.getElementById("history-list").addEventListener("click",function(e){
+  const row=e.target.closest(".history-row"); if(!row) return;
+  viewSnapshot(row.dataset.sha,row.dataset.when,row.dataset.who);
+});
+
 /* ---------- decisions ---------- */
 function decisionStatusClass(s){ return s==="Approved"?"s-G":(s==="Pending"?"s-Y":(s==="Reversed"?"s-R":"s-C")); }
 function renderDecisions(){
@@ -581,6 +673,10 @@ function statusOptions(v){ return ["C","G","Y","R"].map(k=>`<option value="${k}"
 function selOptions(list,v){ return list.map(k=>`<option value="${k}" ${v===k?"selected":""}>${k}</option>`).join(""); }
 
 function renderEdit(){
+  if(historyMode){
+    document.getElementById("view-edit").innerHTML=`<div class="edit-intro" style="text-align:center;padding:40px 20px;background:#fff7df;border-color:#e8cc7a;color:#5a4218"><b>📅 You're viewing a snapshot</b> from ${esc(historyMode.when)}.<br><br>Editing is locked while in history view to protect your live data.<br>Click <b>← Back to live</b> in the gold banner above to return to the current data and make edits.</div>`;
+    return;
+  }
   const m=state.meta;
   let html=`<div class="edit-intro"><b>Edit everything here.</b> Changes save automatically in this browser and update every view instantly. Use <b>Export</b> (top right) to download a backup or share the data file; use <b>Import</b> to load it on another machine. Status codes: <b>C</b>=Complete, <b>G</b>=On Track, <b>Y</b>=At Risk, <b>R</b>=Off Track.</div>`;
 
@@ -700,12 +796,14 @@ function blankDecision(){ return {title:"New decision",date:state.meta.reportDat
 
 const editRoot=document.getElementById("view-edit");
 editRoot.addEventListener("input",e=>{
+  if(historyMode) return;
   const p=e.target.dataset.path; if(!p) return;
   let v=e.target.value; if(e.target.dataset.type==="num"){ v=Math.max(0,Math.min(100,Number(v)||0)); }
   setByPath(state,p,v); persist(); flashSaved();
   renderTop(); renderReadViews();
 });
 editRoot.addEventListener("click",e=>{
+  if(historyMode) return;
   const btn=e.target.closest("[data-act]"); if(!btn) return;
   const parts=btn.dataset.act.split("|"); const act=parts[0];
   if(act==="addWs"){ state.workstreams.push(blankWs()); }
