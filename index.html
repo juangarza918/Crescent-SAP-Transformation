@@ -179,9 +179,10 @@
   .history-row .what{flex:1;font-size:13px;color:#33425a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .history-row .tag{font-size:10.5px;font-weight:700;color:#11823b;background:var(--gbg);padding:2px 7px;border-radius:999px;flex:none}
   @media print{
-    /* hide all interactive chrome */
+    /* hide all interactive chrome and views not wanted in the printed report */
     .tabs, .toolbar, .savebar, .editsec, #auth-modal, #history-modal, #toast,
-    .topbar .overallpill, .footer, #view-edit, #print-all {
+    .topbar .overallpill, .footer, #print-all,
+    #view-edit, #view-timeline, #view-milestones {
       display:none !important;
     }
     body{background:#fff;font-size:12px}
