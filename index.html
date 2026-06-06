@@ -185,8 +185,18 @@
     #view-edit, #view-milestones {
       display:none !important;
     }
+    /* Force the browser to honor background colors so bars, gridlines, and the
+       red status-date line all print, even if "Background graphics" is off. */
+    *, *::before, *::after{
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
     /* Timeline prints on a single landscape page */
     #view-timeline{ page: timeline-page; padding-top:8px !important }
+    /* Darken gridlines & status-date line so they survive the print pipeline */
+    #view-timeline .g-line{ background:#94a3b8 !important; width:1px }
+    #view-timeline .g-asof{ background:#dc2626 !important; width:2px }
+    #view-timeline .g-bar.upcoming{ background:#a4b1c4 !important }
     #view-timeline .legend{ font-size:9px; margin:0 0 4px; gap:12px }
     #view-timeline .ganttscroll{ overflow:hidden; border-radius:4px }
     #view-timeline .gantt{ min-width:0 }
