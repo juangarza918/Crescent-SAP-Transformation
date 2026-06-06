@@ -628,5 +628,14 @@
       "due": "2026-04-24"
     }
   ],
-  "decisions": []
+  "decisions": [
+    {
+      "title": "Go/No-Go SSO Cutover",
+      "date": "2026-06-10",
+      "decidedBy": "Michael Bracamontez",
+      "workstream": "SSO – GUI & Fiori",
+      "status": "Pending",
+      "summary": ""
+    }
+  ]
 }
