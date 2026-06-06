@@ -179,13 +179,39 @@
   .history-row .what{flex:1;font-size:13px;color:#33425a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .history-row .tag{font-size:10.5px;font-weight:700;color:#11823b;background:var(--gbg);padding:2px 7px;border-radius:999px;flex:none}
   @media print{
-    .tabs,.toolbar,.topbar .overallpill,.savebar,.editsec{display:none!important}
-    body{background:#fff}
-    .view{display:none!important}
-    #print-all{display:block!important}
-    .card,.tablecard,.ganttscroll{box-shadow:none;break-inside:avoid}
-    .topbar{box-shadow:none}
+    /* hide all interactive chrome */
+    .tabs, .toolbar, .savebar, .editsec, #auth-modal, #history-modal, #toast,
+    .topbar .overallpill, .footer, #view-edit, #print-all {
+      display:none !important;
+    }
+    body{background:#fff;font-size:12px}
+    .topbar{box-shadow:none;padding:12px 22px}
+    .topbar h1{font-size:18px}
+    /* show every read view, one per page */
+    .view{display:block !important; padding:18px 0 0}
+    .view + .view{page-break-before:always}
+    .wrap{padding:14px 22px}
+    /* cards & tables behave better when paginated */
+    .card, .tablecard, .ganttscroll{box-shadow:none; break-inside:avoid; border-radius:6px}
+    table{break-inside:auto}
+    tr{break-inside:avoid; break-after:auto}
+    thead{display:table-header-group}
+    /* let the Gantt fit a printed page */
+    .ganttscroll{overflow:visible}
+    .gantt{min-width:0}
+    .g-task{font-size:10.5px}
+    .g-month{font-size:9.5px}
+    /* tighter overview blocks */
+    .hero{grid-template-columns:1.4fr 1fr; gap:10px}
+    .kpis{grid-template-columns:repeat(5,1fr); gap:8px}
+    .kpi{padding:10px 12px}
+    .kpi .v{font-size:22px}
+    .ws-grid{grid-template-columns:repeat(2,1fr); gap:10px}
+    .ws{padding:12px 14px}
+    /* history banner stays so snapshot context is preserved on the printout */
+    .history-banner{padding:7px 22px;font-size:11px}
   }
+  @page{ size:A4 portrait; margin:14mm }
 </style>
 </head>
 <body>
@@ -865,12 +891,12 @@ document.getElementById("file-import").addEventListener("change",e=>{
     }catch(err){ alert("Could not import: the file is not a valid dashboard JSON export."); } };
   rd.readAsText(f); e.target.value="";
 });
-document.getElementById("btn-print").addEventListener("click",()=>{ buildPrintAll(); window.print(); });
-
-function buildPrintAll(){
-  let host=document.getElementById("print-all");
-  if(!host){ host=document.createElement("div"); host.id="print-all"; host.style.display="none"; document.querySelector(".wrap").appendChild(host); }
-}
+document.getElementById("btn-print").addEventListener("click",()=>{
+  // Make sure every view's content is up to date before printing (timeline only re-renders when active)
+  renderAll();
+  // Brief defer so layout settles, then print
+  setTimeout(()=>window.print(), 60);
+});
 
 /* ---------- github online edit ---------- */
 function loadAuth(){ try{ const s=localStorage.getItem(PAT_KEY); return s?JSON.parse(s):null; }catch(e){ return null; } }
