@@ -185,24 +185,30 @@
     #view-edit, #view-milestones {
       display:none !important;
     }
-    /* Timeline prints on a single landscape page with compressed rows */
-    #view-timeline{ page: timeline-page; padding-top:10px !important }
-    #view-timeline .legend{ font-size:9px; margin:0 0 4px }
+    /* Timeline prints on a single landscape page */
+    #view-timeline{ page: timeline-page; padding-top:8px !important }
+    #view-timeline .legend{ font-size:9px; margin:0 0 4px; gap:12px }
     #view-timeline .ganttscroll{ overflow:hidden; border-radius:4px }
     #view-timeline .gantt{ min-width:0 }
-    #view-timeline .g-left{ width:148px }
+    /* much wider left column so the long SAP task names are not truncated */
+    #view-timeline .g-left{ width:240px; flex:none }
+    #view-timeline .g-right{ flex:1 }
     #view-timeline .g-head, #view-timeline .g-monthrow{ height:22px }
     #view-timeline .g-head{ font-size:9px; padding:0 8px }
     #view-timeline .g-month{ font-size:8.5px }
     #view-timeline .g-overlay{ top:22px }
-    #view-timeline .g-group, #view-timeline .g-grouptrack{ height:13px }
-    #view-timeline .g-group{ font-size:8.5px; padding:0 6px; letter-spacing:0 }
-    #view-timeline .g-task, #view-timeline .g-track{ height:10.5px }
-    #view-timeline .g-task{ font-size:8.5px; padding:0 6px }
-    #view-timeline .g-task .dates{ display:none }
-    #view-timeline .g-bar{ top:2px; height:6.5px; border-radius:2px }
+    #view-timeline .g-group, #view-timeline .g-grouptrack{ height:14px }
+    #view-timeline .g-group{ font-size:9px; padding:0 8px; letter-spacing:0 }
+    #view-timeline .g-task, #view-timeline .g-track{ height:11.5px }
+    #view-timeline .g-task{ font-size:9px; padding:0 8px; gap:6px }
+    /* restore date range next to each task name */
+    #view-timeline .g-task .dates{ display:inline; font-size:7.5px; color:var(--muted); flex:none }
+    #view-timeline .g-bar{ top:2px; height:7px; border-radius:2px }
     #view-timeline .g-bar.active{ box-shadow:none }
     #view-timeline .g-asof .lbl{ font-size:7.5px; padding:0 2px }
+    /* compress topbar so the Gantt has room to fit without clipping the bottom rows */
+    .topbar{ padding:8px 22px }
+    .topbar h1{ font-size:16px }
     body{background:#fff;font-size:12px}
     .topbar{box-shadow:none;padding:12px 22px}
     .topbar h1{font-size:18px}
