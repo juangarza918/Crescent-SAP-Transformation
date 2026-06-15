@@ -128,6 +128,51 @@
   /* risks */
   .sev{font-weight:700}
   .sev-High{color:var(--r)}.sev-Medium{color:var(--y)}.sev-Low{color:var(--muted)}
+  /* testing */
+  .tt-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+  .tt-toolbar .spacer{flex:1}
+  .tt-bucket-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px}
+  @media(max-width:880px){.tt-bucket-grid{grid-template-columns:1fr}}
+  .tt-bucket{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+  .tt-bucket-head{padding:12px 16px;display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:13px}
+  .tt-bucket-head .count{margin-left:auto;background:rgba(255,255,255,.22);padding:2px 10px;border-radius:999px;font-size:12px}
+  .tt-bucket.overdue .tt-bucket-head{background:linear-gradient(135deg,#b91c1c,#dc2626)}
+  .tt-bucket.thisweek .tt-bucket-head{background:linear-gradient(135deg,#b45309,#e0a106)}
+  .tt-bucket.nextweek .tt-bucket-head{background:linear-gradient(135deg,#1d4ed8,#3a78bd)}
+  .tt-bucket-body{padding:10px;max-height:340px;overflow-y:auto;flex:1}
+  .tt-card{padding:9px 11px;border:1px solid var(--line);border-radius:8px;margin-bottom:8px;cursor:pointer;background:#fff;transition:border-color .12s,box-shadow .12s}
+  .tt-card:last-child{margin-bottom:0}
+  .tt-card:hover{border-color:var(--accent);box-shadow:0 2px 6px rgba(31,95,166,.08)}
+  .tt-card .tt-tx{font-weight:700;font-size:12.5px;color:var(--navy);display:flex;align-items:center;gap:6px;margin-bottom:4px}
+  .tt-card .tt-mod{font-size:9.5px;font-weight:700;padding:1px 6px;border-radius:4px;background:var(--cbg);color:#1d4ed8;flex:none}
+  .tt-card .tt-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:11px;color:var(--muted)}
+  .tt-card .tt-meta b{color:#33425a}
+  .tt-empty{text-align:center;padding:30px 10px;color:var(--muted);font-size:12.5px}
+  .tt-filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+  .tt-filters select, .tt-filters input{padding:6px 8px;font-size:12.5px;border:1px solid var(--line);border-radius:7px;background:#fff;min-width:140px}
+  .tt-filters .clr{appearance:none;border:none;background:transparent;color:var(--muted);cursor:pointer;font-size:11.5px;font-family:inherit;text-decoration:underline}
+  .tt-filters .clr:hover{color:var(--accent)}
+  /* status pills for tests (in addition to s-G/Y/R/C for RAG) */
+  .pill.t-ns{background:#eef1f6;color:#475569}.pill.t-ns .dot{background:#94a3b8}
+  .pill.t-ip{background:#e6edfd;color:#1d4ed8}.pill.t-ip .dot{background:#2563eb}
+  .pill.t-pass{background:#e7f6ec;color:#11823b}.pill.t-pass .dot{background:#16a34a}
+  .pill.t-fail{background:#fbe7e7;color:#b91c1c}.pill.t-fail .dot{background:#dc2626}
+  .pill.t-block{background:#fdf3da;color:#9a6a00}.pill.t-block .dot{background:#e0a106}
+  .pill.t-retest{background:#f3e8ff;color:#7e22ce}.pill.t-retest .dot{background:#a855f7}
+  .tt-row-detail{background:#f7f9fc;border-top:1px solid var(--line);padding:14px 16px}
+  .tt-row-detail .tt-section-title{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+  .tt-row-detail .field{margin-bottom:8px}
+  .tt-mini-list{border:1px solid var(--line);border-radius:7px;background:#fff;padding:6px 6px}
+  .tt-mini-list .tt-mini-row{display:flex;gap:6px;align-items:center;padding:4px 0;border-bottom:1px solid var(--grid)}
+  .tt-mini-list .tt-mini-row:last-child{border-bottom:none}
+  .tt-mini-list input, .tt-mini-list select{padding:4px 6px;font-size:12px}
+  .tt-add-mini{margin-top:6px;font-size:11.5px}
+  /* upload modal */
+  .upload-info{background:#eaf2fc;border:1px solid #cfe0f7;color:#1c3a63;border-radius:8px;padding:10px 12px;margin:10px 0;font-size:12px}
+  .upload-preview{max-height:220px;overflow-y:auto;border:1px solid var(--line);border-radius:7px;margin:10px 0;font-size:11.5px}
+  .upload-preview table{font-size:11.5px}
+  .upload-preview th{font-size:9.5px;padding:5px 8px}
+  .upload-preview td{padding:4px 8px}
   /* edit */
   .edit-intro{background:#eaf2fc;border:1px solid #cfe0f7;color:#1c3a63;border-radius:12px;padding:14px 18px;margin-bottom:18px;font-size:13px}
   .edit-intro b{color:var(--navy)}
@@ -272,6 +317,7 @@
   <button class="tab" data-tab="milestones">Milestones</button>
   <button class="tab" data-tab="risks">Risks &amp; Issues</button>
   <button class="tab" data-tab="decisions">Decisions</button>
+  <button class="tab" data-tab="testing">Testing</button>
   <button class="tab" data-tab="edit" style="display:none">Edit data</button>
   <div class="toolbar">
     <button class="btn" id="btn-print" title="Print or save as PDF">Print / PDF</button>
@@ -289,6 +335,7 @@
   <section class="view" id="view-milestones"></section>
   <section class="view" id="view-risks"></section>
   <section class="view" id="view-decisions"></section>
+  <section class="view" id="view-testing"></section>
   <section class="view" id="view-edit"></section>
   <div class="footer">Crescent SAP Transformation Dashboard &middot; <span id="footer-auth">Sign in to publish edits online</span></div>
 </div>
@@ -453,6 +500,12 @@ const DEFAULT_DATA = {
      summary:"Development system (DS4) upgrade confirmed for May 29th. DS4110, DS4100, and QS4100 refreshes from PS4 to begin syncing environments prior to upgrade."},
     {title:"Resolve SSO Hyper-care VPN via certificate refresh", date:"2026-04-22", decidedBy:"Crescent IT", workstream:"SSO – GUI & Fiori", status:"Approved",
      summary:"IT to resolve VPN authentication issues for a small group of SSO hyper-care users by refreshing certificates rather than reconfiguring the VPN client."}
+  ],
+  tests:[
+    {id:"T-001", transaction:"FB01 - Post G/L Document", module:"FI", scenario:"Post a standard manual journal entry; validate posting key, tax codes, and clearing.", assignee:"Michael Bracamontez", status:"Not Started", dueDate:"2026-07-10", links:[], defects:[], notes:"", lastUpdated:""},
+    {id:"T-002", transaction:"ME21N - Create Purchase Order", module:"MM", scenario:"Create a standard NB purchase order with item-level tax and approval workflow.", assignee:"Erica Hay", status:"Not Started", dueDate:"2026-07-10", links:[], defects:[], notes:"", lastUpdated:""},
+    {id:"T-003", transaction:"VA01 - Create Sales Order", module:"SD", scenario:"Create an OR sales order with pricing procedure, availability check, and delivery dates.", assignee:"Kali Geddie", status:"Not Started", dueDate:"2026-07-13", links:[], defects:[], notes:"", lastUpdated:""},
+    {id:"T-004", transaction:"MIRO - Logistics Invoice Verification", module:"MM", scenario:"Three-way match on PO + GR + invoice; validate vendor open items.", assignee:"Michael Bracamontez", status:"Not Started", dueDate:"2026-07-17", links:[], defects:[], notes:"", lastUpdated:""}
   ]
 };
 
@@ -460,7 +513,18 @@ const DEFAULT_DATA = {
 let state = load();
 function clone(o){ return JSON.parse(JSON.stringify(o)); }
 function load(){ try{ const s=localStorage.getItem(KEY); const d=s?JSON.parse(s):clone(DEFAULT_DATA); normalize(d); return d; }catch(e){ return clone(DEFAULT_DATA); } }
-function normalize(d){ if(d && !Array.isArray(d.decisions)) d.decisions=[]; return d; }
+function normalize(d){
+  if(!d) return d;
+  if(!Array.isArray(d.decisions)) d.decisions=[];
+  if(!Array.isArray(d.tests)) d.tests=[];
+  d.tests.forEach(t=>{
+    if(!Array.isArray(t.links)) t.links=[];
+    if(!Array.isArray(t.defects)) t.defects=[];
+    if(typeof t.notes!=="string") t.notes="";
+    if(typeof t.lastUpdated!=="string") t.lastUpdated="";
+  });
+  return d;
+}
 function persist(){ if(historyMode) return; try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
 
 /* ---------- helpers ---------- */
@@ -729,6 +793,310 @@ function renderDecisions(){
       <tbody>${rows||"<tr><td colspan='5' style='color:var(--muted);text-align:center;padding:24px'>No decisions captured yet. Add some from the Edit data tab.</td></tr>"}</tbody>
     </table></div>`;
 }
+
+/* ---------- testing ---------- */
+const TEST_STATUSES = ["Not Started","In Progress","Passed","Failed","Blocked","Retesting"];
+const TEST_STATUS_CLASS = {"Not Started":"t-ns","In Progress":"t-ip","Passed":"t-pass","Failed":"t-fail","Blocked":"t-block","Retesting":"t-retest"};
+let testingState = { filterModule:"", filterAssignee:"", filterStatus:"", openRowId:null };
+
+function testStatusOptions(v){ return TEST_STATUSES.map(s=>`<option value="${esc(s)}" ${v===s?"selected":""}>${esc(s)}</option>`).join(""); }
+function startOfDay(d){ const x=new Date(d); x.setHours(0,0,0,0); return x; }
+function todayLocal(){ return startOfDay(new Date()); }
+function daysFromToday(iso){ const due=parseD(iso); if(!due) return null; return Math.round((startOfDay(due)-todayLocal())/86400000); }
+function testBucket(t){
+  if(t.status==="Passed"||t.status==="Closed") return null;
+  const days=daysFromToday(t.dueDate); if(days===null) return null;
+  if(days<0) return "overdue";
+  if(days<=6) return "thisweek";
+  if(days<=13) return "nextweek";
+  return null;
+}
+function nextTestId(){
+  let max=0; (state.tests||[]).forEach(t=>{ const m=/^T-(\d+)$/.exec(t.id||""); if(m){ const n=+m[1]; if(n>max) max=n; }});
+  return "T-"+String(max+1).padStart(3,"0");
+}
+function blankTest(){ return {id:nextTestId(), transaction:"New transaction", module:"", scenario:"", assignee:"", status:"Not Started", dueDate:"", links:[], defects:[], notes:"", lastUpdated:todayLocal().toISOString().slice(0,10)}; }
+
+function renderTestDetail(t){
+  const links = t.links.map((l,i)=>`<div class="tt-mini-row">
+    <input data-tt-link="${esc(t.id)}|${i}|label" value="${esc(l.label)}" placeholder="Label" style="flex:0 0 28%">
+    <input data-tt-link="${esc(t.id)}|${i}|url" value="${esc(l.url)}" placeholder="https://..." style="flex:1">
+    <button class="iconbtn" data-act="tt-del-link" data-id="${esc(t.id)}" data-i="${i}" title="Delete link">&times;</button>
+  </div>`).join("") || `<div style="color:var(--muted);font-size:12px;padding:4px">No links yet.</div>`;
+  const defects = t.defects.map((d,i)=>`<div class="tt-mini-row">
+    <input data-tt-defect="${esc(t.id)}|${i}|id" value="${esc(d.id)}" placeholder="ID" style="flex:0 0 16%">
+    <input data-tt-defect="${esc(t.id)}|${i}|title" value="${esc(d.title)}" placeholder="Title" style="flex:1">
+    <select data-tt-defect="${esc(t.id)}|${i}|severity" style="flex:0 0 18%">${selOptions(["High","Medium","Low"],d.severity||"Medium")}</select>
+    <select data-tt-defect="${esc(t.id)}|${i}|status" style="flex:0 0 18%">${selOptions(["Open","Fixed","Closed"],d.status||"Open")}</select>
+    <input data-tt-defect="${esc(t.id)}|${i}|link" value="${esc(d.link)}" placeholder="Link" style="flex:0 0 22%">
+    <button class="iconbtn" data-act="tt-del-defect" data-id="${esc(t.id)}" data-i="${i}" title="Delete defect">&times;</button>
+  </div>`).join("") || `<div style="color:var(--muted);font-size:12px;padding:4px">No defects yet.</div>`;
+  return `<div class="tt-row-detail">
+    <div class="grid2">
+      <div class="field"><label>Transaction</label><input data-tt="${esc(t.id)}|transaction" value="${esc(t.transaction)}"></div>
+      <div class="field"><label>Module</label><input data-tt="${esc(t.id)}|module" value="${esc(t.module)}" list="tt-modules"></div>
+    </div>
+    <div class="field"><label>Scenario / Test description</label><textarea data-tt="${esc(t.id)}|scenario">${esc(t.scenario)}</textarea></div>
+    <div class="grid3">
+      <div class="field"><label>Assignee</label><input data-tt="${esc(t.id)}|assignee" value="${esc(t.assignee)}"></div>
+      <div class="field"><label>Due date</label><input type="date" data-tt="${esc(t.id)}|dueDate" value="${esc(t.dueDate)}"></div>
+      <div class="field"><label>Status</label><select data-tt="${esc(t.id)}|status">${testStatusOptions(t.status)}</select></div>
+    </div>
+    <div class="field"><label>Notes</label><textarea data-tt="${esc(t.id)}|notes">${esc(t.notes)}</textarea></div>
+    <div class="grid2">
+      <div>
+        <div class="tt-section-title">Documentation links (${t.links.length})</div>
+        <div class="tt-mini-list">${links}</div>
+        <button class="btn tt-add-mini" data-act="tt-add-link" data-id="${esc(t.id)}">+ Add link</button>
+      </div>
+      <div>
+        <div class="tt-section-title">Defects (${t.defects.length})</div>
+        <div class="tt-mini-list">${defects}</div>
+        <button class="btn tt-add-mini" data-act="tt-add-defect" data-id="${esc(t.id)}">+ Add defect</button>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;margin-top:14px;justify-content:flex-end">
+      <button class="btn danger" data-act="tt-del" data-id="${esc(t.id)}">Delete this test</button>
+    </div>
+  </div>`;
+}
+
+function renderTesting(){
+  if(!Array.isArray(state.tests)) state.tests=[];
+  const tests = state.tests;
+  const f = testingState;
+  const filtered = tests.filter(t =>
+    (!f.filterModule || t.module===f.filterModule) &&
+    (!f.filterAssignee || t.assignee===f.filterAssignee) &&
+    (!f.filterStatus || t.status===f.filterStatus)
+  );
+  const total = tests.length;
+  const passed = tests.filter(t=>t.status==="Passed").length;
+  const failed = tests.filter(t=>t.status==="Failed" || t.status==="Blocked").length;
+  const inprog = tests.filter(t=>t.status==="In Progress" || t.status==="Retesting").length;
+  const ns     = tests.filter(t=>t.status==="Not Started").length;
+  const buckets = { overdue:[], thisweek:[], nextweek:[] };
+  filtered.forEach(t=>{ const b=testBucket(t); if(b) buckets[b].push(t); });
+  Object.keys(buckets).forEach(k=>buckets[k].sort((a,b)=>(parseD(a.dueDate)||0)-(parseD(b.dueDate)||0)));
+  const modules = [...new Set(tests.map(t=>t.module).filter(Boolean))].sort();
+  const assignees = [...new Set(tests.map(t=>t.assignee).filter(Boolean))].sort();
+
+  function kpi(v,l,barPct,color){
+    return `<div class="card kpi"><div class="v">${v}</div><div class="l">${l}</div>${barPct!=null?`<div class="bar"><span style="width:${barPct}%;background:${color||'var(--accent)'}"></span></div>`:""}</div>`;
+  }
+  const kpis = `<div class="kpis">
+    ${kpi(total, "Total Tests")}
+    ${kpi(passed+"/"+(total||0), "Passed", total?Math.round(passed/total*100):0, "var(--g)")}
+    ${kpi(failed, "Failed / Blocked", total?Math.round(failed/total*100):0, "var(--r)")}
+    ${kpi(inprog, "In Progress", total?Math.round(inprog/total*100):0, "var(--accent)")}
+    ${kpi(ns, "Not Started", total?Math.round(ns/total*100):0, "var(--muted)")}
+  </div>`;
+
+  function bucketHtml(key,label,ico,list){
+    return `<div class="tt-bucket ${key}">
+      <div class="tt-bucket-head"><span>${ico}</span><span>${label}</span><span class="count">${list.length}</span></div>
+      <div class="tt-bucket-body">
+        ${list.length ? list.map(t=>`
+          <div class="tt-card" data-act="tt-jump" data-id="${esc(t.id)}">
+            <div class="tt-tx"><span style="flex:1;overflow:hidden;text-overflow:ellipsis">${esc(t.transaction)}</span><span class="tt-mod">${esc(t.module)||"—"}</span></div>
+            <div class="tt-meta">
+              <span class="pill ${TEST_STATUS_CLASS[t.status]||"t-ns"}"><span class="dot"></span>${esc(t.status)}</span>
+              <span><b>${esc(t.assignee||"Unassigned")}</b></span>
+              <span>${t.dueDate?fmtD(t.dueDate):"—"}</span>
+              ${t.defects.length?`<span style="color:var(--r)"><b>${t.defects.length}</b> defect${t.defects.length>1?"s":""}</span>`:""}
+            </div>
+          </div>`).join("") : `<div class="tt-empty">No tests in this bucket</div>`}
+      </div>
+    </div>`;
+  }
+  const buckets3 = `<div class="tt-bucket-grid">
+    ${bucketHtml("overdue", "Overdue", "🔴", buckets.overdue)}
+    ${bucketHtml("thisweek", "Due this week", "🟡", buckets.thisweek)}
+    ${bucketHtml("nextweek", "Due next week", "🔵", buckets.nextweek)}
+  </div>`;
+
+  const tableRows = filtered.map(t=>{
+    const detail = testingState.openRowId===t.id ? renderTestDetail(t) : "";
+    const cls = TEST_STATUS_CLASS[t.status]||"t-ns";
+    return `<tr class="tt-row" data-id="${esc(t.id)}">
+      <td><b>${esc(t.id)}</b></td>
+      <td><b>${esc(t.transaction)}</b>${t.scenario?`<br><span style="font-size:11px;color:var(--muted)">${esc(t.scenario)}</span>`:""}</td>
+      <td><span class="tt-mod">${esc(t.module)||"—"}</span></td>
+      <td>${esc(t.assignee)||"<span style='color:var(--muted)'>—</span>"}</td>
+      <td><select data-tt-status="${esc(t.id)}" class="pill ${cls}" style="appearance:none;border:1px solid transparent;padding:3px 22px 3px 10px;border-radius:999px;font-weight:700;font-size:11.5px;cursor:pointer">${testStatusOptions(t.status)}</select></td>
+      <td>${t.dueDate?fmtD(t.dueDate):"<span style='color:var(--muted)'>—</span>"}</td>
+      <td class="num"><b style="color:${t.defects.length?'var(--r)':'var(--muted)'}">${t.defects.length}</b></td>
+      <td class="num"><b style="color:${t.links.length?'var(--accent)':'var(--muted)'}">${t.links.length}</b></td>
+      <td>${t.lastUpdated?fmtD(t.lastUpdated):"<span style='color:var(--muted)'>—</span>"}</td>
+      <td><button class="btn" data-act="tt-toggle" data-id="${esc(t.id)}" style="padding:4px 10px;font-size:11px">${testingState.openRowId===t.id?"Close":"Edit"}</button></td>
+    </tr>
+    ${detail?`<tr><td colspan="10" style="padding:0">${detail}</td></tr>`:""}`;
+  }).join("");
+
+  const toolbar = `<div class="tt-toolbar">
+    <h2 style="font-size:16px;color:var(--navy);border-left:3px solid var(--gold);padding-left:10px;margin:0">Regression Testing</h2>
+    <span style="color:var(--muted);font-weight:600;font-size:13px">${filtered.length} of ${total}</span>
+    <span class="spacer"></span>
+    <button class="btn" data-act="tt-template" title="Download a CSV template you can fill in and upload">Download template</button>
+    <button class="btn" data-act="tt-upload" title="Upload a CSV file with your tests">Upload CSV</button>
+    <button class="btn primary" data-act="tt-add">+ Add test</button>
+  </div>`;
+  const filters = `<div class="tt-filters">
+    <select data-tt-filter="filterModule">
+      <option value="">All modules</option>
+      ${modules.map(m=>`<option value="${esc(m)}" ${f.filterModule===m?"selected":""}>${esc(m)}</option>`).join("")}
+    </select>
+    <select data-tt-filter="filterAssignee">
+      <option value="">All assignees</option>
+      ${assignees.map(a=>`<option value="${esc(a)}" ${f.filterAssignee===a?"selected":""}>${esc(a)}</option>`).join("")}
+    </select>
+    <select data-tt-filter="filterStatus">
+      <option value="">All statuses</option>
+      ${TEST_STATUSES.map(s=>`<option value="${esc(s)}" ${f.filterStatus===s?"selected":""}>${esc(s)}</option>`).join("")}
+    </select>
+    ${(f.filterModule||f.filterAssignee||f.filterStatus)?`<button class="clr" data-act="tt-clearfilters">Clear filters</button>`:""}
+  </div>`;
+
+  document.getElementById("view-testing").innerHTML = `
+    <datalist id="tt-modules"><option>FI</option><option>CO</option><option>MM</option><option>SD</option><option>PP</option><option>HR</option><option>WM</option><option>FI-AA</option><option>BW</option><option>CRM</option></datalist>
+    ${toolbar}
+    ${kpis}
+    ${buckets3}
+    ${filters}
+    <div class="tablecard"><table>
+      <thead><tr>
+        <th style="width:6%">ID</th>
+        <th style="width:22%">Transaction / Scenario</th>
+        <th>Module</th>
+        <th>Assignee</th>
+        <th>Status</th>
+        <th>Due</th>
+        <th class="num">Defects</th>
+        <th class="num">Links</th>
+        <th>Updated</th>
+        <th></th>
+      </tr></thead>
+      <tbody>${tableRows || `<tr><td colspan="10" style="text-align:center;padding:30px;color:var(--muted)">No tests yet. Click <b>+ Add test</b> or <b>Upload CSV</b> to get started.</td></tr>`}</tbody>
+    </table></div>`;
+}
+
+// CSV utilities
+function csvTemplate(){
+  return "ID,Transaction,Module,Scenario,Assignee,Status,Due Date,Notes\n" +
+    "T-001,FB01 - Post G/L Document,FI,Post a manual journal entry,Michael B,Not Started,2026-07-10,\n" +
+    "T-002,ME21N - Create Purchase Order,MM,Create a standard NB PO,Erica H,Not Started,2026-07-10,\n";
+}
+function downloadCsv(name, text){
+  const blob=new Blob([text],{type:"text/csv;charset=utf-8"}); const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=name; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(a.href);
+}
+function parseCSV(text){
+  const lines = text.replace(/\r/g,"").split("\n").filter(l=>l.length);
+  if(!lines.length) return [];
+  function parseLine(line){
+    const cells=[]; let cur=""; let inQ=false; let i=0;
+    while(i<line.length){
+      const c=line[i];
+      if(inQ){
+        if(c==='"' && line[i+1]==='"'){ cur+='"'; i+=2; continue; }
+        if(c==='"'){ inQ=false; i++; continue; }
+        cur+=c; i++; continue;
+      }
+      if(c==='"'){ inQ=true; i++; continue; }
+      if(c===','){ cells.push(cur); cur=""; i++; continue; }
+      cur+=c; i++;
+    }
+    cells.push(cur); return cells;
+  }
+  const map = {"id":"id","transaction":"transaction","tx":"transaction","module":"module","mod":"module","scenario":"scenario","description":"scenario","desc":"scenario","assignee":"assignee","owner":"assignee","tester":"assignee","status":"status","due date":"dueDate","duedate":"dueDate","due":"dueDate","notes":"notes","note":"notes","comments":"notes"};
+  const headers = parseLine(lines[0]).map(h=>h.trim().toLowerCase());
+  const keys = headers.map(h=>map[h]||null);
+  const out=[];
+  for(let i=1;i<lines.length;i++){
+    const cells = parseLine(lines[i]);
+    if(cells.every(c=>!c.trim())) continue;
+    const t={id:"",transaction:"",module:"",scenario:"",assignee:"",status:"Not Started",dueDate:"",notes:"",links:[],defects:[],lastUpdated:""};
+    keys.forEach((k,idx)=>{ if(k) t[k]=(cells[idx]||"").trim(); });
+    if(!t.transaction && !t.id) continue;
+    if(t.dueDate){
+      const m=/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})$/.exec(t.dueDate);
+      if(m){ let y=m[3]; if(y.length===2) y="20"+y; t.dueDate=`${y}-${m[1].padStart(2,"0")}-${m[2].padStart(2,"0")}`; }
+    }
+    if(!TEST_STATUSES.includes(t.status)) t.status="Not Started";
+    out.push(t);
+  }
+  return out;
+}
+
+// Hidden file input for CSV upload
+let ttFileInput = document.createElement("input");
+ttFileInput.type="file"; ttFileInput.accept=".csv,.txt"; ttFileInput.style.display="none";
+document.body.appendChild(ttFileInput);
+ttFileInput.addEventListener("change", function(e){
+  const file = e.target.files[0]; if(!file) return;
+  const reader = new FileReader();
+  reader.onload = function(){
+    try{
+      const parsed = parseCSV(String(reader.result));
+      if(!parsed.length){ toast("No rows found in the file.","error"); return; }
+      const ans = confirm(`Found ${parsed.length} test${parsed.length>1?"s":""} in the file.\n\nClick OK to APPEND to your existing tests.\nClick Cancel to keep existing tests unchanged.`);
+      if(!ans){ ttFileInput.value=""; return; }
+      // Assign new IDs to rows without one to avoid clashing
+      const existingIds = new Set(state.tests.map(t=>t.id));
+      parsed.forEach(t=>{
+        if(!t.id || existingIds.has(t.id)){ t.id = nextTestId(); existingIds.add(t.id); state.tests.push(t); }
+        else { existingIds.add(t.id); state.tests.push(t); }
+      });
+      persist(); renderTesting(); renderOverview();
+      toast(`Imported ${parsed.length} test${parsed.length>1?"s":""}. Click ↑ Publish to push live.`,"success");
+    }catch(err){ toast("Upload failed: "+err.message,"error"); }
+    finally{ ttFileInput.value=""; }
+  };
+  reader.readAsText(file);
+});
+
+// Event delegation for the testing view
+const ttRoot = document.getElementById("view-testing");
+function ttFindIdx(id){ return state.tests.findIndex(t=>t.id===id); }
+function ttUpdate(id, key, val){
+  const i=ttFindIdx(id); if(i<0) return;
+  state.tests[i][key]=val; state.tests[i].lastUpdated = todayLocal().toISOString().slice(0,10);
+  persist();
+}
+ttRoot.addEventListener("click", function(e){
+  if(historyMode) return;
+  const btn=e.target.closest("[data-act]"); if(!btn) return;
+  const act=btn.dataset.act; const id=btn.dataset.id; const i=id?ttFindIdx(id):-1;
+  if(act==="tt-add"){ const t=blankTest(); state.tests.push(t); testingState.openRowId=t.id; persist(); renderTesting(); renderOverview(); return; }
+  if(act==="tt-toggle"){ testingState.openRowId = testingState.openRowId===id ? null : id; renderTesting(); return; }
+  if(act==="tt-jump"){ testingState.openRowId = id; renderTesting(); const row=document.querySelector(`#view-testing tr[data-id="${CSS.escape(id)}"]`); if(row) row.scrollIntoView({behavior:"smooth",block:"center"}); return; }
+  if(act==="tt-del"){ if(!confirm("Delete this test? This can't be undone unless you Pull latest.")) return; state.tests.splice(i,1); testingState.openRowId=null; persist(); renderTesting(); renderOverview(); return; }
+  if(act==="tt-add-link"){ state.tests[i].links.push({label:"",url:""}); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); renderTesting(); return; }
+  if(act==="tt-del-link"){ const k=+btn.dataset.i; state.tests[i].links.splice(k,1); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); renderTesting(); return; }
+  if(act==="tt-add-defect"){ state.tests[i].defects.push({id:"",title:"",severity:"Medium",status:"Open",link:""}); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); renderTesting(); return; }
+  if(act==="tt-del-defect"){ const k=+btn.dataset.i; state.tests[i].defects.splice(k,1); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); renderTesting(); return; }
+  if(act==="tt-clearfilters"){ testingState.filterModule=""; testingState.filterAssignee=""; testingState.filterStatus=""; renderTesting(); return; }
+  if(act==="tt-template"){ downloadCsv("regression-testing-template.csv", csvTemplate()); return; }
+  if(act==="tt-upload"){ ttFileInput.click(); return; }
+});
+ttRoot.addEventListener("change", function(e){
+  if(historyMode) return;
+  const el=e.target;
+  // status select on a row
+  const idStatus = el.dataset.ttStatus;
+  if(idStatus){ ttUpdate(idStatus,"status",el.value); renderTesting(); renderOverview(); return; }
+  // filter
+  const fk=el.dataset.ttFilter; if(fk){ testingState[fk]=el.value; renderTesting(); return; }
+});
+ttRoot.addEventListener("input", function(e){
+  if(historyMode) return;
+  const el=e.target;
+  const tt=el.dataset.tt;
+  if(tt){ const [id,key]=tt.split("|"); ttUpdate(id,key,el.value); return; }
+  const tl=el.dataset.ttLink;
+  if(tl){ const [id,i,key]=tl.split("|"); const ix=ttFindIdx(id); if(ix<0) return; state.tests[ix].links[+i][key]=el.value; state.tests[ix].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); return; }
+  const td=el.dataset.ttDefect;
+  if(td){ const [id,i,key]=td.split("|"); const ix=ttFindIdx(id); if(ix<0) return; state.tests[ix].defects[+i][key]=el.value; state.tests[ix].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); return; }
+});
 
 /* ---------- edit ---------- */
 function statusOptions(v){ return ["C","G","Y","R"].map(k=>`<option value="${k}" ${v===k?"selected":""}>${k} – ${STATUS[k].label}</option>`).join(""); }
@@ -1009,8 +1377,8 @@ document.getElementById("auth-signin").addEventListener("click",async function()
 document.getElementById("auth-token").addEventListener("keydown",function(e){ if(e.key==="Enter") document.getElementById("auth-signin").click(); });
 
 /* ---------- render orchestration ---------- */
-function renderReadViews(){ renderOverview(); renderMilestones(); renderRisks(); renderDecisions(); if(document.getElementById("view-timeline").classList.contains("active")) renderTimeline(); }
-function renderAll(){ renderTop(); renderOverview(); renderTimeline(); renderMilestones(); renderRisks(); renderDecisions(); renderEdit(); }
+function renderReadViews(){ renderOverview(); renderMilestones(); renderRisks(); renderDecisions(); renderTesting(); if(document.getElementById("view-timeline").classList.contains("active")) renderTimeline(); }
+function renderAll(){ renderTop(); renderOverview(); renderTimeline(); renderMilestones(); renderRisks(); renderDecisions(); renderTesting(); renderEdit(); }
 
 // Load order: this browser's saved edits win; otherwise published data.json (when hosted); otherwise the built-in baseline.
 async function init(){
