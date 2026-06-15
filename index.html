@@ -937,6 +937,7 @@ function renderTesting(){
     <h2 style="font-size:16px;color:var(--navy);border-left:3px solid var(--gold);padding-left:10px;margin:0">Regression Testing</h2>
     <span style="color:var(--muted);font-weight:600;font-size:13px">${filtered.length} of ${total}</span>
     <span class="spacer"></span>
+    <button class="btn" data-act="tt-export" title="Export the currently filtered tests to Excel (CSV)">⤓ Export to Excel</button>
     <button class="btn" data-act="tt-template" title="Download a CSV template you can fill in and upload">Download template</button>
     <button class="btn" data-act="tt-upload" title="Upload a CSV file with your tests">Upload CSV</button>
     <button class="btn primary" data-act="tt-add">+ Add test</button>
@@ -988,6 +989,38 @@ function csvTemplate(){
 }
 function downloadCsv(name, text){
   const blob=new Blob([text],{type:"text/csv;charset=utf-8"}); const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=name; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(a.href);
+}
+function csvCell(v){ v = v==null?"":String(v); return /[",\n\r]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v; }
+function csvLine(arr){ return arr.map(csvCell).join(","); }
+function ttExportToExcel(){
+  const tests = state.tests || [];
+  const f = testingState;
+  const filtered = tests.filter(t =>
+    (!f.filterModule   || t.module===f.filterModule) &&
+    (!f.filterAssignee || t.assignee===f.filterAssignee) &&
+    (!f.filterStatus   || t.status===f.filterStatus)
+  );
+  if(!filtered.length){ toast("No tests match the current filters — nothing to export.","error"); return; }
+  const fmtDefects = ds => (ds||[]).map(d => `${d.id||"?"} (${d.severity||"-"}/${d.status||"-"})${d.title?": "+d.title:""}${d.link?" ["+d.link+"]":""}`).join(" | ");
+  const fmtLinks   = ls => (ls||[]).map(l => `${l.label||"link"}: ${l.url||""}`).join(" | ");
+  const header = ["ID","Transaction","Module","Scenario","Assignee","Status","Due Date","Last Updated","Notes","Defect Count","Defects","Link Count","Documentation Links"];
+  const rows = [csvLine(header)];
+  filtered.forEach(t => rows.push(csvLine([
+    t.id, t.transaction, t.module, t.scenario, t.assignee, t.status, t.dueDate, t.lastUpdated, t.notes,
+    (t.defects||[]).length, fmtDefects(t.defects),
+    (t.links||[]).length, fmtLinks(t.links)
+  ])));
+  // BOM prefix tells Excel the file is UTF-8 (preserves dashes, accents, etc.)
+  const csv = "﻿" + rows.join("\r\n");
+  const today = todayLocal().toISOString().slice(0,10);
+  const tag = [
+    f.filterModule   && "module-"+f.filterModule,
+    f.filterAssignee && "assignee-"+f.filterAssignee.split(" ").join("_"),
+    f.filterStatus   && "status-"+f.filterStatus.split(" ").join("_"),
+  ].filter(Boolean).join("__");
+  const filename = `regression-tests${tag?"__"+tag:""}__${today}.csv`.replace(/[^a-z0-9._\-]/gi,"_").replace(/^_+|_+$/g,"");
+  downloadCsv(filename, csv);
+  toast(`Exported ${filtered.length} test${filtered.length>1?"s":""} → ${filename}`, "success");
 }
 function parseCSV(text){
   const lines = text.replace(/\r/g,"").split("\n").filter(l=>l.length);
@@ -1077,6 +1110,7 @@ ttRoot.addEventListener("click", function(e){
   if(act==="tt-clearfilters"){ testingState.filterModule=""; testingState.filterAssignee=""; testingState.filterStatus=""; renderTesting(); return; }
   if(act==="tt-template"){ downloadCsv("regression-testing-template.csv", csvTemplate()); return; }
   if(act==="tt-upload"){ ttFileInput.click(); return; }
+  if(act==="tt-export"){ ttExportToExcel(); return; }
 });
 ttRoot.addEventListener("change", function(e){
   if(historyMode) return;
