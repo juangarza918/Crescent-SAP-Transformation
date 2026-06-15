@@ -637,5 +637,59 @@
       "status": "Pending",
       "summary": ""
     }
+  ],
+  "tests": [
+    {
+      "id": "T-001",
+      "transaction": "FB01 - Post G/L Document",
+      "module": "FI",
+      "scenario": "Post a standard manual journal entry; validate posting key, tax codes, and clearing.",
+      "assignee": "Michael Bracamontez",
+      "status": "Not Started",
+      "dueDate": "2026-07-10",
+      "links": [],
+      "defects": [],
+      "notes": "",
+      "lastUpdated": ""
+    },
+    {
+      "id": "T-002",
+      "transaction": "ME21N - Create Purchase Order",
+      "module": "MM",
+      "scenario": "Create a standard NB purchase order with item-level tax and approval workflow.",
+      "assignee": "Erica Hay",
+      "status": "Not Started",
+      "dueDate": "2026-07-10",
+      "links": [],
+      "defects": [],
+      "notes": "",
+      "lastUpdated": ""
+    },
+    {
+      "id": "T-003",
+      "transaction": "VA01 - Create Sales Order",
+      "module": "SD",
+      "scenario": "Create an OR sales order with pricing procedure, availability check, and delivery dates.",
+      "assignee": "Kali Geddie",
+      "status": "Not Started",
+      "dueDate": "2026-07-13",
+      "links": [],
+      "defects": [],
+      "notes": "",
+      "lastUpdated": ""
+    },
+    {
+      "id": "T-004",
+      "transaction": "MIRO - Logistics Invoice Verification",
+      "module": "MM",
+      "scenario": "Three-way match on PO + GR + invoice; validate vendor open items.",
+      "assignee": "Michael Bracamontez",
+      "status": "Not Started",
+      "dueDate": "2026-07-17",
+      "links": [],
+      "defects": [],
+      "notes": "",
+      "lastUpdated": ""
+    }
   ]
 }
