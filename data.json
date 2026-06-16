@@ -1,17 +1,17 @@
 {
   "meta": {
     "projectName": "Crescent SAP Transformation",
-    "reportDate": "2026-06-05",
+    "reportDate": "2026-06-16",
     "overallStatus": "G",
     "goLiveDate": "2026-09-11",
     "goLiveLabel": "S/4HANA 2025 Production Go-Live",
-    "narrative": "Sandbox upgrade and regression testing of core 233 GUI transactions completed and no major issues encountered. Started Dev SUM phase and expecting 5 business days to complete. After 1 week validation, Quality upgrade will start, we were able to move up Quality for additional UAT of both GUI and Fiori. We will have a transport freeze (no changes going into Prod) but will continue with development in Dev and testing in Quality when both are in 2025 version. During this phase there will be a service request to work with SAP on Joule. The SSO issue was moved from IT to SAP, and a case was created and is the main focus this upcoming week. On track to provide Fiori security mappings on  06/08."
+    "narrative": "S/4HANA Upgrade 2025: Development Upgrade Completed Successfully on 06/15. Post SPAU objects (custom coding) steps in progress and to be completed on 06/16.  - Production copy to Quality completed on 06/15, to start pre upgrade steps on 06/18 and completed by 06/23. UAT resources assigned by MM. - Joule Activation: Starting to work SAP on Joule Readiness, getting assigned resource. - Fiori Business Roles Assignment: Sent to MM and MB for review. - SSO – GUI & Fiori: Met with Chase and SAP on 06/12. Having follow up on 06/17 with Microsoft team and SAP."
   },
   "workstreams": [
     {
       "name": "SSO – GUI & Fiori",
       "status": "R",
-      "summary": "- Moved resolution support from IT to SAP. Case was 735274 for SAP SNC and they are running trace. It is still related to certificate setup and SAP providing solution by Tuesday. This is main focus to resolve with SAP next week.",
+      "summary": "- Moved resolution support from IT to SAP. Case was 735274 for SAP SNC and they are running trace. SAP provided feedback that the issue on the Microsoft AD side. Azkar has this as highest priority for his team and has requested Austin and Jeremie to prioritize and have work session on 06/17.",
       "milestones": [
         {
           "name": "SSO – Dev",
@@ -50,7 +50,7 @@
     {
       "name": "S/4HANA Upgrade 2025",
       "status": "G",
-      "summary": "- Sandbox Regression Testing of 233 transactions was completed, with minor remediations resolved. JIB PPAs and Equity Adjustments, Cost Allocations.\n- SAP Development Pre-Requisites completed. (Simplification Check, Notes, SNP Glue deactivation). \n- SAP Development SUM Upgrade started on 06/05.\n",
+      "summary": "- Development System upgrade completed. Post Upgrade steps in progress.\n- Prod copy to Quality for upgrade completed. QS100.\n- SAP Development SUM Upgrade started on 06/05.\n- UAT resources being assigned for Quality.\n",
       "milestones": [
         {
           "name": "Sandbox Copy",
@@ -118,10 +118,10 @@
         },
         {
           "name": "Sandbox – Regression Testing",
-          "pct": 90,
+          "pct": 100,
           "end": "2026-06-19",
           "revised": "",
-          "status": "G",
+          "status": "C",
           "comment": "233 transactions tested. Re running month end close transactions after remediation."
         },
         {
@@ -134,10 +134,10 @@
         },
         {
           "name": "Development – Service Request SUM to SAP",
-          "pct": 10,
+          "pct": 100,
           "end": "2026-06-12",
           "revised": "",
-          "status": "G",
+          "status": "C",
           "comment": "SAP starting process. We expect 3 stops, one for Divestiture Workplace remediation, one for SPAU objects remediation, one for scheduled job."
         },
         {
@@ -169,7 +169,7 @@
     {
       "name": "Joule Activation",
       "status": "G",
-      "summary": "Joule activated in Dev (pending connection to S/4HANA). Will start work with SAP on July for Dev and Quality S4HANA connection. Testing and Quality/Prod activation scheduled for Oct 2026. ",
+      "summary": "Joule activated in Dev (pending connection to S/4HANA). Starting discussions with SAP to get their available Service Request on Joule Readiness for validation on setup.",
       "milestones": [
         {
           "name": "Joule Activation in Dev",
@@ -208,7 +208,7 @@
     {
       "name": "Fiori Business Roles Assignment",
       "status": "G",
-      "summary": "App-to-role mappings complete. Sending file for approval on 06/08.",
+      "summary": "App-to-role mappings complete. File currently being reviewed by MM and providing feedback.",
       "milestones": [
         {
           "name": "Apps Assignment Mappings",
@@ -247,7 +247,7 @@
     {
       "name": "Fiori Apps Activation",
       "status": "G",
-      "summary": "Will start 2025 applications activation after Dev upgrade. Starting on 06/15.",
+      "summary": "Starting Custom Catalogues review to be sent to Security for activation. ",
       "milestones": [
         {
           "name": "Identify All Catalogues",
@@ -278,7 +278,7 @@
     {
       "name": "SAP New Features Trainings",
       "status": "G",
-      "summary": "Fiori / Joule / new-functionality trainings to be scheduled for Oct 2026 and delivered through Q1 2027.",
+      "summary": "No updates. Fiori / Joule / new-functionality trainings to be scheduled for Oct 2026 and delivered through Q1 2027.",
       "milestones": [
         {
           "name": "Schedule Trainings",
@@ -631,7 +631,7 @@
   "decisions": [
     {
       "title": "Go/No-Go SSO Cutover",
-      "date": "2026-06-10",
+      "date": "2026-06-19",
       "decidedBy": "Michael Bracamontez",
       "workstream": "SSO – GUI & Fiori",
       "status": "Pending",
@@ -648,9 +648,17 @@
       "status": "Not Started",
       "dueDate": "2026-07-10",
       "links": [],
-      "defects": [],
+      "defects": [
+        {
+          "id": "",
+          "title": "",
+          "severity": "Medium",
+          "status": "Open",
+          "link": ""
+        }
+      ],
       "notes": "",
-      "lastUpdated": ""
+      "lastUpdated": "2026-06-15"
     },
     {
       "id": "T-002",
@@ -663,7 +671,7 @@
       "links": [],
       "defects": [],
       "notes": "",
-      "lastUpdated": ""
+      "lastUpdated": "2026-06-14"
     },
     {
       "id": "T-003",
