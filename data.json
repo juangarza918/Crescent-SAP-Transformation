@@ -10,8 +10,8 @@
   "workstreams": [
     {
       "name": "SSO – GUI & Fiori",
-      "status": "C",
-      "summary": "SSO GUI issue resolved. Issue on specific resources was due to Microsoft Hello Rollout to SAP/MDM team, that is why it was isolated to the team. Will work with IT for solution to be prepared for Hello rollout.",
+      "status": "G",
+      "summary": "SSO GUI issue resolved. Issue on specific resources was due to Microsoft Hello Rollout to SAP/MDM team, that is why it was isolated to the team. Will work with IT for solution to be prepared for Hello rollout. Cutover next week, coordinate with IT for xml file (SSO file) update on users.",
       "milestones": [
         {
           "name": "SSO – Dev",
