@@ -163,6 +163,22 @@
           "revised": "",
           "status": "G",
           "comment": ""
+        },
+        {
+          "name": "Prod Upgrade Preparations",
+          "pct": 0,
+          "end": "2026-08-28",
+          "revised": "",
+          "status": "G",
+          "comment": ""
+        },
+        {
+          "name": "Prod - Service Request SUM to SAP",
+          "pct": 0,
+          "end": "2026-09-15",
+          "revised": "",
+          "status": "G",
+          "comment": ""
         }
       ]
     },
