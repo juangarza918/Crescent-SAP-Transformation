@@ -10,7 +10,7 @@
   "workstreams": [
     {
       "name": "SSO – GUI & Fiori",
-      "status": "R",
+      "status": "C",
       "summary": "SSO GUI issue resolved. Issue on specific resources was due to Microsoft Hello Rollout to SAP/MDM team, that is why it was isolated to the team. Will work with IT for solution to be prepared for Hello rollout.",
       "milestones": [
         {
@@ -622,7 +622,7 @@
       "workstream": "SSO – GUI & Fiori",
       "impact": "High",
       "likelihood": "Low",
-      "status": "Mitigating",
+      "status": "Resolved",
       "mitigation": "Case created with SAP SNC team. Case #735274",
       "owner": "Crescent IT",
       "due": "2026-04-24"
@@ -634,8 +634,8 @@
       "date": "2026-06-19",
       "decidedBy": "Michael Bracamontez",
       "workstream": "SSO – GUI & Fiori",
-      "status": "Pending",
-      "summary": ""
+      "status": "Approved",
+      "summary": "Approved for next week"
     }
   ],
   "tests": [
