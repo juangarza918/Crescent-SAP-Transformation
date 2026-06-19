@@ -5,13 +5,13 @@
     "overallStatus": "G",
     "goLiveDate": "2026-09-11",
     "goLiveLabel": "S/4HANA 2025 Production Go-Live",
-    "narrative": "S/4HANA Upgrade 2025: Development Upgrade Completed Successfully on 06/15. Post SPAU objects (custom coding) steps in progress and to be completed on 06/16.  - Production copy to Quality completed on 06/15, to start pre upgrade steps on 06/18 and completed by 06/23. UAT resources assigned by MM. - Joule Activation: Starting to work SAP on Joule Readiness, getting assigned resource. - Fiori Business Roles Assignment: Sent to MM and MB for review. - SSO – GUI & Fiori: Met with Chase and SAP on 06/12. Having follow up on 06/17 with Microsoft team and SAP."
+    "narrative": "S/4HANA Upgrade 2025: Post Activities for Dev Upgrade completed. Quality Preparation steps in progress and on target to be completed by 06/19 EOD. Quality Upgrade starting next week on 06/23. - Joule Activation: Meeting with Joule Readiness resource scheduled for 23rd. - Fiori Business Roles Assignment: In review by MM. - SSO – GUI & Fiori: Issue Root Cause identified and fixed. Cutover approved by Michael B for next week, will coordinate communication."
   },
   "workstreams": [
     {
       "name": "SSO – GUI & Fiori",
       "status": "R",
-      "summary": "- Moved resolution support from IT to SAP. Case was 735274 for SAP SNC and they are running trace. SAP provided feedback that the issue on the Microsoft AD side. Azkar has this as highest priority for his team and has requested Austin and Jeremie to prioritize and have work session on 06/17.",
+      "summary": "SSO GUI issue resolved. Issue on specific resources was due to Microsoft Hello Rollout to SAP/MDM team, that is why it was isolated to the team. Will work with IT for solution to be prepared for Hello rollout.",
       "milestones": [
         {
           "name": "SSO – Dev",
@@ -39,10 +39,10 @@
         },
         {
           "name": "SSO – Hyper Care VPN Issue",
-          "pct": 80,
+          "pct": 100,
           "end": "2026-04-24",
           "revised": "2026-06-12",
-          "status": "Y",
+          "status": "C",
           "comment": "Case 735274 was created for SAP SNC team. "
         }
       ]
@@ -50,7 +50,7 @@
     {
       "name": "S/4HANA Upgrade 2025",
       "status": "G",
-      "summary": "- Development System upgrade completed. Post Upgrade steps in progress.\n- Prod copy to Quality for upgrade completed. QS100.\n- SAP Development SUM Upgrade started on 06/05.\n- UAT resources being assigned for Quality.\n",
+      "summary": "- Development Post Upgrade steps completed.\n- Quality pre steps in progress.\n",
       "milestones": [
         {
           "name": "Sandbox Copy",
@@ -142,7 +142,7 @@
         },
         {
           "name": "Quality Upgrade Preparations",
-          "pct": 0,
+          "pct": 90,
           "end": "2026-06-23",
           "revised": "",
           "status": "G",
@@ -169,7 +169,7 @@
     {
       "name": "Joule Activation",
       "status": "G",
-      "summary": "Joule activated in Dev (pending connection to S/4HANA). Starting discussions with SAP to get their available Service Request on Joule Readiness for validation on setup.",
+      "summary": "Joule activated in Dev (pending connection to S/4HANA). Meeting with Joule Readiness resource scheduled on 06/23.",
       "milestones": [
         {
           "name": "Joule Activation in Dev",
@@ -220,10 +220,10 @@
         },
         {
           "name": "Business Roles Assignments 2021",
-          "pct": 90,
+          "pct": 100,
           "end": "2026-06-08",
           "revised": "",
-          "status": "G",
+          "status": "C",
           "comment": "Treasury role assignments in progress."
         },
         {
