@@ -1,17 +1,17 @@
 {
   "meta": {
     "projectName": "Crescent SAP Transformation",
-    "reportDate": "2026-06-16",
+    "reportDate": "2026-06-29",
     "overallStatus": "G",
     "goLiveDate": "2026-09-11",
     "goLiveLabel": "S/4HANA 2025 Production Go-Live",
-    "narrative": "S/4HANA Upgrade 2025: Post Activities for Dev Upgrade completed. Quality Preparation steps in progress and on target to be completed by 06/19 EOD. Quality Upgrade starting next week on 06/23. - Joule Activation: Meeting with Joule Readiness resource scheduled for 23rd. - Fiori Business Roles Assignment: In review by MM. - SSO – GUI & Fiori: Issue Root Cause identified and fixed. Cutover approved by Michael B for next week, will coordinate communication."
+    "narrative": "S/4HANA Upgrade 2025: Missing package in Quality was installed by SAP. Upgrade for Quality environment started and on track to be completed by 07/03. - Joule Activation: Kickoff call with Joule Readiness team. Planning for 4 week engagement for Dev/Quality setup. - Fiori Business Roles Assignment: Finalized <2025 revision. Adding 2025 this week. - SSO – GUI & Fiori: Cutover completed and SSO xml files rolled out to all Crescent Users. SAP downtime will be scheduled next week to deactivate username/password completely."
   },
   "workstreams": [
     {
       "name": "SSO – GUI & Fiori",
-      "status": "G",
-      "summary": "SSO GUI issue resolved. Issue on specific resources was due to Microsoft Hello Rollout to SAP/MDM team, that is why it was isolated to the team. Will work with IT for solution to be prepared for Hello rollout. Cutover next week, coordinate with IT for xml file (SSO file) update on users.",
+      "status": "C",
+      "summary": "SSO GUI issue resolved and cutover completed. Will schedule SAP downtime to deactivate username/password next week.",
       "milestones": [
         {
           "name": "SSO – Dev",
@@ -50,7 +50,7 @@
     {
       "name": "S/4HANA Upgrade 2025",
       "status": "G",
-      "summary": "- Development Post Upgrade steps completed.\n- Quality pre steps in progress.\n",
+      "summary": "- Database upgrade pre-requisite completed.\n- Missing Add On in Quality Installed.\n- Quality Upgrade in Progress.\n",
       "milestones": [
         {
           "name": "Sandbox Copy",
@@ -142,15 +142,15 @@
         },
         {
           "name": "Quality Upgrade Preparations",
-          "pct": 90,
+          "pct": 100,
           "end": "2026-06-23",
           "revised": "",
-          "status": "G",
+          "status": "C",
           "comment": ""
         },
         {
           "name": "Quality - Service Request SUM to SAP",
-          "pct": 0,
+          "pct": 15,
           "end": "2026-07-02",
           "revised": "",
           "status": "G",
@@ -185,7 +185,7 @@
     {
       "name": "Joule Activation",
       "status": "G",
-      "summary": "Joule activated in Dev (pending connection to S/4HANA). Meeting with Joule Readiness resource scheduled on 06/23.",
+      "summary": "Kickoff with Joule Readiness Team. Engagement for next 4 weeks.",
       "milestones": [
         {
           "name": "Joule Activation in Dev",
@@ -224,7 +224,7 @@
     {
       "name": "Fiori Business Roles Assignment",
       "status": "G",
-      "summary": "App-to-role mappings complete. File currently being reviewed by MM and providing feedback.",
+      "summary": "Michael M finalized review. Adding 2025 to roles by 07/10.",
       "milestones": [
         {
           "name": "Apps Assignment Mappings",
@@ -245,7 +245,7 @@
         {
           "name": "Business Roles Assignments 2025",
           "pct": 0,
-          "end": "2026-05-18",
+          "end": "2026-07-16",
           "revised": "",
           "status": "G",
           "comment": ""
@@ -263,7 +263,7 @@
     {
       "name": "Fiori Apps Activation",
       "status": "G",
-      "summary": "Starting Custom Catalogues review to be sent to Security for activation. ",
+      "summary": "Adding 2025 apps/catalogues for Security to activate.",
       "milestones": [
         {
           "name": "Identify All Catalogues",
@@ -663,7 +663,12 @@
       "assignee": "Michael Bracamontez",
       "status": "Not Started",
       "dueDate": "2026-07-10",
-      "links": [],
+      "links": [
+        {
+          "label": "",
+          "url": ""
+        }
+      ],
       "defects": [
         {
           "id": "",
@@ -674,7 +679,7 @@
         }
       ],
       "notes": "",
-      "lastUpdated": "2026-06-15"
+      "lastUpdated": "2026-06-23"
     },
     {
       "id": "T-002",
