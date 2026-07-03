@@ -5,13 +5,13 @@
     "overallStatus": "G",
     "goLiveDate": "2026-09-11",
     "goLiveLabel": "S/4HANA 2025 Production Go-Live",
-    "narrative": "S/4HANA Upgrade 2025: Missing package in Quality was installed by SAP. Upgrade for Quality environment started and on track to be completed by 07/03. - Joule Activation: Kickoff call with Joule Readiness team. Planning for 4 week engagement for Dev/Quality setup. - Fiori Business Roles Assignment: Finalized <2025 revision. Adding 2025 this week. - SSO – GUI & Fiori: Cutover completed and SSO xml files rolled out to all Crescent Users. SAP downtime will be scheduled next week to deactivate username/password completely."
+    "narrative": "S/4HANA Upgrade 2025: Quality Successfully Upgraded. Team starting initial transaction validations before UAT Kickoff on 07/08 with Business, UAT Kickoff was already scheduled - Joule Activation: Call scheduled with SAP technical team on 07/08. - Fiori Business Roles Assignment: Finalized <2025 revision. Adding 2025 this week. "
   },
   "workstreams": [
     {
       "name": "SSO – GUI & Fiori",
       "status": "C",
-      "summary": "SSO GUI issue resolved and cutover completed. Will schedule SAP downtime to deactivate username/password next week.",
+      "summary": "Go-Live Completed.",
       "milestones": [
         {
           "name": "SSO – Dev",
@@ -50,7 +50,7 @@
     {
       "name": "S/4HANA Upgrade 2025",
       "status": "G",
-      "summary": "- Database upgrade pre-requisite completed.\n- Missing Add On in Quality Installed.\n- Quality Upgrade in Progress.\n",
+      "summary": "- QS100 Upgrade completed.\n- Kickoff UAT next week.\n",
       "milestones": [
         {
           "name": "Sandbox Copy",
@@ -150,7 +150,7 @@
         },
         {
           "name": "Quality - Service Request SUM to SAP",
-          "pct": 15,
+          "pct": 100,
           "end": "2026-07-02",
           "revised": "",
           "status": "G",
@@ -185,7 +185,7 @@
     {
       "name": "Joule Activation",
       "status": "G",
-      "summary": "Kickoff with Joule Readiness Team. Engagement for next 4 weeks.",
+      "summary": "Kickoff with Joule Readiness Technical Team. Meeting confirmed for next week 07/08. Engagement for next 4 weeks.",
       "milestones": [
         {
           "name": "Joule Activation in Dev",
@@ -224,7 +224,7 @@
     {
       "name": "Fiori Business Roles Assignment",
       "status": "G",
-      "summary": "Michael M finalized review. Adding 2025 to roles by 07/10.",
+      "summary": "Finalizing 2025 catalogs. SAP Security to start work on roles with Fiori Apps.",
       "milestones": [
         {
           "name": "Apps Assignment Mappings",
@@ -246,7 +246,7 @@
           "name": "Business Roles Assignments 2025",
           "pct": 0,
           "end": "2026-07-16",
-          "revised": "",
+          "revised": "2026-07-03",
           "status": "G",
           "comment": ""
         },
@@ -263,7 +263,7 @@
     {
       "name": "Fiori Apps Activation",
       "status": "G",
-      "summary": "Adding 2025 apps/catalogues for Security to activate.",
+      "summary": "Sending new catalogs to SAP Security team to activate by 07/17.",
       "milestones": [
         {
           "name": "Identify All Catalogues",
@@ -294,7 +294,7 @@
     {
       "name": "SAP New Features Trainings",
       "status": "G",
-      "summary": "No updates. Fiori / Joule / new-functionality trainings to be scheduled for Oct 2026 and delivered through Q1 2027.",
+      "summary": "Start Training schedule to review with Josh/Brian/Michael.",
       "milestones": [
         {
           "name": "Schedule Trainings",
