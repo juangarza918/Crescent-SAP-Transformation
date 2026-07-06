@@ -159,6 +159,17 @@
   .pill.t-fail{background:#fbe7e7;color:#b91c1c}.pill.t-fail .dot{background:#dc2626}
   .pill.t-block{background:#fdf3da;color:#9a6a00}.pill.t-block .dot{background:#e0a106}
   .pill.t-retest{background:#f3e8ff;color:#7e22ce}.pill.t-retest .dot{background:#a855f7}
+  .pill.t-desc{background:#f1f5f9;color:#475569;text-decoration:line-through;text-decoration-color:#94a3b8}.pill.t-desc .dot{background:#64748b}
+  /* Testing view: 6-KPI layout (adds Descoped card) */
+  #view-testing .kpis{grid-template-columns:repeat(6,1fr)}
+  @media(max-width:1200px){#view-testing .kpis{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:620px){#view-testing .kpis{grid-template-columns:repeat(2,1fr)}}
+  /* Sortable column headers */
+  .tt-sortable{cursor:pointer;user-select:none;position:relative;transition:background .12s}
+  .tt-sortable:hover{background:#eef2f8;color:var(--navy)}
+  .tt-sortable.tt-sort-active{color:var(--navy);background:#fff6d9}
+  .tt-sortable .arrow{color:var(--gold);font-weight:900;margin-left:3px}
+  .tt-sortable .arrow.dim{color:#c9d0dc;font-weight:400}
   .tt-row-detail{background:#f7f9fc;border-top:1px solid var(--line);padding:14px 16px}
   .tt-row-detail .tt-section-title{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
   .tt-row-detail .field{margin-bottom:8px}
@@ -795,16 +806,16 @@ function renderDecisions(){
 }
 
 /* ---------- testing ---------- */
-const TEST_STATUSES = ["Not Started","In Progress","Passed","Failed","Blocked","Retesting"];
-const TEST_STATUS_CLASS = {"Not Started":"t-ns","In Progress":"t-ip","Passed":"t-pass","Failed":"t-fail","Blocked":"t-block","Retesting":"t-retest"};
-let testingState = { filterSearch:"", filterModule:"", filterAssignee:"", filterStatus:"", filterDueBucket:"", filterHasDefects:"", filterHasLinks:"", openRowId:null };
+const TEST_STATUSES = ["Not Started","In Progress","Passed","Failed","Blocked","Retesting","Descoped"];
+const TEST_STATUS_CLASS = {"Not Started":"t-ns","In Progress":"t-ip","Passed":"t-pass","Failed":"t-fail","Blocked":"t-block","Retesting":"t-retest","Descoped":"t-desc"};
+let testingState = { filterSearch:"", filterModule:"", filterAssignee:"", filterStatus:"", filterDueBucket:"", filterHasDefects:"", filterHasLinks:"", sortBy:"", sortDir:"asc", openRowId:null };
 
 function testStatusOptions(v){ return TEST_STATUSES.map(s=>`<option value="${esc(s)}" ${v===s?"selected":""}>${esc(s)}</option>`).join(""); }
 function startOfDay(d){ const x=new Date(d); x.setHours(0,0,0,0); return x; }
 function todayLocal(){ return startOfDay(new Date()); }
 function daysFromToday(iso){ const due=parseD(iso); if(!due) return null; return Math.round((startOfDay(due)-todayLocal())/86400000); }
 function testBucket(t){
-  if(t.status==="Passed"||t.status==="Closed") return null;
+  if(t.status==="Passed"||t.status==="Closed"||t.status==="Descoped") return null;
   const days=daysFromToday(t.dueDate); if(days===null) return null;
   if(days<0) return "overdue";
   if(days<=6) return "thisweek";
@@ -901,6 +912,25 @@ function renderTesting(){
   const failed = tests.filter(t=>t.status==="Failed" || t.status==="Blocked").length;
   const inprog = tests.filter(t=>t.status==="In Progress" || t.status==="Retesting").length;
   const ns     = tests.filter(t=>t.status==="Not Started").length;
+  const desc   = tests.filter(t=>t.status==="Descoped").length;
+
+  // Sort the filtered list if a sort column is selected
+  if(testingState.sortBy){
+    const key = testingState.sortBy;
+    const dir = testingState.sortDir==="desc" ? -1 : 1;
+    filtered.sort((a,b)=>{
+      let av, bv;
+      if(key==="defects" || key==="links"){ av=(a[key]||[]).length; bv=(b[key]||[]).length; }
+      else if(key==="dueDate" || key==="lastUpdated"){
+        av = a[key] ? new Date(a[key]).getTime() : (dir===1?Infinity:-Infinity);
+        bv = b[key] ? new Date(b[key]).getTime() : (dir===1?Infinity:-Infinity);
+      } else {
+        av = String(a[key]||"").toLowerCase();
+        bv = String(b[key]||"").toLowerCase();
+      }
+      return av<bv ? -dir : av>bv ? dir : 0;
+    });
+  }
   const buckets = { overdue:[], thisweek:[], nextweek:[] };
   filtered.forEach(t=>{ const b=testBucket(t); if(b) buckets[b].push(t); });
   Object.keys(buckets).forEach(k=>buckets[k].sort((a,b)=>(parseD(a.dueDate)||0)-(parseD(b.dueDate)||0)));
@@ -910,12 +940,18 @@ function renderTesting(){
   function kpi(v,l,barPct,color){
     return `<div class="card kpi"><div class="v">${v}</div><div class="l">${l}</div>${barPct!=null?`<div class="bar"><span style="width:${barPct}%;background:${color||'var(--accent)'}"></span></div>`:""}</div>`;
   }
+  function sortableHeader(key, label, extraStyle, extraCls){
+    const active = testingState.sortBy===key;
+    const arrow = active ? (testingState.sortDir==="desc"?'<span class="arrow">▼</span>':'<span class="arrow">▲</span>') : '<span class="arrow dim">↕</span>';
+    return `<th class="tt-sortable ${active?"tt-sort-active":""} ${extraCls||""}" data-tt-sort="${key}"${extraStyle?` style="${extraStyle}"`:""} title="Click to sort by ${esc(label)}">${esc(label)} ${arrow}</th>`;
+  }
   const kpis = `<div class="kpis">
     ${kpi(total, "Total Tests")}
     ${kpi(passed+"/"+(total||0), "Passed", total?Math.round(passed/total*100):0, "var(--g)")}
     ${kpi(failed, "Failed / Blocked", total?Math.round(failed/total*100):0, "var(--r)")}
     ${kpi(inprog, "In Progress", total?Math.round(inprog/total*100):0, "var(--accent)")}
     ${kpi(ns, "Not Started", total?Math.round(ns/total*100):0, "var(--muted)")}
+    ${kpi(desc, "Descoped", total?Math.round(desc/total*100):0, "#94a3b8")}
   </div>`;
 
   function bucketHtml(key,label,ico,list){
@@ -1012,15 +1048,15 @@ function renderTesting(){
     ${filters}
     <div class="tablecard"><table>
       <thead><tr>
-        <th style="width:6%">ID</th>
-        <th style="width:22%">Transaction / Scenario</th>
-        <th>Module</th>
-        <th>Assignee</th>
-        <th>Status</th>
-        <th>Due</th>
-        <th class="num">Defects</th>
-        <th class="num">Links</th>
-        <th>Updated</th>
+        ${sortableHeader("id","ID","width:6%")}
+        ${sortableHeader("transaction","Transaction / Scenario","width:22%")}
+        ${sortableHeader("module","Module")}
+        ${sortableHeader("assignee","Assignee")}
+        ${sortableHeader("status","Status")}
+        ${sortableHeader("dueDate","Due")}
+        ${sortableHeader("defects","Defects","","num")}
+        ${sortableHeader("links","Links","","num")}
+        ${sortableHeader("lastUpdated","Updated")}
         <th></th>
       </tr></thead>
       <tbody>${tableRows || `<tr><td colspan="10" style="text-align:center;padding:30px;color:var(--muted)">No tests yet. Click <b>+ Add test</b> or <b>Upload CSV</b> to get started.</td></tr>`}</tbody>
@@ -1143,6 +1179,18 @@ function ttUpdate(id, key, val){
 }
 ttRoot.addEventListener("click", function(e){
   if(historyMode) return;
+  // Sortable column header
+  const th = e.target.closest("[data-tt-sort]");
+  if(th){
+    const key = th.dataset.ttSort;
+    if(testingState.sortBy === key){
+      if(testingState.sortDir === "asc"){ testingState.sortDir = "desc"; }
+      else { testingState.sortBy = ""; testingState.sortDir = "asc"; }
+    } else {
+      testingState.sortBy = key; testingState.sortDir = "asc";
+    }
+    renderTesting(); return;
+  }
   const btn=e.target.closest("[data-act]"); if(!btn) return;
   const act=btn.dataset.act; const id=btn.dataset.id; const i=id?ttFindIdx(id):-1;
   if(act==="tt-add"){ const t=blankTest(); state.tests.push(t); testingState.openRowId=t.id; persist(); renderTesting(); renderOverview(); return; }
