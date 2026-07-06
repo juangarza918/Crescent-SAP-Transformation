@@ -797,7 +797,7 @@ function renderDecisions(){
 /* ---------- testing ---------- */
 const TEST_STATUSES = ["Not Started","In Progress","Passed","Failed","Blocked","Retesting"];
 const TEST_STATUS_CLASS = {"Not Started":"t-ns","In Progress":"t-ip","Passed":"t-pass","Failed":"t-fail","Blocked":"t-block","Retesting":"t-retest"};
-let testingState = { filterModule:"", filterAssignee:"", filterStatus:"", openRowId:null };
+let testingState = { filterSearch:"", filterModule:"", filterAssignee:"", filterStatus:"", filterDueBucket:"", filterHasDefects:"", filterHasLinks:"", openRowId:null };
 
 function testStatusOptions(v){ return TEST_STATUSES.map(s=>`<option value="${esc(s)}" ${v===s?"selected":""}>${esc(s)}</option>`).join(""); }
 function startOfDay(d){ const x=new Date(d); x.setHours(0,0,0,0); return x; }
@@ -865,11 +865,37 @@ function renderTesting(){
   if(!Array.isArray(state.tests)) state.tests=[];
   const tests = state.tests;
   const f = testingState;
-  const filtered = tests.filter(t =>
-    (!f.filterModule || t.module===f.filterModule) &&
-    (!f.filterAssignee || t.assignee===f.filterAssignee) &&
-    (!f.filterStatus || t.status===f.filterStatus)
-  );
+  const q = (f.filterSearch||"").trim().toLowerCase();
+  const filtered = tests.filter(t => {
+    if(f.filterModule   && t.module   !== f.filterModule)   return false;
+    if(f.filterAssignee && t.assignee !== f.filterAssignee) return false;
+    if(f.filterStatus   && t.status   !== f.filterStatus)   return false;
+    if(q){
+      const hay = [t.id, t.transaction, t.module, t.scenario, t.assignee, t.notes,
+                   ...(t.defects||[]).map(d=>[d.id,d.title].join(" ")),
+                   ...(t.links||[]).map(l=>[l.label,l.url].join(" "))].join(" ").toLowerCase();
+      if(!hay.includes(q)) return false;
+    }
+    if(f.filterDueBucket){
+      if(f.filterDueBucket==="none"){
+        if(t.dueDate) return false;
+      } else {
+        const days = daysFromToday(t.dueDate);
+        if(days===null) return false;
+        const passed = t.status==="Passed";
+        if(f.filterDueBucket==="overdue"   && (passed || days>=0))              return false;
+        if(f.filterDueBucket==="thisweek"  && (passed || days<0 || days>6))     return false;
+        if(f.filterDueBucket==="nextweek"  && (passed || days<7 || days>13))    return false;
+        if(f.filterDueBucket==="later"     && days<14)                          return false;
+      }
+    }
+    const nd=(t.defects||[]).length, nl=(t.links||[]).length;
+    if(f.filterHasDefects==="yes" && nd===0) return false;
+    if(f.filterHasDefects==="no"  && nd>0)   return false;
+    if(f.filterHasLinks==="yes"   && nl===0) return false;
+    if(f.filterHasLinks==="no"    && nl>0)   return false;
+    return true;
+  });
   const total = tests.length;
   const passed = tests.filter(t=>t.status==="Passed").length;
   const failed = tests.filter(t=>t.status==="Failed" || t.status==="Blocked").length;
@@ -942,20 +968,40 @@ function renderTesting(){
     <button class="btn" data-act="tt-upload" title="Upload a CSV file with your tests">Upload CSV</button>
     <button class="btn primary" data-act="tt-add">+ Add test</button>
   </div>`;
+  const anyFilter = f.filterSearch||f.filterModule||f.filterAssignee||f.filterStatus||f.filterDueBucket||f.filterHasDefects||f.filterHasLinks;
   const filters = `<div class="tt-filters">
-    <select data-tt-filter="filterModule">
+    <input type="search" data-tt-filter="filterSearch" placeholder="🔍 Search ID, transaction, scenario, notes, defects…" value="${esc(f.filterSearch)}" style="min-width:280px;flex:1;max-width:420px">
+    <select data-tt-filter="filterModule" title="Module">
       <option value="">All modules</option>
       ${modules.map(m=>`<option value="${esc(m)}" ${f.filterModule===m?"selected":""}>${esc(m)}</option>`).join("")}
     </select>
-    <select data-tt-filter="filterAssignee">
+    <select data-tt-filter="filterAssignee" title="Assignee">
       <option value="">All assignees</option>
       ${assignees.map(a=>`<option value="${esc(a)}" ${f.filterAssignee===a?"selected":""}>${esc(a)}</option>`).join("")}
     </select>
-    <select data-tt-filter="filterStatus">
+    <select data-tt-filter="filterStatus" title="Status">
       <option value="">All statuses</option>
       ${TEST_STATUSES.map(s=>`<option value="${esc(s)}" ${f.filterStatus===s?"selected":""}>${esc(s)}</option>`).join("")}
     </select>
-    ${(f.filterModule||f.filterAssignee||f.filterStatus)?`<button class="clr" data-act="tt-clearfilters">Clear filters</button>`:""}
+    <select data-tt-filter="filterDueBucket" title="Due date bucket">
+      <option value="">Any due date</option>
+      <option value="overdue"  ${f.filterDueBucket==="overdue"?"selected":""}>Overdue</option>
+      <option value="thisweek" ${f.filterDueBucket==="thisweek"?"selected":""}>Due this week</option>
+      <option value="nextweek" ${f.filterDueBucket==="nextweek"?"selected":""}>Due next week</option>
+      <option value="later"    ${f.filterDueBucket==="later"?"selected":""}>Due later (14+ days)</option>
+      <option value="none"     ${f.filterDueBucket==="none"?"selected":""}>No due date</option>
+    </select>
+    <select data-tt-filter="filterHasDefects" title="Defect presence">
+      <option value="">Any defects</option>
+      <option value="yes" ${f.filterHasDefects==="yes"?"selected":""}>Has defects</option>
+      <option value="no"  ${f.filterHasDefects==="no"?"selected":""}>No defects</option>
+    </select>
+    <select data-tt-filter="filterHasLinks" title="Documentation link presence">
+      <option value="">Any links</option>
+      <option value="yes" ${f.filterHasLinks==="yes"?"selected":""}>Has links</option>
+      <option value="no"  ${f.filterHasLinks==="no"?"selected":""}>No links</option>
+    </select>
+    ${anyFilter?`<button class="clr" data-act="tt-clearfilters">Clear all filters</button>`:""}
   </div>`;
 
   document.getElementById("view-testing").innerHTML = `
@@ -1107,7 +1153,7 @@ ttRoot.addEventListener("click", function(e){
   if(act==="tt-del-link"){ const k=+btn.dataset.i; state.tests[i].links.splice(k,1); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); renderTesting(); return; }
   if(act==="tt-add-defect"){ state.tests[i].defects.push({id:"",title:"",severity:"Medium",status:"Open",link:""}); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); renderTesting(); return; }
   if(act==="tt-del-defect"){ const k=+btn.dataset.i; state.tests[i].defects.splice(k,1); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); renderTesting(); return; }
-  if(act==="tt-clearfilters"){ testingState.filterModule=""; testingState.filterAssignee=""; testingState.filterStatus=""; renderTesting(); return; }
+  if(act==="tt-clearfilters"){ testingState.filterSearch=""; testingState.filterModule=""; testingState.filterAssignee=""; testingState.filterStatus=""; testingState.filterDueBucket=""; testingState.filterHasDefects=""; testingState.filterHasLinks=""; renderTesting(); return; }
   if(act==="tt-template"){ downloadCsv("regression-testing-template.csv", csvTemplate()); return; }
   if(act==="tt-upload"){ ttFileInput.click(); return; }
   if(act==="tt-export"){ ttExportToExcel(); return; }
@@ -1124,6 +1170,15 @@ ttRoot.addEventListener("change", function(e){
 ttRoot.addEventListener("input", function(e){
   if(historyMode) return;
   const el=e.target;
+  // Search-as-you-type: re-render but restore focus + cursor so typing stays smooth
+  if(el.dataset.ttFilter==="filterSearch"){
+    testingState.filterSearch = el.value;
+    const s=el.selectionStart, en=el.selectionEnd;
+    renderTesting();
+    const nu=document.querySelector('[data-tt-filter="filterSearch"]');
+    if(nu){ nu.focus(); try{ nu.setSelectionRange(s,en); }catch(_){} }
+    return;
+  }
   const tt=el.dataset.tt;
   if(tt){ const [id,key]=tt.split("|"); ttUpdate(id,key,el.value); return; }
   const tl=el.dataset.ttLink;
