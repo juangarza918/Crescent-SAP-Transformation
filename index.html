@@ -814,13 +814,23 @@ function testStatusOptions(v){ return TEST_STATUSES.map(s=>`<option value="${esc
 function startOfDay(d){ const x=new Date(d); x.setHours(0,0,0,0); return x; }
 function todayLocal(){ return startOfDay(new Date()); }
 function daysFromToday(iso){ const due=parseD(iso); if(!due) return null; return Math.round((startOfDay(due)-todayLocal())/86400000); }
+function mondayOfWeek(ref){
+  const d=new Date(ref); d.setHours(0,0,0,0);
+  const back=(d.getDay()+6)%7; // Sun=0→6, Mon=1→0, Tue=2→1, ..., Sat=6→5
+  d.setDate(d.getDate()-back);
+  return d;
+}
 function testBucket(t){
   if(t.status==="Passed"||t.status==="Closed"||t.status==="Descoped") return null;
-  const days=daysFromToday(t.dueDate); if(days===null) return null;
-  if(days<0) return "overdue";
-  if(days<=6) return "thisweek";
-  if(days<=13) return "nextweek";
-  return null;
+  const due=parseD(t.dueDate); if(!due) return null;
+  const dueDay=startOfDay(due), today=todayLocal();
+  if(dueDay<today) return "overdue";
+  const wStart=mondayOfWeek(today);
+  const nStart=new Date(wStart); nStart.setDate(wStart.getDate()+7);
+  const aStart=new Date(wStart); aStart.setDate(wStart.getDate()+14);
+  if(dueDay<nStart) return "thisweek"; // today → Sunday of this calendar week
+  if(dueDay<aStart) return "nextweek"; // Mon → Sun of the following calendar week
+  return "later";
 }
 function nextTestId(){
   let max=0; (state.tests||[]).forEach(t=>{ const m=/^T-(\d+)$/.exec(t.id||""); if(m){ const n=+m[1]; if(n>max) max=n; }});
@@ -891,13 +901,7 @@ function renderTesting(){
       if(f.filterDueBucket==="none"){
         if(t.dueDate) return false;
       } else {
-        const days = daysFromToday(t.dueDate);
-        if(days===null) return false;
-        const passed = t.status==="Passed";
-        if(f.filterDueBucket==="overdue"   && (passed || days>=0))              return false;
-        if(f.filterDueBucket==="thisweek"  && (passed || days<0 || days>6))     return false;
-        if(f.filterDueBucket==="nextweek"  && (passed || days<7 || days>13))    return false;
-        if(f.filterDueBucket==="later"     && days<14)                          return false;
+        if(testBucket(t) !== f.filterDueBucket) return false;
       }
     }
     const nd=(t.defects||[]).length, nl=(t.links||[]).length;
@@ -932,7 +936,7 @@ function renderTesting(){
     });
   }
   const buckets = { overdue:[], thisweek:[], nextweek:[] };
-  filtered.forEach(t=>{ const b=testBucket(t); if(b) buckets[b].push(t); });
+  filtered.forEach(t=>{ const b=testBucket(t); if(b && buckets[b]) buckets[b].push(t); });
   Object.keys(buckets).forEach(k=>buckets[k].sort((a,b)=>(parseD(a.dueDate)||0)-(parseD(b.dueDate)||0)));
   const modules = [...new Set(tests.map(t=>t.module).filter(Boolean))].sort();
   const assignees = [...new Set(tests.map(t=>t.assignee).filter(Boolean))].sort();
@@ -1024,7 +1028,7 @@ function renderTesting(){
       <option value="overdue"  ${f.filterDueBucket==="overdue"?"selected":""}>Overdue</option>
       <option value="thisweek" ${f.filterDueBucket==="thisweek"?"selected":""}>Due this week</option>
       <option value="nextweek" ${f.filterDueBucket==="nextweek"?"selected":""}>Due next week</option>
-      <option value="later"    ${f.filterDueBucket==="later"?"selected":""}>Due later (14+ days)</option>
+      <option value="later"    ${f.filterDueBucket==="later"?"selected":""}>Due after next week</option>
       <option value="none"     ${f.filterDueBucket==="none"?"selected":""}>No due date</option>
     </select>
     <select data-tt-filter="filterHasDefects" title="Defect presence">
