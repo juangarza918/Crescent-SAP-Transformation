@@ -1002,7 +1002,9 @@ function renderTesting(){
   const toolbar = `<div class="tt-toolbar">
     <h2 style="font-size:16px;color:var(--navy);border-left:3px solid var(--gold);padding-left:10px;margin:0">Regression Testing</h2>
     <span style="color:var(--muted);font-weight:600;font-size:13px">${filtered.length} of ${total}</span>
+    <span id="tt-save-status" style="font-size:11.5px;font-weight:700"></span>
     <span class="spacer"></span>
+    <button class="btn" data-act="tt-refresh" title="Fetch the latest updates from teammates">🔄 Refresh</button>
     <button class="btn" data-act="tt-export" title="Export the currently filtered tests to Excel (CSV)">⤓ Export to Excel</button>
     <button class="btn" data-act="tt-template" title="Download a CSV template you can fill in and upload">Download template</button>
     <button class="btn" data-act="tt-upload" title="Upload a CSV file with your tests">Upload CSV</button>
@@ -1157,16 +1159,32 @@ ttFileInput.addEventListener("change", function(e){
     try{
       const parsed = parseCSV(String(reader.result));
       if(!parsed.length){ toast("No rows found in the file.","error"); return; }
-      const ans = confirm(`Found ${parsed.length} test${parsed.length>1?"s":""} in the file.\n\nClick OK to APPEND to your existing tests.\nClick Cancel to keep existing tests unchanged.`);
+      // Match by ID: existing IDs → UPDATE, new IDs → ADD
+      const existingById = new Map(state.tests.map(t=>[t.id, t]));
+      let willUpdate=0, willAdd=0;
+      parsed.forEach(row => { if(row.id && existingById.has(row.id)) willUpdate++; else willAdd++; });
+      const parts = [];
+      if(willUpdate) parts.push(`${willUpdate} will UPDATE existing test${willUpdate>1?"s":""} (matched by ID)`);
+      if(willAdd)    parts.push(`${willAdd} will be ADDED as new test${willAdd>1?"s":""}`);
+      const ans = confirm(`Found ${parsed.length} row${parsed.length>1?"s":""} in the file:\n\n• ${parts.join("\n• ")}\n\nClick OK to proceed. On existing tests, only fields with a value in the CSV are overwritten — links, defects, and empty cells are preserved.`);
       if(!ans){ ttFileInput.value=""; return; }
-      // Assign new IDs to rows without one to avoid clashing
-      const existingIds = new Set(state.tests.map(t=>t.id));
-      parsed.forEach(t=>{
-        if(!t.id || existingIds.has(t.id)){ t.id = nextTestId(); existingIds.add(t.id); state.tests.push(t); }
-        else { existingIds.add(t.id); state.tests.push(t); }
+      const today = todayLocal().toISOString().slice(0,10);
+      parsed.forEach(row => {
+        if(row.id && existingById.has(row.id)){
+          const t = existingById.get(row.id);
+          ["transaction","module","scenario","assignee","status","dueDate","notes"].forEach(k => {
+            if(row[k] != null && String(row[k]).trim() !== "") t[k] = row[k];
+          });
+          t.lastUpdated = today;
+        } else {
+          if(!row.id) row.id = nextTestId();
+          row.lastUpdated = today;
+          state.tests.push(row);
+          existingById.set(row.id, row);
+        }
       });
-      persist(); renderTesting(); renderOverview();
-      toast(`Imported ${parsed.length} test${parsed.length>1?"s":""}. Click ↑ Publish to push live.`,"success");
+      persist(); scheduleSaveTests(); renderTesting(); renderOverview();
+      toast(`Imported: ${willUpdate} updated, ${willAdd} added.`,"success");
     }catch(err){ toast("Upload failed: "+err.message,"error"); }
     finally{ ttFileInput.value=""; }
   };
@@ -1179,7 +1197,72 @@ function ttFindIdx(id){ return state.tests.findIndex(t=>t.id===id); }
 function ttUpdate(id, key, val){
   const i=ttFindIdx(id); if(i<0) return;
   state.tests[i][key]=val; state.tests[i].lastUpdated = todayLocal().toISOString().slice(0,10);
-  persist();
+  persist(); scheduleSaveTests();
+}
+
+// --- Auto-save testing changes so every viewer sees them (uses /api/publish-tests) ---
+let saveTestsTimer=null, saveTestsInFlight=false, saveTestsRetry=false;
+let saveTestsStatus="idle"; // idle | pending | saving | saved | error | offline
+function updateSaveStatus(msg){
+  const el=document.getElementById("tt-save-status");
+  if(!el) return;
+  const map = {
+    idle:    ["",""],
+    pending: ["⋯ Pending…",             "color:var(--muted)"],
+    saving:  ["⟳ Saving…",              "color:var(--accent)"],
+    saved:   ["✓ Saved (visible to team)","color:var(--g)"],
+    error:   ["⚠ Save failed",          "color:var(--r)"],
+    offline: ["⚠ Auto-save not wired up (see setup)","color:var(--y)"]
+  };
+  const [txt,style] = map[saveTestsStatus] || ["",""];
+  el.textContent = msg || txt;
+  el.setAttribute("style", "font-size:11.5px;font-weight:700;"+style);
+}
+function scheduleSaveTests(){
+  if(historyMode) return;
+  saveTestsStatus="pending"; updateSaveStatus();
+  if(saveTestsTimer) clearTimeout(saveTestsTimer);
+  saveTestsTimer=setTimeout(saveTestsNow, 1500);
+}
+// Pull the latest tests array so a viewer sees teammate updates
+async function fetchLatestTests(showToast){
+  if(historyMode) return;
+  if(saveTestsStatus==="pending" || saveTestsStatus==="saving") return; // don't stomp local unsaved edits
+  try{
+    // Read from raw.githubusercontent.com — updates within seconds of a commit, no Vercel rebuild lag
+    const r = await fetch("https://raw.githubusercontent.com/"+REPO_CONFIG.owner+"/"+REPO_CONFIG.repo+"/main/"+REPO_CONFIG.dataPath+"?_="+Date.now(), {cache:"no-store"});
+    if(!r.ok) return;
+    const d = await r.json();
+    if(!Array.isArray(d.tests)) return;
+    if(JSON.stringify(d.tests) === JSON.stringify(state.tests)) return;
+    state.tests = d.tests; normalize(state); persist();
+    renderTesting(); renderOverview();
+    if(showToast) toast("Refreshed with latest team updates.","success");
+  }catch(e){/* silent — probably offline */}
+}
+// Poll every 30 sec while the Testing tab is active
+setInterval(()=>{
+  const active = document.getElementById("view-testing");
+  if(active && active.classList.contains("active")) fetchLatestTests(false);
+}, 30000);
+
+async function saveTestsNow(){
+  if(saveTestsInFlight){ saveTestsRetry=true; return; }
+  saveTestsInFlight=true; saveTestsRetry=false;
+  saveTestsStatus="saving"; updateSaveStatus();
+  try{
+    const author = (loadAuth()||{}).login || (localStorage.getItem("crescentSapDisplayName")||"anonymous");
+    const r = await fetch("/api/publish-tests", {
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({tests: state.tests, author})
+    });
+    if(r.status===404){ saveTestsStatus="offline"; updateSaveStatus("⚠ Auto-save endpoint missing — ask admin to add the /api/publish-tests function"); }
+    else if(!r.ok){ const t=await r.text(); saveTestsStatus="error"; updateSaveStatus("⚠ Save failed: "+t.slice(0,80)); }
+    else { saveTestsStatus="saved"; updateSaveStatus(); }
+  }catch(e){ saveTestsStatus="error"; updateSaveStatus("⚠ Save failed: "+e.message); }
+  saveTestsInFlight=false;
+  if(saveTestsRetry){ saveTestsRetry=false; scheduleSaveTests(); }
 }
 ttRoot.addEventListener("click", function(e){
   if(historyMode) return;
@@ -1197,18 +1280,19 @@ ttRoot.addEventListener("click", function(e){
   }
   const btn=e.target.closest("[data-act]"); if(!btn) return;
   const act=btn.dataset.act; const id=btn.dataset.id; const i=id?ttFindIdx(id):-1;
-  if(act==="tt-add"){ const t=blankTest(); state.tests.push(t); testingState.openRowId=t.id; persist(); renderTesting(); renderOverview(); return; }
+  if(act==="tt-add"){ const t=blankTest(); state.tests.push(t); testingState.openRowId=t.id; persist(); scheduleSaveTests(); renderTesting(); renderOverview(); return; }
   if(act==="tt-toggle"){ testingState.openRowId = testingState.openRowId===id ? null : id; renderTesting(); return; }
   if(act==="tt-jump"){ testingState.openRowId = id; renderTesting(); const row=document.querySelector(`#view-testing tr[data-id="${CSS.escape(id)}"]`); if(row) row.scrollIntoView({behavior:"smooth",block:"center"}); return; }
-  if(act==="tt-del"){ if(!confirm("Delete this test? This can't be undone unless you Pull latest.")) return; state.tests.splice(i,1); testingState.openRowId=null; persist(); renderTesting(); renderOverview(); return; }
-  if(act==="tt-add-link"){ state.tests[i].links.push({label:"",url:""}); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); renderTesting(); return; }
-  if(act==="tt-del-link"){ const k=+btn.dataset.i; state.tests[i].links.splice(k,1); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); renderTesting(); return; }
-  if(act==="tt-add-defect"){ state.tests[i].defects.push({id:"",title:"",severity:"Medium",status:"Open",link:""}); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); renderTesting(); return; }
-  if(act==="tt-del-defect"){ const k=+btn.dataset.i; state.tests[i].defects.splice(k,1); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); renderTesting(); return; }
+  if(act==="tt-del"){ if(!confirm("Delete this test? Everyone will lose it once it saves.")) return; state.tests.splice(i,1); testingState.openRowId=null; persist(); scheduleSaveTests(); renderTesting(); renderOverview(); return; }
+  if(act==="tt-add-link"){ state.tests[i].links.push({label:"",url:""}); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); scheduleSaveTests(); renderTesting(); return; }
+  if(act==="tt-del-link"){ const k=+btn.dataset.i; state.tests[i].links.splice(k,1); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); scheduleSaveTests(); renderTesting(); return; }
+  if(act==="tt-add-defect"){ state.tests[i].defects.push({id:"",title:"",severity:"Medium",status:"Open",link:""}); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); scheduleSaveTests(); renderTesting(); return; }
+  if(act==="tt-del-defect"){ const k=+btn.dataset.i; state.tests[i].defects.splice(k,1); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); scheduleSaveTests(); renderTesting(); return; }
   if(act==="tt-clearfilters"){ testingState.filterSearch=""; testingState.filterModule=""; testingState.filterAssignee=""; testingState.filterStatus=""; testingState.filterDueBucket=""; testingState.filterHasDefects=""; testingState.filterHasLinks=""; renderTesting(); return; }
   if(act==="tt-template"){ downloadCsv("regression-testing-template.csv", csvTemplate()); return; }
   if(act==="tt-upload"){ ttFileInput.click(); return; }
   if(act==="tt-export"){ ttExportToExcel(); return; }
+  if(act==="tt-refresh"){ fetchLatestTests(true); return; }
 });
 ttRoot.addEventListener("change", function(e){
   if(historyMode) return;
@@ -1234,9 +1318,9 @@ ttRoot.addEventListener("input", function(e){
   const tt=el.dataset.tt;
   if(tt){ const [id,key]=tt.split("|"); ttUpdate(id,key,el.value); return; }
   const tl=el.dataset.ttLink;
-  if(tl){ const [id,i,key]=tl.split("|"); const ix=ttFindIdx(id); if(ix<0) return; state.tests[ix].links[+i][key]=el.value; state.tests[ix].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); return; }
+  if(tl){ const [id,i,key]=tl.split("|"); const ix=ttFindIdx(id); if(ix<0) return; state.tests[ix].links[+i][key]=el.value; state.tests[ix].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); scheduleSaveTests(); return; }
   const td=el.dataset.ttDefect;
-  if(td){ const [id,i,key]=td.split("|"); const ix=ttFindIdx(id); if(ix<0) return; state.tests[ix].defects[+i][key]=el.value; state.tests[ix].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); return; }
+  if(td){ const [id,i,key]=td.split("|"); const ix=ttFindIdx(id); if(ix<0) return; state.tests[ix].defects[+i][key]=el.value; state.tests[ix].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); scheduleSaveTests(); return; }
 });
 
 /* ---------- edit ---------- */
