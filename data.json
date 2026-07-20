@@ -13495,12 +13495,12 @@
       "module": "Property Accounting",
       "scenario": "Remitter DOI Cross Reference",
       "assignee": "Zach K.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0039",
