@@ -3690,12 +3690,12 @@
       "module": "Corporate Accounting",
       "scenario": "AuC Assignment of Dist. Rule",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0277",
@@ -3703,12 +3703,12 @@
       "module": "Corporate Accounting",
       "scenario": "Transfer Asset under Const.",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0278",
@@ -3716,12 +3716,12 @@
       "module": "Corporate Accounting",
       "scenario": "Reverse Settlement of AuC",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0279",
@@ -3729,12 +3729,12 @@
       "module": "Corporate Accounting",
       "scenario": "Year-End Closing",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0302",
@@ -3742,12 +3742,12 @@
       "module": "Corporate Accounting",
       "scenario": "Edit Worklist",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0324",
@@ -3755,12 +3755,12 @@
       "module": "Corporate Accounting",
       "scenario": "Batch and payment monitor",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0353",
@@ -3768,12 +3768,12 @@
       "module": "Corporate Accounting",
       "scenario": "Settle Projects and Networks",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0354",
@@ -3781,12 +3781,12 @@
       "module": "Corporate Accounting",
       "scenario": "Actual Settlement: Projects/Networks",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0355",
@@ -3794,12 +3794,12 @@
       "module": "Corporate Accounting",
       "scenario": "Period Close for Project Selection",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0359",
@@ -3807,12 +3807,12 @@
       "module": "Corporate Accounting",
       "scenario": "Generate Settmt Rule: Coll.Proc.",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0360",
@@ -3820,12 +3820,12 @@
       "module": "Corporate Accounting",
       "scenario": "Generate Settmt Rule: Indiv.Proc.",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0374",
@@ -3833,12 +3833,12 @@
       "module": "Corporate Accounting",
       "scenario": "Maintain Project Settlement LIs",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0431",
@@ -3846,12 +3846,12 @@
       "module": "Corporate Accounting",
       "scenario": "Clear G/L Account",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0462",
@@ -3859,12 +3859,12 @@
       "module": "Corporate Accounting",
       "scenario": "Acquisition from purchase w. vendor",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0463",
@@ -3872,12 +3872,12 @@
       "module": "Corporate Accounting",
       "scenario": "Asset Retire. frm Sale w/ Customer",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0474",
@@ -3885,12 +3885,12 @@
       "module": "Corporate Accounting",
       "scenario": "Clear G/L Account",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0995",
@@ -3898,12 +3898,12 @@
       "module": "Corporate Accounting",
       "scenario": "Take back FI-AA year-end closing",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1292",
@@ -3911,12 +3911,12 @@
       "module": "Corporate Accounting",
       "scenario": "Overview of job selection",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1293",
@@ -3924,12 +3924,12 @@
       "module": "Corporate Accounting",
       "scenario": "Flexible version of job selection",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1294",
@@ -3937,12 +3937,12 @@
       "module": "Corporate Accounting",
       "scenario": "Job Selection (display only)",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1454",
@@ -3950,12 +3950,12 @@
       "module": "Corporate Accounting",
       "scenario": "Asset Transfer Loader",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1455",
@@ -3963,12 +3963,12 @@
       "module": "Corporate Accounting",
       "scenario": "Asset Retirement Loader",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1482",
@@ -3976,12 +3976,12 @@
       "module": "Corporate Accounting",
       "scenario": "GAAP Depletion Asset",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1483",
@@ -3989,12 +3989,12 @@
       "module": "Corporate Accounting",
       "scenario": "GAAP DEPRECIATION",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1484",
@@ -4002,12 +4002,12 @@
       "module": "Corporate Accounting",
       "scenario": "Production Details",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1485",
@@ -4015,12 +4015,12 @@
       "module": "Corporate Accounting",
       "scenario": "GAAP Depletion Rate",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1486",
@@ -4028,12 +4028,12 @@
       "module": "Corporate Accounting",
       "scenario": "Reserve Details",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1487",
@@ -4041,12 +4041,12 @@
       "module": "Corporate Accounting",
       "scenario": "Upload Reserves and Prod Volumes",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1488",
@@ -4054,12 +4054,12 @@
       "module": "Corporate Accounting",
       "scenario": "Field Cost Center Table",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1233",
@@ -4067,12 +4067,12 @@
       "module": "Reporting",
       "scenario": "Check Lots",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1343",
@@ -4080,12 +4080,12 @@
       "module": "Reporting",
       "scenario": "Output Controller",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0243",
@@ -4093,12 +4093,12 @@
       "module": "Reporting",
       "scenario": "Display Asset Document",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0271",
@@ -4106,12 +4106,12 @@
       "module": "Reporting",
       "scenario": "Assets with errors",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0272",
@@ -4119,12 +4119,12 @@
       "module": "Reporting",
       "scenario": "View Maint. for Deprec. Key Method",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0276",
@@ -4132,12 +4132,12 @@
       "module": "Reporting",
       "scenario": "Display Dist. Rule Allocation",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0284",
@@ -4145,12 +4145,12 @@
       "module": "Reporting",
       "scenario": "Account assignmt Acquisitions",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0308",
@@ -4158,12 +4158,12 @@
       "module": "Reporting",
       "scenario": "Display Asset Master Record",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0312",
@@ -4171,12 +4171,12 @@
       "module": "Reporting",
       "scenario": "Display Group Asset",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0313",
@@ -4184,12 +4184,12 @@
       "module": "Reporting",
       "scenario": "Display Old Asset",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0315",
@@ -4197,12 +4197,12 @@
       "module": "Reporting",
       "scenario": "FI-AA Incomplete Assets",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0316",
@@ -4210,12 +4210,12 @@
       "module": "Reporting",
       "scenario": "Asset Explorer",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0317",
@@ -4223,12 +4223,12 @@
       "module": "Reporting",
       "scenario": "Asset Explorer",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0329",
@@ -4236,12 +4236,12 @@
       "module": "Reporting",
       "scenario": "Display Work Breakdown Structure",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0331",
@@ -4249,12 +4249,12 @@
       "module": "Reporting",
       "scenario": "Display Project Definition",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0333",
@@ -4262,12 +4262,12 @@
       "module": "Reporting",
       "scenario": "Display WBS Element",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0334",
@@ -4275,12 +4275,12 @@
       "module": "Reporting",
       "scenario": "Structure planning",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0335",
@@ -4288,12 +4288,12 @@
       "module": "Reporting",
       "scenario": "Project Builder",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0351",
@@ -4301,12 +4301,12 @@
       "module": "Reporting",
       "scenario": "Project Actual Cost Line Items",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0358",
@@ -4314,12 +4314,12 @@
       "module": "Reporting",
       "scenario": "Display Standard WBS",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0361",
@@ -4327,12 +4327,12 @@
       "module": "Reporting",
       "scenario": "Standard WBS",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0397",
@@ -4340,12 +4340,12 @@
       "module": "Reporting",
       "scenario": "Display log f. mass changes PS",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0398",
@@ -4353,12 +4353,12 @@
       "module": "Reporting",
       "scenario": "Structure Overview",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0412",
@@ -4366,12 +4366,12 @@
       "module": "Reporting",
       "scenario": "Display FI/AA Adjustment Differences",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0414",
@@ -4379,12 +4379,12 @@
       "module": "Reporting",
       "scenario": "G/L: Account Balances",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0423",
@@ -4392,12 +4392,12 @@
       "module": "Reporting",
       "scenario": "G/L: Structured Account Balances",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0464",
@@ -4405,12 +4405,12 @@
       "module": "Reporting",
       "scenario": "Display Balances",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0465",
@@ -4418,12 +4418,12 @@
       "module": "Reporting",
       "scenario": "G/L Account Line Items (New)",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0484",
@@ -4431,12 +4431,12 @@
       "module": "Reporting",
       "scenario": "Display G/L Account Line Items",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0485",
@@ -4444,12 +4444,12 @@
       "module": "Reporting",
       "scenario": "G/L Account Line Item Browser",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0486",
@@ -4457,12 +4457,12 @@
       "module": "Reporting",
       "scenario": "G/L Account Line Items",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0494",
@@ -4470,12 +4470,12 @@
       "module": "Reporting",
       "scenario": "Display Intercompany Document",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1023",
@@ -4483,12 +4483,12 @@
       "module": "Reporting",
       "scenario": "Assignment Plants -> Company Code",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1051",
@@ -4496,12 +4496,12 @@
       "module": "Reporting",
       "scenario": "IMG Activity: SIMG_CFMENUORKAKZS2",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1052",
@@ -4509,12 +4509,12 @@
       "module": "Reporting",
       "scenario": "IMG Activity: SIMG_CFMENUORKEKE40",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1053",
@@ -4522,12 +4522,12 @@
       "module": "Reporting",
       "scenario": "IMG Activity: SIMG_ORKK_SERIE_KZZ2",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1055",
@@ -4535,12 +4535,12 @@
       "module": "Reporting",
       "scenario": "Revaluation",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1056",
@@ -4548,12 +4548,12 @@
       "module": "Reporting",
       "scenario": "Depreciation Posted to Cost Center",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1058",
@@ -4561,12 +4561,12 @@
       "module": "Reporting",
       "scenario": "Asset Acquisitions",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1059",
@@ -4574,12 +4574,12 @@
       "module": "Reporting",
       "scenario": "Asset Balances",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1060",
@@ -4587,12 +4587,12 @@
       "module": "Reporting",
       "scenario": "Asset Balances",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1061",
@@ -4600,12 +4600,12 @@
       "module": "Reporting",
       "scenario": "Asset Balances",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1062",
@@ -4613,12 +4613,12 @@
       "module": "Reporting",
       "scenario": "Asset Balances",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1063",
@@ -4626,12 +4626,12 @@
       "module": "Reporting",
       "scenario": "Asset Balances",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1064",
@@ -4639,12 +4639,12 @@
       "module": "Reporting",
       "scenario": "Asset Balances",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1065",
@@ -4652,12 +4652,12 @@
       "module": "Reporting",
       "scenario": "Asset Balances",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1066",
@@ -4665,12 +4665,12 @@
       "module": "Reporting",
       "scenario": "Asset Balances",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1067",
@@ -4678,12 +4678,12 @@
       "module": "Reporting",
       "scenario": "Asset Balances for Group Assets",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1068",
@@ -4691,12 +4691,12 @@
       "module": "Reporting",
       "scenario": "Physical Inventory List",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1069",
@@ -4704,12 +4704,12 @@
       "module": "Reporting",
       "scenario": "Asset History Sheet",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1070",
@@ -4717,12 +4717,12 @@
       "module": "Reporting",
       "scenario": "Depreciation",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1071",
@@ -4730,12 +4730,12 @@
       "module": "Reporting",
       "scenario": "Depreciation",
       "assignee": "Drew Diaz",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0053",
