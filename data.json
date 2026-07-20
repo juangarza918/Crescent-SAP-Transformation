@@ -13339,12 +13339,12 @@
       "module": "Property Accounting",
       "scenario": "Manual Accounting Document",
       "assignee": "Zach K.",
-      "status": "In Progress",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-17"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0025",
