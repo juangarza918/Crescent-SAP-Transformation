@@ -2616,7 +2616,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0321",
@@ -2629,7 +2629,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0323",
@@ -2637,12 +2637,12 @@
       "module": "Treasury",
       "scenario": "Approve Payments",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-13",
-      "notes": "",
+      "notes": "Need payment file to test",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0416",
@@ -2655,7 +2655,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0424",
@@ -2668,7 +2668,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0425",
@@ -2681,7 +2681,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0426",
@@ -2694,7 +2694,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0429",
@@ -2702,12 +2702,12 @@
       "module": "Treasury",
       "scenario": "Enter G/L Account Posting",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-13",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0432",
@@ -2715,12 +2715,12 @@
       "module": "Treasury",
       "scenario": "Liquidity Forecast - Overview by Transaction Currency",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-13",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0433",
@@ -2728,12 +2728,12 @@
       "module": "Treasury",
       "scenario": "Actual Cash Flow - Trend by Date: EUR",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-13",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0434",
@@ -2741,12 +2741,12 @@
       "module": "Treasury",
       "scenario": "Payment Statistics - In the Last 90 Days",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-13",
-      "notes": "",
+      "notes": "No authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0435",
@@ -2754,12 +2754,12 @@
       "module": "Treasury",
       "scenario": "Post General Journal Entries",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0436",
@@ -2767,12 +2767,12 @@
       "module": "Treasury",
       "scenario": "Cash Flow (Deprecated) - Detailed Analysis",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0439",
@@ -2780,12 +2780,12 @@
       "module": "Treasury",
       "scenario": "Manage Bank Accounts",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0441",
@@ -2793,12 +2793,12 @@
       "module": "Treasury",
       "scenario": "Manage Banks",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0442",
@@ -2806,12 +2806,12 @@
       "module": "Treasury",
       "scenario": "Foreign Bank Account Report",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0443",
@@ -2819,12 +2819,12 @@
       "module": "Treasury",
       "scenario": "Bank Statement Monitor - End of Day",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0448",
@@ -2832,12 +2832,12 @@
       "module": "Treasury",
       "scenario": "Monitor Bank Fees",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0450",
@@ -2845,12 +2845,12 @@
       "module": "Treasury",
       "scenario": "Cash Flow Comparison - By Date Range",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0451",
@@ -2858,12 +2858,12 @@
       "module": "Treasury",
       "scenario": "Bank Statement Monitor - Intraday",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0452",
@@ -2871,12 +2871,12 @@
       "module": "Treasury",
       "scenario": "Bank Account Balance",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0454",
@@ -2884,12 +2884,12 @@
       "module": "Treasury",
       "scenario": "Monitor Bank Account Balances",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0461",
@@ -2902,7 +2902,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0467",
@@ -2910,12 +2910,12 @@
       "module": "Treasury",
       "scenario": "Post Document",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0468",
@@ -2923,12 +2923,12 @@
       "module": "Treasury",
       "scenario": "Change Document",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0470",
@@ -2941,7 +2941,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0471",
@@ -2949,12 +2949,12 @@
       "module": "Treasury",
       "scenario": "Reverse Document",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0472",
@@ -2962,12 +2962,12 @@
       "module": "Treasury",
       "scenario": "Change Line Items",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0475",
@@ -2975,12 +2975,12 @@
       "module": "Treasury",
       "scenario": "Post Tax Payable",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-15",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0476",
@@ -2988,12 +2988,12 @@
       "module": "Treasury",
       "scenario": "G/L Acct Pstg: Single Screen Trans.",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
-      "notes": "",
+      "notes": "Should I have access to post?  Shouldn't this fall under manager role to post?",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0478",
@@ -3006,7 +3006,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0479",
@@ -3019,7 +3019,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0480",
@@ -3032,7 +3032,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0490",
@@ -3040,12 +3040,12 @@
       "module": "Treasury",
       "scenario": "Post Document",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "Should I have access to post?  Shouldn't this fall under manager role to post?",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0492",
@@ -3058,7 +3058,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0496",
@@ -3066,12 +3066,12 @@
       "module": "Treasury",
       "scenario": "Post Parked Document",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "Should not have access to post.  I believe this falls under Manager roles to post.",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0497",
@@ -3079,12 +3079,12 @@
       "module": "Treasury",
       "scenario": "Park Document",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0498",
@@ -3092,12 +3092,12 @@
       "module": "Treasury",
       "scenario": "Change Parked Document",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0500",
@@ -3105,12 +3105,12 @@
       "module": "Treasury",
       "scenario": "Change Parked Document (Header)",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0501",
@@ -3118,12 +3118,12 @@
       "module": "Treasury",
       "scenario": "Document Changes of Parked Documents",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0502",
@@ -3131,12 +3131,12 @@
       "module": "Treasury",
       "scenario": "Parked Document $",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Failed",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "Reject Parked Document - Delete/Reject button greyed out.  Unless this is meant for Manager role.",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0503",
@@ -3144,12 +3144,12 @@
       "module": "Treasury",
       "scenario": "Post Parked Document",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Failed",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "Received error \"Trasaction FBVB not defined for direct call-up\".  Do we need to test?  Instead use FBV0",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0507",
@@ -3157,12 +3157,12 @@
       "module": "Treasury",
       "scenario": "Display Check Information",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Failed",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "No display authorization for 0100",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0512",
@@ -3170,12 +3170,12 @@
       "module": "Treasury",
       "scenario": "Change Check Information/Cash Check",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Failed",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "No authorization for maintaining in company code 0100",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0514",
@@ -3183,12 +3183,12 @@
       "module": "Treasury",
       "scenario": "Reverse Check Payment",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Failed",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "Error - No authorization for voiding issued checks",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0519",
@@ -3196,12 +3196,12 @@
       "module": "Treasury",
       "scenario": "Delete cashing/extract data",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-17",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0521",
@@ -3209,12 +3209,12 @@
       "module": "Treasury",
       "scenario": "Online Cashed Checks",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Failed",
       "dueDate": "2026-07-17",
-      "notes": "",
+      "notes": "We don't use this tcode but, I did test and received error \"No authorization for automatic or online cashed checks\".",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0529",
@@ -3227,7 +3227,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0530",
@@ -3240,7 +3240,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0531",
@@ -3253,7 +3253,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0532",
@@ -3266,7 +3266,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0533",
@@ -3279,7 +3279,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0534",
@@ -3287,12 +3287,12 @@
       "module": "Treasury",
       "scenario": "Bank statement postprocessing",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Failed",
       "dueDate": "2026-07-17",
-      "notes": "",
+      "notes": "The incorrect screen populates when FEBAN is tested.",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0535",
@@ -3305,7 +3305,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0536",
@@ -3318,7 +3318,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0537",
@@ -3326,12 +3326,12 @@
       "module": "Treasury",
       "scenario": "Display Electronic Bank Statement",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0538",
@@ -3344,7 +3344,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0539",
@@ -3357,7 +3357,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0540",
@@ -3365,12 +3365,12 @@
       "module": "Treasury",
       "scenario": "Cash Position",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0541",
@@ -3378,12 +3378,12 @@
       "module": "Treasury",
       "scenario": "Liquidity Forecast",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0542",
@@ -3391,12 +3391,12 @@
       "module": "Treasury",
       "scenario": "Create Bank",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0543",
@@ -3404,12 +3404,12 @@
       "module": "Treasury",
       "scenario": "Change Bank",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0545",
@@ -3417,12 +3417,12 @@
       "module": "Treasury",
       "scenario": "Display Bank Changes",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0546",
@@ -3430,12 +3430,12 @@
       "module": "Treasury",
       "scenario": "Set Flag to Delete Bank",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0547",
@@ -3448,7 +3448,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0551",
@@ -3461,7 +3461,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0553",
@@ -3474,7 +3474,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0562",
@@ -3482,12 +3482,12 @@
       "module": "Treasury",
       "scenario": "Park G/L Account Items",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0563",
@@ -3500,7 +3500,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0564",
@@ -3513,7 +3513,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0566",
@@ -3521,12 +3521,12 @@
       "module": "Treasury",
       "scenario": "Park Incoming Credit Memos",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-21",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1019",
@@ -3539,7 +3539,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1427",
@@ -3547,12 +3547,12 @@
       "module": "Treasury",
       "scenario": "Spot/Forward Transaction Entry",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-21",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1452",
@@ -3560,12 +3560,12 @@
       "module": "Treasury",
       "scenario": "Automated F-03 Program",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-21",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1453",
@@ -3573,12 +3573,12 @@
       "module": "Treasury",
       "scenario": "FI Accrual Loader",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-21",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1462",
@@ -3586,12 +3586,12 @@
       "module": "Treasury",
       "scenario": "JE Park Loader",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-21",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1465",
@@ -3599,12 +3599,12 @@
       "module": "Treasury",
       "scenario": "ACH Payment to Integrity",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-21",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1466",
@@ -3612,12 +3612,12 @@
       "module": "Treasury",
       "scenario": "Tcode for ZFI_PROMOTE_HOLD",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-21",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1489",
@@ -3625,12 +3625,12 @@
       "module": "Treasury",
       "scenario": "JE Upload",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1509",
@@ -3643,7 +3643,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1510",
@@ -3651,12 +3651,12 @@
       "module": "Treasury",
       "scenario": "Clear/Unclear checks from EBS",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-21",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1514",
@@ -3669,7 +3669,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1523",
@@ -3677,12 +3677,12 @@
       "module": "Treasury",
       "scenario": "Printing EFT checks",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-21",
-      "notes": "",
+      "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0275",
