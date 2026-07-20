@@ -11399,12 +11399,12 @@
       "module": "Property Accounting",
       "scenario": "Post Incoming Payments",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0449",
@@ -11412,12 +11412,12 @@
       "module": "Property Accounting",
       "scenario": "Clear Customer",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0473",
@@ -11503,12 +11503,12 @@
       "module": "Property Accounting",
       "scenario": "Net Cash Call to Equity Group",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-14"
     },
     {
       "id": "T-0584",
@@ -11516,12 +11516,12 @@
       "module": "Property Accounting",
       "scenario": "JV Gross Cash Call To Equit Group",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-14"
     },
     {
       "id": "T-0585",
@@ -11529,12 +11529,12 @@
       "module": "Property Accounting",
       "scenario": "JV Net Cash Call To Project",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-14"
     },
     {
       "id": "T-0586",
@@ -11542,12 +11542,12 @@
       "module": "Property Accounting",
       "scenario": "JV Gross Cash Call To Project",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-14"
     },
     {
       "id": "T-0587",
@@ -11555,12 +11555,12 @@
       "module": "Property Accounting",
       "scenario": "JV Non-operated cash call to eq grp",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-14"
     },
     {
       "id": "T-0588",
@@ -11568,12 +11568,12 @@
       "module": "Property Accounting",
       "scenario": "JV Non-Operated Cash Call to Project",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-14"
     },
     {
       "id": "T-0591",
@@ -11581,12 +11581,12 @@
       "module": "Property Accounting",
       "scenario": "Billing Ledger Extract",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0592",
@@ -11594,12 +11594,12 @@
       "module": "Property Accounting",
       "scenario": "Joint Venture Billing Extract",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0593",
@@ -11607,12 +11607,12 @@
       "module": "Property Accounting",
       "scenario": "Joint Venture Ledger Extract",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-14"
     },
     {
       "id": "T-0594",
@@ -11620,12 +11620,12 @@
       "module": "Property Accounting",
       "scenario": "Joint Venture Ledger Extract",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-14"
     },
     {
       "id": "T-0595",
@@ -11633,12 +11633,12 @@
       "module": "Property Accounting",
       "scenario": "Hard Copy Billing",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-14"
     },
     {
       "id": "T-0596",
@@ -11646,12 +11646,12 @@
       "module": "Property Accounting",
       "scenario": "Hard Copy Billing",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "In Progress",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-14"
     },
     {
       "id": "T-0597",
@@ -11659,12 +11659,12 @@
       "module": "Property Accounting",
       "scenario": "Equity Adjustments",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-14"
     },
     {
       "id": "T-0598",
@@ -11672,12 +11672,12 @@
       "module": "Property Accounting",
       "scenario": "Equity Adjustments",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-16"
     },
     {
       "id": "T-0608",
@@ -11789,12 +11789,12 @@
       "module": "Property Accounting",
       "scenario": "Change statistical key figures",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-14"
     },
     {
       "id": "T-0645",
@@ -11802,12 +11802,12 @@
       "module": "Property Accounting",
       "scenario": "Enter Statistical Key Figures",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-14"
     },
     {
       "id": "T-0647",
@@ -11815,12 +11815,12 @@
       "module": "Property Accounting",
       "scenario": "Reverse Statistical Key Figures",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-14"
     },
     {
       "id": "T-0690",
@@ -11893,12 +11893,12 @@
       "module": "Property Accounting",
       "scenario": "Create SPF Statement Volumes",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-15"
     },
     {
       "id": "T-0706",
@@ -11906,12 +11906,12 @@
       "module": "Property Accounting",
       "scenario": "Change SPF Statement Volumes",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-15"
     },
     {
       "id": "T-0708",
@@ -11919,12 +11919,12 @@
       "module": "Property Accounting",
       "scenario": "Delete SPF Statement Volumes",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-15"
     },
     {
       "id": "T-0714",
@@ -11945,12 +11945,12 @@
       "module": "Property Accounting",
       "scenario": "Create Delivery Network",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0724",
@@ -11958,12 +11958,12 @@
       "module": "Property Accounting",
       "scenario": "Update Delivery Network",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0726",
@@ -11971,12 +11971,12 @@
       "module": "Property Accounting",
       "scenario": "Delete Delivery Network",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0727",
@@ -11984,12 +11984,12 @@
       "module": "Property Accounting",
       "scenario": "CREATE DN ALLOCATION PROFILE",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0728",
@@ -11997,12 +11997,12 @@
       "module": "Property Accounting",
       "scenario": "CHANGE DN ALLOCATION PROFILE",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0730",
@@ -12010,12 +12010,12 @@
       "module": "Property Accounting",
       "scenario": "DELETE DN ALLOCATION PROFILE",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0731",
@@ -12023,12 +12023,12 @@
       "module": "Property Accounting",
       "scenario": "Create Delivery Network Dated",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0732",
@@ -12036,12 +12036,12 @@
       "module": "Property Accounting",
       "scenario": "Change Delivery Network Dated",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0734",
@@ -12049,12 +12049,12 @@
       "module": "Property Accounting",
       "scenario": "Delete Delivery Network Dated",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0736",
@@ -12062,12 +12062,12 @@
       "module": "Property Accounting",
       "scenario": "Delivery network group create",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-16"
     },
     {
       "id": "T-0737",
@@ -12075,12 +12075,12 @@
       "module": "Property Accounting",
       "scenario": "Delivery network group change",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-16"
     },
     {
       "id": "T-0739",
@@ -12088,12 +12088,12 @@
       "module": "Property Accounting",
       "scenario": "Create Delivery Netwok Link",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-16"
     },
     {
       "id": "T-0740",
@@ -12101,12 +12101,12 @@
       "module": "Property Accounting",
       "scenario": "Change Delivery Netwok Link",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-16"
     },
     {
       "id": "T-0742",
@@ -12114,12 +12114,12 @@
       "module": "Property Accounting",
       "scenario": "Delete Delivery Netwok Link",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-16"
     },
     {
       "id": "T-0748",
@@ -12127,12 +12127,12 @@
       "module": "Property Accounting",
       "scenario": "DOI Accounting - Doc Concept",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0749",
@@ -12140,12 +12140,12 @@
       "module": "Property Accounting",
       "scenario": "DOI Accounting Change - Doc Concept",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0751",
@@ -12153,12 +12153,12 @@
       "module": "Property Accounting",
       "scenario": "DOI Accounting Delete - Doc Concept",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0754",
@@ -12166,12 +12166,12 @@
       "module": "Property Accounting",
       "scenario": "Create Formula Id Maintenance",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0755",
@@ -12179,12 +12179,12 @@
       "module": "Property Accounting",
       "scenario": "Change Formula Id Maintenance",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0757",
@@ -12192,12 +12192,12 @@
       "module": "Property Accounting",
       "scenario": "Delete Formula Id Maintenance",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0762",
@@ -12205,12 +12205,12 @@
       "module": "Property Accounting",
       "scenario": "Create Internal Marketing Rates",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0764",
@@ -12218,12 +12218,12 @@
       "module": "Property Accounting",
       "scenario": "Create Measurement Point",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0765",
@@ -12231,12 +12231,12 @@
       "module": "Property Accounting",
       "scenario": "Change Measurement Point",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0767",
@@ -12244,12 +12244,12 @@
       "module": "Property Accounting",
       "scenario": "Delete Measurement Point",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-09"
     },
     {
       "id": "T-0768",
@@ -12257,12 +12257,12 @@
       "module": "Property Accounting",
       "scenario": "Create MP Allocation Profile",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-16"
     },
     {
       "id": "T-0769",
@@ -12270,12 +12270,12 @@
       "module": "Property Accounting",
       "scenario": "Change MP Allocation Profile",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-16"
     },
     {
       "id": "T-1535",
@@ -12283,12 +12283,12 @@
       "module": "Property Accounting",
       "scenario": "PRA Well Loader",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-16"
     },
     {
       "id": "T-1536",
@@ -12413,12 +12413,12 @@
       "module": "Property Accounting",
       "scenario": "Queue Monitor",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-16"
     },
     {
       "id": "T-0125",
@@ -12426,12 +12426,12 @@
       "module": "Property Accounting",
       "scenario": "Payment Processing Admin Workplace",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-16"
     },
     {
       "id": "T-0127",
@@ -12439,12 +12439,12 @@
       "module": "Property Accounting",
       "scenario": "Bank tape output file Creation",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-16"
     },
     {
       "id": "T-0128",
@@ -12452,12 +12452,12 @@
       "module": "Property Accounting",
       "scenario": "Check clear using the Bank sent File",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": ""
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0133",
