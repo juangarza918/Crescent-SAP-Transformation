@@ -14194,12 +14194,12 @@
       "module": "Reporting",
       "scenario": "SObj: Actual/Plan/Variance",
       "assignee": "Zach K.",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-22",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1164",
