@@ -2260,12 +2260,12 @@
       "module": "Reporting",
       "scenario": "Compare Totals Records ERP - HANA",
       "assignee": "Arlette C.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-0574",
@@ -2273,12 +2273,12 @@
       "module": "Reporting",
       "scenario": "Totals Record Display",
       "assignee": "Arlette C.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-0576",
@@ -2286,12 +2286,12 @@
       "module": "Reporting",
       "scenario": "FI-SL: Local Actual Document Display",
       "assignee": "Arlette C.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-0577",
@@ -2299,12 +2299,12 @@
       "module": "Reporting",
       "scenario": "Substitution Maintenance",
       "assignee": "Arlette C.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-0652",
