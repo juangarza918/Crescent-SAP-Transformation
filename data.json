@@ -2078,12 +2078,12 @@
       "module": "Reporting",
       "scenario": "Display Changes to Vendors",
       "assignee": "Arlette C.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1106",
@@ -2091,12 +2091,12 @@
       "module": "Reporting",
       "scenario": "Display Critical Vendor Changes",
       "assignee": "Arlette C.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1107",
@@ -2104,12 +2104,12 @@
       "module": "Reporting",
       "scenario": "Vendor Business",
       "assignee": "Arlette C.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1108",
@@ -2117,12 +2117,12 @@
       "module": "Reporting",
       "scenario": "List of Vendor Line Items",
       "assignee": "Arlette C.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1109",
@@ -2130,12 +2130,12 @@
       "module": "Reporting",
       "scenario": "List Of Cleared Vendor Items",
       "assignee": "Arlette C.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1110",
@@ -2143,12 +2143,12 @@
       "module": "Reporting",
       "scenario": "List Of Down Payments Open",
       "assignee": "Arlette C.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1112",
@@ -2156,12 +2156,12 @@
       "module": "Reporting",
       "scenario": "Accounts Rec. Information System",
       "assignee": "Arlette C.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1113",
