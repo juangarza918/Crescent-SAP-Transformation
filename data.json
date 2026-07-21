@@ -12309,12 +12309,12 @@
       "module": "Property Accounting",
       "scenario": "Create Settlement to DOI Xref",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1538",
