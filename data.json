@@ -2416,12 +2416,12 @@
       "module": "Reporting",
       "scenario": "C FI Maintain Table T030",
       "assignee": "Arlette C.",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1002",
@@ -2429,12 +2429,12 @@
       "module": "Reporting",
       "scenario": "C FI maintain table T003",
       "assignee": "Arlette C.",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1003",
@@ -2442,12 +2442,12 @@
       "module": "Reporting",
       "scenario": "C FI Maintain Table T052",
       "assignee": "Arlette C.",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1004",
@@ -2455,12 +2455,12 @@
       "module": "Reporting",
       "scenario": "C FI Maintain Table T001Q (Document)",
       "assignee": "Arlette C.",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1005",
@@ -2468,12 +2468,12 @@
       "module": "Reporting",
       "scenario": "Payment Medium Selection Variants",
       "assignee": "Arlette C.",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1006",
@@ -2481,12 +2481,12 @@
       "module": "Reporting",
       "scenario": "C FI Maintain Table T001",
       "assignee": "Arlette C.",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1007",
@@ -2494,12 +2494,12 @@
       "module": "Reporting",
       "scenario": "C FI Table T030",
       "assignee": "Arlette C.",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1012",
@@ -2507,12 +2507,12 @@
       "module": "Reporting",
       "scenario": "Splitting: Assignment KOSTL -> SCNAM",
       "assignee": "Arlette C.",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1013",
@@ -2520,12 +2520,12 @@
       "module": "Reporting",
       "scenario": "Select. Variants for Internal Orders",
       "assignee": "Arlette C.",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1014",
@@ -2533,12 +2533,12 @@
       "module": "Reporting",
       "scenario": "C RM-MAT MRP Controllers",
       "assignee": "Arlette C.",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1015",
@@ -2546,12 +2546,12 @@
       "module": "Reporting",
       "scenario": "Maintain Lock-Relevant Indicator",
       "assignee": "Arlette C.",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1016",
@@ -2559,12 +2559,12 @@
       "module": "Reporting",
       "scenario": "C RM-MAT MB Grouping Valuation Area",
       "assignee": "Arlette C.",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1020",
@@ -2585,12 +2585,12 @@
       "module": "Reporting",
       "scenario": "Shipping point -> Plant",
       "assignee": "Arlette C.",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1022",
@@ -2598,12 +2598,12 @@
       "module": "Reporting",
       "scenario": "Customize plant",
       "assignee": "Arlette C.",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0318",
@@ -12595,12 +12595,12 @@
       "module": "Property Accounting",
       "scenario": "Payment Processing Queue Monitor",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1136",
