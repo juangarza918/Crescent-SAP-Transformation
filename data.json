@@ -12699,12 +12699,12 @@
       "module": "Reporting",
       "scenario": "Plan/Actual/Cmmt/Rem.Plan/Assigned",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1144",
@@ -12712,12 +12712,12 @@
       "module": "Reporting",
       "scenario": "Project Version Comparison:Act./Plan",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1145",
@@ -12725,12 +12725,12 @@
       "module": "Reporting",
       "scenario": "Forecast",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-22",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1146",
