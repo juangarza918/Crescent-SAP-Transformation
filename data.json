@@ -2494,12 +2494,12 @@
       "module": "Reporting",
       "scenario": "C FI Table T030",
       "assignee": "Arlette C.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1012",
@@ -2507,12 +2507,12 @@
       "module": "Reporting",
       "scenario": "Splitting: Assignment KOSTL -> SCNAM",
       "assignee": "Arlette C.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1013",
