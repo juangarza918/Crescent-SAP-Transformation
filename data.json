@@ -2416,12 +2416,12 @@
       "module": "Reporting",
       "scenario": "C FI Maintain Table T030",
       "assignee": "Arlette C.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1002",
@@ -2429,12 +2429,12 @@
       "module": "Reporting",
       "scenario": "C FI maintain table T003",
       "assignee": "Arlette C.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1003",
@@ -2442,12 +2442,12 @@
       "module": "Reporting",
       "scenario": "C FI Maintain Table T052",
       "assignee": "Arlette C.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1004",
@@ -2455,12 +2455,12 @@
       "module": "Reporting",
       "scenario": "C FI Maintain Table T001Q (Document)",
       "assignee": "Arlette C.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1005",
