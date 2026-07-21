@@ -12376,7 +12376,7 @@
       "assignee": "Trey H.",
       "status": "Not Started",
       "dueDate": "2026-07-17",
-      "notes": "We do not use this T-code. We will test ZWELL_DATED_CREATE.\n",
+      "notes": "We do not use this T-code. We will test ZWELL_DATED_CREATE.",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-21"
