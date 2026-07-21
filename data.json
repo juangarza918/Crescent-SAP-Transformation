@@ -1935,12 +1935,12 @@
       "module": "Reporting",
       "scenario": "Vendor Information System",
       "assignee": "Arlette C.",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1095",
@@ -1948,12 +1948,12 @@
       "module": "Reporting",
       "scenario": "Due Date Analysis for Open Items",
       "assignee": "Arlette C.",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1096",
@@ -1961,12 +1961,12 @@
       "module": "Reporting",
       "scenario": "Transaction Figures: Account Balance",
       "assignee": "Arlette C.",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1097",
@@ -1974,12 +1974,12 @@
       "module": "Reporting",
       "scenario": "Transaction Figures: Special Sales",
       "assignee": "Arlette C.",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1098",
@@ -1987,12 +1987,12 @@
       "module": "Reporting",
       "scenario": "Transaction Figures: Sales",
       "assignee": "Arlette C.",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1099",
@@ -2000,12 +2000,12 @@
       "module": "Reporting",
       "scenario": "Vendor Balances in Local Currency",
       "assignee": "Arlette C.",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1100",
