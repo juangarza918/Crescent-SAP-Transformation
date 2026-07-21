@@ -14194,12 +14194,12 @@
       "module": "Reporting",
       "scenario": "SObj: Actual/Plan/Variance",
       "assignee": "Zach K.",
-      "status": "Blocked",
+      "status": "Not Started",
       "dueDate": "2026-07-22",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1164",
@@ -14207,12 +14207,12 @@
       "module": "Reporting",
       "scenario": "SObj: Actual/Plan/Commitment",
       "assignee": "Zach K.",
-      "status": "Blocked",
+      "status": "Not Started",
       "dueDate": "2026-07-22",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1165",
