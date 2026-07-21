@@ -12751,12 +12751,12 @@
       "module": "Reporting",
       "scenario": "Actual/Comm/Total/Plan in COAr crcy",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-22",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1148",
@@ -12764,12 +12764,12 @@
       "module": "Reporting",
       "scenario": "Act/plan/variance abs./ % var.",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-22",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1149",
@@ -12777,12 +12777,12 @@
       "module": "Reporting",
       "scenario": "Actual/Plan Comparison: Periods",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-22",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-0903",
