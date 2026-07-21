@@ -1623,12 +1623,12 @@
       "module": "Corporate Accounting",
       "scenario": "Enter Credit Memo in Year of Invoice",
       "assignee": "Arlette C.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-0254",
@@ -1636,12 +1636,12 @@
       "module": "Corporate Accounting",
       "scenario": "Manual depreciation",
       "assignee": "Arlette C.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-0255",
@@ -1649,12 +1649,12 @@
       "module": "Corporate Accounting",
       "scenario": "Manual Depreciation",
       "assignee": "Arlette C.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-0256",
