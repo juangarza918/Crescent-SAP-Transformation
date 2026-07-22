@@ -12296,12 +12296,12 @@
       "module": "Property Accounting",
       "scenario": "PRA WC Loader",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-22"
     },
     {
       "id": "T-1537",
@@ -12309,12 +12309,12 @@
       "module": "Property Accounting",
       "scenario": "Create Settlement to DOI Xref",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-22"
     },
     {
       "id": "T-1538",
@@ -12322,12 +12322,12 @@
       "module": "Property Accounting",
       "scenario": "Mass Upload Settlement Statement",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-22"
     },
     {
       "id": "T-1541",
@@ -12335,12 +12335,12 @@
       "module": "Property Accounting",
       "scenario": "Custom Table for API/MTR Mapping Tab",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-22"
     },
     {
       "id": "T-1542",
@@ -12348,12 +12348,12 @@
       "module": "Property Accounting",
       "scenario": "Valuation Cross Reference Loader",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-22"
     },
     {
       "id": "T-1543",
@@ -12361,12 +12361,12 @@
       "module": "Property Accounting",
       "scenario": "Valuation Cross Reference End Date L",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-22"
     },
     {
       "id": "T-1544",
@@ -12374,12 +12374,12 @@
       "module": "Property Accounting",
       "scenario": "Well Completion Dated Create Loader",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-22"
     },
     {
       "id": "T-1545",
@@ -12387,12 +12387,12 @@
       "module": "Property Accounting",
       "scenario": "Create Well Completion Dated Records",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-22"
     },
     {
       "id": "T-1546",
@@ -12400,12 +12400,12 @@
       "module": "Property Accounting",
       "scenario": "Well Test Loader",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-22"
     },
     {
       "id": "T-0016",
@@ -12756,7 +12756,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-22"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1148",
@@ -12769,7 +12769,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-22"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-1149",
@@ -12782,7 +12782,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-22"
+      "lastUpdated": "2026-07-21"
     },
     {
       "id": "T-0903",
