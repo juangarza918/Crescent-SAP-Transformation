@@ -6953,7 +6953,7 @@
       "module": "IT",
       "scenario": "Launch NWBC",
       "assignee": "Leo Hidrogo",
-      "status": "Failed",
+      "status": "Passed",
       "dueDate": "2026-07-22",
       "notes": "Stuck on loading screen",
       "links": [],
