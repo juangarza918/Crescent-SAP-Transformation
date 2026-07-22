@@ -12374,12 +12374,12 @@
       "module": "Property Accounting",
       "scenario": "Well Completion Dated Create Loader",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-22"
     },
     {
       "id": "T-1545",
@@ -12387,12 +12387,12 @@
       "module": "Property Accounting",
       "scenario": "Create Well Completion Dated Records",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-22"
     },
     {
       "id": "T-1546",
@@ -12400,12 +12400,12 @@
       "module": "Property Accounting",
       "scenario": "Well Test Loader",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-22"
     },
     {
       "id": "T-0016",
