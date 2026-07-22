@@ -6953,12 +6953,12 @@
       "module": "IT",
       "scenario": "Launch NWBC",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Failed",
       "dueDate": "2026-07-22",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-22"
     },
     {
       "id": "T-1239",
