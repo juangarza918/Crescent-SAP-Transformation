@@ -4379,7 +4379,7 @@
       "module": "Reporting",
       "scenario": "G/L: Account Balances",
       "assignee": "Drew Diaz",
-      "status": "In Progress",
+      "status": "Failed",
       "dueDate": "2026-07-17",
       "notes": "Getting Syntax error when i try to open the t-code",
       "links": [],
