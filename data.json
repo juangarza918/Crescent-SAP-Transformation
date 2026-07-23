@@ -5835,12 +5835,12 @@
       "module": "MDM",
       "scenario": "Data Navigator View Editor",
       "assignee": "Kali Geddie",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-0004",
@@ -5848,12 +5848,12 @@
       "module": "MDM",
       "scenario": "Divestiture Workbench",
       "assignee": "Kali Geddie",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-0005",
