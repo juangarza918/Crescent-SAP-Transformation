@@ -1176,11 +1176,13 @@ ttFileInput.addEventListener("change", function(e){
             if(row[k] != null && String(row[k]).trim() !== "") t[k] = row[k];
           });
           t.lastUpdated = today;
+          markTestDirty(t.id);
         } else {
           if(!row.id) row.id = nextTestId();
           row.lastUpdated = today;
           state.tests.push(row);
           existingById.set(row.id, row);
+          markTestDirty(row.id);
         }
       });
       persist(); scheduleSaveTests(); renderTesting(); renderOverview();
@@ -1197,12 +1199,19 @@ function ttFindIdx(id){ return state.tests.findIndex(t=>t.id===id); }
 function ttUpdate(id, key, val){
   const i=ttFindIdx(id); if(i<0) return;
   state.tests[i][key]=val; state.tests[i].lastUpdated = todayLocal().toISOString().slice(0,10);
+  markTestDirty(id);
   persist(); scheduleSaveTests();
 }
 
 // --- Auto-save testing changes so every viewer sees them (uses /api/publish-tests) ---
 let saveTestsTimer=null, saveTestsInFlight=false, saveTestsRetry=false;
 let saveTestsStatus="idle"; // idle | pending | saving | saved | error | offline
+// Track WHICH tests have been mutated locally so we can send a delta instead of the whole array
+// This is what prevents stale local copies from clobbering teammates' concurrent edits.
+let dirtyTestIds = new Set();
+let deletedTestIds = new Set();
+function markTestDirty(id){ if(id){ dirtyTestIds.add(id); deletedTestIds.delete(id); } }
+function markTestDeleted(id){ if(id){ deletedTestIds.add(id); dirtyTestIds.delete(id); } }
 function updateSaveStatus(msg){
   const el=document.getElementById("tt-save-status");
   if(!el) return;
@@ -1224,19 +1233,40 @@ function scheduleSaveTests(){
   if(saveTestsTimer) clearTimeout(saveTestsTimer);
   saveTestsTimer=setTimeout(saveTestsNow, 1500);
 }
-// Pull the latest tests array so a viewer sees teammate updates
+// Pull the latest tests array so a viewer sees teammate updates.
+// Preserves any local unsaved edits — tests in dirtyTestIds are NOT overwritten.
 async function fetchLatestTests(showToast){
   if(historyMode) return;
-  if(saveTestsStatus==="pending" || saveTestsStatus==="saving") return; // don't stomp local unsaved edits
   try{
-    // Read from raw.githubusercontent.com — updates within seconds of a commit, no Vercel rebuild lag
     const r = await fetch("https://raw.githubusercontent.com/"+REPO_CONFIG.owner+"/"+REPO_CONFIG.repo+"/main/"+REPO_CONFIG.dataPath+"?_="+Date.now(), {cache:"no-store"});
     if(!r.ok) return;
     const d = await r.json();
     if(!Array.isArray(d.tests)) return;
-    if(JSON.stringify(d.tests) === JSON.stringify(state.tests)) return;
-    state.tests = d.tests; normalize(state); persist();
-    renderTesting(); renderOverview();
+    // Merge server data with local dirty edits:
+    //  - any test whose ID is in dirtyTestIds → keep the local version
+    //  - any test whose ID is in deletedTestIds → keep it deleted locally (skip from server)
+    //  - everything else → use server version
+    const localById = new Map(state.tests.map(t => [t.id, t]));
+    const merged = [];
+    d.tests.forEach(srv => {
+      if(deletedTestIds.has(srv.id)) return; // still queued for deletion locally
+      if(dirtyTestIds.has(srv.id) && localById.has(srv.id)){
+        merged.push(localById.get(srv.id));
+      } else {
+        merged.push(srv);
+      }
+    });
+    // Include local tests that server doesn't have yet (freshly added, save pending)
+    dirtyTestIds.forEach(id => {
+      if(!merged.find(t => t.id === id) && localById.has(id)) merged.push(localById.get(id));
+    });
+    if(JSON.stringify(merged) === JSON.stringify(state.tests)){
+      if(showToast) toast("Already up to date.","success");
+      return;
+    }
+    state.tests = merged; normalize(state); persist();
+    if(document.getElementById("view-testing")) renderTesting();
+    renderOverview();
     if(showToast) toast("Refreshed with latest team updates.","success");
   }catch(e){/* silent — probably offline */}
 }
@@ -1248,21 +1278,49 @@ setInterval(()=>{
 
 async function saveTestsNow(){
   if(saveTestsInFlight){ saveTestsRetry=true; return; }
+  // If nothing dirty, skip. Only meaningful once a save has run at least once.
+  if(dirtyTestIds.size===0 && deletedTestIds.size===0){ saveTestsStatus="saved"; updateSaveStatus(); return; }
   saveTestsInFlight=true; saveTestsRetry=false;
   saveTestsStatus="saving"; updateSaveStatus();
+  // Snapshot the dirty state at send time so we can clear it on success without losing edits made mid-flight
+  const sendDirtyIds = new Set(dirtyTestIds);
+  const sendDeletedIds = new Set(deletedTestIds);
+  const changedTests = state.tests.filter(t => sendDirtyIds.has(t.id));
   try{
     const author = (loadAuth()||{}).login || (localStorage.getItem("crescentSapDisplayName")||"anonymous");
     const r = await fetch("/api/publish-tests", {
       method:"POST",
       headers:{"Content-Type":"application/json"},
-      body: JSON.stringify({tests: state.tests, author})
+      body: JSON.stringify({changedTests, deletedIds: Array.from(sendDeletedIds), author})
     });
     if(r.status===404){ saveTestsStatus="offline"; updateSaveStatus("⚠ Auto-save endpoint missing — ask admin to add the /api/publish-tests function"); }
-    else if(!r.ok){ const t=await r.text(); saveTestsStatus="error"; updateSaveStatus("⚠ Save failed: "+t.slice(0,80)); }
-    else { saveTestsStatus="saved"; updateSaveStatus(); }
+    else if(!r.ok){ const t=await r.text(); saveTestsStatus="error"; updateSaveStatus("⚠ Save failed: "+t.slice(0,120)); }
+    else {
+      const resp = await r.json();
+      // Server returns the merged tests array so we adopt the canonical version.
+      // Merge server result with any in-flight local edits (tests dirtied AFTER send).
+      if(Array.isArray(resp.tests)){
+        const stillDirty = new Set(); // IDs the user touched *after* we started sending
+        dirtyTestIds.forEach(id => { if(!sendDirtyIds.has(id)) stillDirty.add(id); });
+        const localById = new Map(state.tests.map(t=>[t.id,t]));
+        state.tests = resp.tests.map(srv => stillDirty.has(srv.id) && localById.has(srv.id) ? localById.get(srv.id) : srv);
+        // For any local dirty tests that server doesn't know about (freshly added, sending failed), keep them
+        stillDirty.forEach(id => {
+          if(!state.tests.find(t=>t.id===id) && localById.has(id)) state.tests.push(localById.get(id));
+        });
+        normalize(state);
+      }
+      // Only clear the IDs we actually saved
+      sendDirtyIds.forEach(id => dirtyTestIds.delete(id));
+      sendDeletedIds.forEach(id => deletedTestIds.delete(id));
+      persist();
+      if(document.getElementById("view-testing")) renderTesting();
+      renderOverview();
+      saveTestsStatus="saved"; updateSaveStatus();
+    }
   }catch(e){ saveTestsStatus="error"; updateSaveStatus("⚠ Save failed: "+e.message); }
   saveTestsInFlight=false;
-  if(saveTestsRetry){ saveTestsRetry=false; scheduleSaveTests(); }
+  if(saveTestsRetry || dirtyTestIds.size>0 || deletedTestIds.size>0){ saveTestsRetry=false; scheduleSaveTests(); }
 }
 ttRoot.addEventListener("click", function(e){
   if(historyMode) return;
@@ -1280,14 +1338,14 @@ ttRoot.addEventListener("click", function(e){
   }
   const btn=e.target.closest("[data-act]"); if(!btn) return;
   const act=btn.dataset.act; const id=btn.dataset.id; const i=id?ttFindIdx(id):-1;
-  if(act==="tt-add"){ const t=blankTest(); state.tests.push(t); testingState.openRowId=t.id; persist(); scheduleSaveTests(); renderTesting(); renderOverview(); return; }
+  if(act==="tt-add"){ const t=blankTest(); state.tests.push(t); testingState.openRowId=t.id; markTestDirty(t.id); persist(); scheduleSaveTests(); renderTesting(); renderOverview(); return; }
   if(act==="tt-toggle"){ testingState.openRowId = testingState.openRowId===id ? null : id; renderTesting(); return; }
   if(act==="tt-jump"){ testingState.openRowId = id; renderTesting(); const row=document.querySelector(`#view-testing tr[data-id="${CSS.escape(id)}"]`); if(row) row.scrollIntoView({behavior:"smooth",block:"center"}); return; }
-  if(act==="tt-del"){ if(!confirm("Delete this test? Everyone will lose it once it saves.")) return; state.tests.splice(i,1); testingState.openRowId=null; persist(); scheduleSaveTests(); renderTesting(); renderOverview(); return; }
-  if(act==="tt-add-link"){ state.tests[i].links.push({label:"",url:""}); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); scheduleSaveTests(); renderTesting(); return; }
-  if(act==="tt-del-link"){ const k=+btn.dataset.i; state.tests[i].links.splice(k,1); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); scheduleSaveTests(); renderTesting(); return; }
-  if(act==="tt-add-defect"){ state.tests[i].defects.push({id:"",title:"",severity:"Medium",status:"Open",link:""}); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); scheduleSaveTests(); renderTesting(); return; }
-  if(act==="tt-del-defect"){ const k=+btn.dataset.i; state.tests[i].defects.splice(k,1); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); scheduleSaveTests(); renderTesting(); return; }
+  if(act==="tt-del"){ if(!confirm("Delete this test? Everyone will lose it once it saves.")) return; markTestDeleted(id); state.tests.splice(i,1); testingState.openRowId=null; persist(); scheduleSaveTests(); renderTesting(); renderOverview(); return; }
+  if(act==="tt-add-link"){ state.tests[i].links.push({label:"",url:""}); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); markTestDirty(id); persist(); scheduleSaveTests(); renderTesting(); return; }
+  if(act==="tt-del-link"){ const k=+btn.dataset.i; state.tests[i].links.splice(k,1); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); markTestDirty(id); persist(); scheduleSaveTests(); renderTesting(); return; }
+  if(act==="tt-add-defect"){ state.tests[i].defects.push({id:"",title:"",severity:"Medium",status:"Open",link:""}); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); markTestDirty(id); persist(); scheduleSaveTests(); renderTesting(); return; }
+  if(act==="tt-del-defect"){ const k=+btn.dataset.i; state.tests[i].defects.splice(k,1); state.tests[i].lastUpdated=todayLocal().toISOString().slice(0,10); markTestDirty(id); persist(); scheduleSaveTests(); renderTesting(); return; }
   if(act==="tt-clearfilters"){ testingState.filterSearch=""; testingState.filterModule=""; testingState.filterAssignee=""; testingState.filterStatus=""; testingState.filterDueBucket=""; testingState.filterHasDefects=""; testingState.filterHasLinks=""; renderTesting(); return; }
   if(act==="tt-template"){ downloadCsv("regression-testing-template.csv", csvTemplate()); return; }
   if(act==="tt-upload"){ ttFileInput.click(); return; }
@@ -1318,9 +1376,9 @@ ttRoot.addEventListener("input", function(e){
   const tt=el.dataset.tt;
   if(tt){ const [id,key]=tt.split("|"); ttUpdate(id,key,el.value); return; }
   const tl=el.dataset.ttLink;
-  if(tl){ const [id,i,key]=tl.split("|"); const ix=ttFindIdx(id); if(ix<0) return; state.tests[ix].links[+i][key]=el.value; state.tests[ix].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); scheduleSaveTests(); return; }
+  if(tl){ const [id,i,key]=tl.split("|"); const ix=ttFindIdx(id); if(ix<0) return; state.tests[ix].links[+i][key]=el.value; state.tests[ix].lastUpdated=todayLocal().toISOString().slice(0,10); markTestDirty(id); persist(); scheduleSaveTests(); return; }
   const td=el.dataset.ttDefect;
-  if(td){ const [id,i,key]=td.split("|"); const ix=ttFindIdx(id); if(ix<0) return; state.tests[ix].defects[+i][key]=el.value; state.tests[ix].lastUpdated=todayLocal().toISOString().slice(0,10); persist(); scheduleSaveTests(); return; }
+  if(td){ const [id,i,key]=td.split("|"); const ix=ttFindIdx(id); if(ix<0) return; state.tests[ix].defects[+i][key]=el.value; state.tests[ix].lastUpdated=todayLocal().toISOString().slice(0,10); markTestDirty(id); persist(); scheduleSaveTests(); return; }
 });
 
 /* ---------- edit ---------- */
