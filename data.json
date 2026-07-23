@@ -4184,12 +4184,12 @@
       "module": "Reporting",
       "scenario": "Display Old Asset",
       "assignee": "Drew Diaz",
-      "status": "In Progress",
+      "status": "Blocked",
       "dueDate": "2026-07-16",
       "notes": "Getting error saying no legacy data transfger was created for my parameters i've tried",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-0315",
