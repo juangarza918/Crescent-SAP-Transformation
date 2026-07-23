@@ -3848,7 +3848,7 @@
       "assignee": "Drew Diaz",
       "status": "In Progress",
       "dueDate": "2026-07-14",
-      "notes": "Tried a few different accounts/company codes and all returning \"There are no open items managed in ",
+      "notes": "Tried a few different accounts/company codes and all returning \"There are no open items managed in this account\"",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-23"
