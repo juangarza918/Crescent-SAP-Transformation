@@ -3835,7 +3835,7 @@
       "assignee": "Drew Diaz",
       "status": "In Progress",
       "dueDate": "2026-07-14",
-      "notes": "When selecting a WBS Element and executing, there's a message saying \"No line items were selected\"",
+      "notes": "When selecting a WBS Element and executing, there's a message saying \"No line items were selected\" not sure what other parameters i need",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-23"
