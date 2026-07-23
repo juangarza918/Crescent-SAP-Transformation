@@ -6030,9 +6030,9 @@
       "module": "MDM",
       "scenario": "Create WBS Element",
       "assignee": "Kali Geddie",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Currency in requesting company code must be company code currency\n",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-23"
