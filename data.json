@@ -3690,9 +3690,9 @@
       "module": "Corporate Accounting",
       "scenario": "AuC Assignment of Dist. Rule",
       "assignee": "Drew Diaz",
-      "status": "Blocked",
+      "status": "In Progress",
       "dueDate": "2026-07-13",
-      "notes": "Error message saying \"Line item settlement is not possible for asset\" - only a few options are available to select from in parameters - no ",
+      "notes": "Error message saying \"Line item settlement is not possible for asset\" - only a few options are available to select from in parameters. No line item",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-23"
