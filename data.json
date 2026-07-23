@@ -3822,10 +3822,10 @@
       "assignee": "Drew Diaz",
       "status": "In Progress",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "It's showing processing errors on screen when executed\n",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-0374",
