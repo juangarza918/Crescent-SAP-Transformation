@@ -3703,7 +3703,7 @@
       "module": "Corporate Accounting",
       "scenario": "Transfer Asset under Const.",
       "assignee": "Drew Diaz",
-      "status": "In Progress",
+      "status": "Blocked",
       "dueDate": "2026-07-13",
       "notes": "Getting error message saying \"Allocation profile not maintained\"",
       "links": [],
