@@ -4691,7 +4691,7 @@
       "module": "Reporting",
       "scenario": "Physical Inventory List",
       "assignee": "Drew Diaz",
-      "status": "In Progress",
+      "status": "Blocked",
       "dueDate": "2026-07-21",
       "notes": "Not sure parameters for this one",
       "links": [],
