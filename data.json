@@ -4561,12 +4561,12 @@
       "module": "Reporting",
       "scenario": "Asset Acquisitions",
       "assignee": "Drew Diaz",
-      "status": "In Progress",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-1059",
