@@ -830,12 +830,12 @@
       "module": "Accounts Payable",
       "scenario": "Display Parked Document",
       "assignee": "Amanda Burns",
-      "status": "In Progress",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "Not sure what values to put in, but it lets me run the report and is not blocked",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-0506",
@@ -843,12 +843,12 @@
       "module": "Accounts Payable",
       "scenario": "Display Payment Run",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "In Progress",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Not sure what values to input, but report pulls up fine",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0508",
