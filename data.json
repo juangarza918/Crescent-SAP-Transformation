@@ -3887,10 +3887,10 @@
       "assignee": "Drew Diaz",
       "status": "In Progress",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Tried a few different accounts/company codes and all returning \"There are no open items managed in this account\"\n\n\n",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-0995",
