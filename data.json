@@ -10879,12 +10879,12 @@
       "module": "Property Accounting",
       "scenario": "NOT IN MENU",
       "assignee": "Roderick G.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-0715",
