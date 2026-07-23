@@ -856,12 +856,12 @@
       "module": "Accounts Payable",
       "scenario": "Display Payment Document Checks",
       "assignee": "Amanda Burns",
-      "status": "In Progress",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "Need a check number",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-0520",
