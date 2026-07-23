@@ -4028,12 +4028,12 @@
       "module": "Corporate Accounting",
       "scenario": "Reserve Details",
       "assignee": "Drew Diaz",
-      "status": "In Progress",
+      "status": "Blocked",
       "dueDate": "2026-07-15",
       "notes": "No data exists - not sure what parameters to use\n",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-1487",
@@ -4041,12 +4041,12 @@
       "module": "Corporate Accounting",
       "scenario": "Upload Reserves and Prod Volumes",
       "assignee": "Drew Diaz",
-      "status": "In Progress",
+      "status": "Blocked",
       "dueDate": "2026-07-15",
       "notes": "Don't have loader to use",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-1488",
