@@ -856,12 +856,12 @@
       "module": "Accounts Payable",
       "scenario": "Display Payment Document Checks",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "In Progress",
       "dueDate": "2026-07-14",
       "notes": "Need a check number",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0520",
@@ -921,7 +921,7 @@
       "module": "Accounts Payable",
       "scenario": "Report Selection",
       "assignee": "Amanda Burns",
-      "status": "In Progress",
+      "status": "Blocked",
       "dueDate": "2026-07-14",
       "notes": "Report works. I just do not know what values to input.",
       "links": [],
