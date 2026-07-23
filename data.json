@@ -3716,7 +3716,7 @@
       "module": "Corporate Accounting",
       "scenario": "Reverse Settlement of AuC",
       "assignee": "Drew Diaz",
-      "status": "In Progress",
+      "status": "Blocked",
       "dueDate": "2026-07-13",
       "notes": "Getting error message saying \"Allocation profile not maintained\"\n",
       "links": [],
