@@ -4106,12 +4106,12 @@
       "module": "Reporting",
       "scenario": "Assets with errors",
       "assignee": "Drew Diaz",
-      "status": "In Progress",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "Can't find any assets with errors, so not sure what the execution is supposed to look like",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-0272",
