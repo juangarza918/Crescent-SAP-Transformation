@@ -4548,12 +4548,12 @@
       "module": "Reporting",
       "scenario": "Depreciation Posted to Cost Center",
       "assignee": "Drew Diaz",
-      "status": "In Progress",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
       "notes": "No data selected - not sure what to use",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-1058",
