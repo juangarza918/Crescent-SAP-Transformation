@@ -6110,7 +6110,7 @@
       "assignee": "Kali Geddie",
       "status": "Failed",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Short dump - error during insertion into a table with unique key\n",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-23"
