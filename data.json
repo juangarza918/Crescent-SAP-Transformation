@@ -11347,12 +11347,12 @@
       "module": "Reporting",
       "scenario": "Cutback Analysis Report",
       "assignee": "Roderick G.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-1539",
