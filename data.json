@@ -3820,12 +3820,12 @@
       "module": "Corporate Accounting",
       "scenario": "Generate Settmt Rule: Indiv.Proc.",
       "assignee": "Drew Diaz",
-      "status": "In Progress",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "It's showing processing errors on screen when executed\n",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-0374",
