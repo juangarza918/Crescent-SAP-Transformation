@@ -3833,12 +3833,12 @@
       "module": "Corporate Accounting",
       "scenario": "Maintain Project Settlement LIs",
       "assignee": "Drew Diaz",
-      "status": "In Progress",
+      "status": "Blocked",
       "dueDate": "2026-07-14",
       "notes": "When selecting a WBS Element and executing, there's a message saying \"No line items were selected\" not sure what other parameters i need",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-0431",
