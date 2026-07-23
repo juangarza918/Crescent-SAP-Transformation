@@ -4392,12 +4392,12 @@
       "module": "Reporting",
       "scenario": "G/L: Structured Account Balances",
       "assignee": "Drew Diaz",
-      "status": "In Progress",
+      "status": "Blocked",
       "dueDate": "2026-07-17",
       "notes": "Not able to generate a list. Not sure if i have wrong parameters or what",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-0464",
