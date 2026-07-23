@@ -3809,7 +3809,7 @@
       "assignee": "Drew Diaz",
       "status": "In Progress",
       "dueDate": "2026-07-14",
-      "notes": "It's showing processing errors on execution screen",
+      "notes": "It's showing processing errors on screen when executed",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-23"
