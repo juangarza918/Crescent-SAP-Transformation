@@ -1,8 +1,15 @@
-// Vercel serverless function: accepts POST { tests, author } and commits the new
-// tests array back to data.json in the GitHub repo. Uses a server-side token
-// (GITHUB_TOKEN env var) so viewers do NOT need their own PAT to update tests.
-// Only the `tests` field of data.json is replaced — other fields are preserved,
-// which also prevents concurrent editors from clobbering unrelated data.
+// Vercel serverless function.
+// Accepts a DELTA payload so concurrent editors never clobber each other:
+//   POST { changedTests: [...], deletedIds: [...], author: "..." }
+// The server:
+//   1. Fetches current data.json from GitHub
+//   2. Merges `changedTests` into the current tests array by ID (replace-or-add)
+//   3. Removes any IDs in `deletedIds`
+//   4. Commits the merged result back to GitHub
+//   5. Returns the merged tests array so the client can adopt the canonical version
+//
+// Backwards compat: still accepts the old `tests: [...]` full-replace payload,
+// but old clients should be upgraded — full-replace loses concurrent edits.
 
 const REPO_OWNER = "juangarza918";
 const REPO_NAME  = "Crescent-SAP-Transformation";
@@ -32,8 +39,32 @@ async function ghFetch(url, opts = {}) {
   return fetch(url, Object.assign({}, opts, { headers }));
 }
 
-async function commitTests(newTests, author, retriesLeft) {
-  // 1. Get current data.json (for SHA + full document)
+async function commitMerged(mergedTests, author, retriesLeft) {
+  const putResp = await ghFetch(API, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      message: `Update tests via dashboard (${author})`,
+      content: Buffer.from(JSON.stringify(mergedTests.doc, null, 2)).toString("base64"),
+      sha: mergedTests.sha,
+      branch: "main",
+    }),
+  });
+  if (putResp.status === 409 && retriesLeft > 0) {
+    // Optimistic-lock conflict — refetch and re-merge, then retry.
+    const fresh = await fetchAndMerge(mergedTests.changed, mergedTests.deleted);
+    fresh.changed = mergedTests.changed;
+    fresh.deleted = mergedTests.deleted;
+    return commitMerged(fresh, author, retriesLeft - 1);
+  }
+  if (!putResp.ok) {
+    const txt = await putResp.text();
+    throw new Error(`PUT data.json failed (${putResp.status}): ${txt.slice(0, 200)}`);
+  }
+  return putResp.json();
+}
+
+async function fetchAndMerge(changedTests, deletedIds) {
   const getResp = await ghFetch(`${API}?ref=main`);
   if (!getResp.ok) {
     const txt = await getResp.text();
@@ -42,30 +73,17 @@ async function commitTests(newTests, author, retriesLeft) {
   const info = await getResp.json();
   const sha = info.sha;
   const currentDoc = JSON.parse(Buffer.from(info.content, "base64").toString("utf8"));
-
-  // 2. Replace ONLY the tests array
-  currentDoc.tests = newTests;
-
-  // 3. PUT new content
-  const putResp = await ghFetch(API, {
-    method: "PUT",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      message: `Update tests via dashboard (${author})`,
-      content: Buffer.from(JSON.stringify(currentDoc, null, 2)).toString("base64"),
-      sha,
-      branch: "main",
-    }),
+  const currentTests = Array.isArray(currentDoc.tests) ? currentDoc.tests : [];
+  // Merge by ID: current tests → map → apply changes → apply deletions → back to array
+  const byId = new Map(currentTests.map((t) => [t.id, t]));
+  (changedTests || []).forEach((ct) => {
+    if (!ct || !ct.id) return;
+    byId.set(ct.id, ct);
   });
-  if (putResp.status === 409 && retriesLeft > 0) {
-    // Optimistic-lock conflict — someone else committed while we were fetching. Retry.
-    return commitTests(newTests, author, retriesLeft - 1);
-  }
-  if (!putResp.ok) {
-    const txt = await putResp.text();
-    throw new Error(`PUT data.json failed (${putResp.status}): ${txt.slice(0, 200)}`);
-  }
-  return putResp.json();
+  (deletedIds || []).forEach((id) => byId.delete(id));
+  const mergedTests = Array.from(byId.values());
+  currentDoc.tests = mergedTests;
+  return { doc: currentDoc, sha, tests: mergedTests };
 }
 
 module.exports = async (req, res) => {
@@ -77,35 +95,53 @@ module.exports = async (req, res) => {
   if (req.method === "OPTIONS") return res.status(204).end();
   if (req.method !== "POST") return json(res, 405, { error: "Method not allowed" });
 
-  // Origin gate — allow only the deployed site and localhost dev
-  if (origin && !ALLOWED_ORIGINS.some(o => origin.startsWith(o))) {
+  if (origin && !ALLOWED_ORIGINS.some((o) => origin.startsWith(o))) {
     return json(res, 403, { error: `Forbidden origin: ${origin}` });
   }
 
   if (!process.env.GITHUB_TOKEN) {
-    return json(res, 500, { error: "Server is missing GITHUB_TOKEN env var. Ask the admin to add it in Vercel > Project > Settings > Environment Variables." });
+    return json(res, 500, { error: "Server is missing GITHUB_TOKEN env var." });
   }
 
   let body = req.body;
-  if (typeof body === "string") { try { body = JSON.parse(body); } catch { body = {}; } }
+  if (typeof body === "string") {
+    try { body = JSON.parse(body); } catch { body = {}; }
+  }
   body = body || {};
 
-  const newTests = body.tests;
-  if (!Array.isArray(newTests)) return json(res, 400, { error: "Body must include a `tests` array." });
+  let changedTests, deletedIds;
+  if (Array.isArray(body.changedTests) || Array.isArray(body.deletedIds)) {
+    // New delta payload
+    changedTests = Array.isArray(body.changedTests) ? body.changedTests : [];
+    deletedIds   = Array.isArray(body.deletedIds)   ? body.deletedIds   : [];
+    if (changedTests.length === 0 && deletedIds.length === 0) {
+      return json(res, 200, { success: true, tests: null, noop: true });
+    }
+  } else if (Array.isArray(body.tests)) {
+    // Backwards-compat: full replace. Convert to a delta so it goes through the merge path anyway.
+    // Note: this is unsafe if concurrent editors exist, but old clients need it during rollout.
+    changedTests = body.tests;
+    deletedIds   = [];
+  } else {
+    return json(res, 400, { error: "Body must include `changedTests`+`deletedIds` (preferred) or a legacy `tests` array." });
+  }
 
-  // Basic safety cap so a rogue client can't push a huge blob
-  if (newTests.length > 5000) return json(res, 413, { error: "Too many tests (>5000)." });
+  if (changedTests.length > 5000) return json(res, 413, { error: "Too many tests in one save (>5000)." });
 
   const author = String(body.author || "anonymous")
     .replace(/[^\w\s.@-]/g, "")
     .slice(0, 100) || "anonymous";
 
   try {
-    const result = await commitTests(newTests, author, 2);
+    const merged = await fetchAndMerge(changedTests, deletedIds);
+    merged.changed = changedTests;
+    merged.deleted = deletedIds;
+    const result = await commitMerged(merged, author, 3);
     return json(res, 200, {
       success: true,
       commit: (result.commit || {}).sha,
-      testsCount: newTests.length,
+      tests: merged.tests,
+      testsCount: merged.tests.length,
     });
   } catch (err) {
     return json(res, 500, { error: err.message });
