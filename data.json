@@ -6576,12 +6576,12 @@
       "module": "MDM",
       "scenario": "Display Customer (Accounting)",
       "assignee": "Kali Geddie",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-0524",
@@ -6589,12 +6589,12 @@
       "module": "MDM",
       "scenario": "Customer Account Balance",
       "assignee": "Kali Geddie",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-0525",
@@ -6602,12 +6602,12 @@
       "module": "MDM",
       "scenario": "Customer Balance Display",
       "assignee": "Kali Geddie",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-0526",
