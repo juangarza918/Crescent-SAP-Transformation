@@ -4171,7 +4171,7 @@
       "module": "Reporting",
       "scenario": "Display Group Asset",
       "assignee": "Drew Diaz",
-      "status": "Descoped",
+      "status": "Blocked",
       "dueDate": "2026-07-16",
       "notes": "Getting a pop up that my parameters don't exist. not sure what else to use",
       "links": [],
