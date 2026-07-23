@@ -4145,7 +4145,7 @@
       "module": "Reporting",
       "scenario": "Account assignmt Acquisitions",
       "assignee": "Drew Diaz",
-      "status": "In Progress",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "Getting a popup saying that Client 100 has status 'not modificable' - take screenshot for ",
       "links": [],
