@@ -4470,12 +4470,12 @@
       "module": "Reporting",
       "scenario": "Display Intercompany Document",
       "assignee": "Drew Diaz",
-      "status": "In Progress",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "I don't have a doc number to use",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-1023",
