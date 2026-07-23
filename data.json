@@ -3989,7 +3989,7 @@
       "module": "Corporate Accounting",
       "scenario": "GAAP DEPRECIATION",
       "assignee": "Drew Diaz",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "Showing \"No data exists for entered selection criteria\" - tried a few different parameters and none gave me any results",
       "links": [],
