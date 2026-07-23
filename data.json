@@ -858,7 +858,7 @@
       "assignee": "Amanda Burns",
       "status": "Passed",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Need a check number",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-23"
@@ -923,7 +923,7 @@
       "assignee": "Amanda Burns",
       "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "Blocked. Potentially descope. ",
+      "notes": "Blocked. Potentially descope\n",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-23"
