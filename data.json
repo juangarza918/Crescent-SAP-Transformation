@@ -3861,7 +3861,7 @@
       "assignee": "Drew Diaz",
       "status": "In Progress",
       "dueDate": "2026-07-14",
-      "notes": "Don't have a document number to use in parameters on this one",
+      "notes": "Do not have a document number ref to use for this one",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-23"
