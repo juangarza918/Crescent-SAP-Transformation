@@ -10424,12 +10424,12 @@
       "module": "Property Accounting",
       "scenario": "Compare FI with JV document",
       "assignee": "Roderick G.",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-0614",
