@@ -4147,10 +4147,10 @@
       "assignee": "Drew Diaz",
       "status": "In Progress",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "Getting a popup saying that Client 100 has status 'not modificable'",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-0308",
