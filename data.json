@@ -4186,10 +4186,10 @@
       "assignee": "Drew Diaz",
       "status": "In Progress",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "Getting error saying no legacy data transfger was created for my parameters i've tried",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-0315",
