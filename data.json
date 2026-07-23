@@ -3807,12 +3807,12 @@
       "module": "Corporate Accounting",
       "scenario": "Generate Settmt Rule: Coll.Proc.",
       "assignee": "Drew Diaz",
-      "status": "In Progress",
+      "status": "Blocked",
       "dueDate": "2026-07-14",
       "notes": "When running - i'm showing there are processing errors on the execution screen",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-0360",
