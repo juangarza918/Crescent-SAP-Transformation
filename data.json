@@ -921,12 +921,12 @@
       "module": "Accounts Payable",
       "scenario": "Report Selection",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "In Progress",
       "dueDate": "2026-07-14",
       "notes": "Report works. I just do not know what values to input.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-0573",
@@ -4327,12 +4327,12 @@
       "module": "Reporting",
       "scenario": "Standard WBS",
       "assignee": "Drew Diaz",
-      "status": "Blocked",
+      "status": "In Progress",
       "dueDate": "2026-07-17",
       "notes": "No values found when i search for parameters\n",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0397",
@@ -4392,12 +4392,12 @@
       "module": "Reporting",
       "scenario": "G/L: Structured Account Balances",
       "assignee": "Drew Diaz",
-      "status": "Blocked",
+      "status": "In Progress",
       "dueDate": "2026-07-17",
       "notes": "Not able to generate a list. Not sure if i have wrong parameters or what",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0464",
