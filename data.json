@@ -3991,10 +3991,10 @@
       "assignee": "Drew Diaz",
       "status": "In Progress",
       "dueDate": "2026-07-15",
-      "notes": "",
+      "notes": "ZFIN_DEPPOST",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-23"
     },
     {
       "id": "T-1484",
