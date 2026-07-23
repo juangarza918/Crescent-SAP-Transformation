@@ -1674,6 +1674,10 @@ async function init(){
   renderAll();
   refreshAuthUI();
   if(loadAuth()){ try{ const r=await ghApi("/repos/"+REPO_CONFIG.owner+"/"+REPO_CONFIG.repo+"/contents/"+REPO_CONFIG.dataPath+"?ref="+REPO_CONFIG.branch); if(r.ok){ const d=await r.json(); serverSha=d.sha; } }catch(e){} }
+  // Always fetch the latest published tests on load (merge — locally dirty edits are preserved).
+  // This ensures data.json recoveries or teammate updates are visible on every hard refresh,
+  // rather than being hidden by a stale localStorage cache.
+  try{ await fetchLatestTests(false); }catch(e){}
 }
 init();
 </script>
