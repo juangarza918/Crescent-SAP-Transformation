@@ -13560,12 +13560,12 @@
       "module": "Property Accounting",
       "scenario": "Product/Property Translations",
       "assignee": "Zach K.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-24"
     },
     {
       "id": "T-0044",
