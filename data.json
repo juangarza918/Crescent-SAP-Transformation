@@ -9761,9 +9761,9 @@
       "module": "Property Accounting",
       "scenario": "Well Identification Create",
       "assignee": "Paola D.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
-      "notes": "Missing ",
+      "notes": "",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-24"
