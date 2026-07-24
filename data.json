@@ -9774,12 +9774,12 @@
       "module": "Property Accounting",
       "scenario": "Well Identification Change",
       "assignee": "Paola D.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-24"
     },
     {
       "id": "T-0847",
