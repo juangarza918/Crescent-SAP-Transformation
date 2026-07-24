@@ -9852,12 +9852,12 @@
       "module": "Property Accounting",
       "scenario": "Balancing Workplace",
       "assignee": "Paola D.",
-      "status": "Not Started",
+      "status": "Failed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-24"
     },
     {
       "id": "T-0858",
