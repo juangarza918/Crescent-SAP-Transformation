@@ -1,11 +1,11 @@
 {
   "meta": {
     "projectName": "Crescent SAP Transformation",
-    "reportDate": "2026-06-29",
+    "reportDate": "2026-07-26",
     "overallStatus": "G",
-    "goLiveDate": "2026-09-11",
+    "goLiveDate": "2026-08-10",
     "goLiveLabel": "S/4HANA 2025 Production Go-Live",
-    "narrative": "S/4HANA Upgrade 2025: Quality Successfully Upgraded. Team starting initial transaction validations before UAT Kickoff on 07/08 with Business, UAT Kickoff was already scheduled - Joule Activation: Call scheduled with SAP technical team on 07/08. - Fiori Business Roles Assignment: Finalized <2025 revision. Adding 2025 this week. "
+    "narrative": "S/4HANA Upgrade 2025: UAT in progress and on target to complete by 07/29. Due to progress, aiming to move upgrade go-live date to 08/10, 1 month before the initial expected go-live.  - Joule Activation: S4/HANA Dev connection being finalized and on last step. To complete testing and complete Quality environment by end of week. - Fiori Business Roles Assignment and Activation: Protiviti activating 2025 apps and working on Fiori role assignments."
   },
   "workstreams": [
     {
@@ -50,7 +50,7 @@
     {
       "name": "S/4HANA Upgrade 2025",
       "status": "G",
-      "summary": "- QS100 Upgrade completed.\n- Kickoff UAT next week.\n",
+      "summary": "- QS100 UAT in progress. 582/1040 cases tested and passed. There are about 250 that are pending status updates from team and should receive on Monday. The remaining expected to be passed by Wednesday. 35 have been marked as failed by team and SAP team has been reviewing, no concerns on any of those and will be retested. We are doing an additional end to end scenario testing that includes master data, transactional data, and month end close. The only items of concern are Concur interfaces and JVA OH and Insurance customizations to adopt standard, for which we expect the solution by end of upcoming week. With all testing expected by end of week, the team is targeting to move up go-live to 08/10 and we will have go/no-go decision on our monthly 08/03.\n",
       "milestones": [
         {
           "name": "Sandbox Copy",
@@ -158,17 +158,17 @@
         },
         {
           "name": "Quality UAT Regression Testing",
-          "pct": 0,
+          "pct": 80,
           "end": "2026-08-28",
-          "revised": "",
+          "revised": "2026-07-29",
           "status": "G",
           "comment": ""
         },
         {
           "name": "Prod Upgrade Preparations",
-          "pct": 0,
+          "pct": 70,
           "end": "2026-08-28",
-          "revised": "",
+          "revised": "2026-07-31",
           "status": "G",
           "comment": ""
         },
@@ -176,7 +176,7 @@
           "name": "Prod - Service Request SUM to SAP",
           "pct": 0,
           "end": "2026-09-15",
-          "revised": "",
+          "revised": "2026-08-10",
           "status": "G",
           "comment": ""
         }
@@ -185,11 +185,11 @@
     {
       "name": "Joule Activation",
       "status": "G",
-      "summary": "Kickoff with Joule Readiness Technical Team. Meeting confirmed for next week 07/08. Engagement for next 4 weeks.",
+      "summary": "Joule Connection to S4/HANA Dev in progress. Expected completion of Dev set up this week as well and complete Quality after initial tests. ",
       "milestones": [
         {
           "name": "Joule Activation in Dev",
-          "pct": 90,
+          "pct": 95,
           "end": "2026-09-18",
           "revised": "",
           "status": "G",
@@ -199,7 +199,7 @@
           "name": "Joule Testing",
           "pct": 0,
           "end": "2026-10-02",
-          "revised": "",
+          "revised": "2026-07-31",
           "status": "G",
           "comment": ""
         },
@@ -207,7 +207,7 @@
           "name": "Joule Activation & Testing in Quality",
           "pct": 0,
           "end": "2026-10-16",
-          "revised": "",
+          "revised": "2026-07-31",
           "status": "G",
           "comment": ""
         },
@@ -215,7 +215,7 @@
           "name": "Joule Activation in Prod",
           "pct": 0,
           "end": "2026-10-23",
-          "revised": "",
+          "revised": "2026-08-28",
           "status": "G",
           "comment": ""
         }
@@ -224,7 +224,7 @@
     {
       "name": "Fiori Business Roles Assignment",
       "status": "G",
-      "summary": "Finalizing 2025 catalogs. SAP Security to start work on roles with Fiori Apps.",
+      "summary": "Protiviti team start work on the ",
       "milestones": [
         {
           "name": "Apps Assignment Mappings",
@@ -244,9 +244,9 @@
         },
         {
           "name": "Business Roles Assignments 2025",
-          "pct": 0,
+          "pct": 20,
           "end": "2026-07-16",
-          "revised": "2026-07-03",
+          "revised": "2026-09-30",
           "status": "G",
           "comment": ""
         },
@@ -263,7 +263,7 @@
     {
       "name": "Fiori Apps Activation",
       "status": "G",
-      "summary": "Sending new catalogs to SAP Security team to activate by 07/17.",
+      "summary": "All catalogs for 2025 were already activated, just specific odata services for applications within 2025 are being activated.",
       "milestones": [
         {
           "name": "Identify All Catalogues",
@@ -283,7 +283,7 @@
         },
         {
           "name": "Create Custom Catalogues Post Go-live 2025",
-          "pct": 0,
+          "pct": 50,
           "end": "2026-08-03",
           "revised": "",
           "status": "G",
@@ -642,6 +642,26 @@
       "mitigation": "Case created with SAP SNC team. Case #735274",
       "owner": "Crescent IT",
       "due": "2026-04-24"
+    },
+    {
+      "title": "OH and SI Processes",
+      "workstream": "S/4HANA Upgrade 2025",
+      "impact": "High",
+      "likelihood": "Medium",
+      "status": "Open",
+      "mitigation": "Re-Implement Customization temporarily",
+      "owner": "SAP",
+      "due": "2026-07-31"
+    },
+    {
+      "title": "Concur",
+      "workstream": "S/4HANA Upgrade 2025",
+      "impact": "High",
+      "likelihood": "Medium",
+      "status": "Open",
+      "mitigation": "Re-Implement Customization temporarily",
+      "owner": "SAP",
+      "due": "2026-07-31"
     }
   ],
   "decisions": [
@@ -652,6 +672,14 @@
       "workstream": "SSO – GUI & Fiori",
       "status": "Approved",
       "summary": "Approved for next week"
+    },
+    {
+      "title": "Go/No-Go Upgrade ",
+      "date": "2026-08-03",
+      "decidedBy": "Michael Bracamontez/Michael Michaelis",
+      "workstream": "S/4HANA Upgrade 2025",
+      "status": "Pending",
+      "summary": "Moving up go-live date"
     }
   ],
   "tests": [
