@@ -1235,12 +1235,24 @@ function scheduleSaveTests(){
 }
 // Pull the latest tests array so a viewer sees teammate updates.
 // Preserves any local unsaved edits — tests in dirtyTestIds are NOT overwritten.
+// Uses /api/publish-tests GET (authenticated GitHub API, always fresh) instead of
+// raw.githubusercontent.com which has a ~5-minute CDN cache that used to overwrite
+// recently-saved data with stale content.
 async function fetchLatestTests(showToast){
   if(historyMode) return;
   try{
-    const r = await fetch("https://raw.githubusercontent.com/"+REPO_CONFIG.owner+"/"+REPO_CONFIG.repo+"/main/"+REPO_CONFIG.dataPath+"?_="+Date.now(), {cache:"no-store"});
-    if(!r.ok) return;
-    const d = await r.json();
+    // Prefer the fresh serverless endpoint. Falls back to raw CDN if the endpoint is unreachable
+    // (e.g. opened as a local file where /api/* doesn't exist).
+    let d = null;
+    try{
+      const r = await fetch("/api/publish-tests?_="+Date.now(), {cache:"no-store"});
+      if(r.ok){ d = await r.json(); }
+    }catch(e){}
+    if(!d || !Array.isArray(d.tests)){
+      const r = await fetch("https://raw.githubusercontent.com/"+REPO_CONFIG.owner+"/"+REPO_CONFIG.repo+"/main/"+REPO_CONFIG.dataPath+"?_="+Date.now(), {cache:"no-store"});
+      if(!r.ok) return;
+      d = await r.json();
+    }
     if(!Array.isArray(d.tests)) return;
     // Merge server data with local dirty edits:
     //  - any test whose ID is in dirtyTestIds → keep the local version
