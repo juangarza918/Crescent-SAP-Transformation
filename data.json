@@ -2665,12 +2665,12 @@
       "module": "Treasury",
       "scenario": "Approve Payments",
       "assignee": "Brittany Quintanilla",
-      "status": "In Progress",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "Need payment file to test",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-27"
     },
     {
       "id": "T-0416",
