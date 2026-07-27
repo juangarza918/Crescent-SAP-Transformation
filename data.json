@@ -1196,12 +1196,12 @@
       "module": "Accounts Payable",
       "scenario": "Delete Voided Checks",
       "assignee": "Amanda Burns",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-27"
     },
     {
       "id": "T-0518",
@@ -1209,12 +1209,12 @@
       "module": "Accounts Payable",
       "scenario": "Delete Manual Checks",
       "assignee": "Amanda Burns",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-27"
     },
     {
       "id": "T-0522",
@@ -1222,12 +1222,12 @@
       "module": "Accounts Payable",
       "scenario": "Change Check/Payment Assignment",
       "assignee": "Amanda Burns",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-27"
     },
     {
       "id": "T-0528",
@@ -1235,12 +1235,12 @@
       "module": "Accounts Payable",
       "scenario": "TemSe/REGUT Data Administration",
       "assignee": "Amanda Burns",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-27"
     },
     {
       "id": "T-1116",
