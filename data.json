@@ -1404,12 +1404,12 @@
       "module": "Reporting",
       "scenario": "Customer Master Data Comparison",
       "assignee": "Amanda Burns",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-27"
     },
     {
       "id": "T-1129",
