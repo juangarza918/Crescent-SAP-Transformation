@@ -1196,12 +1196,12 @@
       "module": "Accounts Payable",
       "scenario": "Delete Voided Checks",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0518",
@@ -1209,12 +1209,12 @@
       "module": "Accounts Payable",
       "scenario": "Delete Manual Checks",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0522",
@@ -1222,12 +1222,12 @@
       "module": "Accounts Payable",
       "scenario": "Change Check/Payment Assignment",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0528",
@@ -1235,12 +1235,12 @@
       "module": "Accounts Payable",
       "scenario": "TemSe/REGUT Data Administration",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1116",
@@ -1248,12 +1248,12 @@
       "module": "Reporting",
       "scenario": "Transaction Figures: Sales",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1117",
@@ -1261,12 +1261,12 @@
       "module": "Reporting",
       "scenario": "Customer Balances in Local Currency",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1118",
@@ -1274,12 +1274,12 @@
       "module": "Reporting",
       "scenario": "List of Customer Open Items",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1119",
@@ -1287,12 +1287,12 @@
       "module": "Reporting",
       "scenario": "Open Items: Customer Due Date Forec.",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1120",
@@ -1300,12 +1300,12 @@
       "module": "Reporting",
       "scenario": "Customer Eval. with OI Sorted List",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1121",
@@ -1313,12 +1313,12 @@
       "module": "Reporting",
       "scenario": "Customer Payment History",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1122",
@@ -1326,12 +1326,12 @@
       "module": "Reporting",
       "scenario": "Customer Open Item Analysis(Overdue)",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1123",
@@ -1339,12 +1339,12 @@
       "module": "Reporting",
       "scenario": "Customer List",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1124",
@@ -1352,12 +1352,12 @@
       "module": "Reporting",
       "scenario": "List of customer addresses",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1125",
@@ -1365,12 +1365,12 @@
       "module": "Reporting",
       "scenario": "Display Changes to Customers",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1126",
@@ -1378,12 +1378,12 @@
       "module": "Reporting",
       "scenario": "Display Critical Customer Changes",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1127",
@@ -1391,12 +1391,12 @@
       "module": "Reporting",
       "scenario": "Customer Sales",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1128",
@@ -1404,12 +1404,12 @@
       "module": "Reporting",
       "scenario": "Customer Master Data Comparison",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1129",
@@ -1417,12 +1417,12 @@
       "module": "Reporting",
       "scenario": "List of Customer Line Items",
       "assignee": "Amanda Burns",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-27"
     },
     {
       "id": "T-1130",
