@@ -1196,12 +1196,12 @@
       "module": "Accounts Payable",
       "scenario": "Delete Voided Checks",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0518",
@@ -1209,12 +1209,12 @@
       "module": "Accounts Payable",
       "scenario": "Delete Manual Checks",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-0522",
