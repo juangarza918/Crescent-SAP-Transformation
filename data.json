@@ -1482,12 +1482,12 @@
       "module": "Reporting",
       "scenario": "Materials List: Prices and Inventory",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1231",
@@ -1495,12 +1495,12 @@
       "module": "Reporting",
       "scenario": "Payment List",
       "assignee": "Amanda Burns",
-      "status": "Passed",
+      "status": "Not Started",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-20"
     },
     {
       "id": "T-1232",
@@ -1508,12 +1508,12 @@
       "module": "Reporting",
       "scenario": "Check Register",
       "assignee": "Amanda Burns",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-27"
     },
     {
       "id": "T-0242",
