@@ -1495,12 +1495,12 @@
       "module": "Reporting",
       "scenario": "Payment List",
       "assignee": "Amanda Burns",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-27"
     },
     {
       "id": "T-1232",
