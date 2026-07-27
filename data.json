@@ -1274,12 +1274,12 @@
       "module": "Reporting",
       "scenario": "List of Customer Open Items",
       "assignee": "Amanda Burns",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-27"
     },
     {
       "id": "T-1119",
@@ -1287,12 +1287,12 @@
       "module": "Reporting",
       "scenario": "Open Items: Customer Due Date Forec.",
       "assignee": "Amanda Burns",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-27"
     },
     {
       "id": "T-1120",
