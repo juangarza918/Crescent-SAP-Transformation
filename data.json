@@ -1261,12 +1261,12 @@
       "module": "Reporting",
       "scenario": "Customer Balances in Local Currency",
       "assignee": "Amanda Burns",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-27"
     },
     {
       "id": "T-1118",
