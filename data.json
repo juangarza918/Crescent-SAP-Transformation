@@ -10049,12 +10049,12 @@
       "module": "Reporting",
       "scenario": "Cumulated Actual Costs",
       "assignee": "Paola D.",
-      "status": "Not Started",
+      "status": "Failed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-28"
     },
     {
       "id": "T-1177",
