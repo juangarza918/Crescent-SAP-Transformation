@@ -13705,12 +13705,12 @@
       "module": "Property Accounting",
       "scenario": "PRA and FI balance transaction",
       "assignee": "Zach K.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-28"
     },
     {
       "id": "T-0150",
