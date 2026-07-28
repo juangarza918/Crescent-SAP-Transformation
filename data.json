@@ -13380,12 +13380,12 @@
       "module": "Property Accounting",
       "scenario": "Upload AR Comments & Categories",
       "assignee": "Zach K.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-28"
     },
     {
       "id": "T-0026",
