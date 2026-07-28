@@ -13343,7 +13343,7 @@
       "assignee": "Zach K.",
       "status": "Not Started",
       "dueDate": "2026-07-15",
-      "notes": "Able to access t-code. Not authorized to perform",
+      "notes": "Able to access t-code. Not authorized to perform intercompany doc reversal",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-28"
