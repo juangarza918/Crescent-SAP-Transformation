@@ -13317,10 +13317,10 @@
       "assignee": "Zach K.",
       "status": "Not Started",
       "dueDate": "2026-07-15",
-      "notes": "",
+      "notes": "\"You are not authorized to use transaction\" access blocked",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-28"
     },
     {
       "id": "T-0015",
