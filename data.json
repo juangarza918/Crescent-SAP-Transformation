@@ -13432,12 +13432,12 @@
       "module": "Property Accounting",
       "scenario": "CDEX Comapny Product Cross Reference",
       "assignee": "Zach K.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-28"
     },
     {
       "id": "T-0031",
