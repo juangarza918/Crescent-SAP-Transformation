@@ -11518,12 +11518,12 @@
       "module": "Property Accounting",
       "scenario": "Park Outgoing Credit Notes",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-28"
     },
     {
       "id": "T-0583",
