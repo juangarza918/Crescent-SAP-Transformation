@@ -13289,7 +13289,7 @@
       "module": "Property Accounting",
       "scenario": "Automatic Write-Off Processing-obsol",
       "assignee": "Zach K.",
-      "status": "Not Started",
+      "status": "Failed",
       "dueDate": "2026-07-14",
       "notes": "After inputting t-code, received pop stating \"Obsolete Transaction. No more in use\"",
       "links": [],
