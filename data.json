@@ -11505,12 +11505,12 @@
       "module": "Property Accounting",
       "scenario": "Preliminary Entry Outbound Invoices",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-28"
     },
     {
       "id": "T-0568",
