@@ -13112,12 +13112,12 @@
       "module": "Property Accounting",
       "scenario": "Payout mass processing",
       "assignee": "Zach K.",
-      "status": "In Progress",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-28"
     },
     {
       "id": "T-1499",
