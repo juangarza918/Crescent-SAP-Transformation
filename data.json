@@ -11583,12 +11583,12 @@
       "module": "Property Accounting",
       "scenario": "JV Non-operated cash call to eq grp",
       "assignee": "Trey H.",
-      "status": "In Progress",
+      "status": "Blocked",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-28"
     },
     {
       "id": "T-0588",
@@ -11596,12 +11596,12 @@
       "module": "Property Accounting",
       "scenario": "JV Non-Operated Cash Call to Project",
       "assignee": "Trey H.",
-      "status": "In Progress",
+      "status": "Blocked",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-28"
     },
     {
       "id": "T-0591",
