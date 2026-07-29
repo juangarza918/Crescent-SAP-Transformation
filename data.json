@@ -11895,7 +11895,7 @@
       "module": "Property Accounting",
       "scenario": "Delete CA Manual Entry",
       "assignee": "Trey H.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-15",
       "notes": "We do not use this CA T-code. ",
       "links": [],
