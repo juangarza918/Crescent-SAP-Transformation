@@ -743,10 +743,10 @@
       "assignee": "Amanda Burns",
       "status": "Blocked",
       "dueDate": "2026-07-13",
-      "notes": "\"Not authorized to use transaction F0217\"",
+      "notes": "AADSTS50105: Your administrator has configured the application SAP Fiori - QS4 ('93e3f2f9-8037-47da-8a89-c72981f2b9a7') to block users unless they are specifically granted ('assigned') access to the application. The signed in user 'hector.palma@crescentenergyco.com' is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0444",
@@ -756,10 +756,10 @@
       "assignee": "Amanda Burns",
       "status": "Blocked",
       "dueDate": "2026-07-13",
-      "notes": "\"Not authorized to use transaction\"",
+      "notes": "AADSTS50105: Your administrator has configured the application SAP Fiori - QS4 ('93e3f2f9-8037-47da-8a89-c72981f2b9a7') to block users unless they are specifically granted ('assigned') access to the application. The signed in user 'hector.palma@crescentenergyco.com' is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0445",
@@ -767,12 +767,12 @@
       "module": "Accounts Payable",
       "scenario": "Monitor Payments",
       "assignee": "Amanda Burns",
-      "status": "Blocked",
+      "status": "Not Started",
       "dueDate": "2026-07-13",
-      "notes": "\"Not authorized to use transaction\"",
+      "notes": "AADSTS50105: Your administrator has configured the application SAP Fiori - QS4 ('93e3f2f9-8037-47da-8a89-c72981f2b9a7') to block users unless they are specifically granted ('assigned') access to the application. The signed in user 'hector.palma@crescentenergyco.com' is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0459",
@@ -782,10 +782,10 @@
       "assignee": "Amanda Burns",
       "status": "Blocked",
       "dueDate": "2026-07-13",
-      "notes": "Not sure what value to input to run report",
+      "notes": "Transaction opened successfully. Search help returned �No values found�; no payment request data was available in QS4 client 100.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0460",
@@ -936,12 +936,12 @@
       "module": "Accounts Payable",
       "scenario": "Displayed Parked Vendor Document",
       "assignee": "Amanda Burns",
-      "status": "Blocked",
+      "status": "Failed",
       "dueDate": "2026-07-14",
-      "notes": "\"Transaction FV63 is not supported for direct access\"",
+      "notes": "Transaction FV63 is not supported for direct access.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0572",
@@ -949,12 +949,12 @@
       "module": "Accounts Payable",
       "scenario": "Report Selection",
       "assignee": "Amanda Burns",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "Blocked. Potentially descope\n",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0573",
@@ -1014,12 +1014,12 @@
       "module": "Accounts Payable",
       "scenario": "Post Outgoing Payments",
       "assignee": "Amanda Burns",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "Not authorized to use this transaction",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0456",
@@ -2600,12 +2600,12 @@
       "module": "Reporting",
       "scenario": "Commodity Code / Import code no.",
       "assignee": "Arlette C.",
-      "status": "Blocked",
+      "status": "Failed",
       "dueDate": "2026-07-21",
-      "notes": "",
+      "notes": "Transaction OVE1 cannot be executed (SAP Note 2476734)",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-21"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1021",
@@ -2730,12 +2730,12 @@
       "module": "Treasury",
       "scenario": "Enter G/L Account Posting",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0432",
@@ -2745,10 +2745,10 @@
       "assignee": "Brittany Quintanilla",
       "status": "Blocked",
       "dueDate": "2026-07-13",
-      "notes": "Not authorized",
+      "notes": "Fiori app access pending",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0433",
@@ -2758,10 +2758,10 @@
       "assignee": "Brittany Quintanilla",
       "status": "Blocked",
       "dueDate": "2026-07-13",
-      "notes": "Not authorized",
+      "notes": "Fiori app access pending",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0434",
@@ -2771,10 +2771,10 @@
       "assignee": "Brittany Quintanilla",
       "status": "Blocked",
       "dueDate": "2026-07-13",
-      "notes": "No authorized",
+      "notes": "Fiori app access pending",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0435",
@@ -2784,10 +2784,10 @@
       "assignee": "Brittany Quintanilla",
       "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "Not authorized",
+      "notes": "Fiori app access pending",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0436",
@@ -2797,10 +2797,10 @@
       "assignee": "Brittany Quintanilla",
       "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "Not authorized",
+      "notes": "Fiori app access pending",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0439",
@@ -2810,10 +2810,10 @@
       "assignee": "Brittany Quintanilla",
       "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "Not authorized",
+      "notes": "Fiori app access pending",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0441",
@@ -2823,10 +2823,10 @@
       "assignee": "Brittany Quintanilla",
       "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "Not authorized",
+      "notes": "Fiori app access pending",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0442",
@@ -2836,10 +2836,10 @@
       "assignee": "Brittany Quintanilla",
       "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "Not authorized",
+      "notes": "Fiori app access pending",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0443",
@@ -2849,10 +2849,10 @@
       "assignee": "Brittany Quintanilla",
       "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "Not authorized",
+      "notes": "Fiori app access pending",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0448",
@@ -2862,10 +2862,10 @@
       "assignee": "Brittany Quintanilla",
       "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "Not authorized",
+      "notes": "Fiori app access pending",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0450",
@@ -2875,10 +2875,10 @@
       "assignee": "Brittany Quintanilla",
       "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "Not authorized",
+      "notes": "Fiori app access pending",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0451",
@@ -2888,10 +2888,10 @@
       "assignee": "Brittany Quintanilla",
       "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "Not authorized",
+      "notes": "Fiori app access pending",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0452",
@@ -2901,10 +2901,10 @@
       "assignee": "Brittany Quintanilla",
       "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "Not authorized",
+      "notes": "Fiori app access pending",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0454",
@@ -2914,10 +2914,10 @@
       "assignee": "Brittany Quintanilla",
       "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "Not authorized",
+      "notes": "Fiori app access pending",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0461",
@@ -3003,12 +3003,12 @@
       "module": "Treasury",
       "scenario": "Post Tax Payable",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0476",
@@ -3159,12 +3159,12 @@
       "module": "Treasury",
       "scenario": "Parked Document $",
       "assignee": "Brittany Quintanilla",
-      "status": "Failed",
+      "status": "Blocked",
       "dueDate": "2026-07-16",
-      "notes": "Reject Parked Document - Delete/Reject button greyed out.  Unless this is meant for Manager role.",
+      "notes": "No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0503",
@@ -3174,10 +3174,10 @@
       "assignee": "Brittany Quintanilla",
       "status": "Failed",
       "dueDate": "2026-07-16",
-      "notes": "Received error \"Trasaction FBVB not defined for direct call-up\".  Do we need to test?  Instead use FBV0",
+      "notes": "Critiacl Message: Transaction FBVB not defined for direct call-up. FBV0 could be used instead.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0507",
@@ -3185,12 +3185,12 @@
       "module": "Treasury",
       "scenario": "Display Check Information",
       "assignee": "Brittany Quintanilla",
-      "status": "Failed",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "No display authorization for 0100",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0512",
@@ -3198,12 +3198,12 @@
       "module": "Treasury",
       "scenario": "Change Check Information/Cash Check",
       "assignee": "Brittany Quintanilla",
-      "status": "Failed",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "No authorization for maintaining in company code 0100",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0514",
@@ -3211,12 +3211,12 @@
       "module": "Treasury",
       "scenario": "Reverse Check Payment",
       "assignee": "Brittany Quintanilla",
-      "status": "Failed",
+      "status": "Passed",
       "dueDate": "2026-07-16",
-      "notes": "Error - No authorization for voiding issued checks",
+      "notes": "During QS4 client 100 testing, check 3000013287 for company code 0200 was unintentionally canceled in FCH8. SAP created reversal document 2000396032. No further action has been taken. Please advise whether the payment needs to be recreated.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0519",
@@ -3226,10 +3226,10 @@
       "assignee": "Brittany Quintanilla",
       "status": "Blocked",
       "dueDate": "2026-07-17",
-      "notes": "Not authorized",
+      "notes": "No Check Number to execute.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0521",
@@ -3237,12 +3237,12 @@
       "module": "Treasury",
       "scenario": "Online Cashed Checks",
       "assignee": "Brittany Quintanilla",
-      "status": "Failed",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "We don't use this tcode but, I did test and received error \"No authorization for automatic or online cashed checks\".",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0529",
@@ -3315,12 +3315,12 @@
       "module": "Treasury",
       "scenario": "Bank statement postprocessing",
       "assignee": "Brittany Quintanilla",
-      "status": "Failed",
+      "status": "Blocked",
       "dueDate": "2026-07-17",
-      "notes": "The incorrect screen populates when FEBAN is tested.",
+      "notes": "Bank statement postprocessing window opened succesfully. No data to process.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0535",
@@ -3395,10 +3395,10 @@
       "assignee": "Brittany Quintanilla",
       "status": "Blocked",
       "dueDate": "2026-07-20",
-      "notes": "Not authorized",
+      "notes": "Fiori app access pending",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0541",
@@ -3406,12 +3406,12 @@
       "module": "Treasury",
       "scenario": "Liquidity Forecast",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0542",
@@ -3549,12 +3549,12 @@
       "module": "Treasury",
       "scenario": "Park Incoming Credit Memos",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "Not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1019",
@@ -3577,10 +3577,10 @@
       "assignee": "Brittany Quintanilla",
       "status": "Blocked",
       "dueDate": "2026-07-21",
-      "notes": "Not authorized",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1452",
@@ -3588,12 +3588,12 @@
       "module": "Treasury",
       "scenario": "Automated F-03 Program",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-21",
-      "notes": "Not authorized",
+      "notes": "Transaction opened successfully. No clearing executed.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1453",
@@ -3603,10 +3603,10 @@
       "assignee": "Brittany Quintanilla",
       "status": "Blocked",
       "dueDate": "2026-07-21",
-      "notes": "Not authorized",
+      "notes": "No data to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1462",
@@ -3616,10 +3616,10 @@
       "assignee": "Brittany Quintanilla",
       "status": "Blocked",
       "dueDate": "2026-07-21",
-      "notes": "Not authorized",
+      "notes": "No data to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1465",
@@ -3627,12 +3627,12 @@
       "module": "Treasury",
       "scenario": "ACH Payment to Integrity",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-21",
-      "notes": "Not authorized",
+      "notes": "Transaction opened successfully. Selection screen loaded correctly with no errors or authorization issues.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1466",
@@ -3640,12 +3640,12 @@
       "module": "Treasury",
       "scenario": "Tcode for ZFI_PROMOTE_HOLD",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-21",
-      "notes": "Not authorized",
+      "notes": "Transaction opened successfully. Selection screen loaded correctly with no errors or authorization issues.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1489",
@@ -3679,12 +3679,12 @@
       "module": "Treasury",
       "scenario": "Clear/Unclear checks from EBS",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-21",
-      "notes": "Not authorized",
+      "notes": "Transaction opened successfully. Selection screen loaded correctly with no errors or authorization issues.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1514",
@@ -3705,12 +3705,12 @@
       "module": "Treasury",
       "scenario": "Printing EFT checks",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-21",
-      "notes": "Not authorized",
+      "notes": "Transaction opened successfully. Selection screen loaded correctly with no errors or authorization issues.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0275",
@@ -3718,12 +3718,12 @@
       "module": "Corporate Accounting",
       "scenario": "AuC Assignment of Dist. Rule",
       "assignee": "Drew Diaz",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "Error message saying \"Line item settlement is not possible for asset\" - only a few options are available to select from in parameters",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0277",
@@ -3731,12 +3731,12 @@
       "module": "Corporate Accounting",
       "scenario": "Transfer Asset under Const.",
       "assignee": "Drew Diaz",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "Getting error message saying \"Allocation profile not maintained\"",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0278",
@@ -3744,12 +3744,12 @@
       "module": "Corporate Accounting",
       "scenario": "Reverse Settlement of AuC",
       "assignee": "Drew Diaz",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "Getting error message saying \"Allocation profile not maintained\"\n",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0279",
@@ -3835,12 +3835,12 @@
       "module": "Corporate Accounting",
       "scenario": "Generate Settmt Rule: Coll.Proc.",
       "assignee": "Drew Diaz",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "When running - i'm showing there are processing errors on the execution screen",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0360",
@@ -3863,10 +3863,10 @@
       "assignee": "Drew Diaz",
       "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "When selecting a WBS Element and executing, there's a message saying \"No line items were selected\" - potential descope\n",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0431",
@@ -3874,12 +3874,12 @@
       "module": "Corporate Accounting",
       "scenario": "Clear G/L Account",
       "assignee": "Drew Diaz",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "Tried a few different accounts/company codes and all returning \"There are no open items managed in this account\"",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0462",
@@ -3913,12 +3913,12 @@
       "module": "Corporate Accounting",
       "scenario": "Clear G/L Account",
       "assignee": "Drew Diaz",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "Tried a few different accounts/company codes and all returning \"There are no open items managed in this account\"\n\n\n",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0995",
@@ -3980,10 +3980,10 @@
       "assignee": "Drew Diaz",
       "status": "Blocked",
       "dueDate": "2026-07-15",
-      "notes": "Do not have a file to upload for this one\n",
+      "notes": "Upload file required to execute",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1455",
@@ -3993,10 +3993,10 @@
       "assignee": "Drew Diaz",
       "status": "Blocked",
       "dueDate": "2026-07-15",
-      "notes": "Do not have a file to upload for this one",
+      "notes": "Upload file required to execute",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1482",
@@ -4032,10 +4032,10 @@
       "assignee": "Drew Diaz",
       "status": "Blocked",
       "dueDate": "2026-07-15",
-      "notes": "Returning that no data exists. Not sure if i'm inputting wrong parameters or what",
+      "notes": "Upload file required to execute",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1485",
@@ -4045,10 +4045,10 @@
       "assignee": "Drew Diaz",
       "status": "Blocked",
       "dueDate": "2026-07-15",
-      "notes": "Returning that no data exists. Not sure if i'm inputting wrong parameters or what",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1486",
@@ -4058,10 +4058,10 @@
       "assignee": "Drew Diaz",
       "status": "Blocked",
       "dueDate": "2026-07-15",
-      "notes": "No data exists - not sure what parameters to use\n",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1487",
@@ -4071,10 +4071,10 @@
       "assignee": "Drew Diaz",
       "status": "Blocked",
       "dueDate": "2026-07-15",
-      "notes": "Don't have loader to use",
+      "notes": "Upload file required to execute",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1488",
@@ -4082,12 +4082,12 @@
       "module": "Corporate Accounting",
       "scenario": "Field Cost Center Table",
       "assignee": "Drew Diaz",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1233",
@@ -4201,10 +4201,10 @@
       "assignee": "Drew Diaz",
       "status": "Blocked",
       "dueDate": "2026-07-16",
-      "notes": "Getting a pop up that my parameters don't exist. not sure what else to use",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0313",
@@ -4212,12 +4212,12 @@
       "module": "Reporting",
       "scenario": "Display Old Asset",
       "assignee": "Drew Diaz",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "Getting error saying no legacy data transfger was created for my parameters i've tried",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0315",
@@ -4342,12 +4342,12 @@
       "module": "Reporting",
       "scenario": "Display Standard WBS",
       "assignee": "Drew Diaz",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "No values found when i search for parameters",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0361",
@@ -4357,10 +4357,10 @@
       "assignee": "Drew Diaz",
       "status": "Blocked",
       "dueDate": "2026-07-17",
-      "notes": "No values found when i search for parameters\n",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0397",
@@ -4409,10 +4409,10 @@
       "assignee": "Drew Diaz",
       "status": "Failed",
       "dueDate": "2026-07-17",
-      "notes": "Getting Syntax error when i try to open the t-code",
+      "notes": "ABAP programming error    Does not have a component called \"ZZ",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0423",
@@ -4578,10 +4578,10 @@
       "assignee": "Drew Diaz",
       "status": "Blocked",
       "dueDate": "2026-07-20",
-      "notes": "No data selected - not sure what to use",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1058",
@@ -4708,10 +4708,10 @@
       "assignee": "Drew Diaz",
       "status": "Blocked",
       "dueDate": "2026-07-21",
-      "notes": "Not sure paramters for this one",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1068",
@@ -4721,10 +4721,10 @@
       "assignee": "Drew Diaz",
       "status": "Blocked",
       "dueDate": "2026-07-21",
-      "notes": "Not sure parameters for this one",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1069",
@@ -6058,12 +6058,12 @@
       "module": "MDM",
       "scenario": "Create WBS Element",
       "assignee": "Kali Geddie",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "Currency in requesting company code must be company code currency\n",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0341",
@@ -6136,12 +6136,12 @@
       "module": "MDM",
       "scenario": "Change Project Plan",
       "assignee": "Kali Geddie",
-      "status": "Failed",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "Short dump - error during insertion into a table with unique key\n",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0352",
@@ -6266,12 +6266,12 @@
       "module": "MDM",
       "scenario": "Change Financial Statement Version",
       "assignee": "Kali Geddie",
-      "status": "Failed",
+      "status": "Blocked",
       "dueDate": "2026-07-15",
-      "notes": "",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0559",
@@ -6476,10 +6476,10 @@
       "assignee": "Kali Geddie",
       "status": "Blocked",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1442",
@@ -6489,10 +6489,10 @@
       "assignee": "Kali Geddie",
       "status": "Blocked",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1450",
@@ -6502,10 +6502,10 @@
       "assignee": "Kali Geddie",
       "status": "Blocked",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1456",
@@ -6515,10 +6515,10 @@
       "assignee": "Kali Geddie",
       "status": "Blocked",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1460",
@@ -6552,12 +6552,12 @@
       "module": "MDM",
       "scenario": "GA Allocation Cost Center Mapping",
       "assignee": "Kali Geddie",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1481",
@@ -6565,12 +6565,12 @@
       "module": "MDM",
       "scenario": "Asset Master",
       "assignee": "Kali Geddie",
-      "status": "Blocked",
+      "status": "Failed",
       "dueDate": "2026-07-17",
-      "notes": "",
+      "notes": "ABAP error ZZLCTR\".",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1506",
@@ -6593,10 +6593,10 @@
       "assignee": "Kali Geddie",
       "status": "Blocked",
       "dueDate": "2026-07-17",
-      "notes": "",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0523",
@@ -6656,12 +6656,12 @@
       "module": "Reporting",
       "scenario": "Depreciation",
       "assignee": "Kali Geddie",
-      "status": "Failed",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1073",
@@ -6682,12 +6682,12 @@
       "module": "Reporting",
       "scenario": "Write-Ups",
       "assignee": "Kali Geddie",
-      "status": "Failed",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1075",
@@ -6903,12 +6903,12 @@
       "module": "Reporting",
       "scenario": "Asset History",
       "assignee": "Kali Geddie",
-      "status": "Failed",
+      "status": "Blocked",
       "dueDate": "2026-07-21",
-      "notes": "",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1111",
@@ -6918,10 +6918,10 @@
       "assignee": "Kali Geddie",
       "status": "Blocked",
       "dueDate": "2026-07-21",
-      "notes": "",
+      "notes": "No data to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1132",
@@ -6931,10 +6931,10 @@
       "assignee": "Kali Geddie",
       "status": "Failed",
       "dueDate": "2026-07-21",
-      "notes": "",
+      "notes": "DUMP: ABAP programming error",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1133",
@@ -7007,12 +7007,12 @@
       "module": "IT",
       "scenario": "Cannot be executed directly",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-22",
-      "notes": "",
+      "notes": "The object could not be executed.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1263",
@@ -7046,12 +7046,12 @@
       "module": "IT",
       "scenario": "Start an Object",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-22",
-      "notes": "",
+      "notes": "The object could not be executed.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1268",
@@ -7449,12 +7449,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Administrate Update Records",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1284",
@@ -7462,12 +7462,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Update Program Administration",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1285",
@@ -7475,12 +7475,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Reorganize Security Audit Log",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1286",
@@ -7488,12 +7488,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Configure Security Audit Log",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1287",
@@ -7501,12 +7501,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Evaluate Security Audit Log",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1288",
@@ -7514,12 +7514,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Evaluate Security Audit Log",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1289",
@@ -7527,12 +7527,12 @@
       "module": "SAPSUPPORT",
       "scenario": "system log",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1290",
@@ -7540,12 +7540,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Installation Check",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1291",
@@ -7553,12 +7553,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Batch Input: Log Monitoring",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1295",
@@ -7566,12 +7566,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Queue Maintenance Transaction",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1296",
@@ -7579,12 +7579,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Execute external OS commands",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1297",
@@ -7592,12 +7592,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Work Processes of AS Instance",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1298",
@@ -7605,12 +7605,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Started AS Instances",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1299",
@@ -7618,12 +7618,12 @@
       "module": "SAPSUPPORT",
       "scenario": "TXCOM Maintenance",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1300",
@@ -7631,12 +7631,12 @@
       "module": "SAPSUPPORT",
       "scenario": "THOST Maintenance",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1301",
@@ -7644,12 +7644,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Number Range Buffer",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1302",
@@ -7657,12 +7657,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Asynchronous RFC Error Log",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1303",
@@ -7670,12 +7670,12 @@
       "module": "SAPSUPPORT",
       "scenario": "RFC Destinations (Display/Edit)",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1304",
@@ -7683,12 +7683,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Background control objects monitor",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1305",
@@ -7696,12 +7696,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Event History and Background Events",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1306",
@@ -7709,12 +7709,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Display/Maintain Operating Mode Sets",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1307",
@@ -7722,12 +7722,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Manage Background Processing Events",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1308",
@@ -7735,12 +7735,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Background Processing Analysis Tool",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1309",
@@ -7748,12 +7748,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Global Work Process Overview",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1310",
@@ -7761,12 +7761,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Maintain External OS Commands",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1312",
@@ -7774,12 +7774,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Gateway Monitor",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1313",
@@ -7787,12 +7787,12 @@
       "module": "SAPSUPPORT",
       "scenario": "ICM Monitor",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1327",
@@ -7800,12 +7800,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Note Assistant",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1357",
@@ -7813,12 +7813,12 @@
       "module": "SAPSUPPORT",
       "scenario": "System Trace",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1358",
@@ -7826,12 +7826,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Setups/Tune Buffers",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1359",
@@ -7839,12 +7839,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Workload and Performance Statistics",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1360",
@@ -7852,12 +7852,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Global Workload Statistics",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-15",
-      "notes": "",
+      "notes": "Cannot read object list for QS4 from SCR (Error 4)",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1361",
@@ -7865,12 +7865,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Workload and Performance Statistics",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1362",
@@ -7878,12 +7878,12 @@
       "module": "SAPSUPPORT",
       "scenario": "DB Performance Monitor",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1363",
@@ -7891,12 +7891,12 @@
       "module": "SAPSUPPORT",
       "scenario": "St04 for MS SQL Server",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1364",
@@ -7904,12 +7904,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Performance Trace",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1365",
@@ -7917,12 +7917,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Operating System Monitor",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1366",
@@ -7930,12 +7930,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Application monitor",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1367",
@@ -7943,12 +7943,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Table Call Statistics",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1368",
@@ -7956,12 +7956,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Display Developer Traces",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1369",
@@ -7969,12 +7969,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Single transaction analysis",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1370",
@@ -7982,12 +7982,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Analysis&Monitoring tool collection",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1371",
@@ -7995,12 +7995,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Application Analysis",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1372",
@@ -8008,12 +8008,12 @@
       "module": "SAPSUPPORT",
       "scenario": "ABAP Dump Analysis",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1373",
@@ -8021,12 +8021,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Global  Perf. Analysis: Execute",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1374",
@@ -8034,12 +8034,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Statistics display for all systems",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1375",
@@ -8047,12 +8047,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Authorization Trace",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1376",
@@ -8060,12 +8060,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Transport Management System",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1377",
@@ -8073,12 +8073,12 @@
       "module": "SAPSUPPORT",
       "scenario": "TMS Import Queue",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1378",
@@ -8086,12 +8086,12 @@
       "module": "SAPSUPPORT",
       "scenario": "TMS Import Monitor",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1379",
@@ -8099,12 +8099,12 @@
       "module": "SAPSUPPORT",
       "scenario": "TMS Quality Assurance",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Blocked",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "Not Executed",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1380",
@@ -8112,12 +8112,12 @@
       "module": "SAPSUPPORT",
       "scenario": "TMS Import Overview",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1381",
@@ -8125,12 +8125,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Trust Manager",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1382",
@@ -8138,12 +8138,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Trust Manager for Logon Ticket",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1383",
@@ -8151,12 +8151,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Maintain time zone act. in client",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1384",
@@ -8164,12 +8164,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Display View Cluster VCUSRVAR",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1385",
@@ -8177,12 +8177,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Display View Cluster VCUSRVARCOM",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1387",
@@ -8190,12 +8190,12 @@
       "module": "SAPSUPPORT",
       "scenario": "User Display",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1388",
@@ -8203,12 +8203,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Maintain Authorizations",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1389",
@@ -8216,12 +8216,12 @@
       "module": "SAPSUPPORT",
       "scenario": "User Mass Maintenance",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1390",
@@ -8229,12 +8229,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Mass Changes to User Master Records",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1391",
@@ -8242,12 +8242,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Maintain Authorization Fields",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1392",
@@ -8255,12 +8255,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Authorization Object Maintenance",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1393",
@@ -8268,12 +8268,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Default Data Maintenance (SAP)",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1394",
@@ -8281,12 +8281,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Authorization Default Data (Cust.)",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1395",
@@ -8294,12 +8294,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Change Documents for Default Values",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1396",
@@ -8307,12 +8307,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Upgrade Tool for Profile Generator",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1397",
@@ -8320,12 +8320,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Upgrade Tool for Profile Generator",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1399",
@@ -8333,12 +8333,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Own data",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1400",
@@ -8346,12 +8346,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Maintain Own User Address",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1401",
@@ -8359,12 +8359,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Maintain Own User Parameters",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1403",
@@ -8372,12 +8372,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Analyze User Buffer",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1404",
@@ -8385,12 +8385,12 @@
       "module": "SAPSUPPORT",
       "scenario": "User company address maintenance",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1405",
@@ -8398,12 +8398,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Maintain User Groups",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1406",
@@ -8411,12 +8411,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Display user groups",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1407",
@@ -8424,12 +8424,12 @@
       "module": "SAPSUPPORT",
       "scenario": "User Information System",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1408",
@@ -8437,12 +8437,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Role Profiles",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1409",
@@ -8450,12 +8450,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Workflow Builder",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Failed",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "SAPnetz warning: Frontend version is older than R/3 version - SAPRL 816 (93)",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1410",
@@ -8463,12 +8463,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Show Graphical Workflow Log",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1411",
@@ -8476,12 +8476,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Display/Maint. Event Type Linkages",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "Information message: Client 100 has status 'not modifiable'",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1412",
@@ -8489,12 +8489,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Display/Maint. Event Type Linkages",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "Information message: Client 100 has status 'not modifiable'",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1413",
@@ -8502,12 +8502,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Work Item Retrieval",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1414",
@@ -8515,12 +8515,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Where-Used List for Tasks",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1415",
@@ -8528,12 +8528,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Workflows for Object Type",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-21",
-      "notes": "",
+      "notes": "No information could be retrieved.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1416",
@@ -8541,12 +8541,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Workflows for Object",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-21",
-      "notes": "",
+      "notes": "No information could be retrieved.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1419",
@@ -8554,12 +8554,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Workflow Diagnosis",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1420",
@@ -8567,12 +8567,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Start Workflow",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1421",
@@ -8580,12 +8580,12 @@
       "module": "SAPSUPPORT",
       "scenario": "DX Workbench: tools",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1422",
@@ -8593,12 +8593,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Data Transfer Workbench",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1426",
@@ -8606,12 +8606,12 @@
       "module": "SAPSUPPORT",
       "scenario": "TREX Administration Tool",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1431",
@@ -8619,12 +8619,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Maintain Print Parameters",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1432",
@@ -8632,12 +8632,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Display IDoc",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1433",
@@ -8645,12 +8645,12 @@
       "module": "SAPSUPPORT",
       "scenario": "IDoc Lists",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1434",
@@ -8658,12 +8658,12 @@
       "module": "SAPSUPPORT",
       "scenario": "IDoc statistics",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1435",
@@ -8671,12 +8671,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Search for IDocs by Content",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1436",
@@ -8684,12 +8684,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Search for IDocs by Content",
       "assignee": "Leo Hidrogo",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-26"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0738",
@@ -8827,12 +8827,12 @@
       "module": "Property Accounting",
       "scenario": "Display Joint Venture",
       "assignee": "Paola D.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0761",
@@ -8853,12 +8853,12 @@
       "module": "Property Accounting",
       "scenario": "Display Internal Marketing Rates",
       "assignee": "Paola D.",
-      "status": "Failed",
+      "status": "Blocked",
       "dueDate": "2026-07-13",
-      "notes": "",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0766",
@@ -8920,10 +8920,10 @@
       "assignee": "Paola D.",
       "status": "Blocked",
       "dueDate": "2026-07-13",
-      "notes": "",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0778",
@@ -8970,12 +8970,12 @@
       "module": "Property Accounting",
       "scenario": "Display MP Meter Specifications",
       "assignee": "Paola D.",
-      "status": "Failed",
+      "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0785",
@@ -8983,12 +8983,12 @@
       "module": "Property Accounting",
       "scenario": "Display WC & MP Measurments",
       "assignee": "Paola D.",
-      "status": "Failed",
+      "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0786",
@@ -8996,12 +8996,12 @@
       "module": "Property Accounting",
       "scenario": "MP/WC Measurements",
       "assignee": "Paola D.",
-      "status": "Failed",
+      "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0787",
@@ -9011,10 +9011,10 @@
       "assignee": "Paola D.",
       "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0790",
@@ -9048,12 +9048,12 @@
       "module": "Property Accounting",
       "scenario": "Display Plant Allocation Methods",
       "assignee": "Paola D.",
-      "status": "Failed",
+      "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0794",
@@ -9061,12 +9061,12 @@
       "module": "Property Accounting",
       "scenario": "Platform Maintenance Display",
       "assignee": "Paola D.",
-      "status": "Failed",
+      "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "No values found.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0798",
@@ -9113,12 +9113,12 @@
       "module": "Property Accounting",
       "scenario": "Display WC/MP Reproduced Materials",
       "assignee": "Paola D.",
-      "status": "Failed",
+      "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0805",
@@ -9451,12 +9451,12 @@
       "module": "Property Accounting",
       "scenario": "Display Repository Formula",
       "assignee": "Paola D.",
-      "status": "Blocked",
+      "status": "Failed",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "Critical Message: Repository control table  not found in Data Dictionary",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0880",
@@ -9529,12 +9529,12 @@
       "module": "Property Accounting",
       "scenario": "Outstanding summary balance",
       "assignee": "Paola D.",
-      "status": "Failed",
+      "status": "Blocked",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "No Values found.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0886",
@@ -9596,10 +9596,10 @@
       "assignee": "Paola D.",
       "status": "Blocked",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0902",
@@ -9622,10 +9622,10 @@
       "assignee": "Paola D.",
       "status": "Blocked",
       "dueDate": "2026-07-17",
-      "notes": "",
+      "notes": "No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0825",
@@ -9776,12 +9776,12 @@
       "module": "Property Accounting",
       "scenario": "Delete wc volumes",
       "assignee": "Paola D.",
-      "status": "Failed",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
-      "notes": "Missing document number to test ",
+      "notes": "No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-24"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0844",
@@ -9815,12 +9815,12 @@
       "module": "Property Accounting",
       "scenario": "Well Identification Display",
       "assignee": "Paola D.",
-      "status": "Failed",
+      "status": "Passed",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "Transaction opened successfully. Selection screen loaded correctly with no errors or authorization issues.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-24"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0848",
@@ -9841,12 +9841,12 @@
       "module": "Property Accounting",
       "scenario": "Create Well Test",
       "assignee": "Paola D.",
-      "status": "Failed",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-24"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0850",
@@ -9854,12 +9854,12 @@
       "module": "Property Accounting",
       "scenario": "Well Test Change",
       "assignee": "Paola D.",
-      "status": "Failed",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-24"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0852",
@@ -9867,12 +9867,12 @@
       "module": "Property Accounting",
       "scenario": "Well Test delete",
       "assignee": "Paola D.",
-      "status": "Failed",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-24"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0855",
@@ -9880,12 +9880,12 @@
       "module": "Property Accounting",
       "scenario": "Balancing Workplace",
       "assignee": "Paola D.",
-      "status": "Failed",
+      "status": "Passed",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "Transaction opened successfully. Selection screen loaded correctly with no errors or authorization issues.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-24"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0858",
@@ -9945,12 +9945,12 @@
       "module": "Reporting",
       "scenario": "Budget/Actual/Variance",
       "assignee": "Paola D.",
-      "status": "Failed",
+      "status": "Blocked",
       "dueDate": "2026-07-21",
-      "notes": "",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1167",
@@ -9958,12 +9958,12 @@
       "module": "Reporting",
       "scenario": "Budget/Actual/Commitment",
       "assignee": "Paola D.",
-      "status": "Failed",
+      "status": "Blocked",
       "dueDate": "2026-07-21",
-      "notes": "",
+      "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1168",
@@ -10220,10 +10220,10 @@
       "assignee": "Roderick G.",
       "status": "Blocked",
       "dueDate": "2026-07-13",
-      "notes": "Potientially Descope",
+      "notes": "Use /n/PRA/FP_DISP_COM_REC to access. No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0126",
@@ -10350,10 +10350,10 @@
       "assignee": "Roderick G.",
       "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "AADSTS50105: Your administrator has configured the application SAP Fiori - QS4 ('93e3f2f9-8037-47da-8a89-c72981f2b9a7') to block users unless they are specifically granted ('assigned') access to the application. The signed in user 'hector.palma@crescentenergyco.com' is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0440",
@@ -10363,10 +10363,10 @@
       "assignee": "Roderick G.",
       "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "AADSTS50105: Your administrator has configured the application SAP Fiori - QS4 ('93e3f2f9-8037-47da-8a89-c72981f2b9a7') to block users unless they are specifically granted ('assigned') access to the application. The signed in user 'hector.palma@crescentenergyco.com' is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0466",
@@ -10452,12 +10452,12 @@
       "module": "Property Accounting",
       "scenario": "Compare FI with JV document",
       "assignee": "Roderick G.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0614",
@@ -10465,12 +10465,12 @@
       "module": "Property Accounting",
       "scenario": "JV Document Comparison",
       "assignee": "Roderick G.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0615",
@@ -10818,10 +10818,10 @@
       "assignee": "Roderick G.",
       "status": "Blocked",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "No records found.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0704",
@@ -10831,10 +10831,10 @@
       "assignee": "Roderick G.",
       "status": "Blocked",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "No records found.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0707",
@@ -10922,10 +10922,10 @@
       "assignee": "Roderick G.",
       "status": "Blocked",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "No records found.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0716",
@@ -10935,10 +10935,10 @@
       "assignee": "Roderick G.",
       "status": "Blocked",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "No records found.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0719",
@@ -11154,12 +11154,12 @@
       "module": "Property Accounting",
       "scenario": "Price maintenance",
       "assignee": "Roderick G.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0796",
@@ -11167,12 +11167,12 @@
       "module": "Property Accounting",
       "scenario": "Valuation PPN Selection",
       "assignee": "Roderick G.",
-      "status": "Failed",
+      "status": "Blocked",
       "dueDate": "2026-07-17",
-      "notes": "",
+      "notes": "No records found.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0797",
@@ -11180,12 +11180,12 @@
       "module": "Property Accounting",
       "scenario": "Manual PPN: Create",
       "assignee": "Roderick G.",
-      "status": "Failed",
+      "status": "Passed",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "Transaction opened successfully. Selection screen loaded correctly with no errors or authorization issues.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0799",
@@ -11208,10 +11208,10 @@
       "assignee": "Roderick G.",
       "status": "Blocked",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "No values found.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0804",
@@ -11338,10 +11338,10 @@
       "assignee": "Roderick G.",
       "status": "Blocked",
       "dueDate": "2026-07-21",
-      "notes": "",
+      "notes": "No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1437",
@@ -11351,10 +11351,10 @@
       "assignee": "Roderick G.",
       "status": "Blocked",
       "dueDate": "2026-07-21",
-      "notes": "",
+      "notes": "No condition records exist for this selection",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1438",
@@ -11364,10 +11364,10 @@
       "assignee": "Roderick G.",
       "status": "Blocked",
       "dueDate": "2026-07-21",
-      "notes": "",
+      "notes": "No condition records exist for this selection",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-23"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1448",
@@ -11414,12 +11414,12 @@
       "module": "Property Accounting",
       "scenario": "Enter Customer Credit Memo",
       "assignee": "Trey H.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0447",
@@ -11453,12 +11453,12 @@
       "module": "Property Accounting",
       "scenario": "Post Held Document",
       "assignee": "Trey H.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0477",
@@ -11466,12 +11466,12 @@
       "module": "Property Accounting",
       "scenario": "Enter Outgoing Invoices",
       "assignee": "Trey H.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0493",
@@ -11479,12 +11479,12 @@
       "module": "Property Accounting",
       "scenario": "Change Intercompany Document",
       "assignee": "Trey H.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0552",
@@ -11661,12 +11661,12 @@
       "module": "Property Accounting",
       "scenario": "Hard Copy Billing",
       "assignee": "Trey H.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "WRITE_FORM is invalid, OPEN_FORM is missing",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0596",
@@ -11674,12 +11674,12 @@
       "module": "Property Accounting",
       "scenario": "Hard Copy Billing",
       "assignee": "Trey H.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0597",
@@ -11741,10 +11741,10 @@
       "assignee": "Trey H.",
       "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Transaction opened succesfully. No data retrieved.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0620",
@@ -11754,10 +11754,10 @@
       "assignee": "Trey H.",
       "status": "Blocked",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "Transaction opened succesfully. No data retrieved.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0621",
@@ -12545,12 +12545,12 @@
       "module": "Property Accounting",
       "scenario": "Payment Processing 2.0 Portal",
       "assignee": "Trey H.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "Use /n/PRA/PP_PORTAL to access.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0138",
@@ -12963,10 +12963,10 @@
       "assignee": "Zach K.",
       "status": "Failed",
       "dueDate": "2026-07-13",
-      "notes": "",
+      "notes": "DUMP: ABAP programming error",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1449",
@@ -13065,9 +13065,9 @@
       "module": "Property Accounting",
       "scenario": "NRI vs WI Owner report",
       "assignee": "Zach K.",
-      "status": "Failed",
+      "status": "Passed",
       "dueDate": "2026-07-14",
-      "notes": "The download of the file put it in a non excel readable file as such there is no output for the file.",
+      "notes": "Transaction opened successfully. Selection screen loaded correctly with no errors or authorization issues.",
       "links": [
         {
           "label": "",
@@ -13083,7 +13083,7 @@
           "link": ""
         }
       ],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1492",
@@ -13257,7 +13257,7 @@
       "assignee": "Zach K.",
       "status": "Failed",
       "dueDate": "2026-07-14",
-      "notes": "\"THIS FUNCTION IS NOT POSSIBLE\"",
+      "notes": "Use /n/AIF/ERR to access. Waring message: Potentially unlicensed usage of AIF; use of AIF restricted",
       "links": [],
       "defects": [
         {
@@ -13268,7 +13268,7 @@
           "link": ""
         }
       ],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0009",
@@ -14253,10 +14253,10 @@
       "assignee": "Zach K.",
       "status": "Blocked",
       "dueDate": "2026-07-22",
-      "notes": "",
+      "notes": "No values found.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1164",
@@ -14266,10 +14266,10 @@
       "assignee": "Zach K.",
       "status": "Blocked",
       "dueDate": "2026-07-22",
-      "notes": "",
+      "notes": "No values found.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1165",
@@ -14279,10 +14279,10 @@
       "assignee": "Zach K.",
       "status": "Blocked",
       "dueDate": "2026-07-22",
-      "notes": "",
+      "notes": "No values found.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": ",0,,1,link: https://crescentenergyco.app.box.com/file/2337235233574",
