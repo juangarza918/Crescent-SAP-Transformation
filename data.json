@@ -12768,7 +12768,7 @@
       "assignee": "Trey H.",
       "status": "Descoped",
       "dueDate": "2026-07-22",
-      "notes": "We do not use this T-Code. Also, I cannot find a ",
+      "notes": "We do not use this T-Code. Also, I cannot find an AFE that will pull any data in Q.\n",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-29"
