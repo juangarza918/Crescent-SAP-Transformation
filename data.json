@@ -12532,7 +12532,7 @@
       "module": "Property Accounting",
       "scenario": "Output file creation",
       "assignee": "Trey H.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-20",
       "notes": "We do not use this T-code. ",
       "links": [],
