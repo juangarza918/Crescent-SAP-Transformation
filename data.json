@@ -741,7 +741,7 @@
       "module": "Accounts Payable",
       "scenario": "Track Supplier Invoices",
       "assignee": "Amanda Burns",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-13",
       "notes": "AADSTS50105: Your administrator has configured the application SAP Fiori - QS4 ('93e3f2f9-8037-47da-8a89-c72981f2b9a7') to block users unless they are specifically granted ('assigned') access to the application. The signed in user 'hector.palma@crescentenergyco.com' is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.",
       "links": [],
@@ -754,7 +754,7 @@
       "module": "Accounts Payable",
       "scenario": "Invoice Processing Time - Today",
       "assignee": "Amanda Burns",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-13",
       "notes": "AADSTS50105: Your administrator has configured the application SAP Fiori - QS4 ('93e3f2f9-8037-47da-8a89-c72981f2b9a7') to block users unless they are specifically granted ('assigned') access to the application. The signed in user 'hector.palma@crescentenergyco.com' is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.",
       "links": [],
@@ -767,7 +767,7 @@
       "module": "Accounts Payable",
       "scenario": "Monitor Payments",
       "assignee": "Amanda Burns",
-      "status": "Not Started",
+      "status": "Descoped",
       "dueDate": "2026-07-13",
       "notes": "AADSTS50105: Your administrator has configured the application SAP Fiori - QS4 ('93e3f2f9-8037-47da-8a89-c72981f2b9a7') to block users unless they are specifically granted ('assigned') access to the application. The signed in user 'hector.palma@crescentenergyco.com' is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.",
       "links": [],
@@ -1456,12 +1456,12 @@
       "module": "Reporting",
       "scenario": "Currencies and Time Frame",
       "assignee": "Amanda Burns",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-17",
       "notes": "No access",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1171",
@@ -1469,12 +1469,12 @@
       "module": "Reporting",
       "scenario": "Dynamic Currency and Time Frame",
       "assignee": "Amanda Burns",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-17",
       "notes": "No Access",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-27"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1230",
@@ -2600,7 +2600,7 @@
       "module": "Reporting",
       "scenario": "Commodity Code / Import code no.",
       "assignee": "Arlette C.",
-      "status": "Failed",
+      "status": "Descoped",
       "dueDate": "2026-07-21",
       "notes": "Transaction OVE1 cannot be executed (SAP Note 2476734)",
       "links": [],
@@ -2644,7 +2644,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0321",
@@ -2657,7 +2657,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0323",
@@ -2683,7 +2683,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0424",
@@ -2696,7 +2696,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0425",
@@ -2709,7 +2709,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0426",
@@ -2722,7 +2722,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0429",
@@ -2743,7 +2743,7 @@
       "module": "Treasury",
       "scenario": "Liquidity Forecast - Overview by Transaction Currency",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-13",
       "notes": "Fiori app access pending",
       "links": [],
@@ -2756,7 +2756,7 @@
       "module": "Treasury",
       "scenario": "Actual Cash Flow - Trend by Date: EUR",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-13",
       "notes": "Fiori app access pending",
       "links": [],
@@ -2769,7 +2769,7 @@
       "module": "Treasury",
       "scenario": "Payment Statistics - In the Last 90 Days",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-13",
       "notes": "Fiori app access pending",
       "links": [],
@@ -2782,7 +2782,7 @@
       "module": "Treasury",
       "scenario": "Post General Journal Entries",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "Fiori app access pending",
       "links": [],
@@ -2795,7 +2795,7 @@
       "module": "Treasury",
       "scenario": "Cash Flow (Deprecated) - Detailed Analysis",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "Fiori app access pending",
       "links": [],
@@ -2808,7 +2808,7 @@
       "module": "Treasury",
       "scenario": "Manage Bank Accounts",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "Fiori app access pending",
       "links": [],
@@ -2821,7 +2821,7 @@
       "module": "Treasury",
       "scenario": "Manage Banks",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "Fiori app access pending",
       "links": [],
@@ -2834,7 +2834,7 @@
       "module": "Treasury",
       "scenario": "Foreign Bank Account Report",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "Fiori app access pending",
       "links": [],
@@ -2847,7 +2847,7 @@
       "module": "Treasury",
       "scenario": "Bank Statement Monitor - End of Day",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "Fiori app access pending",
       "links": [],
@@ -2860,7 +2860,7 @@
       "module": "Treasury",
       "scenario": "Monitor Bank Fees",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "Fiori app access pending",
       "links": [],
@@ -2873,7 +2873,7 @@
       "module": "Treasury",
       "scenario": "Cash Flow Comparison - By Date Range",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "Fiori app access pending",
       "links": [],
@@ -2886,7 +2886,7 @@
       "module": "Treasury",
       "scenario": "Bank Statement Monitor - Intraday",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "Fiori app access pending",
       "links": [],
@@ -2899,7 +2899,7 @@
       "module": "Treasury",
       "scenario": "Bank Account Balance",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "Fiori app access pending",
       "links": [],
@@ -2912,7 +2912,7 @@
       "module": "Treasury",
       "scenario": "Monitor Bank Account Balances",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "Fiori app access pending",
       "links": [],
@@ -2930,7 +2930,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0467",
@@ -2969,7 +2969,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0471",
@@ -3034,7 +3034,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0479",
@@ -3047,7 +3047,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0480",
@@ -3060,7 +3060,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0490",
@@ -3086,7 +3086,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0496",
@@ -3255,7 +3255,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0530",
@@ -3268,7 +3268,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0531",
@@ -3281,7 +3281,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0532",
@@ -3294,7 +3294,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0533",
@@ -3307,7 +3307,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0534",
@@ -3333,7 +3333,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0536",
@@ -3346,7 +3346,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0537",
@@ -3372,7 +3372,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0539",
@@ -3385,7 +3385,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0540",
@@ -3476,7 +3476,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0551",
@@ -3489,7 +3489,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0553",
@@ -3502,7 +3502,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0562",
@@ -3528,7 +3528,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0564",
@@ -3541,7 +3541,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0566",
@@ -3562,12 +3562,12 @@
       "module": "Treasury",
       "scenario": "Process Repetitive Codes",
       "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "status": "Descoped",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1427",
@@ -3575,7 +3575,7 @@
       "module": "Treasury",
       "scenario": "Spot/Forward Transaction Entry",
       "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-21",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
@@ -3671,7 +3671,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1510",
@@ -3697,7 +3697,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1523",
@@ -4576,7 +4576,7 @@
       "module": "Reporting",
       "scenario": "Depreciation Posted to Cost Center",
       "assignee": "Drew Diaz",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-20",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
@@ -4706,7 +4706,7 @@
       "module": "Reporting",
       "scenario": "Asset Balances for Group Assets",
       "assignee": "Drew Diaz",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-21",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
@@ -4719,7 +4719,7 @@
       "module": "Reporting",
       "scenario": "Physical Inventory List",
       "assignee": "Drew Diaz",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-21",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
@@ -4771,7 +4771,7 @@
       "module": "Owner Relations",
       "scenario": "Un-Escheat Owner",
       "assignee": "Joy G.",
-      "status": "Failed",
+      "status": "Descoped",
       "dueDate": "2026-07-13",
       "notes": "NOT AUTHORIZED",
       "links": [],
@@ -4823,7 +4823,7 @@
       "module": "Owner Relations",
       "scenario": "Maintain Owner Info",
       "assignee": "Joy G.",
-      "status": "Failed",
+      "status": "Descoped",
       "dueDate": "2026-07-13",
       "notes": "NOT AUTHORIZED",
       "links": [],
@@ -5044,7 +5044,7 @@
       "module": "Owner Relations",
       "scenario": "Escheat BA Info Maintenance",
       "assignee": "Joy G.",
-      "status": "Failed",
+      "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "NOT AUTHORIZED",
       "links": [],
@@ -5057,7 +5057,7 @@
       "module": "Owner Relations",
       "scenario": "Escheat Due Dilgence Address Maint",
       "assignee": "Joy G.",
-      "status": "Failed",
+      "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "NOT AUTHORIZED",
       "links": [],
@@ -5070,7 +5070,7 @@
       "module": "Owner Relations",
       "scenario": "Escheat Holder Record Maintenance",
       "assignee": "Joy G.",
-      "status": "Failed",
+      "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "NOT AUTHORIZED",
       "links": [],
@@ -5239,7 +5239,7 @@
       "module": "Owner Relations",
       "scenario": "",
       "assignee": "Grant M.",
-      "status": "Failed",
+      "status": "Descoped",
       "dueDate": "2026-07-15",
       "notes": "T CODE DOES NOT EXIST",
       "links": [],
@@ -5278,7 +5278,7 @@
       "module": "Owner Relations",
       "scenario": "PRA Mkt Free Costs Updates",
       "assignee": "Grant M.",
-      "status": "In Progress",
+      "status": "Descoped",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
@@ -5785,7 +5785,7 @@
       "module": "Owner Relations",
       "scenario": "Owner 1099 Information",
       "assignee": "Joy G.",
-      "status": "Failed",
+      "status": "Descoped",
       "dueDate": "2026-07-22",
       "notes": "NO RECORDS FOUND FOR MULT SEARCH ATTEMPTS",
       "links": [],
@@ -5811,7 +5811,7 @@
       "module": "Owner Relations",
       "scenario": "PRA Outstanding Summary Balance",
       "assignee": "Grant M.",
-      "status": "Failed",
+      "status": "Descoped",
       "dueDate": "2026-07-22",
       "notes": "ABAP RUNTIME ERROR - ALL CLIENT",
       "links": [],
@@ -5837,7 +5837,7 @@
       "module": "Owner Relations",
       "scenario": "OWNER SHIP FORM",
       "assignee": "Grant M.",
-      "status": "In Progress",
+      "status": "Descoped",
       "dueDate": "2026-07-22",
       "notes": "SCREEN FREEZES DURING OUTPUT, BUT DOES NOT FAIL",
       "links": [],
@@ -6474,7 +6474,7 @@
       "module": "MDM",
       "scenario": "Alternate Hierarchy",
       "assignee": "Kali Geddie",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-16",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
@@ -6487,7 +6487,7 @@
       "module": "MDM",
       "scenario": "Bank Routing Create Upload",
       "assignee": "Kali Geddie",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-16",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
@@ -6500,7 +6500,7 @@
       "module": "MDM",
       "scenario": "Create Cost Cente Loader",
       "assignee": "Kali Geddie",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-16",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
@@ -6513,7 +6513,7 @@
       "module": "MDM",
       "scenario": "AFE Budget and Plan Loader",
       "assignee": "Kali Geddie",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-16",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
@@ -6565,7 +6565,7 @@
       "module": "MDM",
       "scenario": "Asset Master",
       "assignee": "Kali Geddie",
-      "status": "Failed",
+      "status": "Descoped",
       "dueDate": "2026-07-17",
       "notes": "ABAP error ZZLCTR\".",
       "links": [],
@@ -7007,7 +7007,7 @@
       "module": "IT",
       "scenario": "Cannot be executed directly",
       "assignee": "Leo Hidrogo",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-22",
       "notes": "The object could not be executed.",
       "links": [],
@@ -7046,7 +7046,7 @@
       "module": "IT",
       "scenario": "Start an Object",
       "assignee": "Leo Hidrogo",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-22",
       "notes": "The object could not be executed.",
       "links": [],
@@ -7852,7 +7852,7 @@
       "module": "SAPSUPPORT",
       "scenario": "Global Workload Statistics",
       "assignee": "Leo Hidrogo",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-15",
       "notes": "Cannot read object list for QS4 from SCR (Error 4)",
       "links": [],
@@ -8099,7 +8099,7 @@
       "module": "SAPSUPPORT",
       "scenario": "TMS Quality Assurance",
       "assignee": "Leo Hidrogo",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-16",
       "notes": "Not Executed",
       "links": [],
@@ -10015,7 +10015,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1174",
@@ -10028,7 +10028,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1175",
@@ -10041,7 +10041,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1176",
@@ -10054,7 +10054,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1177",
@@ -10067,7 +10067,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1178",
@@ -10080,7 +10080,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1234",
@@ -10218,7 +10218,7 @@
       "module": "Property Accounting",
       "scenario": "Compliance Reconciliation Report",
       "assignee": "Roderick G.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-13",
       "notes": "Use /n/PRA/FP_DISP_COM_REC to access. No data.",
       "links": [],
@@ -10361,7 +10361,7 @@
       "module": "Property Accounting",
       "scenario": "Run Compliance Reports",
       "assignee": "Roderick G.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "AADSTS50105: Your administrator has configured the application SAP Fiori - QS4 ('93e3f2f9-8037-47da-8a89-c72981f2b9a7') to block users unless they are specifically granted ('assigned') access to the application. The signed in user 'hector.palma@crescentenergyco.com' is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.",
       "links": [],
@@ -10816,7 +10816,7 @@
       "module": "Property Accounting",
       "scenario": "Revised Owner Availabilty - Display",
       "assignee": "Roderick G.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-16",
       "notes": "No records found.",
       "links": [],
@@ -10829,7 +10829,7 @@
       "module": "Property Accounting",
       "scenario": "Revised Owner Availability List Proc",
       "assignee": "Roderick G.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-16",
       "notes": "No records found.",
       "links": [],
@@ -10920,7 +10920,7 @@
       "module": "Property Accounting",
       "scenario": "Display Chemical Analysis",
       "assignee": "Roderick G.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-16",
       "notes": "No records found.",
       "links": [],
@@ -10933,7 +10933,7 @@
       "module": "Property Accounting",
       "scenario": "Chemical Analysis List",
       "assignee": "Roderick G.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-16",
       "notes": "No records found.",
       "links": [],
@@ -11167,7 +11167,7 @@
       "module": "Property Accounting",
       "scenario": "Valuation PPN Selection",
       "assignee": "Roderick G.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-17",
       "notes": "No records found.",
       "links": [],
@@ -11206,7 +11206,7 @@
       "module": "Property Accounting",
       "scenario": "Rebuild Standard Hierarchies",
       "assignee": "Roderick G.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-20",
       "notes": "No values found.",
       "links": [],
@@ -11336,7 +11336,7 @@
       "module": "Reporting",
       "scenario": "Conditions: Dialog Box for CondElem.",
       "assignee": "Roderick G.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-21",
       "notes": "No data.",
       "links": [],
@@ -11349,7 +11349,7 @@
       "module": "Reporting",
       "scenario": "Subs. Settl. SettRun: DisplayCond.S.",
       "assignee": "Roderick G.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-21",
       "notes": "No condition records exist for this selection",
       "links": [],
@@ -11362,7 +11362,7 @@
       "module": "Reporting",
       "scenario": "Subseq.Settle.: Display Cond.Records",
       "assignee": "Roderick G.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-21",
       "notes": "No condition records exist for this selection",
       "links": [],
@@ -11583,12 +11583,12 @@
       "module": "Property Accounting",
       "scenario": "JV Non-operated cash call to eq grp",
       "assignee": "Trey H.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0588",
@@ -11596,12 +11596,12 @@
       "module": "Property Accounting",
       "scenario": "JV Non-Operated Cash Call to Project",
       "assignee": "Trey H.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0591",
@@ -11713,12 +11713,12 @@
       "module": "Property Accounting",
       "scenario": "Create BTCI Sessions for Cash Calls",
       "assignee": "Trey H.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0609",
@@ -11726,12 +11726,12 @@
       "module": "Property Accounting",
       "scenario": "Create BTCI Sessions for Cash Calls",
       "assignee": "Trey H.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0619",
@@ -11765,12 +11765,12 @@
       "module": "Property Accounting",
       "scenario": "Cash Call Non-Operator",
       "assignee": "Trey H.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0622",
@@ -11783,7 +11783,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0634",
@@ -11796,7 +11796,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0635",
@@ -11809,7 +11809,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0644",
@@ -11871,7 +11871,7 @@
       "assignee": "Trey H.",
       "status": "Descoped",
       "dueDate": "2026-07-15",
-      "notes": "We do not use this CA T-code. \n",
+      "notes": "We do not use this CA T-code.",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-29"
@@ -11884,7 +11884,7 @@
       "assignee": "Trey H.",
       "status": "Descoped",
       "dueDate": "2026-07-15",
-      "notes": "We do not use this CA T-code. ",
+      "notes": "We do not use this CA T-code.",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-29"
@@ -11897,7 +11897,7 @@
       "assignee": "Trey H.",
       "status": "Descoped",
       "dueDate": "2026-07-15",
-      "notes": "We do not use this CA T-code. ",
+      "notes": "We do not use this CA T-code.",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-29"
@@ -11910,7 +11910,7 @@
       "assignee": "Trey H.",
       "status": "Descoped",
       "dueDate": "2026-07-15",
-      "notes": "We do not use this CA T-code. ",
+      "notes": "We do not use this CA T-code.",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-29"
@@ -12534,7 +12534,7 @@
       "assignee": "Trey H.",
       "status": "Descoped",
       "dueDate": "2026-07-20",
-      "notes": "We do not use this T-code. ",
+      "notes": "We do not use this T-code.",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-29"
@@ -12768,7 +12768,7 @@
       "assignee": "Trey H.",
       "status": "Descoped",
       "dueDate": "2026-07-22",
-      "notes": "We do not use this T-Code. Also, I cannot find an AFE that will pull any data in Q.\n",
+      "notes": "We do not use this T-Code. Also, I cannot find an AFE that will pull any data in Q.",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-29"
@@ -12914,7 +12914,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0916",
@@ -13130,7 +13130,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1500",
@@ -13143,7 +13143,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1501",
@@ -13156,7 +13156,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1502",
@@ -13169,7 +13169,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1503",
@@ -13182,7 +13182,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1505",
@@ -13294,7 +13294,7 @@
       "notes": "After inputting t-code, received pop stating \"Obsolete Transaction. No more in use\"",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0012",
@@ -13320,7 +13320,7 @@
       "notes": "\"You are not authorized to use transaction\" access blocked",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0015",
@@ -13333,7 +13333,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0017",
@@ -13346,7 +13346,7 @@
       "notes": "Able to access t-code. Not authorized to perform intercompany doc reversal. If authorize issue is fine on reversal, then pass",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0019",
@@ -13476,7 +13476,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-24"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0034",
@@ -13619,7 +13619,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-24"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0123",
@@ -13749,7 +13749,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-24"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1430",
@@ -13775,7 +13775,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1444",
@@ -13788,7 +13788,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1445",
@@ -13814,7 +13814,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1447",
@@ -13879,7 +13879,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-24"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1495",
@@ -13905,7 +13905,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1507",
@@ -13918,7 +13918,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1511",
@@ -13931,7 +13931,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1515",
@@ -13944,7 +13944,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1516",
@@ -13996,7 +13996,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1525",
@@ -14009,7 +14009,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1527",
@@ -14035,7 +14035,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1531",
@@ -14048,7 +14048,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1532",
@@ -14061,7 +14061,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1533",
@@ -14074,7 +14074,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1150",
@@ -14100,7 +14100,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-24"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1152",
@@ -14113,7 +14113,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-24"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1153",
@@ -14126,7 +14126,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-24"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1154",
@@ -14152,7 +14152,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-24"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1156",
@@ -14165,7 +14165,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-24"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1157",
@@ -14178,7 +14178,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1158",
@@ -14191,7 +14191,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1159",
@@ -14204,7 +14204,7 @@
       "notes": "Message : \"No hierarchies have yet been summarized\"",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1160",
@@ -14217,7 +14217,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-24"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1161",
@@ -14230,7 +14230,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-24"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1162",
@@ -14243,7 +14243,7 @@
       "notes": "\"Summary hierarchy could not be read\" Not sure of input",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-28"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1163",
@@ -14296,6 +14296,19 @@
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-20"
+    },
+    {
+      "id": ",0,,0,",
+      "transaction": "",
+      "module": "",
+      "scenario": "",
+      "assignee": "",
+      "status": "Not Started",
+      "dueDate": "",
+      "notes": "",
+      "links": [],
+      "defects": [],
+      "lastUpdated": "2026-07-29"
     }
   ]
 }
