@@ -11284,12 +11284,12 @@
       "module": "Property Accounting",
       "scenario": "Change Valuation Cross Reference",
       "assignee": "Roderick G.",
-      "status": "Not Started",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0818",
