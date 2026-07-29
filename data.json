@@ -4770,143 +4770,143 @@
       "transaction": "/PRA/ESCH_HST_CLN",
       "module": "Owner Relations",
       "scenario": "Un-Escheat Owner",
-      "assignee": "Grant M.",
+      "assignee": "Joy G.",
       "status": "Not Started",
       "dueDate": "2026-07-13",
-      "notes": "",
+      "notes": "NOT AUTHORIZED",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0054",
       "transaction": "/PRA/ESCH_WORKPLACE",
       "module": "Owner Relations",
       "scenario": "Escheat Workplace",
-      "assignee": "Grant M.",
+      "assignee": "Joy G.",
       "status": "Not Started",
       "dueDate": "2026-07-13",
-      "notes": "",
+      "notes": "�",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0119",
       "transaction": "/PRA/OM_DOCUMENT",
       "module": "Owner Relations",
       "scenario": "Marketing Free Maintenance",
-      "assignee": "Grant M.",
+      "assignee": "Joy G.",
       "status": "Not Started",
       "dueDate": "2026-07-13",
-      "notes": "",
+      "notes": "�",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0120",
       "transaction": "/PRA/OM_EXECUTE",
       "module": "Owner Relations",
       "scenario": "Marketing Free Maint. execute",
-      "assignee": "Grant M.",
+      "assignee": "Joy G.",
       "status": "Not Started",
       "dueDate": "2026-07-13",
-      "notes": "",
+      "notes": "�",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0224",
       "transaction": "/PRA/TEMP_PP_OWN",
       "module": "Owner Relations",
       "scenario": "Maintain Owner Info",
-      "assignee": "Grant M.",
+      "assignee": "Joy G.",
       "status": "Not Started",
       "dueDate": "2026-07-13",
-      "notes": "",
+      "notes": "NOT AUTHORIZED",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0603",
       "transaction": "GJ2B",
       "module": "Owner Relations",
       "scenario": "Maintain JV partners",
-      "assignee": "Grant M.",
+      "assignee": "Andrea W.",
       "status": "Not Started",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0636",
       "transaction": "GJV1",
       "module": "Owner Relations",
       "scenario": "Create Joint Venture Master",
-      "assignee": "Grant M.",
+      "assignee": "Joy G.",
       "status": "Not Started",
       "dueDate": "2026-07-13",
-      "notes": "",
+      "notes": "�",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0637",
       "transaction": "GJV2",
       "module": "Owner Relations",
       "scenario": "Change Joint Venture Master",
-      "assignee": "Grant M.",
+      "assignee": "Joy G.",
       "status": "Not Started",
       "dueDate": "2026-07-13",
-      "notes": "",
+      "notes": "�",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0686",
       "transaction": "O3U_BG1",
       "module": "Owner Relations",
       "scenario": "Create Bearer Group",
-      "assignee": "Grant M.",
+      "assignee": "Jenni F.",
       "status": "Not Started",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0687",
       "transaction": "O3U_BG2",
       "module": "Owner Relations",
       "scenario": "Change Bearer Group",
-      "assignee": "Grant M.",
+      "assignee": "Jenni F.",
       "status": "Not Started",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0689",
       "transaction": "O3U_BG6",
       "module": "Owner Relations",
       "scenario": "Delete Bearer Group",
-      "assignee": "Grant M.",
+      "assignee": "Jenni F.",
       "status": "Not Started",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0023",
@@ -4919,7 +4919,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0024",
@@ -4932,7 +4932,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0702",
@@ -4945,254 +4945,254 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0717",
       "transaction": "O3U_DI1",
       "module": "Owner Relations",
       "scenario": "Base DOI Maintenance Create",
-      "assignee": "Grant M.",
+      "assignee": "Jenni F.",
       "status": "Not Started",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0718",
       "transaction": "O3U_DI2",
       "module": "Owner Relations",
       "scenario": "Base DOI Maintenance Change",
-      "assignee": "Grant M.",
+      "assignee": "Jenni F.",
       "status": "Not Started",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0720",
       "transaction": "O3U_DI6",
       "module": "Owner Relations",
       "scenario": "Base DOI Maintenance Delete",
-      "assignee": "Grant M.",
+      "assignee": "Jenni F.",
       "status": "Not Started",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0721",
       "transaction": "O3U_DI9",
       "module": "Owner Relations",
       "scenario": "Base DOI List Processing",
-      "assignee": "Grant M.",
+      "assignee": "Jenni F.",
       "status": "Not Started",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0744",
       "transaction": "O3U_DO2",
       "module": "Owner Relations",
       "scenario": "DOI Owner Maintenance Change",
-      "assignee": "Grant M.",
+      "assignee": "Jenni F.",
       "status": "Not Started",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0758",
       "transaction": "O3U_JV1",
       "module": "Owner Relations",
       "scenario": "Create Joint Venture",
-      "assignee": "Grant M.",
+      "assignee": "Jenni F.",
       "status": "Not Started",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0759",
       "transaction": "O3U_JV2",
       "module": "Owner Relations",
       "scenario": "Change Joint Venture",
-      "assignee": "Grant M.",
+      "assignee": "Jenni F.",
       "status": "Not Started",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0871",
       "transaction": "O3UE2_ESCH_BA",
       "module": "Owner Relations",
       "scenario": "Escheat BA Info Maintenance",
-      "assignee": "Grant M.",
+      "assignee": "Joy G.",
       "status": "Not Started",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "NOT AUTHORIZED",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0872",
       "transaction": "O3UE2_ESCHEAT_ADDR",
       "module": "Owner Relations",
       "scenario": "Escheat Due Dilgence Address Maint",
-      "assignee": "Grant M.",
+      "assignee": "Joy G.",
       "status": "Not Started",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "NOT AUTHORIZED",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0873",
       "transaction": "O3UE2_ESCHEAT_HOLDER",
       "module": "Owner Relations",
       "scenario": "Escheat Holder Record Maintenance",
-      "assignee": "Grant M.",
+      "assignee": "Joy G.",
       "status": "Not Started",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "NOT AUTHORIZED",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0046",
       "transaction": "/PRA/DISP_WH_TYPE",
       "module": "Owner Relations",
       "scenario": "Owner Withholding Amounts",
-      "assignee": "Grant M.",
+      "assignee": "Jennifer T.",
       "status": "Not Started",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0051",
       "transaction": "/PRA/ESC_SFI",
       "module": "Owner Relations",
       "scenario": "Suspended Funds Inquiry",
-      "assignee": "Grant M.",
+      "assignee": "Jennifer T.",
       "status": "Not Started",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0052",
       "transaction": "/PRA/ESCH_DISP_HIST",
       "module": "Owner Relations",
       "scenario": "Display Owner Escheat History",
-      "assignee": "Grant M.",
+      "assignee": "Joy G.",
       "status": "Not Started",
       "dueDate": "2026-07-14",
-      "notes": "",
+      "notes": "�",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0058",
       "transaction": "/PRA/FF_RESULTSA",
       "module": "Owner Relations",
       "scenario": "Display Allocation Results - Actual",
-      "assignee": "Grant M.",
+      "assignee": "Jennifer T.",
       "status": "Not Started",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0059",
       "transaction": "/PRA/FF_RESULTSE",
       "module": "Owner Relations",
       "scenario": "Display Allocation Results Entitled",
-      "assignee": "Grant M.",
+      "assignee": "Jennifer T.",
       "status": "Not Started",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0067",
       "transaction": "/PRA/FP_DIS_HST_CMP",
       "module": "Owner Relations",
       "scenario": "History Compare Workplace",
-      "assignee": "Grant M.",
+      "assignee": "Jennifer T.",
       "status": "Not Started",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0874",
       "transaction": "O3UE2_PORTAL_004",
       "module": "Owner Relations",
       "scenario": "Process 2.0 Portal",
-      "assignee": "Grant M.",
+      "assignee": "Jennifer T.",
       "status": "Not Started",
       "dueDate": "2026-07-15",
-      "notes": "",
+      "notes": "Not Authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0879",
       "transaction": "O3UOW_CHECKIN_JOBS",
       "module": "Owner Relations",
       "scenario": "View Check In and Check Out Jobs",
-      "assignee": "Grant M.",
+      "assignee": "Jennifer T.",
       "status": "Not Started",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0901",
       "transaction": "O3URV_ALT_CT_OW_XREF",
       "module": "Owner Relations",
       "scenario": "Alternative Owner Xref",
-      "assignee": "Grant M.",
+      "assignee": "Jennifer T.",
       "status": "Not Started",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1469",
@@ -5205,7 +5205,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1470",
@@ -5218,7 +5218,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1472",
@@ -5231,7 +5231,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1493",
@@ -5241,10 +5241,10 @@
       "assignee": "Grant M.",
       "status": "Not Started",
       "dueDate": "2026-07-15",
-      "notes": "",
+      "notes": "T CODE DOES NOT EXIST",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1494",
@@ -5257,7 +5257,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1526",
@@ -5270,7 +5270,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1529",
@@ -5283,7 +5283,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1530",
@@ -5296,462 +5296,462 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0107",
       "transaction": "/PRA/FT_OWNER_BAL",
       "module": "Owner Relations",
       "scenario": "Owner Balance Enquiry",
-      "assignee": "Grant M.",
+      "assignee": "Jennifer T.",
       "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0118",
       "transaction": "/PRA/OFS",
       "module": "Owner Relations",
       "scenario": "Owner Fact Sheet",
-      "assignee": "Grant M.",
+      "assignee": "Jennifer T.",
       "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0132",
       "transaction": "/PRA/PP_DISP_OWN_BAL",
       "module": "Owner Relations",
       "scenario": "Owner Balance Inquiry",
-      "assignee": "Grant M.",
+      "assignee": "Jennifer T.",
       "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0139",
       "transaction": "/PRA/PP_RECON_RPT",
       "module": "Owner Relations",
       "scenario": "Payment Processing Recon Report",
-      "assignee": "Grant M.",
+      "assignee": "Sharon B.",
       "status": "Not Started",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0153",
       "transaction": "/PRA/R_WH_REP_TH",
       "module": "Owner Relations",
       "scenario": "Maintain Min Threshold for Reporting",
-      "assignee": "Grant M.",
+      "assignee": "Sharon B.",
       "status": "Not Started",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0230",
       "transaction": "/PRA/WH_ADMIN",
       "module": "Owner Relations",
       "scenario": "Annual Reporting Admin Workplace",
-      "assignee": "Grant M.",
+      "assignee": "Sharon B.",
       "status": "Not Started",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "not authorized",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0231",
       "transaction": "/PRA/WH_BL_ENQ",
       "module": "Owner Relations",
       "scenario": "Withholding Inquiry",
-      "assignee": "Grant M.",
+      "assignee": "Sharon B.",
       "status": "Not Started",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0232",
       "transaction": "/PRA/WH_EN_TYP_REP",
       "module": "Owner Relations",
       "scenario": "Maintain Reportable Entity Types",
-      "assignee": "Grant M.",
+      "assignee": "Sharon B.",
       "status": "Not Started",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "not values found/unsure what data to input",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0234",
       "transaction": "/PRA/WH_PORTAL",
       "module": "Owner Relations",
       "scenario": "Annual Reporting Portal",
-      "assignee": "Grant M.",
+      "assignee": "Sharon B.",
       "status": "Not Started",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "not authorized to use some transactions",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0235",
       "transaction": "/PRA/WH_PROC_SEL",
       "module": "Owner Relations",
       "scenario": "Annual Reporting Process Selection",
-      "assignee": "Grant M.",
+      "assignee": "Sharon B.",
       "status": "Not Started",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0236",
       "transaction": "/PRA/WH_RECON_RPT",
       "module": "Owner Relations",
       "scenario": "Reconciliation Report",
-      "assignee": "Grant M.",
+      "assignee": "Sharon B.",
       "status": "Not Started",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "same message regarless of date input",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0237",
       "transaction": "/PRA/WH_STR_WELL",
       "module": "Owner Relations",
       "scenario": "Stripper Well Inquiry",
-      "assignee": "Grant M.",
+      "assignee": "Sharon B.",
       "status": "Not Started",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "unsure what data to input",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0238",
       "transaction": "/PRA/WH_WORKPLACE",
       "module": "Owner Relations",
       "scenario": "Annual Reporting Workplace",
-      "assignee": "Grant M.",
+      "assignee": "Sharon B.",
       "status": "Not Started",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "unsure what data to input",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0239",
       "transaction": "/PRA/WORKPLACE",
       "module": "Owner Relations",
       "scenario": "Process 2.1 Workplace",
-      "assignee": "Grant M.",
+      "assignee": "Sharon B.",
       "status": "Not Started",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0325",
       "transaction": "BP",
       "module": "Owner Relations",
       "scenario": "Maintain Business Partner",
-      "assignee": "Grant M.",
+      "assignee": "Margie B.",
       "status": "Not Started",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0550",
       "transaction": "FK10N",
       "module": "Owner Relations",
       "scenario": "Vendor Balance Display",
-      "assignee": "Grant M.",
+      "assignee": "Margie B.",
       "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0575",
       "transaction": "GD21",
       "module": "Owner Relations",
       "scenario": "Flexible G/L: Document Selection",
-      "assignee": "Grant M.",
+      "assignee": "Margie B.",
       "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0578",
       "transaction": "GJ_GD13",
       "module": "Owner Relations",
       "scenario": "Display JVA and JV-Billing totals",
-      "assignee": "Grant M.",
+      "assignee": "Margie B.",
       "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0579",
       "transaction": "GJ_GD20",
       "module": "Owner Relations",
       "scenario": "JVA and JV-Billing items",
-      "assignee": "Grant M.",
+      "assignee": "Margie B.",
       "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0580",
       "transaction": "GJ_SUS_CC_DISP",
       "module": "Owner Relations",
       "scenario": "Display JV cost centers in suspense",
-      "assignee": "Grant M.",
+      "assignee": "Margie B.",
       "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0581",
       "transaction": "GJ_SUS_ORD_DISP",
       "module": "Owner Relations",
       "scenario": "Display JV orders in suspense",
-      "assignee": "Grant M.",
+      "assignee": "Margie B.",
       "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0582",
       "transaction": "GJ_SUS_VE_DISP",
       "module": "Owner Relations",
       "scenario": "Display Ventures in suspense",
-      "assignee": "Grant M.",
+      "assignee": "Margie B.",
       "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0589",
       "transaction": "GJ09",
       "module": "Owner Relations",
       "scenario": "Joint Venture detailed information",
-      "assignee": "Grant M.",
+      "assignee": "Margie B.",
       "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0590",
       "transaction": "GJ11",
       "module": "Owner Relations",
       "scenario": "Joint Venture master data catalog",
-      "assignee": "Grant M.",
+      "assignee": "Margie B.",
       "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0602",
       "transaction": "GJ2A",
       "module": "Owner Relations",
       "scenario": "Display JV partners",
-      "assignee": "Grant M.",
+      "assignee": "Margie B.",
       "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0605",
       "transaction": "GJ3A",
       "module": "Owner Relations",
       "scenario": "Display JV project in suspense",
-      "assignee": "Grant M.",
+      "assignee": "Andrea W.",
       "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0606",
       "transaction": "GJ3R",
       "module": "Owner Relations",
       "scenario": "Reconsile Intercompany Mapping",
-      "assignee": "Grant M.",
+      "assignee": "Andrea W.",
       "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0607",
       "transaction": "GJ54",
       "module": "Owner Relations",
       "scenario": "JOA detailed information",
-      "assignee": "Grant M.",
+      "assignee": "Andrea W.",
       "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0610",
       "transaction": "GJ87",
       "module": "Owner Relations",
       "scenario": "Display summary ledger totals",
-      "assignee": "Grant M.",
+      "assignee": "Andrea W.",
       "status": "Not Started",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0611",
       "transaction": "GJ88",
       "module": "Owner Relations",
       "scenario": "Display billing ledger totals",
-      "assignee": "Grant M.",
+      "assignee": "Andrea W.",
       "status": "Not Started",
       "dueDate": "2026-07-22",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0612",
       "transaction": "GJ95A",
       "module": "Owner Relations",
       "scenario": "North American Overhead Calculations",
-      "assignee": "Grant M.",
+      "assignee": "Andrea W.",
       "status": "Not Started",
       "dueDate": "2026-07-22",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0629",
       "transaction": "GJGA",
       "module": "Owner Relations",
       "scenario": "Display JOA graphically",
-      "assignee": "Grant M.",
+      "assignee": "Andrea W.",
       "status": "Not Started",
       "dueDate": "2026-07-22",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0632",
       "transaction": "GJM2",
       "module": "Owner Relations",
       "scenario": "Display Prepaid Inventory",
-      "assignee": "Grant M.",
+      "assignee": "Andrea W.",
       "status": "Not Started",
       "dueDate": "2026-07-22",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0633",
       "transaction": "GJOI",
       "module": "Owner Relations",
       "scenario": "Open line items for cost objects",
-      "assignee": "Grant M.",
+      "assignee": "Andrea W.",
       "status": "Not Started",
       "dueDate": "2026-07-22",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0638",
       "transaction": "GJV5",
       "module": "Owner Relations",
       "scenario": "Display Change Documents JV-Master",
-      "assignee": "Grant M.",
+      "assignee": "Andrea W.",
       "status": "Not Started",
       "dueDate": "2026-07-22",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0639",
@@ -5764,33 +5764,33 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0640",
       "transaction": "GJVV",
       "module": "Owner Relations",
       "scenario": "Joint Venture Master Transaction",
-      "assignee": "Grant M.",
+      "assignee": "Jenni F.",
       "status": "Not Started",
       "dueDate": "2026-07-22",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1008",
       "transaction": "OIUH_RD04",
       "module": "Owner Relations",
       "scenario": "Owner 1099 Information",
-      "assignee": "Grant M.",
+      "assignee": "Joy G.",
       "status": "Not Started",
       "dueDate": "2026-07-22",
-      "notes": "",
+      "notes": "NO RECORDS FOUND FOR MULT SEARCH ATTEMPTS",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1009",
@@ -5803,7 +5803,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1517",
@@ -5813,10 +5813,10 @@
       "assignee": "Grant M.",
       "status": "Not Started",
       "dueDate": "2026-07-22",
-      "notes": "",
+      "notes": "ABAP RUNTIME ERROR - ALL CLIENT",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1518",
@@ -5829,7 +5829,7 @@
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1519",
@@ -5839,10 +5839,10 @@
       "assignee": "Grant M.",
       "status": "Not Started",
       "dueDate": "2026-07-22",
-      "notes": "",
+      "notes": "SCREEN FREEZES DURING OUTPUT, BUT DOES NOT FAIL",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-0002",
