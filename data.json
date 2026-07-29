@@ -11910,7 +11910,7 @@
       "assignee": "Trey H.",
       "status": "Descoped",
       "dueDate": "2026-07-15",
-      "notes": "",
+      "notes": "We do not use this CA T-code. ",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-29"
