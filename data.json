@@ -12766,12 +12766,12 @@
       "module": "Reporting",
       "scenario": "Project Interest: Plan/Actual",
       "assignee": "Trey H.",
-      "status": "Not Started",
+      "status": "Descoped",
       "dueDate": "2026-07-22",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-20"
+      "lastUpdated": "2026-07-29"
     },
     {
       "id": "T-1147",
