@@ -14314,7 +14314,7 @@
       "id": "T-1547",
       "transaction": "ZPRA_MIXED_PAYMENT",
       "module": "PRA",
-      "scenario": "",
+      "scenario": "Run Revenue Payments",
       "assignee": "",
       "status": "Not Started",
       "dueDate": "",
