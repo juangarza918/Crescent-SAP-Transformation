@@ -14312,7 +14312,7 @@
     },
     {
       "id": "T-1547",
-      "transaction": "New transaction",
+      "transaction": "ZPRA_MIXED_PAYMENT",
       "module": "",
       "scenario": "",
       "assignee": "",
