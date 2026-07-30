@@ -779,13 +779,13 @@
       "transaction": "F8BS",
       "module": "Accounts Payable",
       "scenario": "Detail display of payment requests",
-      "assignee": "Amanda Burns",
+      "assignee": "Hector P.",
       "status": "Descoped",
       "dueDate": "2026-07-13",
-      "notes": "Transaction opened successfully. Search help returned �No values found�; no payment request data was available in QS4 client 100.",
+      "notes": "Transaction opened successfully. Search help returned ?No values found?; no payment request data was available in QS4 client 100.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0460",
@@ -935,13 +935,13 @@
       "transaction": "FV63",
       "module": "Accounts Payable",
       "scenario": "Displayed Parked Vendor Document",
-      "assignee": "Amanda Burns",
+      "assignee": "Hector P.",
       "status": "Failed",
       "dueDate": "2026-07-14",
       "notes": "Transaction FV63 is not supported for direct access.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0572",
@@ -2638,26 +2638,26 @@
       "transaction": "BAUP",
       "module": "Treasury",
       "scenario": "Apply Bank Data",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Hector P.",
+      "status": "Blocked",
       "dueDate": "2026-07-13",
-      "notes": "",
+      "notes": "No template to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0321",
       "transaction": "BIC2",
       "module": "Treasury",
       "scenario": "Transfer BIC Data",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Hector P.",
+      "status": "Blocked",
       "dueDate": "2026-07-13",
-      "notes": "",
+      "notes": "No template to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0323",
@@ -2677,52 +2677,52 @@
       "transaction": "F.14",
       "module": "Treasury",
       "scenario": "ABAP/4 Report: Recurring Entries",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Hector P.",
+      "status": "Blocked",
       "dueDate": "2026-07-13",
-      "notes": "",
+      "notes": "Session SAPF120 was not created / Message No. FB202",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0424",
       "transaction": "F.56",
       "module": "Treasury",
       "scenario": "Delete Recurring Entry Documents",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Hector P.",
+      "status": "Passed",
       "dueDate": "2026-07-13",
-      "notes": "",
+      "notes": "Transaction opened and executed succesfully. No flagged documents to delete.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0425",
       "transaction": "F.80",
       "module": "Treasury",
       "scenario": "Mass Reversal of Documents",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Hector P.",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0426",
       "transaction": "F.81",
       "module": "Treasury",
       "scenario": "Reverse Posting for Accr./Defer.Docs",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Hector P.",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0429",
@@ -2924,13 +2924,13 @@
       "transaction": "F8BV",
       "module": "Treasury",
       "scenario": "Reversal of Bank-to-Bank Transfers",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Hector P.",
+      "status": "Passed",
       "dueDate": "2026-07-15",
-      "notes": "",
+      "notes": "List does not contain any data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0467",
@@ -2963,13 +2963,13 @@
       "transaction": "FB05",
       "module": "Treasury",
       "scenario": "Post with Clearing",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Hector P.",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0471",
@@ -3028,39 +3028,39 @@
       "transaction": "FBD1",
       "module": "Treasury",
       "scenario": "Enter Recurring Entry",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Hector P.",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0479",
       "transaction": "FBD2",
       "module": "Treasury",
       "scenario": "Change Recurring Entry",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Hector P.",
+      "status": "Blocked",
       "dueDate": "2026-07-15",
-      "notes": "",
+      "notes": "No document number to change.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0480",
       "transaction": "FBD5",
       "module": "Treasury",
       "scenario": "Realize Recurring Entry",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Hector P.",
+      "status": "Blocked",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0490",
@@ -3080,13 +3080,13 @@
       "transaction": "FBS1",
       "module": "Treasury",
       "scenario": "Enter Accrual/Deferral Doc.",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Hector P.",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0496",
@@ -3158,26 +3158,26 @@
       "transaction": "FBV6",
       "module": "Treasury",
       "scenario": "Parked Document $",
-      "assignee": "Brittany Quintanilla",
+      "assignee": "Juan Carlos",
       "status": "Blocked",
       "dueDate": "2026-07-16",
       "notes": "No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0503",
       "transaction": "FBVB",
       "module": "Treasury",
       "scenario": "Post Parked Document",
-      "assignee": "Brittany Quintanilla",
-      "status": "Failed",
+      "assignee": "Juan Carlos",
+      "status": "Blocked",
       "dueDate": "2026-07-16",
       "notes": "Critiacl Message: Transaction FBVB not defined for direct call-up. FBV0 could be used instead.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0507",
@@ -3223,13 +3223,13 @@
       "transaction": "FCHG",
       "module": "Treasury",
       "scenario": "Delete cashing/extract data",
-      "assignee": "Brittany Quintanilla",
+      "assignee": "Juan Carlos",
       "status": "Blocked",
       "dueDate": "2026-07-17",
       "notes": "No Check Number to execute.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0521",
@@ -3249,104 +3249,104 @@
       "transaction": "FEB_BSPROC",
       "module": "Treasury",
       "scenario": "Bank Statement Postprocessing",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Hector P.",
+      "status": "Failed",
       "dueDate": "2026-07-17",
-      "notes": "",
+      "notes": "Error after calling up RS_VARIANT_CONTENTS",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0530",
       "transaction": "FEBA",
       "module": "Treasury",
       "scenario": "Postprocess Electronic Bank Statmt",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Hector P.",
+      "status": "Failed",
       "dueDate": "2026-07-17",
-      "notes": "",
+      "notes": "Error after calling up RS_VARIANT_CONTENTS",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0531",
       "transaction": "FEBA_BANK_STATEMENT",
       "module": "Treasury",
       "scenario": "Postprocessing Bank Statement",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Hector P.",
+      "status": "Failed",
       "dueDate": "2026-07-17",
-      "notes": "",
+      "notes": "Error after calling up RS_VARIANT_CONTENTS",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0532",
       "transaction": "FEBA_CHECK_DEPOSIT",
       "module": "Treasury",
       "scenario": "Postprocessing Check Deposit Trans.",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Hector P.",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0533",
       "transaction": "FEBA_LOCKBOX",
       "module": "Treasury",
       "scenario": "Display Account Balance",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Hector P.",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0534",
       "transaction": "FEBAN",
       "module": "Treasury",
       "scenario": "Bank statement postprocessing",
-      "assignee": "Brittany Quintanilla",
-      "status": "Blocked",
+      "assignee": "Juan Carlos",
+      "status": "Failed",
       "dueDate": "2026-07-17",
-      "notes": "Bank statement postprocessing window opened succesfully. No data to process.",
+      "notes": "Error after calling up RS_VARIANT_CONTENTS",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0535",
       "transaction": "FEBAN_BROWSER",
       "module": "Treasury",
       "scenario": "Displays the Note to Payee",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Hector P.",
+      "status": "Failed",
       "dueDate": "2026-07-17",
-      "notes": "",
+      "notes": "You can call this function only from transaction FEBAN",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0536",
       "transaction": "FF.4",
       "module": "Treasury",
       "scenario": "Vendor Cashed Checks",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Juan Carlos",
+      "status": "Blocked",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0537",
@@ -3366,39 +3366,39 @@
       "transaction": "FF67",
       "module": "Treasury",
       "scenario": "Manual Account Statement",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Juan Carlos",
+      "status": "Blocked",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0539",
       "transaction": "FF68",
       "module": "Treasury",
       "scenario": "Manual Check Deposit Transaction",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Juan Carlos",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0540",
       "transaction": "FF7AN",
       "module": "Treasury",
       "scenario": "Cash Position",
-      "assignee": "Brittany Quintanilla",
+      "assignee": "Juan Carlos",
       "status": "Blocked",
       "dueDate": "2026-07-20",
       "notes": "Fiori app access pending",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0541",
@@ -3470,39 +3470,39 @@
       "transaction": "FI12",
       "module": "Treasury",
       "scenario": "Change House Banks/Bank Accounts",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Juan Carlos",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0551",
       "transaction": "FKMT",
       "module": "Treasury",
       "scenario": "FI Acct Assignment Model Management",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Juan Carlos",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0553",
       "transaction": "FRFT_B",
       "module": "Treasury",
       "scenario": "Repetitive Codes: Payment to Banks",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Juan Carlos",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0562",
@@ -3522,26 +3522,26 @@
       "transaction": "FV50L",
       "module": "Treasury",
       "scenario": "Park G/L Acct Doc. for Ledger Group",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Juan Carlos",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0564",
       "transaction": "FV60",
       "module": "Treasury",
       "scenario": "Park Incoming Invoices",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Juan Carlos",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0566",
@@ -3600,26 +3600,26 @@
       "transaction": "ZFI_ACCRUAL_REPT",
       "module": "Treasury",
       "scenario": "FI Accrual Loader",
-      "assignee": "Brittany Quintanilla",
+      "assignee": "Juan Carlos",
       "status": "Blocked",
       "dueDate": "2026-07-21",
       "notes": "No data to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1462",
       "transaction": "ZFI_JE_PARK_REPT",
       "module": "Treasury",
       "scenario": "JE Park Loader",
-      "assignee": "Brittany Quintanilla",
+      "assignee": "Juan Carlos",
       "status": "Blocked",
       "dueDate": "2026-07-21",
       "notes": "No data to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1465",
@@ -3665,13 +3665,13 @@
       "transaction": "ZPRA_CHECK_CLEAR",
       "module": "Treasury",
       "scenario": "Cleared Check Status",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Juan Carlos",
+      "status": "Failed",
       "dueDate": "2026-07-21",
-      "notes": "",
+      "notes": "ABAP dump: CALL_FUNCTION_NOT_FOUND",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1510",
@@ -3691,13 +3691,13 @@
       "transaction": "ZPRA_ELOUT_OWNRNG",
       "module": "Treasury",
       "scenario": "Energy Link Outbound Interface Owner",
-      "assignee": "Brittany Quintanilla",
-      "status": "Not Started",
+      "assignee": "Juan Carlos",
+      "status": "Blocked",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1523",
@@ -3860,13 +3860,13 @@
       "transaction": "CJIC",
       "module": "Corporate Accounting",
       "scenario": "Maintain Project Settlement LIs",
-      "assignee": "Drew Diaz",
+      "assignee": "Juan Carlos",
       "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0431",
@@ -3977,26 +3977,26 @@
       "transaction": "ZFI_ASSET_TRANS_LOAD",
       "module": "Corporate Accounting",
       "scenario": "Asset Transfer Loader",
-      "assignee": "Drew Diaz",
+      "assignee": "Juan Carlos",
       "status": "Blocked",
       "dueDate": "2026-07-15",
       "notes": "Upload file required to execute",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1455",
       "transaction": "ZFI_ASSETRETIRE_LOAD",
       "module": "Corporate Accounting",
       "scenario": "Asset Retirement Loader",
-      "assignee": "Drew Diaz",
+      "assignee": "Juan Carlos",
       "status": "Blocked",
       "dueDate": "2026-07-15",
       "notes": "Upload file required to execute",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1482",
@@ -4029,52 +4029,52 @@
       "transaction": "ZFIN_DEPPROD",
       "module": "Corporate Accounting",
       "scenario": "Production Details",
-      "assignee": "Drew Diaz",
+      "assignee": "Juan Carlos",
       "status": "Blocked",
       "dueDate": "2026-07-15",
       "notes": "Upload file required to execute",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1485",
       "transaction": "ZFIN_DEPRATEEDIT",
       "module": "Corporate Accounting",
       "scenario": "GAAP Depletion Rate",
-      "assignee": "Drew Diaz",
+      "assignee": "Juan Carlos",
       "status": "Blocked",
       "dueDate": "2026-07-15",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1486",
       "transaction": "ZFIN_DEPRES",
       "module": "Corporate Accounting",
       "scenario": "Reserve Details",
-      "assignee": "Drew Diaz",
+      "assignee": "Juan Carlos",
       "status": "Blocked",
       "dueDate": "2026-07-15",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1487",
       "transaction": "ZFIN_DEPRES_PROD",
       "module": "Corporate Accounting",
       "scenario": "Upload Reserves and Prod Volumes",
-      "assignee": "Drew Diaz",
+      "assignee": "Juan Carlos",
       "status": "Blocked",
       "dueDate": "2026-07-15",
       "notes": "Upload file required to execute",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1488",
@@ -4198,13 +4198,13 @@
       "transaction": "AS23",
       "module": "Reporting",
       "scenario": "Display Group Asset",
-      "assignee": "Drew Diaz",
+      "assignee": "Juan Carlos",
       "status": "Descoped",
       "dueDate": "2026-07-16",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0313",
@@ -4354,13 +4354,13 @@
       "transaction": "CJCS",
       "module": "Reporting",
       "scenario": "Standard WBS",
-      "assignee": "Drew Diaz",
+      "assignee": "Juan Carlos",
       "status": "Descoped",
       "dueDate": "2026-07-17",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0397",
@@ -4406,13 +4406,13 @@
       "transaction": "F.08",
       "module": "Reporting",
       "scenario": "G/L: Account Balances",
-      "assignee": "Drew Diaz",
+      "assignee": "Juan Carlos",
       "status": "Failed",
       "dueDate": "2026-07-17",
       "notes": "ABAP programming error    Does not have a component called \"ZZ",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0423",
@@ -5030,13 +5030,13 @@
       "transaction": "O3U_JV2",
       "module": "Owner Relations",
       "scenario": "Change Joint Venture",
-      "assignee": "Jenni F.",
-      "status": "Not Started",
+      "assignee": "Hector P.",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0871",
@@ -6265,13 +6265,13 @@
       "transaction": "FSE2",
       "module": "MDM",
       "scenario": "Change Financial Statement Version",
-      "assignee": "Kali Geddie",
+      "assignee": "Juan Carlos",
       "status": "Descoped",
       "dueDate": "2026-07-15",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0559",
@@ -6590,13 +6590,13 @@
       "transaction": "ZPRA_BP_CHANGE",
       "module": "MDM",
       "scenario": "BP Change",
-      "assignee": "Kali Geddie",
+      "assignee": "Juan Carlos",
       "status": "Blocked",
       "dueDate": "2026-07-17",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0523",
@@ -6655,13 +6655,13 @@
       "transaction": "S_ALR_87012007",
       "module": "Reporting",
       "scenario": "Depreciation",
-      "assignee": "Kali Geddie",
+      "assignee": "Juan Carlos",
       "status": "Blocked",
       "dueDate": "2026-07-20",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1073",
@@ -6681,13 +6681,13 @@
       "transaction": "S_ALR_87012011",
       "module": "Reporting",
       "scenario": "Write-Ups",
-      "assignee": "Kali Geddie",
+      "assignee": "Juan Carlos",
       "status": "Blocked",
       "dueDate": "2026-07-20",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1075",
@@ -6902,39 +6902,39 @@
       "transaction": "S_ALR_87012075",
       "module": "Reporting",
       "scenario": "Asset History",
-      "assignee": "Kali Geddie",
+      "assignee": "Juan Carlos",
       "status": "Blocked",
       "dueDate": "2026-07-21",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1111",
       "transaction": "S_ALR_87012119",
       "module": "Reporting",
       "scenario": "Cashed Checks",
-      "assignee": "Kali Geddie",
+      "assignee": "Juan Carlos",
       "status": "Blocked",
       "dueDate": "2026-07-21",
       "notes": "No data to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1132",
       "transaction": "S_ALR_87012277",
       "module": "Reporting",
       "scenario": "G/L Account Balances",
-      "assignee": "Kali Geddie",
+      "assignee": "Juan Carlos",
       "status": "Failed",
       "dueDate": "2026-07-21",
       "notes": "DUMP: ABAP programming error",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1133",
@@ -8449,13 +8449,13 @@
       "transaction": "SWDD",
       "module": "SAPSUPPORT",
       "scenario": "Workflow Builder",
-      "assignee": "Leo Hidrogo",
+      "assignee": "Juan Carlos",
       "status": "Failed",
       "dueDate": "2026-07-20",
       "notes": "SAPnetz warning: Frontend version is older than R/3 version - SAPRL 816 (93)",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1410",
@@ -8852,13 +8852,13 @@
       "transaction": "O3U_MKT3",
       "module": "Property Accounting",
       "scenario": "Display Internal Marketing Rates",
-      "assignee": "Paola D.",
+      "assignee": "Hector P.",
       "status": "Blocked",
       "dueDate": "2026-07-13",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0766",
@@ -9528,13 +9528,13 @@
       "transaction": "O3UOW_SUMM_BAL",
       "module": "Property Accounting",
       "scenario": "Outstanding summary balance",
-      "assignee": "Paola D.",
+      "assignee": "Hector P.",
       "status": "Blocked",
       "dueDate": "2026-07-16",
       "notes": "No Values found.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0886",
@@ -9593,13 +9593,13 @@
       "transaction": "O3UREP_ROY_REPORTING",
       "module": "Property Accounting",
       "scenario": "Royalty Reporting",
-      "assignee": "Paola D.",
+      "assignee": "Hector P.",
       "status": "Blocked",
       "dueDate": "2026-07-16",
       "notes": "No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0902",
@@ -9619,13 +9619,13 @@
       "transaction": "O3U_VPPN9",
       "module": "Property Accounting",
       "scenario": "Production PPN Dialog",
-      "assignee": "Paola D.",
+      "assignee": "Hector P.",
       "status": "Blocked",
       "dueDate": "2026-07-17",
       "notes": "No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0825",
@@ -9775,13 +9775,13 @@
       "transaction": "O3U_WCDVL6",
       "module": "Property Accounting",
       "scenario": "Delete wc volumes",
-      "assignee": "Paola D.",
+      "assignee": "Hector P.",
       "status": "Blocked",
       "dueDate": "2026-07-20",
       "notes": "No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0844",
@@ -9840,39 +9840,39 @@
       "transaction": "O3U_WLTS1",
       "module": "Property Accounting",
       "scenario": "Create Well Test",
-      "assignee": "Paola D.",
+      "assignee": "Hector P.",
       "status": "Blocked",
       "dueDate": "2026-07-20",
       "notes": "No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0850",
       "transaction": "O3U_WLTS2",
       "module": "Property Accounting",
       "scenario": "Well Test Change",
-      "assignee": "Paola D.",
+      "assignee": "Hector P.",
       "status": "Blocked",
       "dueDate": "2026-07-20",
       "notes": "No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0852",
       "transaction": "O3U_WLTS6",
       "module": "Property Accounting",
       "scenario": "Well Test delete",
-      "assignee": "Paola D.",
+      "assignee": "Hector P.",
       "status": "Blocked",
       "dueDate": "2026-07-20",
       "notes": "No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0855",
@@ -9944,26 +9944,26 @@
       "transaction": "S_ALR_87013583",
       "module": "Reporting",
       "scenario": "Budget/Actual/Variance",
-      "assignee": "Paola D.",
+      "assignee": "Juan Carlos",
       "status": "Blocked",
       "dueDate": "2026-07-21",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1167",
       "transaction": "S_ALR_87013584",
       "module": "Reporting",
       "scenario": "Budget/Actual/Commitment",
-      "assignee": "Paola D.",
+      "assignee": "Juan Carlos",
       "status": "Blocked",
       "dueDate": "2026-07-21",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1168",
@@ -10009,78 +10009,78 @@
       "transaction": "S_ALR_87100185",
       "module": "Reporting",
       "scenario": "Actual Costs Per Month, Current FY",
-      "assignee": "Paola D.",
-      "status": "Failed",
+      "assignee": "Juan Carlos",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1174",
       "transaction": "S_ALR_87100186",
       "module": "Reporting",
       "scenario": "Plan Costs per Month, Current FY",
-      "assignee": "Paola D.",
-      "status": "Failed",
+      "assignee": "Juan Carlos",
+      "status": "Blocked",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1175",
       "transaction": "S_ALR_87100187",
       "module": "Reporting",
       "scenario": "Commitment per Month, Current FY",
-      "assignee": "Paola D.",
-      "status": "Failed",
+      "assignee": "Juan Carlos",
+      "status": "Blocked",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1176",
       "transaction": "S_ALR_87100188",
       "module": "Reporting",
       "scenario": "Cumulated Actual Costs",
-      "assignee": "Paola D.",
-      "status": "Failed",
+      "assignee": "Juan Carlos",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1177",
       "transaction": "S_ALR_87100189",
       "module": "Reporting",
       "scenario": "Actual/Planned Time Series",
-      "assignee": "Paola D.",
-      "status": "Failed",
+      "assignee": "Juan Carlos",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1178",
       "transaction": "S_ALR_87100190",
       "module": "Reporting",
       "scenario": "Actual/Plan/Var Project + Respons",
-      "assignee": "Paola D.",
-      "status": "Failed",
+      "assignee": "Juan Carlos",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1234",
@@ -10347,10 +10347,10 @@
       "transaction": "F1035",
       "module": "Property Accounting",
       "scenario": "JADE Report",
-      "assignee": "Roderick G.",
+      "assignee": "Hector P.",
       "status": "Failed",
       "dueDate": "2026-07-14",
-      "notes": "The navigation target \"#AnalyticQuery-analyze\" of the app could not be resolved. This can be caused, for example, by an incorrect content configuration, an incorrect or missing role assignment, or because your current device is not supported.\n",
+      "notes": "The navigation target \"#AnalyticQuery-analyze\" of the app could not be resolved. This can be caused, for example, by an incorrect content configuration, an incorrect or missing role assignment, or because your current device is not supported.",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-30"
@@ -11738,26 +11738,26 @@
       "transaction": "GJBT",
       "module": "Property Accounting",
       "scenario": "Billing threshold check",
-      "assignee": "Trey H.",
+      "assignee": "Hector P.",
       "status": "Blocked",
       "dueDate": "2026-07-14",
       "notes": "Transaction opened succesfully. No data retrieved.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0620",
       "transaction": "GJBTA",
       "module": "Property Accounting",
       "scenario": "Billing threshold check",
-      "assignee": "Trey H.",
+      "assignee": "Hector P.",
       "status": "Blocked",
       "dueDate": "2026-07-14",
       "notes": "Transaction opened succesfully. No data retrieved.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0621",
@@ -11777,7 +11777,7 @@
       "transaction": "GJCO",
       "module": "Property Accounting",
       "scenario": "Cash Call Operator",
-      "assignee": "Trey H.",
+      "assignee": "Hector P.",
       "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
@@ -11790,7 +11790,7 @@
       "transaction": "GJRCN",
       "module": "Property Accounting",
       "scenario": "Cash Call Reclassification",
-      "assignee": "Trey H.",
+      "assignee": "Hector P.",
       "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
@@ -11803,7 +11803,7 @@
       "transaction": "GJRCNA",
       "module": "Property Accounting",
       "scenario": "Cash Call Reclassification",
-      "assignee": "Trey H.",
+      "assignee": "Hector P.",
       "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
@@ -12960,13 +12960,13 @@
       "transaction": "ZACDOCA_REPORT",
       "module": "Property Accounting",
       "scenario": "ACDOCA REPORT DOWNLOAD",
-      "assignee": "Zach K.",
+      "assignee": "Hector P.",
       "status": "Failed",
       "dueDate": "2026-07-13",
       "notes": "DUMP: ABAP programming error",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1449",
@@ -13314,7 +13314,7 @@
       "transaction": "/PRA/ACCT_DATA_CLNUP",
       "module": "Property Accounting",
       "scenario": "Accounting Document Data Clean Up",
-      "assignee": "Zach K.",
+      "assignee": "Hector P.",
       "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
@@ -13327,7 +13327,7 @@
       "transaction": "/PRA/ACCT_ENTRY",
       "module": "Property Accounting",
       "scenario": "PRA Account Entry Control UI",
-      "assignee": "Zach K.",
+      "assignee": "Hector P.",
       "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
@@ -13340,10 +13340,10 @@
       "transaction": "/PRA/ACCTDOC_CC_RVS",
       "module": "Property Accounting",
       "scenario": "Reverse Intercompany Document",
-      "assignee": "Zach K.",
+      "assignee": "Hector P.",
       "status": "Passed",
       "dueDate": "2026-07-15",
-      "notes": "Message after simulation: No error found, document(s) can be posted.\n",
+      "notes": "Message after simulation: No error found, document(s) can be posted.",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-30"
@@ -13470,13 +13470,13 @@
       "transaction": "/PRA/CI_CDEXREM_X",
       "module": "Property Accounting",
       "scenario": "CDEX Remitter Cross Reference (New)",
-      "assignee": "Zach K.",
-      "status": "In Progress",
+      "assignee": "Hector P.",
+      "status": "Blocked",
       "dueDate": "2026-07-15",
-      "notes": "",
+      "notes": "Opens with /n/PRA/CI_CDEXREM_X. Missing prerequisite data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0034",
@@ -13613,13 +13613,13 @@
       "transaction": "/PRA/PN_DEFINE_TAG",
       "module": "Property Accounting",
       "scenario": "Define PPN Tags",
-      "assignee": "Zach K.",
-      "status": "In Progress",
+      "assignee": "Hector P.",
+      "status": "Blocked",
       "dueDate": "2026-07-16",
-      "notes": "",
+      "notes": "No entries found that match the selection criteria.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0123",
@@ -13743,13 +13743,13 @@
       "transaction": "/PRA/VL_FRML_CALC",
       "module": "Property Accounting",
       "scenario": "Formula Calculation",
-      "assignee": "Zach K.",
-      "status": "In Progress",
+      "assignee": "Hector P.",
+      "status": "Passed",
       "dueDate": "2026-07-16",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1430",
@@ -13769,26 +13769,26 @@
       "transaction": "ZBASE_CONTRACT",
       "module": "Property Accounting",
       "scenario": "Create PRA Contracts Loader",
-      "assignee": "Zach K.",
-      "status": "In Progress",
+      "assignee": "Hector P.",
+      "status": "Blocked",
       "dueDate": "2026-07-17",
-      "notes": "",
+      "notes": "No template to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1444",
       "transaction": "ZCA_BAL_ADJ",
       "module": "Property Accounting",
       "scenario": "PBA Balance Adjustments Loader",
-      "assignee": "Zach K.",
-      "status": "In Progress",
+      "assignee": "Hector P.",
+      "status": "Blocked",
       "dueDate": "2026-07-17",
-      "notes": "",
+      "notes": "No template to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1445",
@@ -13808,13 +13808,13 @@
       "transaction": "ZCA_PBA",
       "module": "Property Accounting",
       "scenario": "PBA Loader",
-      "assignee": "Zach K.",
-      "status": "In Progress",
+      "assignee": "Hector P.",
+      "status": "Blocked",
       "dueDate": "2026-07-17",
-      "notes": "",
+      "notes": "No template to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1447",
@@ -13899,52 +13899,52 @@
       "transaction": "ZJVA_JIB_EXT",
       "module": "Property Accounting",
       "scenario": "JV JIBLink Extract program",
-      "assignee": "Zach K.",
-      "status": "In Progress",
+      "assignee": "Hector P.",
+      "status": "Blocked",
       "dueDate": "2026-07-17",
-      "notes": "",
+      "notes": "ZJVA_JIB_EXT executed successfully and triggered the S-Drive transfer. No files to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1507",
       "transaction": "ZMKT_GROUPS_UPLOAD",
       "module": "Property Accounting",
       "scenario": "Marketing Groups Upload",
-      "assignee": "Zach K.",
-      "status": "In Progress",
+      "assignee": "Hector P.",
+      "status": "Blocked",
       "dueDate": "2026-07-17",
-      "notes": "",
+      "notes": "No template to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1511",
       "transaction": "ZPRA_CHK_LOADER",
       "module": "Property Accounting",
       "scenario": "CHECK REMIT LOADER",
-      "assignee": "Zach K.",
-      "status": "In Progress",
+      "assignee": "Hector P.",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "No template to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1515",
       "transaction": "ZPRA_INTMKT_LOAD",
       "module": "Property Accounting",
       "scenario": "Internal Marketing Rates Mass loader",
-      "assignee": "Zach K.",
-      "status": "In Progress",
+      "assignee": "Hector P.",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "No template to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1516",
@@ -13990,26 +13990,26 @@
       "transaction": "ZPRA_WC_DOWNTIME",
       "module": "Property Accounting",
       "scenario": "Procount well Down Time",
-      "assignee": "Zach K.",
-      "status": "In Progress",
+      "assignee": "Hector P.",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "No template to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1525",
       "transaction": "ZPRA_WELL_TEST",
       "module": "Property Accounting",
       "scenario": "Procount/Prodview well test inbound",
-      "assignee": "Zach K.",
-      "status": "In Progress",
+      "assignee": "Hector P.",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "No template to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1527",
@@ -14029,52 +14029,52 @@
       "transaction": "ZR_FIELD",
       "module": "Property Accounting",
       "scenario": "Field Loader",
-      "assignee": "Zach K.",
-      "status": "In Progress",
+      "assignee": "Hector P.",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "No template to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1531",
       "transaction": "ZR_RESERVOIR",
       "module": "Property Accounting",
       "scenario": "Reservoir Loader",
-      "assignee": "Zach K.",
-      "status": "In Progress",
+      "assignee": "Hector P.",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "No template to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1532",
       "transaction": "ZR_TAX_CLASS_CREATE",
       "module": "Property Accounting",
       "scenario": "Tax Class Create Loader",
-      "assignee": "Zach K.",
-      "status": "In Progress",
+      "assignee": "Hector P.",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "No template to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1533",
       "transaction": "ZR_TCM",
       "module": "Property Accounting",
       "scenario": "Theoretical Calculation Loader",
-      "assignee": "Zach K.",
-      "status": "In Progress",
+      "assignee": "Hector P.",
+      "status": "Blocked",
       "dueDate": "2026-07-20",
-      "notes": "",
+      "notes": "No template to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1150",
@@ -14094,39 +14094,39 @@
       "transaction": "S_ALR_87013546",
       "module": "Reporting",
       "scenario": "Commitments: Period comparison",
-      "assignee": "Zach K.",
+      "assignee": "Juan Carlos",
       "status": "In Progress",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1152",
       "transaction": "S_ALR_87013547",
       "module": "Reporting",
       "scenario": "Period Comparison - Plan",
-      "assignee": "Zach K.",
+      "assignee": "Juan Carlos",
       "status": "In Progress",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1153",
       "transaction": "S_ALR_87013548",
       "module": "Reporting",
       "scenario": "Stat. key figures/periods",
-      "assignee": "Zach K.",
+      "assignee": "Juan Carlos",
       "status": "In Progress",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1154",
@@ -14172,26 +14172,26 @@
       "transaction": "S_ALR_87013557",
       "module": "Reporting",
       "scenario": "Budget/Actual/Variance",
-      "assignee": "Zach K.",
+      "assignee": "Juan Carlos",
       "status": "In Progress",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1158",
       "transaction": "S_ALR_87013558",
       "module": "Reporting",
       "scenario": "Budget/Actual/Commitmt/Rem.Plan/Assg",
-      "assignee": "Zach K.",
+      "assignee": "Juan Carlos",
       "status": "In Progress",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1159",
@@ -14211,39 +14211,39 @@
       "transaction": "S_ALR_87013577",
       "module": "Reporting",
       "scenario": "Costs/Revenues/Expenditures/Receipts",
-      "assignee": "Zach K.",
+      "assignee": "Juan Carlos",
       "status": "In Progress",
       "dueDate": "2026-07-22",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1161",
       "transaction": "S_ALR_87013578",
       "module": "Reporting",
       "scenario": "Plan/Actual/Variance",
-      "assignee": "Zach K.",
+      "assignee": "Juan Carlos",
       "status": "In Progress",
       "dueDate": "2026-07-22",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1162",
       "transaction": "S_ALR_87013579",
       "module": "Reporting",
       "scenario": "Plan/Actual/Commitment",
-      "assignee": "Zach K.",
+      "assignee": "Juan Carlos",
       "status": "In Progress",
       "dueDate": "2026-07-22",
       "notes": "\"Summary hierarchy could not be read\" Not sure of input",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-1163",
