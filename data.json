@@ -11778,12 +11778,12 @@
       "module": "Property Accounting",
       "scenario": "Cash Call Operator",
       "assignee": "Trey H.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0634",
