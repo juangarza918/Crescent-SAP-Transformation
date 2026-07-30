@@ -10350,7 +10350,7 @@
       "assignee": "Roderick G.",
       "status": "Failed",
       "dueDate": "2026-07-14",
-      "notes": "AADSTS50105: Your administrator has configured the application SAP Fiori - QS4 ('93e3f2f9-8037-47da-8a89-c72981f2b9a7') to block users unless they are specifically granted ('assigned') access to the application. The signed in user 'hector.palma@crescentenergyco.com' is blocked because they are not a direct member of a group with access, nor had access directly assigned by an administrator. Please contact your administrator to assign access to this application.",
+      "notes": "The navigation target \"#AnalyticQuery-analyze\" of the app could not be resolved. This can be caused, for example, by an incorrect content configuration, an incorrect or missing role assignment, or because your current device is not supported.\n",
       "links": [],
       "defects": [],
       "lastUpdated": "2026-07-30"
