@@ -13315,12 +13315,12 @@
       "module": "Property Accounting",
       "scenario": "Accounting Document Data Clean Up",
       "assignee": "Zach K.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "\"You are not authorized to use transaction\" access blocked",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0015",
