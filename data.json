@@ -13328,12 +13328,12 @@
       "module": "Property Accounting",
       "scenario": "PRA Account Entry Control UI",
       "assignee": "Zach K.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0017",
