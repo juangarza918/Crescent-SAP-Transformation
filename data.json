@@ -13341,12 +13341,12 @@
       "module": "Property Accounting",
       "scenario": "Reverse Intercompany Document",
       "assignee": "Zach K.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "Able to access t-code. Not authorized to perform intercompany doc reversal. If authorize issue is fine on reversal, then pass",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-29"
+      "lastUpdated": "2026-07-30"
     },
     {
       "id": "T-0019",
