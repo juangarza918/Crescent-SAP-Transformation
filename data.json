@@ -14173,12 +14173,12 @@
       "module": "Reporting",
       "scenario": "Budget/Actual/Variance",
       "assignee": "Juan Carlos",
-      "status": "In Progress",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-07-31"
     },
     {
       "id": "T-1158",
