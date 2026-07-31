@@ -14238,12 +14238,12 @@
       "module": "Reporting",
       "scenario": "Plan/Actual/Commitment",
       "assignee": "Juan Carlos",
-      "status": "In Progress",
+      "status": "Blocked",
       "dueDate": "2026-07-22",
       "notes": "\"Summary hierarchy could not be read\" Not sure of input",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-07-31"
     },
     {
       "id": "T-1163",
