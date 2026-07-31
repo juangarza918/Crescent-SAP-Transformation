@@ -14212,12 +14212,12 @@
       "module": "Reporting",
       "scenario": "Costs/Revenues/Expenditures/Receipts",
       "assignee": "Juan Carlos",
-      "status": "In Progress",
+      "status": "Blocked",
       "dueDate": "2026-07-22",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-07-31"
     },
     {
       "id": "T-1161",
