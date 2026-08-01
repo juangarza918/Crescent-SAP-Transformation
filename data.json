@@ -50,7 +50,7 @@
     {
       "name": "S/4HANA Upgrade 2025",
       "status": "G",
-      "summary": "- QS100 UAT completed. Remediations identified completed. SAP doing an additional end to end testing from master data, month end close, and interfaces. Can move up go-live to Aug 10th up from Sept 14th. Summary of remediation: Obsolete Function modules, adding notes, custom programs. Just testing Concur on Monday/Tuesday. If go-live approved,  we will start with SUM activities on Monday night and prepare for downtime at night Friday Aug 7th (a few hours). Integration with Snowflake will be down around 2pm CST that Friday.\n",
+      "summary": "- QS100 UAT completed. Remediations identified completed. SAP doing an additional end to end testing from master data, month end close, and interfaces. Can move up go-live to Aug 10th up from Sept 14th. Summary of remediation: Obsolete Function modules, adding notes, custom programs, new authorizations. Just testing Concur on Monday/Tuesday. If go-live approved,  we will start with SUM activities on Monday night and prepare for downtime at night Friday Aug 7th (a few hours). Integration with Snowflake will be down around 2pm CST that Friday.\n",
       "milestones": [
         {
           "name": "Sandbox Copy",
