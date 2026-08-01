@@ -1,11 +1,11 @@
 {
   "meta": {
     "projectName": "Crescent SAP Transformation",
-    "reportDate": "2026-07-26",
+    "reportDate": "2026-08-03",
     "overallStatus": "G",
     "goLiveDate": "2026-09-14",
     "goLiveLabel": "S/4HANA 2025 Production Go-Live",
-    "narrative": "S/4HANA Upgrade 2025: UAT in progress and on target to complete by 07/29. Due to progress, aiming to move upgrade go-live date to 08/10, 1 month before the initial expected go-live.  - Joule Activation: S4/HANA Dev connection being finalized and on last step. To complete testing and complete Quality environment by end of week. - Fiori Business Roles Assignment and Activation: Protiviti activating 2025 apps and working on Fiori role assignments."
+    "narrative": "S/4HANA Upgrade 2025: User Acceptance Testing completed, remediations identified completed. Only pending testing Concur and planned for Monday/Tuesday. SAP team doing an additional month end close and interface testing. Recommendation to move forward with go-live on Aug 10th. - Joule Activation: S4/HANA Dev connection completed, adding standard agents for testing. Starting Quality. - Fiori Business Roles Assignment and Activation: Protiviti ongoing work on activating 2025 apps and working on Fiori role assignments."
   },
   "workstreams": [
     {
@@ -50,7 +50,7 @@
     {
       "name": "S/4HANA Upgrade 2025",
       "status": "G",
-      "summary": "- QS100 UAT in progress. 582/1040 cases tested and passed. There are about 250 that are pending status updates from team and should receive on Monday. The remaining expected to be passed by Wednesday. 35 have been marked as failed by team and SAP team has been reviewing, no concerns on any of those and will be retested. We are doing an additional end to end scenario testing that includes master data, transactional data, and month end close. The only items of concern are Concur interfaces and JVA OH and Insurance customizations to adopt standard, for which we expect the solution by end of upcoming week. With all testing expected by end of week, the team is targeting to move up go-live to 08/10 and we will have go/no-go decision on our monthly 08/03.\n",
+      "summary": "- QS100 UAT completed. Remediations identified completed. SAP doing an additional end to end testing from master data, month end close, and interfaces. Can move up go-live to Aug 10th up from Sept 14th. Summary of remediation: Obsolete Function modules, adding notes, custom programs. Just testing Concur on Monday/Tuesday. If go-live approved,  we will start with SUM activities on Monday night and prepare for downtime at night Friday Aug 7th (a few hours). Integration with Snowflake will be down around 2pm CST that Friday.\n",
       "milestones": [
         {
           "name": "Sandbox Copy",
@@ -158,7 +158,7 @@
         },
         {
           "name": "Quality UAT Regression Testing",
-          "pct": 95,
+          "pct": 100,
           "end": "2026-08-28",
           "revised": "2026-07-29",
           "status": "G",
@@ -166,7 +166,7 @@
         },
         {
           "name": "Prod Upgrade Preparations",
-          "pct": 80,
+          "pct": 100,
           "end": "2026-08-28",
           "revised": "2026-07-31",
           "status": "G",
@@ -174,7 +174,7 @@
         },
         {
           "name": "Prod - Service Request SUM to SAP",
-          "pct": 10,
+          "pct": 75,
           "end": "2026-09-15",
           "revised": "2026-08-10",
           "status": "G",
@@ -185,7 +185,7 @@
     {
       "name": "Joule Activation",
       "status": "G",
-      "summary": "Joule Connection to S4/HANA Dev in progress. Expected completion of Dev set up this week as well and complete Quality after initial tests. ",
+      "summary": "Joule Connection to S4/HANA Dev completed. Starting agents testing. Paused on Quality to get Upgrade pre-reqs completed.",
       "milestones": [
         {
           "name": "Joule Activation in Dev",
@@ -196,7 +196,7 @@
           "comment": "Creating Services Request to SAP."
         },
         {
-          "name": "Joule Testing",
+          "name": "Joule Testing in Dev",
           "pct": 30,
           "end": "2026-10-02",
           "revised": "2026-07-31",
@@ -224,7 +224,7 @@
     {
       "name": "Fiori Business Roles Assignment",
       "status": "G",
-      "summary": "Protiviti team start work on the ",
+      "summary": "Protiviti team work in progress",
       "milestones": [
         {
           "name": "Apps Assignment Mappings",
@@ -254,7 +254,7 @@
           "name": "Business Roles Testing",
           "pct": 0,
           "end": "2026-08-24",
-          "revised": "",
+          "revised": "2026-10-30",
           "status": "G",
           "comment": ""
         }
@@ -263,7 +263,7 @@
     {
       "name": "Fiori Apps Activation",
       "status": "G",
-      "summary": "All catalogs for 2025 were already activated, just specific odata services for applications within 2025 are being activated.",
+      "summary": "All catalogs for 2025 were already activated, just specific odata services for applications within 2025 are being activated. Ongoing",
       "milestones": [
         {
           "name": "Identify All Catalogues",
@@ -294,7 +294,7 @@
     {
       "name": "SAP New Features Trainings",
       "status": "G",
-      "summary": "Start Training schedule to review with Josh/Brian/Michael.",
+      "summary": "Start Training schedule to review with Josh/Brian/Michael and rollout plan.",
       "milestones": [
         {
           "name": "Schedule Trainings",
@@ -649,7 +649,7 @@
       "impact": "High",
       "likelihood": "Medium",
       "status": "Open",
-      "mitigation": "Re-Implement Customization temporarily",
+      "mitigation": "BADI in progress. Re-implement customization temporarily.",
       "owner": "SAP",
       "due": "2026-07-31"
     },
@@ -659,7 +659,7 @@
       "impact": "High",
       "likelihood": "Medium",
       "status": "Open",
-      "mitigation": "Re-Implement Customization temporarily",
+      "mitigation": "Re-Implement Customization temporarily. Call on Monday.",
       "owner": "SAP",
       "due": "2026-07-31"
     }
