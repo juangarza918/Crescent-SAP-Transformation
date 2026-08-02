@@ -14306,7 +14306,15 @@
       "status": "Failed",
       "dueDate": "2026-08-01",
       "links": [],
-      "defects": [],
+      "defects": [
+        {
+          "id": "",
+          "title": "",
+          "severity": "Medium",
+          "status": "Open",
+          "link": ""
+        }
+      ],
       "notes": "Posting period 000 is not defined for fiscal year variant K4\nMessage No. GU506. Case with SAP raised",
       "lastUpdated": "2026-08-01"
     }
