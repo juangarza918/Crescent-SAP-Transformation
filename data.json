@@ -14303,7 +14303,7 @@
       "module": "JVA",
       "scenario": "Run GJG5 to allocate both Cost Center and AFE costs",
       "assignee": "",
-      "status": "Not Started",
+      "status": "Failed",
       "dueDate": "2026-08-01",
       "links": [],
       "defects": [],
