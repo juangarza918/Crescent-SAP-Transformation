@@ -14302,7 +14302,7 @@
       "transaction": "GJG5",
       "module": "JVA",
       "scenario": "Run GJG5 to allocate both Cost Center and AFE costs",
-      "assignee": "",
+      "assignee": "Juan Garza",
       "status": "Failed",
       "dueDate": "2026-08-01",
       "links": [],
