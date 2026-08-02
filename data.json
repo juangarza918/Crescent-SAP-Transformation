@@ -14301,7 +14301,7 @@
       "id": "T-1548",
       "transaction": "GJG5",
       "module": "JVA",
-      "scenario": "",
+      "scenario": "Run GJG5 to allocate both Cost Center and AFE costs",
       "assignee": "",
       "status": "Not Started",
       "dueDate": "",
