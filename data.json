@@ -13926,12 +13926,12 @@
       "module": "Property Accounting",
       "scenario": "CHECK REMIT LOADER",
       "assignee": "Hector P.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-20",
       "notes": "No template to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-03"
     },
     {
       "id": "T-1515",
