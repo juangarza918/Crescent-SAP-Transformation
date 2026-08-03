@@ -12961,12 +12961,12 @@
       "module": "Property Accounting",
       "scenario": "ACDOCA REPORT DOWNLOAD",
       "assignee": "Hector P.",
-      "status": "Failed",
+      "status": "Descoped",
       "dueDate": "2026-07-13",
       "notes": "DUMP: ABAP programming error",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-03"
     },
     {
       "id": "T-1449",
