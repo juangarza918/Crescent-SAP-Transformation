@@ -10036,12 +10036,12 @@
       "module": "Reporting",
       "scenario": "Commitment per Month, Current FY",
       "assignee": "Juan Carlos",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-03"
     },
     {
       "id": "T-1176",
