@@ -3,9 +3,9 @@
     "projectName": "Crescent SAP Transformation",
     "reportDate": "2026-08-03",
     "overallStatus": "G",
-    "goLiveDate": "2026-09-14",
+    "goLiveDate": "2026-08-17",
     "goLiveLabel": "S/4HANA 2025 Production Go-Live",
-    "narrative": "S/4HANA Upgrade 2025: User Acceptance Testing completed, remediations identified completed. Only pending testing Concur and planned for Monday/Tuesday. SAP team doing an additional month end close and interface testing. Recommendation to move forward with go-live on Aug 10th. - Joule Activation: S4/HANA Dev connection completed, adding standard agents for testing. Starting Quality. - Fiori Business Roles Assignment and Activation: Protiviti ongoing work on activating 2025 apps and working on Fiori role assignments."
+    "narrative": "S/4HANA Upgrade 2025: User Acceptance Testing completed, remediations identified completed. Only pending testing Concur and planned for Monday/Tuesday. SAP team doing an additional month end close and interface testing. Recommendation to move forward with go-live on Aug 17th after HANA DB upgrade this week and start Upgrade activities on Aug 10th. - Joule Activation: S4/HANA Dev connection completed, adding standard agents for testing. Starting Quality. - Fiori Business Roles Assignment and Activation: Protiviti ongoing work on activating 2025 apps and working on Fiori role assignments."
   },
   "workstreams": [
     {
@@ -50,7 +50,7 @@
     {
       "name": "S/4HANA Upgrade 2025",
       "status": "G",
-      "summary": "- QS100 UAT completed. Remediations identified completed. SAP doing an additional end to end testing from master data, month end close, and interfaces. Can move up go-live to Aug 10th up from Sept 14th. Summary of remediation: Obsolete Function modules, adding notes, custom programs, new authorizations. Just testing Concur on Monday/Tuesday. If go-live approved,  we will start with SUM activities on Monday night and prepare for downtime at night Friday Aug 7th (a few hours). Integration with Snowflake will be down around 2pm CST that Friday.\n",
+      "summary": "- QS100 UAT completed. Remediations identified completed. SAP doing an additional end to end testing from master data, month end close, and interfaces. Can move up go-live to Aug 17th up from Sept 14th. Change to 17th due to HANA DB Upgrade. Summary of remediation: Obsolete Function modules, adding notes, custom programs, new authorizations. Just testing Concur this week. If go-live approved,  we will start with SUM activities on Monday night 10th and prepare for downtime at night Friday Aug 14th (a few hours). Integration with Snowflake will be down evening of Thursday. Cutover post upgrade activities: Concur connection, SNP License for new release, Transports for remediation, Authorizations.\n",
       "milestones": [
         {
           "name": "Sandbox Copy",
@@ -166,7 +166,7 @@
         },
         {
           "name": "Prod Upgrade Preparations",
-          "pct": 100,
+          "pct": 90,
           "end": "2026-08-28",
           "revised": "2026-07-31",
           "status": "G",
