@@ -6682,12 +6682,12 @@
       "module": "Reporting",
       "scenario": "Write-Ups",
       "assignee": "Juan Carlos",
-      "status": "Blocked",
+      "status": "Retesting",
       "dueDate": "2026-07-20",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-03"
     },
     {
       "id": "T-1075",
@@ -6903,12 +6903,12 @@
       "module": "Reporting",
       "scenario": "Asset History",
       "assignee": "Juan Carlos",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-21",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-03"
     },
     {
       "id": "T-1111",
