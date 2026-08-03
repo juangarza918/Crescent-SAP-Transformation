@@ -13471,12 +13471,12 @@
       "module": "Property Accounting",
       "scenario": "CDEX Remitter Cross Reference (New)",
       "assignee": "Hector P.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-15",
       "notes": "Opens with /n/PRA/CI_CDEXREM_X. Missing prerequisite data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-03"
     },
     {
       "id": "T-0034",
