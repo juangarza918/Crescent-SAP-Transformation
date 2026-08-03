@@ -14225,12 +14225,12 @@
       "module": "Reporting",
       "scenario": "Plan/Actual/Variance",
       "assignee": "Juan Carlos",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-22",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-31"
+      "lastUpdated": "2026-08-03"
     },
     {
       "id": "T-1162",
@@ -14238,12 +14238,12 @@
       "module": "Reporting",
       "scenario": "Plan/Actual/Commitment",
       "assignee": "Juan Carlos",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-22",
       "notes": "\"Summary hierarchy could not be read\" Not sure of input",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-31"
+      "lastUpdated": "2026-08-03"
     },
     {
       "id": "T-1163",
