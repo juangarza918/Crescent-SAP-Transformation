@@ -13614,12 +13614,12 @@
       "module": "Property Accounting",
       "scenario": "Define PPN Tags",
       "assignee": "Hector P.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-16",
       "notes": "No entries found that match the selection criteria.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-03"
     },
     {
       "id": "T-0123",
@@ -13939,12 +13939,12 @@
       "module": "Property Accounting",
       "scenario": "Internal Marketing Rates Mass loader",
       "assignee": "Hector P.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-20",
       "notes": "No template to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-03"
     },
     {
       "id": "T-1516",
