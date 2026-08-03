@@ -11752,12 +11752,12 @@
       "module": "Property Accounting",
       "scenario": "Billing threshold check",
       "assignee": "Hector P.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "Transaction opened succesfully. No data retrieved.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-03"
     },
     {
       "id": "T-0621",
