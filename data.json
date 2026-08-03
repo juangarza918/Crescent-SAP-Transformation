@@ -6916,12 +6916,12 @@
       "module": "Reporting",
       "scenario": "Cashed Checks",
       "assignee": "Juan Carlos",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-21",
       "notes": "No data to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-03"
     },
     {
       "id": "T-1132",
