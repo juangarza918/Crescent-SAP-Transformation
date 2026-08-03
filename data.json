@@ -13900,12 +13900,12 @@
       "module": "Property Accounting",
       "scenario": "JV JIBLink Extract program",
       "assignee": "Hector P.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "ZJVA_JIB_EXT executed successfully and triggered the S-Drive transfer. No files to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-03"
     },
     {
       "id": "T-1507",
