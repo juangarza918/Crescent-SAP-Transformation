@@ -3276,12 +3276,12 @@
       "module": "Treasury",
       "scenario": "Postprocessing Bank Statement",
       "assignee": "Hector P.",
-      "status": "Failed",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "Error after calling up RS_VARIANT_CONTENTS",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-0532",
@@ -3328,12 +3328,12 @@
       "module": "Treasury",
       "scenario": "Displays the Note to Payee",
       "assignee": "Hector P.",
-      "status": "Failed",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "You can call this function only from transaction FEBAN",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-0536",
