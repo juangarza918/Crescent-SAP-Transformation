@@ -3159,12 +3159,12 @@
       "module": "Treasury",
       "scenario": "Parked Document $",
       "assignee": "Juan Carlos",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-16",
       "notes": "No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-0503",
