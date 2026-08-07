@@ -9594,12 +9594,12 @@
       "module": "Property Accounting",
       "scenario": "Royalty Reporting",
       "assignee": "Hector P.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-16",
       "notes": "No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-0902",
