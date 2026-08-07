@@ -3692,12 +3692,12 @@
       "module": "Treasury",
       "scenario": "Energy Link Outbound Interface Owner",
       "assignee": "Juan Carlos",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-21",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-1523",
