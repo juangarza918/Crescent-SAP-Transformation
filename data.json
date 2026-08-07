@@ -2639,12 +2639,12 @@
       "module": "Treasury",
       "scenario": "Apply Bank Data",
       "assignee": "Hector P.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-13",
       "notes": "No template to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-0321",
