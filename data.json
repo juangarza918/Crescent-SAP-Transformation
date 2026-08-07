@@ -8853,12 +8853,12 @@
       "module": "Property Accounting",
       "scenario": "Display Internal Marketing Rates",
       "assignee": "Hector P.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-13",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-0766",
