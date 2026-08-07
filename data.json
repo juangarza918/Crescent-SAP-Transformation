@@ -3341,12 +3341,12 @@
       "module": "Treasury",
       "scenario": "Vendor Cashed Checks",
       "assignee": "Juan Carlos",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-17",
       "notes": "",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-0537",
