@@ -11739,12 +11739,12 @@
       "module": "Property Accounting",
       "scenario": "Billing threshold check",
       "assignee": "Hector P.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-14",
       "notes": "Transaction opened succesfully. No data retrieved.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-0620",
