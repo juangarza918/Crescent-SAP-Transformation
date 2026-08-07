@@ -936,12 +936,12 @@
       "module": "Accounts Payable",
       "scenario": "Displayed Parked Vendor Document",
       "assignee": "Hector P.",
-      "status": "Failed",
+      "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "Transaction FV63 is not supported for direct access.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-0572",
