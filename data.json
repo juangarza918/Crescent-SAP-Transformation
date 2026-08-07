@@ -3042,12 +3042,12 @@
       "module": "Treasury",
       "scenario": "Change Recurring Entry",
       "assignee": "Hector P.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-15",
       "notes": "No document number to change.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-0480",
