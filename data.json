@@ -6929,12 +6929,12 @@
       "module": "Reporting",
       "scenario": "G/L Account Balances",
       "assignee": "Juan Carlos",
-      "status": "Failed",
+      "status": "Descoped",
       "dueDate": "2026-07-21",
       "notes": "DUMP: ABAP programming error",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-1133",
