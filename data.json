@@ -9776,12 +9776,12 @@
       "module": "Property Accounting",
       "scenario": "Delete wc volumes",
       "assignee": "Hector P.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-0844",
