@@ -3978,12 +3978,12 @@
       "module": "Corporate Accounting",
       "scenario": "Asset Transfer Loader",
       "assignee": "Juan Carlos",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-15",
       "notes": "Upload file required to execute",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-1455",
