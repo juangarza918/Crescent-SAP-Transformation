@@ -8450,12 +8450,12 @@
       "module": "SAPSUPPORT",
       "scenario": "Workflow Builder",
       "assignee": "Juan Carlos",
-      "status": "Failed",
+      "status": "Descoped",
       "dueDate": "2026-07-20",
       "notes": "SAPnetz warning: Frontend version is older than R/3 version - SAPRL 816 (93)",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-1410",
