@@ -9841,12 +9841,12 @@
       "module": "Property Accounting",
       "scenario": "Create Well Test",
       "assignee": "Hector P.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-0850",
@@ -9854,12 +9854,12 @@
       "module": "Property Accounting",
       "scenario": "Well Test Change",
       "assignee": "Hector P.",
-      "status": "Blocked",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "No data.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-0852",
