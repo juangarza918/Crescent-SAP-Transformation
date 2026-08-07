@@ -2652,12 +2652,12 @@
       "module": "Treasury",
       "scenario": "Transfer BIC Data",
       "assignee": "Hector P.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-13",
       "notes": "No template to load.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-0323",
@@ -2678,12 +2678,12 @@
       "module": "Treasury",
       "scenario": "ABAP/4 Report: Recurring Entries",
       "assignee": "Hector P.",
-      "status": "Blocked",
+      "status": "Descoped",
       "dueDate": "2026-07-13",
       "notes": "Session SAPF120 was not created / Message No. FB202",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-0424",
