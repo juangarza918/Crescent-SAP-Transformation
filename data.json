@@ -3666,12 +3666,12 @@
       "module": "Treasury",
       "scenario": "Cleared Check Status",
       "assignee": "Juan Carlos",
-      "status": "Failed",
+      "status": "Descoped",
       "dueDate": "2026-07-21",
       "notes": "ABAP dump: CALL_FUNCTION_NOT_FOUND",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-1510",
