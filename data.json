@@ -10348,12 +10348,12 @@
       "module": "Property Accounting",
       "scenario": "JADE Report",
       "assignee": "Hector P.",
-      "status": "Failed",
+      "status": "Descoped",
       "dueDate": "2026-07-14",
       "notes": "The navigation target \"#AnalyticQuery-analyze\" of the app could not be resolved. This can be caused, for example, by an incorrect content configuration, an incorrect or missing role assignment, or because your current device is not supported.",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-0440",
@@ -14303,12 +14303,12 @@
       "module": "JVA",
       "scenario": "Run GJG5 to allocate both Cost Center and AFE costs",
       "assignee": "Juan Garza",
-      "status": "Failed",
+      "status": "Passed",
       "dueDate": "2026-08-01",
       "links": [],
       "defects": [],
       "notes": "Posting period 000 is not defined for fiscal year variant K4\nMessage No. GU506. Case with SAP raised",
-      "lastUpdated": "2026-08-01"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-1549",
