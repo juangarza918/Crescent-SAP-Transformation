@@ -3263,12 +3263,12 @@
       "module": "Treasury",
       "scenario": "Postprocess Electronic Bank Statmt",
       "assignee": "Hector P.",
-      "status": "Failed",
+      "status": "Passed",
       "dueDate": "2026-07-17",
       "notes": "Error after calling up RS_VARIANT_CONTENTS",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-07-30"
+      "lastUpdated": "2026-08-07"
     },
     {
       "id": "T-0531",
