@@ -6682,12 +6682,12 @@
       "module": "Reporting",
       "scenario": "Write-Ups",
       "assignee": "Juan Carlos",
-      "status": "Retesting",
+      "status": "Passed",
       "dueDate": "2026-07-20",
       "notes": "Report executed succesfully, no data retrieved",
       "links": [],
       "defects": [],
-      "lastUpdated": "2026-08-03"
+      "lastUpdated": "2026-08-13"
     },
     {
       "id": "T-1075",
