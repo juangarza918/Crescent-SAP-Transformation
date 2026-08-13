@@ -656,7 +656,7 @@
       "workstream": "S/4HANA Upgrade 2025",
       "impact": "High",
       "likelihood": "Medium",
-      "status": "Mitigating",
+      "status": "Resolved",
       "mitigation": "BADI in progress. Re-implement customization temporarily.",
       "owner": "SAP",
       "due": "2026-07-31"
@@ -666,7 +666,7 @@
       "workstream": "S/4HANA Upgrade 2025",
       "impact": "High",
       "likelihood": "Medium",
-      "status": "Mitigating",
+      "status": "Resolved",
       "mitigation": "Testing standard. Re-Implement Customization temporarily if needed. Call on Monday.",
       "owner": "SAP",
       "due": "2026-07-31"
