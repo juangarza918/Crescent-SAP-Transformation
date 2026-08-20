@@ -1,11 +1,11 @@
 {
   "meta": {
     "projectName": "Crescent SAP Transformation",
-    "reportDate": "2026-08-03",
+    "reportDate": "2026-08-21",
     "overallStatus": "G",
     "goLiveDate": "2026-08-17",
     "goLiveLabel": "S/4HANA 2025 Production Go-Live",
-    "narrative": "S/4HANA Upgrade 2025: User Acceptance Testing completed, remediations identified completed. Only pending testing Concur and planned for Monday/Tuesday. SAP team doing an additional month end close and interface testing. Recommendation to move forward with go-live on Aug 17th after HANA DB upgrade this week and start Upgrade activities on Aug 10th. - Joule Activation: S4/HANA Dev connection completed, adding standard agents for testing. Starting Quality. - Fiori Business Roles Assignment and Activation: Protiviti ongoing work on activating 2025 apps and working on Fiori role assignments."
+    "narrative": "S/4HANA Upgrade 2025: Go Live Completed. - Joule Activation: S4/HANA Starting Quality. - Fiori Business Roles Assignment and Activation: Protiviti ongoing work on activating 2025 apps and working on Fiori role assignments."
   },
   "workstreams": [
     {
@@ -49,8 +49,8 @@
     },
     {
       "name": "S/4HANA Upgrade 2025",
-      "status": "G",
-      "summary": "- QS100 UAT completed. Remediations identified completed. SAP doing an additional end to end testing from master data, month end close, and interfaces. Can move up go-live to Aug 17th up from Sept 14th. Change to 17th due to HANA DB Upgrade. Summary of remediation: Obsolete Function modules, adding notes, custom programs, new authorizations. Just testing Concur this week. If go-live approved,  we will start with SUM activities on Monday night 10th and prepare for downtime at night Friday Aug 14th (a few hours). Integration with Snowflake will be down evening of Thursday. Cutover post upgrade activities: Concur connection, SNP License for new release, Transports for remediation, Authorizations.\n",
+      "status": "C",
+      "summary": "- Go-Live Completed. No major issues. Resolved 2 authorizations, Snowflake table syncing, 1 fix on AP, 1 fix on JE loader, 1 note. Outstanding: GRC new login, lockbox text shift.",
       "milestones": [
         {
           "name": "Sandbox Copy",
@@ -174,18 +174,18 @@
         },
         {
           "name": "Prod - Service Request SUM to SAP",
-          "pct": 20,
+          "pct": 100,
           "end": "2026-09-15",
           "revised": "2026-08-10",
-          "status": "G",
+          "status": "C",
           "comment": ""
         },
         {
           "name": "Prod - Post Cutover Activities (Concur/Transports/SNP Glue)",
-          "pct": 0,
-          "end": "",
+          "pct": 100,
+          "end": "2026-08-15",
           "revised": "",
-          "status": "G",
+          "status": "C",
           "comment": ""
         }
       ]
@@ -193,29 +193,29 @@
     {
       "name": "Joule Activation",
       "status": "G",
-      "summary": "Joule Connection to S4/HANA Dev completed. Starting agents testing. Paused on Quality to get Upgrade pre-reqs completed.",
+      "summary": "Joule Connection to S4/HANA Dev completed. Starting Quality",
       "milestones": [
         {
           "name": "Joule Activation in Dev",
           "pct": 100,
           "end": "2026-09-18",
           "revised": "",
-          "status": "G",
+          "status": "C",
           "comment": "Creating Services Request to SAP."
         },
         {
           "name": "Joule Testing in Dev",
-          "pct": 30,
+          "pct": 100,
           "end": "2026-10-02",
           "revised": "2026-07-31",
-          "status": "G",
+          "status": "C",
           "comment": ""
         },
         {
           "name": "Joule Activation & Testing in Quality",
           "pct": 10,
-          "end": "2026-10-16",
-          "revised": "2026-07-31",
+          "end": "2026-09-04",
+          "revised": "",
           "status": "G",
           "comment": ""
         },
@@ -232,7 +232,7 @@
     {
       "name": "Fiori Business Roles Assignment",
       "status": "G",
-      "summary": "Protiviti team work in progress",
+      "summary": "Protiviti team work in progress and Vijan/Patrick/Stewart engaged.",
       "milestones": [
         {
           "name": "Apps Assignment Mappings",
@@ -293,7 +293,7 @@
           "name": "Create Custom Catalogues Post Go-live 2025",
           "pct": 50,
           "end": "2026-08-03",
-          "revised": "",
+          "revised": "2026-09-18",
           "status": "G",
           "comment": ""
         }
