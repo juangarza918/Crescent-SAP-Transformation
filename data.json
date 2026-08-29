@@ -50,7 +50,7 @@
     {
       "name": "S/4HANA Upgrade 2025",
       "status": "C",
-      "summary": "- Go-Live Completed. No major issues. Resolved 2 authorizations, Snowflake table syncing, 1 fix on AP, 1 fix on JE loader, 1 note. Outstanding: GRC new login, lockbox text shift.",
+      "summary": "- Go-Live Completed. No major issues. Resolved 2 authorizations, Snowflake table syncing, 1 fix on AP, 1 fix on JE loader, 1 note, GRC login.",
       "milestones": [
         {
           "name": "Sandbox Copy",
