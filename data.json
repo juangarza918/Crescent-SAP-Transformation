@@ -3,9 +3,9 @@
     "projectName": "Crescent SAP Transformation",
     "reportDate": "2026-08-28",
     "overallStatus": "G",
-    "goLiveDate": "2026-08-17",
+    "goLiveDate": "2026-10-30",
     "goLiveLabel": "S/4HANA 2025 Production Go-Live",
-    "narrative": "S/4HANA Upgrade 2025: Go Live Completed. - Joule Activation: S4/HANA Starting Quality. - Fiori Business Roles Assignment and Activation: Protiviti ongoing work on activating 2025 apps and working on Fiori role assignments."
+    "narrative": "S/4HANA Upgrade 2025: Go Live Completed. Moving towards Fiori and Joule rollouts.  - Joule Activation: S4/HANA Starting Quality. - Fiori Business Roles Assignment and Activation: Protiviti ongoing work on activating 2025 apps and working on Fiori role assignment."
   },
   "workstreams": [
     {
