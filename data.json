@@ -1,7 +1,7 @@
 {
   "meta": {
     "projectName": "Crescent SAP Transformation",
-    "reportDate": "2026-08-21",
+    "reportDate": "2026-08-28",
     "overallStatus": "G",
     "goLiveDate": "2026-08-17",
     "goLiveLabel": "S/4HANA 2025 Production Go-Live",
@@ -213,7 +213,7 @@
         },
         {
           "name": "Joule Activation & Testing in Quality",
-          "pct": 10,
+          "pct": 30,
           "end": "2026-09-04",
           "revised": "",
           "status": "G",
@@ -243,26 +243,18 @@
           "comment": "Provide to Michael B / Michael M this week."
         },
         {
-          "name": "Business Roles Assignments 2021",
-          "pct": 100,
-          "end": "2026-06-08",
-          "revised": "",
+          "name": "Business Roles Assignments ",
+          "pct": 25,
+          "end": "2026-09-08",
+          "revised": "2026-11-30",
           "status": "C",
           "comment": "Treasury role assignments in progress."
         },
         {
-          "name": "Business Roles Assignments 2025",
-          "pct": 20,
-          "end": "2026-07-16",
-          "revised": "2026-09-30",
-          "status": "G",
-          "comment": ""
-        },
-        {
           "name": "Business Roles Testing",
           "pct": 0,
-          "end": "2026-08-24",
-          "revised": "2026-10-30",
+          "end": "2026-10-05",
+          "revised": "2027-02-26",
           "status": "G",
           "comment": ""
         }
@@ -565,43 +557,43 @@
     {
       "project": "SAP Joule Activation",
       "task": "Joule Go-Live",
-      "start": "2026-10-19",
+      "start": "2026-10-30",
       "end": "2026-10-23",
       "owner": "Crescent SAP"
     },
     {
       "project": "Fiori / Joule / New Functionality Training",
       "task": "AP",
-      "start": "2026-10-26",
-      "end": "2026-10-30",
+      "start": "2027-02-01",
+      "end": "2027-02-26",
       "owner": "Crescent SAP"
     },
     {
       "project": "Fiori / Joule / New Functionality Training",
       "task": "Treasury",
-      "start": "2026-10-26",
+      "start": "2026-10-05",
       "end": "2026-10-30",
       "owner": "Crescent SAP"
     },
     {
       "project": "Fiori / Joule / New Functionality Training",
       "task": "Corporate",
-      "start": "2026-10-26",
-      "end": "2026-10-30",
+      "start": "2026-11-02",
+      "end": "2026-11-20",
       "owner": "Crescent SAP"
     },
     {
       "project": "Fiori / Joule / New Functionality Training",
       "task": "Property",
-      "start": "2026-11-02",
-      "end": "2026-11-06",
+      "start": "2027-02-01",
+      "end": "2027-02-26",
       "owner": "Crescent SAP"
     },
     {
       "project": "Fiori / Joule / New Functionality Training",
       "task": "DO",
-      "start": "2026-11-02",
-      "end": "2026-11-06",
+      "start": "2027-02-01",
+      "end": "2027-02-26",
       "owner": "Crescent SAP"
     },
     {
