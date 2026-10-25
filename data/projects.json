@@ -8,16 +8,6 @@
       "accent": "#c8a24b",
       "created": "2026-05-24",
       "dataFile": "crescent-sap-transformation.json"
-    },
-    {
-      "id": "e2e-smoke-test",
-      "name": "E2E Smoke Test",
-      "icon": "??",
-      "color": "#333333",
-      "accent": "#c8a24b",
-      "created": "2026-10-25",
-      "dataFile": "e2e-smoke-test.json",
-      "createdBy": "claude-smoke-test"
     }
   ]
 }
