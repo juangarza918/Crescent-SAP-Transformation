@@ -1,8 +1,6 @@
 // POST /api/update-project
-// Body: { projectId, indexUpdates: {name?, icon?, color?, accent?}, metaUpdates: {projectName?, overallStatus?, reportDate?, goLiveDate?, goLiveLabel?, narrative?}, author? }
-// Updates both the project's entry in data/projects.json AND the meta section of
-// data/<project>.json. Only the fields present in the two update bags are touched;
-// everything else is preserved.
+// Body: { projectId, indexUpdates: {name?, icon?, color?, accent?, status?}, metaUpdates: {...}, author? }
+// `status` on the index is "active" | "completed" — determines which hub tab the project appears in.
 
 const REPO_OWNER = "juangarza918";
 const REPO_NAME  = "Crescent-SAP-Transformation";
@@ -34,21 +32,12 @@ async function getFile(path) {
   return { exists: true, sha: info.sha, content: JSON.parse(Buffer.from(info.content, "base64").toString("utf8")) };
 }
 async function putFile(path, obj, message, sha) {
-  const payload = {
-    message,
-    content: Buffer.from(JSON.stringify(obj, null, 2)).toString("base64"),
-    branch: "main"
-  };
+  const payload = { message, content: Buffer.from(JSON.stringify(obj, null, 2)).toString("base64"), branch: "main" };
   if (sha) payload.sha = sha;
   const r = await ghFetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`, {
-    method: "PUT",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload)
+    method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload)
   });
-  if (!r.ok) {
-    const txt = await r.text();
-    throw new Error(`PUT ${path} failed (${r.status}): ${txt.slice(0, 200)}`);
-  }
+  if (!r.ok) { const txt = await r.text(); throw new Error(`PUT ${path} failed (${r.status}): ${txt.slice(0, 200)}`); }
   return r.json();
 }
 
@@ -62,31 +51,36 @@ module.exports = async (req, res) => {
   if (origin && !ALLOWED_ORIGINS.some(o => origin.startsWith(o))) {
     return json(res, 403, { error: `Forbidden origin: ${origin}` });
   }
-  if (!process.env.GITHUB_TOKEN) {
-    return json(res, 500, { error: "Server is missing GITHUB_TOKEN env var." });
-  }
+  if (!process.env.GITHUB_TOKEN) return json(res, 500, { error: "Server is missing GITHUB_TOKEN env var." });
 
   let body = req.body;
   if (typeof body === "string") { try { body = JSON.parse(body); } catch { body = {}; } }
   body = body || {};
-
   const projectId = String(body.projectId || "").replace(/[^a-z0-9._-]/gi, "").slice(0, 80);
   if (!projectId) return json(res, 400, { error: "projectId is required" });
-
   const indexUpdates = body.indexUpdates || {};
   const metaUpdates = body.metaUpdates || {};
   const author = String(body.author || "anonymous").replace(/[^\w\s.@-]/g, "").slice(0, 80) || "anonymous";
 
-  // Only accept known fields
-  const allowedIndex = ["name","icon","color","accent"];
+  const allowedIndex = ["name","icon","color","accent","status"];
   const allowedMeta  = ["projectName","overallStatus","reportDate","goLiveDate","goLiveLabel","narrative"];
   const safeIndex = {};
-  allowedIndex.forEach(k => { if (indexUpdates[k] !== undefined) safeIndex[k] = String(indexUpdates[k]).slice(0, 200); });
+  allowedIndex.forEach(k => {
+    if (indexUpdates[k] === undefined) return;
+    if (k === "status") {
+      const v = String(indexUpdates[k]).toLowerCase();
+      safeIndex[k] = (v === "completed") ? "completed" : "active";
+    } else {
+      safeIndex[k] = String(indexUpdates[k]).slice(0, 200);
+    }
+  });
   const safeMeta = {};
-  allowedMeta.forEach(k => { if (metaUpdates[k] !== undefined) safeMeta[k] = typeof metaUpdates[k] === "string" ? metaUpdates[k].slice(0, 5000) : metaUpdates[k]; });
+  allowedMeta.forEach(k => {
+    if (metaUpdates[k] === undefined) return;
+    safeMeta[k] = typeof metaUpdates[k] === "string" ? metaUpdates[k].slice(0, 5000) : metaUpdates[k];
+  });
 
   try {
-    // 1. Update project index entry
     const idxFile = await getFile("data/projects.json");
     if (!idxFile.exists) return json(res, 404, { error: "projects.json missing" });
     const idxDoc = idxFile.content;
@@ -95,7 +89,6 @@ module.exports = async (req, res) => {
     Object.assign(entry, safeIndex);
     await putFile("data/projects.json", idxDoc, `[${projectId}] Update project index (${author})`, idxFile.sha);
 
-    // 2. Update the project's doc meta
     if (Object.keys(safeMeta).length > 0) {
       const docFile = await getFile(`data/${projectId}.json`);
       if (!docFile.exists) return json(res, 404, { error: `data/${projectId}.json missing` });
