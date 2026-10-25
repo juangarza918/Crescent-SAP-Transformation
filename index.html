@@ -1884,12 +1884,27 @@ async function fetchProjectSummary(p){
 }
 
 let HUB_TAB = (localStorage.getItem("crescentDashboardHubTab") === "completed") ? "completed" : "active";
+// A project counts as "completed" for the Completed tab if EITHER:
+//   1. the hub-tab status is explicitly "completed" (set via Settings or ✓ icon), OR
+//   2. its Overall RAG status is "C" (Complete) — the pill the user sees on the card
+// This way flipping Overall RAG to Complete in Settings also moves the card to Completed,
+// matching the natural reading of the pill.
+function isProjectCompleted(p){
+  if((p.status || "active") === "completed") return true;
+  const rag = p._summary ? p._summary.overallStatus : null;
+  if(rag === "C") return true;
+  return false;
+}
 async function renderHub(){
   const host = document.getElementById("view-hub");
   if(!host) return;
   HUB_PROJECTS = await fetchProjectsIndex();
-  const active    = HUB_PROJECTS.filter(p => (p.status || "active") === "active");
-  const completed = HUB_PROJECTS.filter(p => p.status === "completed");
+  // Pre-fetch summaries in parallel so we can filter by Overall RAG status up front.
+  // Attach the summary to each project in-memory so renderHub + filter + stats all share it.
+  const summaries = await Promise.all(HUB_PROJECTS.map(p => fetchProjectSummary(p)));
+  HUB_PROJECTS.forEach((p, i) => { p._summary = summaries[i] || null; });
+  const active    = HUB_PROJECTS.filter(p => !isProjectCompleted(p));
+  const completed = HUB_PROJECTS.filter(p =>  isProjectCompleted(p));
   const visible = (HUB_TAB === "completed") ? completed : active;
 
   host.innerHTML = `
@@ -1931,13 +1946,25 @@ async function renderHub(){
 
   const cardsHtml = visible.map(p => {
     const accent = (p.accent || "#c8a24b").replace(/"/g,"");
-    const isCompleted = p.status === "completed";
-    const toggleIcon = isCompleted ? "↶" : "✓";
-    const toggleTitle = isCompleted ? "Reactivate project (move back to Active)" : "Mark project as Completed";
-    const toggleClass = isCompleted ? "" : "success";
-    return `<div class="hub-card ${isCompleted ? "completed" : ""}" data-project="${esc(p.id)}">
+    const inCompletedTab = isProjectCompleted(p);
+    const toggleIcon = inCompletedTab ? "↶" : "✓";
+    const toggleTitle = inCompletedTab ? "Reactivate project (move back to Active)" : "Mark project as Completed";
+    const toggleClass = inCompletedTab ? "" : "success";
+    const s = p._summary;
+    const stClass = s ? ((STATUS[s.overallStatus] || STATUS.G).cls) : "";
+    const stLabel = s ? ((STATUS[s.overallStatus] || STATUS.G).label) : "";
+    const statsHtml = s ? `
+      <div class="status-row"><span class="pill ${stClass}"><span class="dot"></span>${stLabel}</span></div>
+      ${s.goLiveDate ? `<div class="countdown">${esc(daysUntil(s.goLiveDate))}</div>` : ""}
+      <div class="stats">
+        <span><b>${s.workstreams}</b>workstreams</span>
+        <span><b>${s.totalTests}</b>tests</span>
+        <span><b>${s.passedTests}</b>passed</span>
+        <span><b>${s.openRisks}</b>open risks</span>
+      </div>` : `<div class="empty-stats">Could not load status</div>`;
+    return `<div class="hub-card ${inCompletedTab ? "completed" : ""}" data-project="${esc(p.id)}">
       <div class="accent-strip" style="background:${esc(accent)}"></div>
-      ${isCompleted ? `<span class="completed-badge">COMPLETED</span>` : ""}
+      ${inCompletedTab ? `<span class="completed-badge">COMPLETED</span>` : ""}
       <div class="hub-card-actions">
         <button class="hub-card-btn ${toggleClass}" data-action="toggle-status" title="${esc(toggleTitle)}">${toggleIcon}</button>
         <button class="hub-card-btn danger" data-action="delete" title="Delete project (requires typing the name)">🗑</button>
@@ -1946,7 +1973,7 @@ async function renderHub(){
         <div class="icon">${esc(p.icon || "📊")}</div>
         <h3>${esc(p.name)}</h3>
       </div>
-      <div class="empty-stats" id="stats-${esc(p.id)}">Loading status…</div>
+      ${statsHtml}
     </div>`;
   }).join("");
   grid.innerHTML = cardsHtml + (HUB_TAB === "active"
@@ -1979,25 +2006,7 @@ async function renderHub(){
     });
   });
 
-  // Lazy-fill status/stats for each card
-  visible.forEach(async p => {
-    const s = await fetchProjectSummary(p);
-    const el = document.getElementById("stats-" + p.id);
-    if(!el) return;
-    if(!s){ el.textContent = "Could not load status"; return; }
-    const stClass = (STATUS[s.overallStatus] || STATUS.G).cls;
-    const stLabel = (STATUS[s.overallStatus] || STATUS.G).label;
-    el.outerHTML = `<div class="status-row">
-        <span class="pill ${stClass}"><span class="dot"></span>${stLabel}</span>
-      </div>
-      ${s.goLiveDate ? `<div class="countdown">${esc(daysUntil(s.goLiveDate))}</div>` : ""}
-      <div class="stats">
-        <span><b>${s.workstreams}</b>workstreams</span>
-        <span><b>${s.totalTests}</b>tests</span>
-        <span><b>${s.passedTests}</b>passed</span>
-        <span><b>${s.openRisks}</b>open risks</span>
-      </div>`;
-  });
+  // Stats are now rendered inline from the pre-fetched summaries (no second-pass needed).
 }
 
 async function toggleProjectStatus(projectId, newStatus){
@@ -2005,31 +2014,39 @@ async function toggleProjectStatus(projectId, newStatus){
   if(!entry) return;
   const projName = entry.name || projectId;
   const prevStatus = entry.status || "active";
-  // OPTIMISTIC update: flip the status in memory and re-render immediately so the user
-  // sees the change land in <100ms, instead of waiting for Vercel's CDN to serve a fresh
-  // projects.json. The server call runs in the background; if it fails we revert.
+  const prevRag = entry._summary ? entry._summary.overallStatus : null;
+  // When reactivating a project whose Overall RAG is "C" (Complete), also reset RAG to "G"
+  // (On Track). Otherwise the hub's "RAG=C counts as completed" rule would keep the card
+  // stuck in the Completed tab even after clicking ↶ Reactivate.
+  const needsRagReset = newStatus === "active" && prevRag === "C";
+  // OPTIMISTIC update
   entry.status = newStatus;
+  if(needsRagReset && entry._summary) entry._summary.overallStatus = "G";
   HUB_TAB = (newStatus === "completed") ? "completed" : "active";
   try{ localStorage.setItem("crescentDashboardHubTab", HUB_TAB); }catch(e){}
   renderHubFromCache();
   try{
+    const body = {
+      projectId,
+      indexUpdates: {status: newStatus},
+      author: (loadAuth()||{}).login || "anonymous"
+    };
+    if(needsRagReset) body.metaUpdates = {overallStatus: "G"};
     const r = await fetch("/api/update-project", {
       method:"POST", headers:{"Content-Type":"application/json"},
-      body: JSON.stringify({
-        projectId,
-        indexUpdates: {status: newStatus},
-        author: (loadAuth()||{}).login || "anonymous"
-      })
+      body: JSON.stringify(body)
     });
     if(!r.ok){
       let msg = "HTTP " + r.status;
       try{ const e = await r.json(); msg = e.error || msg; }catch(e){}
       throw new Error(msg);
     }
-    toast(`"${projName}" marked as ${newStatus === "completed" ? "Completed" : "Active"}.`, "success");
+    const extra = needsRagReset ? " (Overall RAG also reset from Complete to On Track)" : "";
+    toast(`"${projName}" marked as ${newStatus === "completed" ? "Completed" : "Active"}.${extra}`, "success");
   }catch(e){
     // Revert optimistic update
     entry.status = prevStatus;
+    if(needsRagReset && entry._summary) entry._summary.overallStatus = prevRag;
     HUB_TAB = (prevStatus === "completed") ? "completed" : "active";
     renderHubFromCache();
     alert("Could not update project status: " + e.message);
