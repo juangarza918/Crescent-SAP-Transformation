@@ -2,7 +2,7 @@
   "meta": {
     "projectName": "Crescent SAP Transformation",
     "reportDate": "2026-10-09",
-    "overallStatus": "G",
+    "overallStatus": "C",
     "goLiveDate": "2026-08-17",
     "goLiveLabel": "S/4HANA 2025 Production Go-Live",
     "narrative": "S/4HANA Upgrade 2025: Go Live Completed. Moving towards Fiori and Joule rollouts.  - Joule Activation: S4/HANA Starting Quality. - Fiori Business Roles Assignment and Activation: Protiviti ongoing work on activating 2025 apps and working on Fiori role assignment."
@@ -186,29 +186,6 @@
           "end": "2026-08-15",
           "revised": "",
           "status": "C",
-          "comment": ""
-        }
-      ]
-    },
-    {
-      "name": "SAP New Features Trainings",
-      "status": "G",
-      "summary": "Start Training schedule to review with Josh/Brian/Michael and rollout plan.",
-      "milestones": [
-        {
-          "name": "Schedule Trainings",
-          "pct": 0,
-          "end": "2026-10-05",
-          "revised": "",
-          "status": "G",
-          "comment": ""
-        },
-        {
-          "name": "Trainings",
-          "pct": 0,
-          "end": "2027-03-01",
-          "revised": "",
-          "status": "G",
           "comment": ""
         }
       ]
