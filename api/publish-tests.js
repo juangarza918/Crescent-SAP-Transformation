@@ -1,11 +1,8 @@
 // Vercel serverless function — multi-project aware.
 //
-// GET  /api/publish-tests?project=<id>      → current tests array + commit sha for that project
+// GET  /api/publish-tests?project=<id>      → returns full project doc + tests + commit sha
 // POST /api/publish-tests
 //   { project, changedTests, deletedIds, author } → delta merge into data/<project>.json
-//
-// If no project is passed, defaults to "crescent-sap-transformation" (backwards compat
-// with the pre-multi-project client).
 
 const REPO_OWNER = "juangarza918";
 const REPO_NAME  = "Crescent-SAP-Transformation";
@@ -100,14 +97,15 @@ module.exports = async (req, res) => {
     return json(res, 500, { error: "Server is missing GITHUB_TOKEN env var." });
   }
 
-  // GET: fetch the freshest tests for a project
+  // GET: full doc for a project (new in multi-project — client uses this for the initial
+  // page load to avoid the Vercel/CDN rebuild delay that could show stale/wrong data).
   if (req.method === "GET") {
     const u = new URL(req.url, `http://${req.headers.host}`);
     const project = u.searchParams.get("project") || DEFAULT_PROJECT;
     try {
       const { doc, sha } = await fetchCurrent(project);
       const tests = Array.isArray(doc.tests) ? doc.tests : [];
-      return json(res, 200, { project, tests, commit: sha, testsCount: tests.length });
+      return json(res, 200, { project, doc, tests, commit: sha, testsCount: tests.length });
     } catch (err) {
       return json(res, 500, { error: err.message });
     }
