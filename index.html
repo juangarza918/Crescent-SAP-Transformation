@@ -234,6 +234,23 @@
   .hub-newcard .plus{font-size:44px;font-weight:300;line-height:1}
   .hub-newcard .lbl{font-size:13.5px;font-weight:700;letter-spacing:.02em}
   .hub-empty{padding:40px;text-align:center;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:12px}
+  /* hub tabs: Active / Completed */
+  .hub-tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:22px}
+  .hub-tab{appearance:none;border:none;background:transparent;color:var(--muted);font-weight:700;font-size:13.5px;padding:11px 18px;border-radius:9px 9px 0 0;cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;gap:8px}
+  .hub-tab:hover{color:var(--ink);background:#eef2f8}
+  .hub-tab.active{color:var(--navy);box-shadow:0 -3px 0 var(--gold) inset;background:#fff}
+  .hub-tab .hub-tab-count{background:#eef2f8;color:var(--muted);padding:1px 8px;border-radius:999px;font-size:11.5px}
+  .hub-tab.active .hub-tab-count{background:var(--gold);color:#3d2e0a}
+  /* hover-reveal action buttons on each card */
+  .hub-card-actions{position:absolute;top:10px;right:10px;display:flex;gap:4px;opacity:0;transition:opacity .14s;z-index:3}
+  .hub-card:hover .hub-card-actions{opacity:1}
+  .hub-card-btn{width:28px;height:28px;border:1px solid var(--line);background:#fff;border-radius:7px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;font-family:inherit;color:var(--muted);transition:background .12s,border-color .12s,color .12s}
+  .hub-card-btn:hover{background:#eef2f8;border-color:var(--accent);color:var(--accent)}
+  .hub-card-btn.danger:hover{background:var(--rbg);border-color:var(--r);color:var(--r)}
+  .hub-card-btn.success:hover{background:var(--gbg);border-color:var(--g);color:#11823b}
+  .hub-card.completed{opacity:.85}
+  .hub-card.completed .accent-strip{filter:grayscale(.3)}
+  .hub-card .completed-badge{position:absolute;top:12px;left:12px;background:var(--gbg);color:#11823b;font-size:10px;font-weight:800;padding:2px 7px;border-radius:999px;letter-spacing:.04em;z-index:2}
   .hub-link{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.3);color:#fff}
   .hub-link:hover{background:rgba(255,255,255,.26);color:#fff;border-color:rgba(255,255,255,.5)}
   .project-switcher{display:flex;align-items:center;gap:8px}
@@ -414,9 +431,13 @@
       <div class="field"><label>Gold stripe (accent)</label><input id="st-accent" type="color"></div>
     </div>
     <div class="grid3">
-      <div class="field"><label>Overall status</label><select id="st-status"><option value="G">G – On Track</option><option value="Y">Y – At Risk</option><option value="R">R – Off Track</option><option value="C">C – Complete</option></select></div>
+      <div class="field"><label>Overall status (RAG)</label><select id="st-status"><option value="G">G – On Track</option><option value="Y">Y – At Risk</option><option value="R">R – Off Track</option><option value="C">C – Complete</option></select></div>
       <div class="field"><label>Status date</label><input id="st-reportdate" type="date"></div>
       <div class="field"><label>Go-live date</label><input id="st-golive" type="date"></div>
+    </div>
+    <div class="grid2">
+      <div class="field"><label>Project state (hub tab)</label><select id="st-projstatus"><option value="active">Active (in progress)</option><option value="completed">Completed (moved to Completed tab)</option></select></div>
+      <div class="field"><label>Go-live label</label><input id="st-golivelabel" maxlength="80"></div>
     </div>
     <div class="field"><label>Go-live label</label><input id="st-golivelabel" maxlength="80"></div>
     <div class="field"><label>Executive summary</label><textarea id="st-narrative" rows="4"></textarea></div>
@@ -1861,38 +1882,65 @@ async function fetchProjectSummary(p){
   }catch(e){ return null; }
 }
 
+let HUB_TAB = (localStorage.getItem("crescentDashboardHubTab") === "completed") ? "completed" : "active";
 async function renderHub(){
   const host = document.getElementById("view-hub");
   if(!host) return;
+  HUB_PROJECTS = await fetchProjectsIndex();
+  const active    = HUB_PROJECTS.filter(p => (p.status || "active") === "active");
+  const completed = HUB_PROJECTS.filter(p => p.status === "completed");
+  const visible = (HUB_TAB === "completed") ? completed : active;
+
   host.innerHTML = `
     <div class="hub-header">
       <h2>Project Dashboards</h2>
-      <span class="count" id="hub-count">loading…</span>
       <span class="spacer"></span>
       <button class="btn primary" id="btn-new-project">+ New Project</button>
     </div>
-    <p class="hub-intro">Pick a project to open its dashboard, or create a new one. Each project tracks its own schedule, milestones, risks, decisions, and regression tests.</p>
-    <div class="hub-grid" id="hub-grid"><div class="hub-empty">Loading projects…</div></div>
+    <p class="hub-intro">Pick a project to open its dashboard, or create a new one. Each project tracks its own schedule, milestones, risks, decisions, and regression tests. Mark a project <b>Completed</b> to move it to the Completed tab and keep the Active view uncluttered.</p>
+    <div class="hub-tabs">
+      <button class="hub-tab ${HUB_TAB === "active" ? "active" : ""}" data-hub-tab="active">
+        Active <span class="hub-tab-count">${active.length}</span>
+      </button>
+      <button class="hub-tab ${HUB_TAB === "completed" ? "active" : ""}" data-hub-tab="completed">
+        Completed <span class="hub-tab-count">${completed.length}</span>
+      </button>
+    </div>
+    <div class="hub-grid" id="hub-grid"></div>
   `;
   document.getElementById("btn-new-project").addEventListener("click", openNewProjectModal);
+  host.querySelectorAll(".hub-tab").forEach(t => t.addEventListener("click", () => {
+    HUB_TAB = t.dataset.hubTab;
+    try{ localStorage.setItem("crescentDashboardHubTab", HUB_TAB); }catch(e){}
+    renderHub();
+  }));
 
-  HUB_PROJECTS = await fetchProjectsIndex();
   const grid = document.getElementById("hub-grid");
-  const count = document.getElementById("hub-count");
-  count.textContent = HUB_PROJECTS.length + (HUB_PROJECTS.length === 1 ? " project" : " projects");
-
-  if(!HUB_PROJECTS.length){
-    grid.innerHTML = `
-      <div class="hub-newcard" id="hub-newcard-first"><div class="plus">+</div><div class="lbl">Create your first project</div></div>
-    `;
-    document.getElementById("hub-newcard-first").addEventListener("click", openNewProjectModal);
+  if(!visible.length){
+    if(HUB_TAB === "completed"){
+      grid.innerHTML = `<div class="hub-empty">No completed projects yet. Mark a project as Completed from its ⚙ Settings, or from the ✓ icon on any Active card.</div>`;
+    } else {
+      grid.innerHTML = `
+        <div class="hub-newcard" id="hub-newcard-first"><div class="plus">+</div><div class="lbl">Create your first project</div></div>
+      `;
+      document.getElementById("hub-newcard-first").addEventListener("click", openNewProjectModal);
+    }
     return;
   }
 
-  const cardsHtml = HUB_PROJECTS.map(p => {
+  const cardsHtml = visible.map(p => {
     const accent = (p.accent || "#c8a24b").replace(/"/g,"");
-    return `<div class="hub-card" data-project="${esc(p.id)}">
+    const isCompleted = p.status === "completed";
+    const toggleIcon = isCompleted ? "↶" : "✓";
+    const toggleTitle = isCompleted ? "Reactivate project (move back to Active)" : "Mark project as Completed";
+    const toggleClass = isCompleted ? "" : "success";
+    return `<div class="hub-card ${isCompleted ? "completed" : ""}" data-project="${esc(p.id)}">
       <div class="accent-strip" style="background:${esc(accent)}"></div>
+      ${isCompleted ? `<span class="completed-badge">COMPLETED</span>` : ""}
+      <div class="hub-card-actions">
+        <button class="hub-card-btn ${toggleClass}" data-action="toggle-status" title="${esc(toggleTitle)}">${toggleIcon}</button>
+        <button class="hub-card-btn danger" data-action="delete" title="Delete project (requires typing the name)">🗑</button>
+      </div>
       <div class="top">
         <div class="icon">${esc(p.icon || "📊")}</div>
         <h3>${esc(p.name)}</h3>
@@ -1900,18 +1948,38 @@ async function renderHub(){
       <div class="empty-stats" id="stats-${esc(p.id)}">Loading status…</div>
     </div>`;
   }).join("");
-  grid.innerHTML = cardsHtml + `
-    <div class="hub-newcard" id="hub-newcard"><div class="plus">+</div><div class="lbl">New Project</div></div>
-  `;
+  grid.innerHTML = cardsHtml + (HUB_TAB === "active"
+    ? `<div class="hub-newcard" id="hub-newcard"><div class="plus">+</div><div class="lbl">New Project</div></div>`
+    : "");
+
+  // Main card click → open project (ignore clicks on action buttons)
   grid.querySelectorAll(".hub-card").forEach(card => {
-    card.addEventListener("click", () => {
+    card.addEventListener("click", (e) => {
+      if(e.target.closest(".hub-card-actions")) return;
       location.href = location.pathname + "?project=" + encodeURIComponent(card.dataset.project);
     });
   });
-  document.getElementById("hub-newcard").addEventListener("click", openNewProjectModal);
+  const newcard = document.getElementById("hub-newcard");
+  if(newcard) newcard.addEventListener("click", openNewProjectModal);
+
+  // Wire up per-card action buttons
+  grid.querySelectorAll(".hub-card-btn").forEach(btn => {
+    btn.addEventListener("click", async (e) => {
+      e.stopPropagation();
+      const card = btn.closest(".hub-card");
+      const projectId = card.dataset.project;
+      const entry = HUB_PROJECTS.find(p => p.id === projectId);
+      if(!entry) return;
+      if(btn.dataset.action === "toggle-status"){
+        await toggleProjectStatus(projectId, (entry.status === "completed") ? "active" : "completed");
+      } else if(btn.dataset.action === "delete"){
+        await deleteProjectFromHub(projectId, entry.name);
+      }
+    });
+  });
 
   // Lazy-fill status/stats for each card
-  HUB_PROJECTS.forEach(async p => {
+  visible.forEach(async p => {
     const s = await fetchProjectSummary(p);
     const el = document.getElementById("stats-" + p.id);
     if(!el) return;
@@ -1929,6 +1997,57 @@ async function renderHub(){
         <span><b>${s.openRisks}</b>open risks</span>
       </div>`;
   });
+}
+
+async function toggleProjectStatus(projectId, newStatus){
+  try{
+    const r = await fetch("/api/update-project", {
+      method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({
+        projectId,
+        indexUpdates: {status: newStatus},
+        author: (loadAuth()||{}).login || "anonymous"
+      })
+    });
+    if(!r.ok){
+      let msg = "HTTP " + r.status;
+      try{ const e = await r.json(); msg = e.error || msg; }catch(e){}
+      throw new Error(msg);
+    }
+    // If we marked complete and are on Active tab, auto-switch to Completed so the user
+    // can see where it went (and vice versa for reactivate).
+    HUB_TAB = (newStatus === "completed") ? "completed" : "active";
+    try{ localStorage.setItem("crescentDashboardHubTab", HUB_TAB); }catch(e){}
+    await renderHub();
+  }catch(e){
+    alert("Could not update project status: " + e.message);
+  }
+}
+
+async function deleteProjectFromHub(projectId, name){
+  const typed = prompt(
+    "⚠ DELETE THIS PROJECT PERMANENTLY?\n\n\"" + name + "\"\n\n" +
+    "This removes the project's data file and its entry in the project index. The commit history stays in GitHub (technically recoverable), but the dashboard will no longer show it.\n\n" +
+    "Type the project name exactly to confirm:"
+  );
+  if(typed === null) return;
+  if(typed.trim() !== name){ alert("Name didn't match — nothing was deleted."); return; }
+  try{
+    const r = await fetch("/api/delete-project", {
+      method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({projectId, confirm: name, author: (loadAuth()||{}).login || "anonymous"})
+    });
+    if(!r.ok){
+      let msg = "HTTP " + r.status;
+      try{ const e = await r.json(); msg = e.error || msg; }catch(e){}
+      throw new Error(msg);
+    }
+    // Wipe any local cache for this project so a future recreation isn't polluted
+    try{ localStorage.removeItem("crescentDashboard_v2_" + projectId); }catch(e){}
+    await renderHub();
+  }catch(e){
+    alert("Delete failed: " + e.message);
+  }
 }
 
 async function populateProjectSwitcher(){
@@ -2016,8 +2135,11 @@ document.getElementById("np-name").addEventListener("keydown", e => {
 });
 
 /* ---------- project settings modal ---------- */
-function openSettingsModal(){
+async function openSettingsModal(){
   if(HUB_MODE || !PROJECT_ID) return;
+  // Make sure HUB_PROJECTS is populated (populateProjectSwitcher caches it in a closure
+  // but renderHub owns the global — fetch defensively).
+  if(!HUB_PROJECTS || !HUB_PROJECTS.length){ HUB_PROJECTS = await fetchProjectsIndex(); }
   const projectEntry = HUB_PROJECTS.find(p => p.id === PROJECT_ID) || {};
   const m = state.meta || {};
   document.getElementById("st-name").value       = m.projectName || projectEntry.name || "";
@@ -2029,6 +2151,7 @@ function openSettingsModal(){
   document.getElementById("st-golive").value     = m.goLiveDate || "";
   document.getElementById("st-golivelabel").value= m.goLiveLabel || "Production Go-Live";
   document.getElementById("st-narrative").value  = m.narrative || "";
+  document.getElementById("st-projstatus").value = (projectEntry.status === "completed") ? "completed" : "active";
   document.getElementById("st-msg").textContent  = "";
   document.getElementById("settings-modal").style.display = "flex";
   setTimeout(() => document.getElementById("st-name").focus(), 50);
@@ -2049,7 +2172,8 @@ async function saveSettings(){
         name:   (document.getElementById("st-name").value || "").trim(),
         icon:   (document.getElementById("st-icon").value || "📊").trim(),
         color:  document.getElementById("st-color").value || "#0f2545",
-        accent: document.getElementById("st-accent").value || "#c8a24b"
+        accent: document.getElementById("st-accent").value || "#c8a24b",
+        status: document.getElementById("st-projstatus").value === "completed" ? "completed" : "active"
       },
       metaUpdates: {
         projectName:   (document.getElementById("st-name").value || "").trim(),
