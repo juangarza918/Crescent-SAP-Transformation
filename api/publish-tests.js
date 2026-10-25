@@ -1,22 +1,27 @@
-// Vercel serverless function.
+// Vercel serverless function — multi-project aware.
 //
-// GET  /api/publish-tests → returns the CURRENT tests array + commit sha, fetched
-//                          server-side via the authenticated GitHub API (always fresh,
-//                          bypasses the raw.githubusercontent CDN cache).
+// GET  /api/publish-tests?project=<id>      → current tests array + commit sha for that project
+// POST /api/publish-tests
+//   { project, changedTests, deletedIds, author } → delta merge into data/<project>.json
 //
-// POST /api/publish-tests → accepts a DELTA payload so concurrent editors never
-//                          clobber each other:
-//   { changedTests: [...], deletedIds: [...], author: "..." }
-//   Server merges by ID into current data.json, commits, and returns the merged tests.
+// If no project is passed, defaults to "crescent-sap-transformation" (backwards compat
+// with the pre-multi-project client).
 
 const REPO_OWNER = "juangarza918";
 const REPO_NAME  = "Crescent-SAP-Transformation";
-const FILE_PATH  = "data.json";
-const API = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`;
+const DEFAULT_PROJECT = "crescent-sap-transformation";
 const ALLOWED_ORIGINS = [
   "https://crescent-sap-transformation.vercel.app",
   "http://localhost:8765",
 ];
+
+function filePath(project) {
+  const safe = String(project || DEFAULT_PROJECT).replace(/[^a-z0-9._-]/gi, "").slice(0, 80);
+  return `data/${safe || DEFAULT_PROJECT}.json`;
+}
+function api(project) {
+  return `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${filePath(project)}`;
+}
 
 function json(res, status, body) {
   res.status(status).setHeader("Content-Type", "application/json");
@@ -26,23 +31,20 @@ function json(res, status, body) {
 
 async function ghFetch(url, opts = {}) {
   const token = process.env.GITHUB_TOKEN;
-  const headers = Object.assign(
-    {
-      Authorization: `Bearer ${token}`,
-      Accept: "application/vnd.github+json",
-      "X-GitHub-Api-Version": "2022-11-28",
-      "User-Agent": "crescent-sap-dashboard",
-    },
-    opts.headers || {}
-  );
+  const headers = Object.assign({
+    Authorization: `Bearer ${token}`,
+    Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
+    "User-Agent": "crescent-sap-dashboard",
+  }, opts.headers || {});
   return fetch(url, Object.assign({}, opts, { headers }));
 }
 
-async function fetchCurrent() {
-  const getResp = await ghFetch(`${API}?ref=main`);
+async function fetchCurrent(project) {
+  const getResp = await ghFetch(`${api(project)}?ref=main`);
   if (!getResp.ok) {
     const txt = await getResp.text();
-    throw new Error(`GET data.json failed (${getResp.status}): ${txt.slice(0, 200)}`);
+    throw new Error(`GET ${filePath(project)} failed (${getResp.status}): ${txt.slice(0, 200)}`);
   }
   const info = await getResp.json();
   const sha = info.sha;
@@ -50,8 +52,8 @@ async function fetchCurrent() {
   return { doc, sha };
 }
 
-async function fetchAndMerge(changedTests, deletedIds) {
-  const { doc, sha } = await fetchCurrent();
+async function fetchAndMerge(project, changedTests, deletedIds) {
+  const { doc, sha } = await fetchCurrent(project);
   const currentTests = Array.isArray(doc.tests) ? doc.tests : [];
   const byId = new Map(currentTests.map((t) => [t.id, t]));
   (changedTests || []).forEach((ct) => { if (ct && ct.id) byId.set(ct.id, ct); });
@@ -61,25 +63,25 @@ async function fetchAndMerge(changedTests, deletedIds) {
   return { doc, sha, tests: mergedTests };
 }
 
-async function commitMerged(merged, author, retriesLeft) {
-  const putResp = await ghFetch(API, {
+async function commitMerged(project, merged, author, retriesLeft) {
+  const putResp = await ghFetch(api(project), {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      message: `Update tests via dashboard (${author})`,
+      message: `[${project}] Update tests via dashboard (${author})`,
       content: Buffer.from(JSON.stringify(merged.doc, null, 2)).toString("base64"),
       sha: merged.sha,
       branch: "main",
     }),
   });
   if (putResp.status === 409 && retriesLeft > 0) {
-    const fresh = await fetchAndMerge(merged.changed, merged.deleted);
+    const fresh = await fetchAndMerge(project, merged.changed, merged.deleted);
     fresh.changed = merged.changed; fresh.deleted = merged.deleted;
-    return commitMerged(fresh, author, retriesLeft - 1);
+    return commitMerged(project, fresh, author, retriesLeft - 1);
   }
   if (!putResp.ok) {
     const txt = await putResp.text();
-    throw new Error(`PUT data.json failed (${putResp.status}): ${txt.slice(0, 200)}`);
+    throw new Error(`PUT ${filePath(project)} failed (${putResp.status}): ${txt.slice(0, 200)}`);
   }
   return putResp.json();
 }
@@ -91,7 +93,6 @@ module.exports = async (req, res) => {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
   if (req.method === "OPTIONS") return res.status(204).end();
-
   if (origin && !ALLOWED_ORIGINS.some((o) => origin.startsWith(o))) {
     return json(res, 403, { error: `Forbidden origin: ${origin}` });
   }
@@ -99,12 +100,14 @@ module.exports = async (req, res) => {
     return json(res, 500, { error: "Server is missing GITHUB_TOKEN env var." });
   }
 
-  // GET: return the freshest tests array (bypasses CDN cache)
+  // GET: fetch the freshest tests for a project
   if (req.method === "GET") {
+    const u = new URL(req.url, `http://${req.headers.host}`);
+    const project = u.searchParams.get("project") || DEFAULT_PROJECT;
     try {
-      const { doc, sha } = await fetchCurrent();
+      const { doc, sha } = await fetchCurrent(project);
       const tests = Array.isArray(doc.tests) ? doc.tests : [];
-      return json(res, 200, { tests, commit: sha, testsCount: tests.length });
+      return json(res, 200, { project, tests, commit: sha, testsCount: tests.length });
     } catch (err) {
       return json(res, 500, { error: err.message });
     }
@@ -116,6 +119,7 @@ module.exports = async (req, res) => {
   if (typeof body === "string") { try { body = JSON.parse(body); } catch { body = {}; } }
   body = body || {};
 
+  const project = body.project || DEFAULT_PROJECT;
   let changedTests, deletedIds;
   if (Array.isArray(body.changedTests) || Array.isArray(body.deletedIds)) {
     changedTests = Array.isArray(body.changedTests) ? body.changedTests : [];
@@ -124,7 +128,6 @@ module.exports = async (req, res) => {
       return json(res, 200, { success: true, tests: null, noop: true });
     }
   } else if (Array.isArray(body.tests)) {
-    // Backwards-compat (unsafe under concurrency, kept for old clients during rollout).
     changedTests = body.tests; deletedIds = [];
   } else {
     return json(res, 400, { error: "Body must include `changedTests`+`deletedIds` or legacy `tests`." });
@@ -136,11 +139,12 @@ module.exports = async (req, res) => {
     .replace(/[^\w\s.@-]/g, "").slice(0, 100) || "anonymous";
 
   try {
-    const merged = await fetchAndMerge(changedTests, deletedIds);
+    const merged = await fetchAndMerge(project, changedTests, deletedIds);
     merged.changed = changedTests; merged.deleted = deletedIds;
-    const result = await commitMerged(merged, author, 3);
+    const result = await commitMerged(project, merged, author, 3);
     return json(res, 200, {
       success: true,
+      project,
       commit: (result.commit || {}).sha,
       tests: merged.tests,
       testsCount: merged.tests.length,
