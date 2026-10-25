@@ -210,6 +210,37 @@
   .danger:hover{background:var(--rbg);color:var(--r)}
   .hint{color:var(--muted);font-size:11.5px}
   .footer{color:var(--muted);font-size:11.5px;text-align:center;padding:24px 0 6px}
+  /* --- MULTI-PROJECT HUB --- */
+  .hub-view{padding:40px 26px 60px;max-width:1240px;margin:0 auto;display:none}
+  .hub-header{display:flex;align-items:center;gap:14px;margin-bottom:28px;flex-wrap:wrap}
+  .hub-header h2{font-size:22px;color:var(--navy);margin:0;border-left:4px solid var(--gold);padding-left:14px}
+  .hub-header .count{color:var(--muted);font-weight:600;font-size:13.5px}
+  .hub-header .spacer{flex:1}
+  .hub-intro{color:var(--muted);font-size:13.5px;margin-bottom:22px;max-width:720px}
+  .hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+  .hub-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 20px 20px;box-shadow:var(--shadow);cursor:pointer;transition:transform .14s,box-shadow .14s;position:relative;overflow:hidden;min-height:200px;display:flex;flex-direction:column}
+  .hub-card:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(15,42,68,.14);border-color:#c7d4e8}
+  .hub-card .accent-strip{position:absolute;top:0;left:0;right:0;height:4px;background:var(--gold)}
+  .hub-card .top{display:flex;align-items:flex-start;gap:12px;margin-bottom:4px}
+  .hub-card .top .icon{font-size:28px;line-height:1}
+  .hub-card .top h3{font-size:16px;color:var(--navy);margin:0;flex:1}
+  .hub-card .countdown{color:var(--muted);font-size:12px;margin-top:10px}
+  .hub-card .status-row{display:flex;align-items:center;gap:8px;margin-top:14px}
+  .hub-card .stats{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px;font-size:11.5px;color:var(--muted);padding-top:12px;border-top:1px solid var(--grid)}
+  .hub-card .stats b{color:var(--ink);font-size:12.5px;margin-right:3px}
+  .hub-card .empty-stats{color:#9fb0c7;font-style:italic;font-size:11.5px;margin-top:14px;padding-top:12px;border-top:1px solid var(--grid)}
+  .hub-newcard{border:2px dashed #c0cce0;background:transparent;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--muted);min-height:200px;cursor:pointer;transition:border-color .14s,background .14s,color .14s;gap:6px}
+  .hub-newcard:hover{border-color:var(--accent);background:#eef4fc;color:var(--accent)}
+  .hub-newcard .plus{font-size:44px;font-weight:300;line-height:1}
+  .hub-newcard .lbl{font-size:13.5px;font-weight:700;letter-spacing:.02em}
+  .hub-empty{padding:40px;text-align:center;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:12px}
+  .hub-link{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.3);color:#fff}
+  .hub-link:hover{background:rgba(255,255,255,.26);color:#fff;border-color:rgba(255,255,255,.5)}
+  .project-switcher{display:flex;align-items:center;gap:8px}
+  .project-switcher select{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.28);border-radius:8px;padding:7px 11px;font-size:13px;font-weight:600;font-family:inherit;cursor:pointer;max-width:220px}
+  .project-switcher select option{background:#1b2533;color:#fff}
+  .project-switcher select:hover{background:rgba(255,255,255,.22)}
+  .project-switcher select:focus{outline:none;border-color:var(--gold)}
   .modal{position:fixed;inset:0;background:rgba(15,42,68,.5);display:flex;align-items:center;justify-content:center;z-index:100;padding:20px}
   .modal-card{background:#fff;border-radius:14px;padding:22px;max-width:480px;width:100%;box-shadow:0 10px 40px rgba(15,42,68,.25)}
   .modal-card h3{font-size:16px;margin-bottom:10px;color:var(--navy)}
@@ -309,8 +340,12 @@
 <body>
 <div class="topbar">
   <div class="brand">
-    <span class="eyebrow">Crescent &middot; SAP S/4HANA Program</span>
+    <span class="eyebrow">Crescent &middot; Program Dashboards</span>
     <h1 id="t-projname">SAP Transformation</h1>
+  </div>
+  <button class="btn hub-link" id="btn-back-to-hub" style="display:none" title="Back to all projects">← All projects</button>
+  <div class="project-switcher" id="project-switcher" style="display:none">
+    <select id="project-switch-select" title="Switch project"></select>
   </div>
   <div class="spacer"></div>
   <div class="overallpill"><span class="dot" id="t-overalldot"></span><span id="t-overalltext">On Track</span></div>
@@ -348,6 +383,7 @@
   <section class="view" id="view-decisions"></section>
   <section class="view" id="view-testing"></section>
   <section class="view" id="view-edit"></section>
+  <section id="view-hub" class="hub-view" style="display:none"></section>
   <div class="footer">Crescent SAP Transformation Dashboard &middot; <span id="footer-auth">Sign in to publish edits online</span></div>
 </div>
 
@@ -361,6 +397,26 @@
     <div class="modal-actions">
       <button class="btn" id="auth-cancel">Cancel</button>
       <button class="btn primary" id="auth-signin">Sign in</button>
+    </div>
+  </div>
+</div>
+<div id="newproject-modal" class="modal" style="display:none">
+  <div class="modal-card">
+    <h3>Create a new project dashboard</h3>
+    <p>Each project gets its own dashboard with the same tabs (Overview, Timeline, Milestones, Risks, Decisions, Testing).</p>
+    <div class="field"><label>Project name</label><input id="np-name" placeholder="e.g. Acme ERP Rollout 2027" maxlength="100"></div>
+    <div class="grid3">
+      <div class="field"><label>Icon (emoji)</label><input id="np-icon" value="📊" maxlength="4"></div>
+      <div class="field"><label>Color accent</label><input id="np-color" type="color" value="#0f2545"></div>
+      <div class="field"><label>Gold stripe</label><input id="np-accent" type="color" value="#c8a24b"></div>
+    </div>
+    <div class="field"><label>Start from</label>
+      <select id="np-clone"><option value="">Blank project (recommended)</option></select>
+    </div>
+    <div id="np-error" class="error-msg"></div>
+    <div class="modal-actions">
+      <button class="btn" id="np-cancel">Cancel</button>
+      <button class="btn primary" id="np-create">Create project</button>
     </div>
   </div>
 </div>
@@ -378,9 +434,25 @@
 
 <script>
 "use strict";
-const KEY = "crescentSapDashboard_v1";
+// --- MULTI-PROJECT ROUTING ---
+// URL `/` → hub view (grid of all projects)
+// URL `/?project=<id>` → dashboard view for that project
+const URL_PARAMS = new URLSearchParams(location.search);
+const PROJECT_ID = URL_PARAMS.get("project") || "";
+const HUB_MODE = !PROJECT_ID;
+const PROJECTS_INDEX_URL = "data/projects.json";
 const PAT_KEY = "crescentSapGithubPat_v1";
-const REPO_CONFIG = {owner:"juangarza918", repo:"Crescent-SAP-Transformation", branch:"main", dataPath:"data.json"};
+// Per-project localStorage key so projects don't share state
+const KEY = PROJECT_ID ? ("crescentDashboard_v2_" + PROJECT_ID) : "crescentDashboard_hub";
+const REPO_CONFIG = {
+  owner:  "juangarza918",
+  repo:   "Crescent-SAP-Transformation",
+  branch: "main",
+  // When no project (hub mode) the dashboard code doesn't fetch dataPath, but we still
+  // need something sensible to avoid breaking downstream references.
+  dataPath: PROJECT_ID ? ("data/" + PROJECT_ID + ".json") : "data/projects.json",
+  projectId: PROJECT_ID
+};
 let serverSha = null;
 
 const DEFAULT_DATA = {
@@ -1245,7 +1317,7 @@ async function fetchLatestTests(showToast){
     // (e.g. opened as a local file where /api/* doesn't exist).
     let d = null;
     try{
-      const r = await fetch("/api/publish-tests?_="+Date.now(), {cache:"no-store"});
+      const r = await fetch("/api/publish-tests?project="+encodeURIComponent(PROJECT_ID)+"&_="+Date.now(), {cache:"no-store"});
       if(r.ok){ d = await r.json(); }
     }catch(e){}
     if(!d || !Array.isArray(d.tests)){
@@ -1303,7 +1375,7 @@ async function saveTestsNow(){
     const r = await fetch("/api/publish-tests", {
       method:"POST",
       headers:{"Content-Type":"application/json"},
-      body: JSON.stringify({changedTests, deletedIds: Array.from(sendDeletedIds), author})
+      body: JSON.stringify({project: PROJECT_ID, changedTests, deletedIds: Array.from(sendDeletedIds), author})
     });
     if(r.status===404){ saveTestsStatus="offline"; updateSaveStatus("⚠ Auto-save endpoint missing — ask admin to add the /api/publish-tests function"); }
     else if(!r.ok){ const t=await r.text(); saveTestsStatus="error"; updateSaveStatus("⚠ Save failed: "+t.slice(0,120)); }
@@ -1675,20 +1747,229 @@ document.getElementById("auth-token").addEventListener("keydown",function(e){ if
 function renderReadViews(){ renderOverview(); renderMilestones(); renderRisks(); renderDecisions(); renderTesting(); if(document.getElementById("view-timeline").classList.contains("active")) renderTimeline(); }
 function renderAll(){ renderTop(); renderOverview(); renderTimeline(); renderMilestones(); renderRisks(); renderDecisions(); renderTesting(); renderEdit(); }
 
-// Load order: this browser's saved edits win; otherwise published data.json (when hosted); otherwise the built-in baseline.
+/* ---------- multi-project hub + switcher ---------- */
+let HUB_PROJECTS = []; // cached list from data/projects.json
+
+async function fetchProjectsIndex(){
+  try{
+    const r = await fetch(PROJECTS_INDEX_URL + "?_=" + Date.now(), {cache:"no-store"});
+    if(!r.ok) return [];
+    const d = await r.json();
+    return Array.isArray(d.projects) ? d.projects : [];
+  }catch(e){ return []; }
+}
+
+function daysUntil(iso){
+  if(!iso) return "";
+  const t = parseD(iso); if(!t) return "";
+  const today = todayLocal();
+  const diff = Math.round((startOfDay(t) - today)/86400000);
+  if(diff > 0) return diff + " days until " + fmtD(iso);
+  if(diff < 0) return Math.abs(diff) + " days past " + fmtD(iso);
+  return "Go-live today (" + fmtD(iso) + ")";
+}
+
+async function fetchProjectSummary(p){
+  try{
+    const r = await fetch("data/" + encodeURIComponent(p.id) + ".json?_=" + Date.now(), {cache:"no-store"});
+    if(!r.ok) return null;
+    const d = await r.json();
+    const tests = Array.isArray(d.tests) ? d.tests : [];
+    const risks = Array.isArray(d.risks) ? d.risks : [];
+    return {
+      projectName: (d.meta && d.meta.projectName) || p.name,
+      overallStatus: (d.meta && d.meta.overallStatus) || "G",
+      goLiveDate: d.meta && d.meta.goLiveDate,
+      totalTests: tests.length,
+      passedTests: tests.filter(t => t.status === "Passed").length,
+      openRisks: risks.filter(r => r.status && r.status !== "Resolved").length,
+      workstreams: (d.workstreams || []).length
+    };
+  }catch(e){ return null; }
+}
+
+async function renderHub(){
+  const host = document.getElementById("view-hub");
+  if(!host) return;
+  host.innerHTML = `
+    <div class="hub-header">
+      <h2>Project Dashboards</h2>
+      <span class="count" id="hub-count">loading…</span>
+      <span class="spacer"></span>
+      <button class="btn primary" id="btn-new-project">+ New Project</button>
+    </div>
+    <p class="hub-intro">Pick a project to open its dashboard, or create a new one. Each project tracks its own schedule, milestones, risks, decisions, and regression tests.</p>
+    <div class="hub-grid" id="hub-grid"><div class="hub-empty">Loading projects…</div></div>
+  `;
+  document.getElementById("btn-new-project").addEventListener("click", openNewProjectModal);
+
+  HUB_PROJECTS = await fetchProjectsIndex();
+  const grid = document.getElementById("hub-grid");
+  const count = document.getElementById("hub-count");
+  count.textContent = HUB_PROJECTS.length + (HUB_PROJECTS.length === 1 ? " project" : " projects");
+
+  if(!HUB_PROJECTS.length){
+    grid.innerHTML = `
+      <div class="hub-newcard" id="hub-newcard-first"><div class="plus">+</div><div class="lbl">Create your first project</div></div>
+    `;
+    document.getElementById("hub-newcard-first").addEventListener("click", openNewProjectModal);
+    return;
+  }
+
+  const cardsHtml = HUB_PROJECTS.map(p => {
+    const accent = (p.accent || "#c8a24b").replace(/"/g,"");
+    return `<div class="hub-card" data-project="${esc(p.id)}">
+      <div class="accent-strip" style="background:${esc(accent)}"></div>
+      <div class="top">
+        <div class="icon">${esc(p.icon || "📊")}</div>
+        <h3>${esc(p.name)}</h3>
+      </div>
+      <div class="empty-stats" id="stats-${esc(p.id)}">Loading status…</div>
+    </div>`;
+  }).join("");
+  grid.innerHTML = cardsHtml + `
+    <div class="hub-newcard" id="hub-newcard"><div class="plus">+</div><div class="lbl">New Project</div></div>
+  `;
+  grid.querySelectorAll(".hub-card").forEach(card => {
+    card.addEventListener("click", () => {
+      location.href = location.pathname + "?project=" + encodeURIComponent(card.dataset.project);
+    });
+  });
+  document.getElementById("hub-newcard").addEventListener("click", openNewProjectModal);
+
+  // Lazy-fill status/stats for each card
+  HUB_PROJECTS.forEach(async p => {
+    const s = await fetchProjectSummary(p);
+    const el = document.getElementById("stats-" + p.id);
+    if(!el) return;
+    if(!s){ el.textContent = "Could not load status"; return; }
+    const stClass = (STATUS[s.overallStatus] || STATUS.G).cls;
+    const stLabel = (STATUS[s.overallStatus] || STATUS.G).label;
+    el.outerHTML = `<div class="status-row">
+        <span class="pill ${stClass}"><span class="dot"></span>${stLabel}</span>
+      </div>
+      ${s.goLiveDate ? `<div class="countdown">${esc(daysUntil(s.goLiveDate))}</div>` : ""}
+      <div class="stats">
+        <span><b>${s.workstreams}</b>workstreams</span>
+        <span><b>${s.totalTests}</b>tests</span>
+        <span><b>${s.passedTests}</b>passed</span>
+        <span><b>${s.openRisks}</b>open risks</span>
+      </div>`;
+  });
+}
+
+async function populateProjectSwitcher(){
+  const sel = document.getElementById("project-switch-select");
+  const switcher = document.getElementById("project-switcher");
+  const backBtn = document.getElementById("btn-back-to-hub");
+  if(!sel || !switcher || !backBtn) return;
+  const projects = await fetchProjectsIndex();
+  if(!projects.length) return;
+  sel.innerHTML = projects.map(p =>
+    `<option value="${esc(p.id)}" ${p.id === PROJECT_ID ? "selected" : ""}>${esc(p.icon || "📊")}  ${esc(p.name)}</option>`
+  ).join("");
+  switcher.style.display = "flex";
+  backBtn.style.display = "inline-flex";
+  sel.addEventListener("change", () => {
+    const target = sel.value;
+    if(target && target !== PROJECT_ID){
+      location.href = location.pathname + "?project=" + encodeURIComponent(target);
+    }
+  });
+  backBtn.addEventListener("click", () => { location.href = location.pathname; });
+}
+
+/* ---------- new project modal ---------- */
+function openNewProjectModal(){
+  const modal = document.getElementById("newproject-modal");
+  if(!modal) return;
+  document.getElementById("np-name").value = "";
+  document.getElementById("np-icon").value = "📊";
+  document.getElementById("np-color").value = "#0f2545";
+  document.getElementById("np-accent").value = "#c8a24b";
+  document.getElementById("np-error").textContent = "";
+  // Populate clone-from options with current project list
+  const cloneSel = document.getElementById("np-clone");
+  const base = `<option value="">Blank project (recommended)</option>`;
+  const existing = (HUB_PROJECTS.length ? HUB_PROJECTS : []).map(p =>
+    `<option value="${esc(p.id)}">Clone from: ${esc(p.name)}</option>`
+  ).join("");
+  cloneSel.innerHTML = base + existing;
+  modal.style.display = "flex";
+  setTimeout(() => document.getElementById("np-name").focus(), 50);
+}
+function closeNewProjectModal(){
+  const modal = document.getElementById("newproject-modal");
+  if(modal) modal.style.display = "none";
+}
+async function createNewProject(){
+  const name = (document.getElementById("np-name").value || "").trim();
+  const icon = (document.getElementById("np-icon").value || "📊").trim();
+  const color = document.getElementById("np-color").value || "#0f2545";
+  const accent = document.getElementById("np-accent").value || "#c8a24b";
+  const cloneFromId = document.getElementById("np-clone").value || "";
+  const errEl = document.getElementById("np-error");
+  errEl.textContent = "";
+  if(!name){ errEl.textContent = "Please enter a project name."; return; }
+  const btn = document.getElementById("np-create");
+  btn.disabled = true; const origTxt = btn.textContent; btn.textContent = "Creating…";
+  try{
+    const author = (loadAuth() || {}).login || "anonymous";
+    const r = await fetch("/api/create-project", {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({name, icon, color, accent, cloneFromId, author})
+    });
+    if(!r.ok){
+      let msg = "HTTP " + r.status;
+      try{ const errBody = await r.json(); msg = errBody.error || msg; }catch(e){}
+      throw new Error(msg);
+    }
+    const result = await r.json();
+    const newId = result.project && result.project.id;
+    if(!newId) throw new Error("Server did not return a project id");
+    // Redirect to the new project's dashboard
+    location.href = location.pathname + "?project=" + encodeURIComponent(newId);
+  }catch(e){
+    errEl.textContent = "Could not create project: " + e.message;
+    btn.disabled = false; btn.textContent = origTxt;
+  }
+}
+// Wire up modal buttons once (safe to attach even in hub-only mode)
+document.getElementById("np-cancel").addEventListener("click", closeNewProjectModal);
+document.getElementById("np-create").addEventListener("click", createNewProject);
+document.getElementById("np-name").addEventListener("keydown", e => {
+  if(e.key === "Enter") createNewProject();
+});
+
+// Load order: this browser's saved edits win; otherwise published data (when hosted); otherwise the built-in baseline.
 async function init(){
+  // --- MULTI-PROJECT ROUTING ---
+  if(HUB_MODE){
+    // Hide the dashboard chrome; show only the hub view
+    document.querySelectorAll(".tabs, .view").forEach(el => el.style.display = "none");
+    const topbarPill = document.querySelector(".overallpill");    if(topbarPill)    topbarPill.style.display = "none";
+    const topbarDate = document.querySelector(".reportdate");     if(topbarDate)    topbarDate.style.display = "none";
+    const hubView = document.getElementById("view-hub");
+    if(hubView) hubView.style.display = "block";
+    const brandTitle = document.getElementById("t-projname");
+    if(brandTitle) brandTitle.textContent = "Project Dashboards";
+    refreshAuthUI();
+    await renderHub();
+    return;
+  }
+  // Dashboard mode: load this project's data
   try{
     if(localStorage.getItem(KEY)===null){
-      const r=await fetch("data.json?_="+Date.now(),{cache:"no-store"});
+      const r=await fetch(REPO_CONFIG.dataPath+"?_="+Date.now(),{cache:"no-store"});
       if(r.ok){ const d=await r.json(); if(d&&d.meta&&Array.isArray(d.workstreams)&&Array.isArray(d.schedule)&&Array.isArray(d.risks)){ normalize(d); state=d; } }
     }
   }catch(e){/* no data.json (e.g. opened as a local file) — use built-in data */}
   renderAll();
   refreshAuthUI();
+  await populateProjectSwitcher();
   if(loadAuth()){ try{ const r=await ghApi("/repos/"+REPO_CONFIG.owner+"/"+REPO_CONFIG.repo+"/contents/"+REPO_CONFIG.dataPath+"?ref="+REPO_CONFIG.branch); if(r.ok){ const d=await r.json(); serverSha=d.sha; } }catch(e){} }
   // Always fetch the latest published tests on load (merge — locally dirty edits are preserved).
-  // This ensures data.json recoveries or teammate updates are visible on every hard refresh,
-  // rather than being hidden by a stale localStorage cache.
   try{ await fetchLatestTests(false); }catch(e){}
 }
 init();
