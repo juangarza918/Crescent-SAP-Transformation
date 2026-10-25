@@ -27,7 +27,8 @@
       "accent": "#c8a24b",
       "created": "2026-10-25",
       "dataFile": "fiori-activation.json",
-      "createdBy": "split-migration"
+      "createdBy": "split-migration",
+      "status": "completed"
     }
   ]
 }
