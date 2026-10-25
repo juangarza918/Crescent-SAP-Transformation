@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "projectName": "Fiori Activation",
+    "reportDate": "2026-10-25",
+    "overallStatus": "G",
+    "goLiveDate": "2026-08-03",
+    "goLiveLabel": "Fiori Full Activation",
+    "narrative": "Fiori apps activation and business role assignments combined into one project. Covers both Fiori Business Roles (treasury, 2021/2025 assignments, testing) and Fiori Apps Activation (catalogues, custom catalogues). Split out of the main Crescent SAP Transformation program."
+  },
+  "workstreams": [
+    {
+      "name": "Fiori Business Roles Assignment",
+      "status": "G",
+      "summary": "Protiviti team work in progress and Vijan/Patrick/Stewart engaged.",
+      "milestones": [
+        {
+          "name": "Apps Assignment Mappings",
+          "pct": 100,
+          "end": "2026-02-06",
+          "revised": "2026-03-31",
+          "status": "C",
+          "comment": "Provide to Michael B / Michael M this week."
+        },
+        {
+          "name": "Business Roles Assignments ",
+          "pct": 25,
+          "end": "2026-09-08",
+          "revised": "2026-11-30",
+          "status": "C",
+          "comment": "Treasury role assignments in progress."
+        },
+        {
+          "name": "Business Roles Testing",
+          "pct": 0,
+          "end": "2026-10-05",
+          "revised": "2027-02-26",
+          "status": "G",
+          "comment": ""
+        }
+      ]
+    },
+    {
+      "name": "Fiori Apps Activation",
+      "status": "G",
+      "summary": "All catalogs for 2025 were already activated, just specific odata services for applications within 2025 are being activated. Ongoing",
+      "milestones": [
+        {
+          "name": "Identify All Catalogues",
+          "pct": 100,
+          "end": "2026-02-13",
+          "revised": "",
+          "status": "C",
+          "comment": "For the 2021 version. New ones from 2025 added after Dev upgrade."
+        },
+        {
+          "name": "Create Custom Catalogues (Existing Version)",
+          "pct": 100,
+          "end": "2026-05-18",
+          "revised": "",
+          "status": "C",
+          "comment": "7 areas. 1 through 4 activated."
+        },
+        {
+          "name": "Create Custom Catalogues Post Go-live 2025",
+          "pct": 50,
+          "end": "2026-08-03",
+          "revised": "2026-09-18",
+          "status": "G",
+          "comment": ""
+        }
+      ]
+    }
+  ],
+  "schedule": [
+    {
+      "project": "FIORI Activation",
+      "task": "Activate PRA",
+      "start": "2026-01-12",
+      "end": "2026-01-23",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "FIORI Activation",
+      "task": "Security Assignment",
+      "start": "2026-01-12",
+      "end": "2026-01-30",
+      "owner": "Crescent SAP"
+    }
+  ],
+  "risks": [],
+  "decisions": [],
+  "tests": []
+}
