@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "projectName": "Joule Activation",
+    "reportDate": "2026-10-25",
+    "overallStatus": "G",
+    "goLiveDate": "2026-10-23",
+    "goLiveLabel": "Joule Production Go-Live",
+    "narrative": "SAP Joule (AI copilot) activation across Dev, Quality, and Production. Split out of the main Crescent SAP Transformation program to track independently."
+  },
+  "workstreams": [
+    {
+      "name": "Joule Activation",
+      "status": "G",
+      "summary": "Joule Connection to S4/HANA Dev completed. Starting Quality",
+      "milestones": [
+        {
+          "name": "Joule Activation in Dev",
+          "pct": 100,
+          "end": "2026-09-18",
+          "revised": "",
+          "status": "C",
+          "comment": "Creating Services Request to SAP."
+        },
+        {
+          "name": "Joule Testing in Dev",
+          "pct": 100,
+          "end": "2026-10-02",
+          "revised": "2026-07-31",
+          "status": "C",
+          "comment": ""
+        },
+        {
+          "name": "Joule Activation & Testing in Quality",
+          "pct": 30,
+          "end": "2026-09-04",
+          "revised": "",
+          "status": "G",
+          "comment": ""
+        },
+        {
+          "name": "Joule Activation in Prod",
+          "pct": 0,
+          "end": "2026-10-23",
+          "revised": "",
+          "status": "G",
+          "comment": ""
+        }
+      ]
+    }
+  ],
+  "schedule": [
+    {
+      "project": "SAP Joule Activation",
+      "task": "Activate Joule in Dev",
+      "start": "2026-09-14",
+      "end": "2026-09-18",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP Joule Activation",
+      "task": "Test Joule in Dev",
+      "start": "2026-09-21",
+      "end": "2026-10-02",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP Joule Activation",
+      "task": "Activate Joule in Quality",
+      "start": "2026-10-05",
+      "end": "2026-10-09",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP Joule Activation",
+      "task": "Test Joule in Quality",
+      "start": "2026-10-12",
+      "end": "2026-10-16",
+      "owner": "Crescent SAP"
+    },
+    {
+      "project": "SAP Joule Activation",
+      "task": "Joule Go-Live",
+      "start": "2026-10-30",
+      "end": "2026-10-23",
+      "owner": "Crescent SAP"
+    }
+  ],
+  "risks": [],
+  "decisions": [],
+  "tests": []
+}
