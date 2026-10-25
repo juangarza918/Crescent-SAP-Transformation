@@ -346,6 +346,7 @@
   <button class="btn hub-link" id="btn-back-to-hub" style="display:none" title="Back to all projects">← All projects</button>
   <div class="project-switcher" id="project-switcher" style="display:none">
     <select id="project-switch-select" title="Switch project"></select>
+    <button class="btn hub-link" id="btn-project-settings" title="Project settings — rename, change icon/color, delete" style="padding:7px 10px">⚙</button>
   </div>
   <div class="spacer"></div>
   <div class="overallpill"><span class="dot" id="t-overalldot"></span><span id="t-overalltext">On Track</span></div>
@@ -397,6 +398,35 @@
     <div class="modal-actions">
       <button class="btn" id="auth-cancel">Cancel</button>
       <button class="btn primary" id="auth-signin">Sign in</button>
+    </div>
+  </div>
+</div>
+<div id="settings-modal" class="modal" style="display:none">
+  <div class="modal-card" style="max-width:620px">
+    <h3>Project settings</h3>
+    <p>Change this project's name, icon, color, status, go-live date, or executive summary. Changes save instantly for everyone.</p>
+    <div class="grid2">
+      <div class="field"><label>Project name</label><input id="st-name" maxlength="100"></div>
+      <div class="field"><label>Icon (emoji)</label><input id="st-icon" maxlength="4"></div>
+    </div>
+    <div class="grid2">
+      <div class="field"><label>Color (card)</label><input id="st-color" type="color"></div>
+      <div class="field"><label>Gold stripe (accent)</label><input id="st-accent" type="color"></div>
+    </div>
+    <div class="grid3">
+      <div class="field"><label>Overall status</label><select id="st-status"><option value="G">G – On Track</option><option value="Y">Y – At Risk</option><option value="R">R – Off Track</option><option value="C">C – Complete</option></select></div>
+      <div class="field"><label>Status date</label><input id="st-reportdate" type="date"></div>
+      <div class="field"><label>Go-live date</label><input id="st-golive" type="date"></div>
+    </div>
+    <div class="field"><label>Go-live label</label><input id="st-golivelabel" maxlength="80"></div>
+    <div class="field"><label>Executive summary</label><textarea id="st-narrative" rows="4"></textarea></div>
+    <div id="st-msg" class="error-msg"></div>
+    <div class="modal-actions" style="justify-content:space-between">
+      <button class="btn danger" id="st-delete" title="Permanently delete this project">Delete project…</button>
+      <div style="display:flex;gap:8px">
+        <button class="btn" id="st-cancel">Cancel</button>
+        <button class="btn primary" id="st-save">Save changes</button>
+      </div>
     </div>
   </div>
 </div>
@@ -593,9 +623,52 @@ const DEFAULT_DATA = {
 };
 
 /* ---------- state ---------- */
-let state = load();
+// Blank skeleton — used as the initial doc for ANY project that isn't the baked-in
+// Crescent SAP seed. Prevents a slow Vercel rebuild from accidentally showing the
+// Crescent seed data on a brand-new blank project while its own data file is being fetched.
+const BLANK_DOC = {
+  meta:{
+    projectName: PROJECT_ID || "New Project",
+    reportDate: new Date().toISOString().slice(0,10),
+    overallStatus: "G",
+    goLiveDate: "",
+    goLiveLabel: "Production Go-Live",
+    narrative: ""
+  },
+  workstreams: [], schedule: [], risks: [], decisions: [], tests: []
+};
 function clone(o){ return JSON.parse(JSON.stringify(o)); }
-function load(){ try{ const s=localStorage.getItem(KEY); const d=s?JSON.parse(s):clone(DEFAULT_DATA); normalize(d); return d; }catch(e){ return clone(DEFAULT_DATA); } }
+// Pick the right starting template for this project
+function startingDoc(){
+  // Only the hardcoded Crescent SAP project should use DEFAULT_DATA (its seed).
+  // Every other project ID starts blank unless its data file has been fetched.
+  return (PROJECT_ID === "crescent-sap-transformation") ? clone(DEFAULT_DATA) : clone(BLANK_DOC);
+}
+// Detect if localStorage was polluted by the DEFAULT_DATA fallback bug (where a non-Crescent
+// project's localStorage ended up holding the Crescent seed). We clear it so init() can
+// re-fetch the real data.
+function wipePollutedLocalIfAny(){
+  if(!PROJECT_ID || PROJECT_ID === "crescent-sap-transformation") return;
+  try{
+    const s = localStorage.getItem(KEY);
+    if(!s) return;
+    const d = JSON.parse(s);
+    // Fingerprint: Crescent seed has these very specific items
+    const metaName = d && d.meta && d.meta.projectName;
+    const hasCrescentName = metaName === "Crescent SAP Transformation";
+    const hasCrescentWorkstream = Array.isArray(d && d.workstreams) &&
+      d.workstreams.some(w => w && w.name && w.name.indexOf("SSO") >= 0 && w.name.indexOf("Fiori") >= 0);
+    const hasCrescentSchedule = Array.isArray(d && d.schedule) &&
+      d.schedule.some(s => s && s.task && s.task.indexOf("SSO in Dev") >= 0);
+    if(hasCrescentName || hasCrescentWorkstream || hasCrescentSchedule){
+      console.warn("[dashboard] Clearing polluted localStorage for project", PROJECT_ID, "(detected Crescent seed data in a non-Crescent project)");
+      localStorage.removeItem(KEY);
+    }
+  }catch(e){/* ignore */}
+}
+wipePollutedLocalIfAny();
+function load(){ try{ const s=localStorage.getItem(KEY); const d=s?JSON.parse(s):startingDoc(); normalize(d); return d; }catch(e){ return startingDoc(); } }
+let state = load();
 function normalize(d){
   if(!d) return d;
   if(!Array.isArray(d.decisions)) d.decisions=[];
@@ -1942,6 +2015,112 @@ document.getElementById("np-name").addEventListener("keydown", e => {
   if(e.key === "Enter") createNewProject();
 });
 
+/* ---------- project settings modal ---------- */
+function openSettingsModal(){
+  if(HUB_MODE || !PROJECT_ID) return;
+  const projectEntry = HUB_PROJECTS.find(p => p.id === PROJECT_ID) || {};
+  const m = state.meta || {};
+  document.getElementById("st-name").value       = m.projectName || projectEntry.name || "";
+  document.getElementById("st-icon").value       = projectEntry.icon || "📊";
+  document.getElementById("st-color").value      = projectEntry.color || "#0f2545";
+  document.getElementById("st-accent").value     = projectEntry.accent || "#c8a24b";
+  document.getElementById("st-status").value     = m.overallStatus || "G";
+  document.getElementById("st-reportdate").value = m.reportDate || "";
+  document.getElementById("st-golive").value     = m.goLiveDate || "";
+  document.getElementById("st-golivelabel").value= m.goLiveLabel || "Production Go-Live";
+  document.getElementById("st-narrative").value  = m.narrative || "";
+  document.getElementById("st-msg").textContent  = "";
+  document.getElementById("settings-modal").style.display = "flex";
+  setTimeout(() => document.getElementById("st-name").focus(), 50);
+}
+function closeSettingsModal(){ document.getElementById("settings-modal").style.display = "none"; }
+async function saveSettings(){
+  const msg = document.getElementById("st-msg");
+  msg.textContent = "";
+  const btn = document.getElementById("st-save");
+  const origTxt = btn.textContent;
+  btn.disabled = true; btn.textContent = "Saving…";
+  try{
+    const author = (loadAuth() || {}).login || "anonymous";
+    const body = {
+      projectId: PROJECT_ID,
+      author,
+      indexUpdates: {
+        name:   (document.getElementById("st-name").value || "").trim(),
+        icon:   (document.getElementById("st-icon").value || "📊").trim(),
+        color:  document.getElementById("st-color").value || "#0f2545",
+        accent: document.getElementById("st-accent").value || "#c8a24b"
+      },
+      metaUpdates: {
+        projectName:   (document.getElementById("st-name").value || "").trim(),
+        overallStatus: document.getElementById("st-status").value || "G",
+        reportDate:    document.getElementById("st-reportdate").value || "",
+        goLiveDate:    document.getElementById("st-golive").value || "",
+        goLiveLabel:   (document.getElementById("st-golivelabel").value || "").trim(),
+        narrative:     (document.getElementById("st-narrative").value || "").trim()
+      }
+    };
+    const r = await fetch("/api/update-project", {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify(body)
+    });
+    if(!r.ok){
+      let errMsg = "HTTP " + r.status;
+      try{ const e = await r.json(); errMsg = e.error || errMsg; }catch(e){}
+      throw new Error(errMsg);
+    }
+    // Apply the meta changes locally so the UI updates immediately
+    Object.assign(state.meta, body.metaUpdates);
+    persist();
+    renderAll();
+    await populateProjectSwitcher(); // refresh dropdown with new name/icon
+    closeSettingsModal();
+    toast("Project settings saved.","success");
+  }catch(e){
+    msg.textContent = "Save failed: " + e.message;
+  }finally{
+    btn.disabled = false; btn.textContent = origTxt;
+  }
+}
+async function deleteCurrentProject(){
+  const name = (state.meta && state.meta.projectName) || PROJECT_ID;
+  const typed = prompt(
+    "⚠ DELETE THIS PROJECT PERMANENTLY?\n\n" +
+    "This removes the project's data file and its entry in the project index. " +
+    "The commit history stays in GitHub (so technically recoverable), but the dashboard will no longer show it.\n\n" +
+    "Type the project name exactly to confirm:\n" + name
+  );
+  if(typed === null) return;
+  if(typed.trim() !== name){ alert("Name didn't match — nothing was deleted."); return; }
+  const msg = document.getElementById("st-msg");
+  msg.textContent = "Deleting…";
+  try{
+    const r = await fetch("/api/delete-project", {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({projectId: PROJECT_ID, confirm: name, author: (loadAuth()||{}).login || "anonymous"})
+    });
+    if(!r.ok){
+      let errMsg = "HTTP " + r.status;
+      try{ const e = await r.json(); errMsg = e.error || errMsg; }catch(e){}
+      throw new Error(errMsg);
+    }
+    // Clear this project's localStorage so a future recreation isn't polluted
+    try{ localStorage.removeItem(KEY); }catch(e){}
+    alert("Project \"" + name + "\" deleted. Returning to the hub.");
+    location.href = location.pathname;
+  }catch(e){
+    msg.textContent = "Delete failed: " + e.message;
+  }
+}
+// Wire settings buttons (safe to attach even in hub mode — the modal just won't open)
+const _stOpen = document.getElementById("btn-project-settings");
+if(_stOpen) _stOpen.addEventListener("click", openSettingsModal);
+document.getElementById("st-cancel").addEventListener("click", closeSettingsModal);
+document.getElementById("st-save").addEventListener("click", saveSettings);
+document.getElementById("st-delete").addEventListener("click", deleteCurrentProject);
+
 // Load order: this browser's saved edits win; otherwise published data (when hosted); otherwise the built-in baseline.
 async function init(){
   // --- MULTI-PROJECT ROUTING ---
@@ -1958,13 +2137,34 @@ async function init(){
     await renderHub();
     return;
   }
-  // Dashboard mode: load this project's data
-  try{
-    if(localStorage.getItem(KEY)===null){
-      const r=await fetch(REPO_CONFIG.dataPath+"?_="+Date.now(),{cache:"no-store"});
-      if(r.ok){ const d=await r.json(); if(d&&d.meta&&Array.isArray(d.workstreams)&&Array.isArray(d.schedule)&&Array.isArray(d.risks)){ normalize(d); state=d; } }
+  // Dashboard mode: load this project's data.
+  // Prefer /api/publish-tests GET (always fresh, uses server-side GitHub token — bypasses
+  // the Vercel/CDN rebuild delay that used to make brand-new projects fall back to the
+  // Crescent seed data). Fall back to the direct data file URL if the API is unreachable
+  // (e.g. opened as a local file).
+  if(localStorage.getItem(KEY) === null){
+    let fetched = null;
+    try{
+      const r = await fetch("/api/publish-tests?project=" + encodeURIComponent(PROJECT_ID) + "&_=" + Date.now(), {cache:"no-store"});
+      if(r.ok){
+        const resp = await r.json();
+        // New: endpoint returns {doc,...}. Fallback to {tests} only shape for older clients/endpoints.
+        if(resp && resp.doc && resp.doc.meta){ fetched = resp.doc; }
+      }
+    }catch(e){/* server unreachable */}
+    if(!fetched){
+      try{
+        const r = await fetch(REPO_CONFIG.dataPath + "?_=" + Date.now(), {cache:"no-store"});
+        if(r.ok){
+          const d = await r.json();
+          if(d && d.meta && Array.isArray(d.workstreams) && Array.isArray(d.schedule) && Array.isArray(d.risks)){ fetched = d; }
+        }
+      }catch(e){}
     }
-  }catch(e){/* no data.json (e.g. opened as a local file) — use built-in data */}
+    if(fetched){ normalize(fetched); state = fetched; }
+    // If BOTH failed and this isn't the Crescent project, state stays as BLANK_DOC
+    // (NOT the Crescent seed) thanks to the startingDoc() switch above.
+  }
   renderAll();
   refreshAuthUI();
   await populateProjectSwitcher();
