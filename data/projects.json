@@ -1,0 +1,13 @@
+{
+  "projects": [
+    {
+      "id": "crescent-sap-transformation",
+      "name": "Crescent SAP Transformation",
+      "icon": "🏢",
+      "color": "#0f2545",
+      "accent": "#c8a24b",
+      "created": "2026-05-24",
+      "dataFile": "crescent-sap-transformation.json"
+    }
+  ]
+}
