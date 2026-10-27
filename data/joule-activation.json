@@ -16,7 +16,7 @@
         {
           "name": "Joule Activation in Dev",
           "pct": 100,
-          "end": "2026-09-18",
+          "end": "2026-07-31",
           "revised": "",
           "status": "C",
           "comment": "Creating Services Request to SAP."
@@ -24,15 +24,15 @@
         {
           "name": "Joule Testing in Dev",
           "pct": 100,
-          "end": "2026-10-02",
-          "revised": "2026-07-31",
+          "end": "2026-08-28",
+          "revised": "",
           "status": "C",
           "comment": ""
         },
         {
           "name": "Joule Activation & Testing in Quality",
           "pct": 30,
-          "end": "2026-09-04",
+          "end": "2026-11-20",
           "revised": "",
           "status": "G",
           "comment": ""
@@ -40,7 +40,7 @@
         {
           "name": "Joule Activation in Prod",
           "pct": 0,
-          "end": "2026-10-23",
+          "end": "2027-01-31",
           "revised": "",
           "status": "G",
           "comment": ""
@@ -52,22 +52,22 @@
     {
       "project": "SAP Joule Activation",
       "task": "Activate Joule in Dev",
-      "start": "2026-09-14",
-      "end": "2026-09-18",
+      "start": "2026-07-01",
+      "end": "2026-07-31",
       "owner": "Crescent SAP"
     },
     {
       "project": "SAP Joule Activation",
       "task": "Test Joule in Dev",
-      "start": "2026-09-21",
-      "end": "2026-10-02",
+      "start": "2026-08-03",
+      "end": "2026-08-28",
       "owner": "Crescent SAP"
     },
     {
       "project": "SAP Joule Activation",
       "task": "Activate Joule in Quality",
       "start": "2026-10-05",
-      "end": "2026-10-09",
+      "end": "2026-11-20",
       "owner": "Crescent SAP"
     },
     {
