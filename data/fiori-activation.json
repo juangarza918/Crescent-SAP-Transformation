@@ -75,6 +75,41 @@
       "start": "2026-11-30",
       "end": "2026-12-11",
       "owner": ""
+    },
+    {
+      "project": "FIORI Treasury",
+      "task": "Treasury UAT",
+      "start": "2026-11-09",
+      "end": "2026-12-18",
+      "owner": ""
+    },
+    {
+      "project": "FIORI AP",
+      "task": "AP UAT",
+      "start": "2026-11-16",
+      "end": "2026-12-18",
+      "owner": ""
+    },
+    {
+      "project": "FIORI Corporate",
+      "task": "Corporate UAT",
+      "start": "2026-11-16",
+      "end": "2026-12-18",
+      "owner": ""
+    },
+    {
+      "project": "FIORI JIB",
+      "task": "JIB UAT",
+      "start": "2026-11-30",
+      "end": "2027-01-29",
+      "owner": ""
+    },
+    {
+      "project": "FIORI Revenue",
+      "task": "Revenue UAT",
+      "start": "2026-12-14",
+      "end": "2027-01-29",
+      "owner": ""
     }
   ],
   "risks": [],
