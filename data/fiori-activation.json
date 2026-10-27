@@ -16,24 +16,24 @@
         {
           "name": "Apps Assignment Mappings",
           "pct": 100,
-          "end": "2026-02-06",
-          "revised": "2026-03-31",
+          "end": "2026-09-30",
+          "revised": "",
           "status": "C",
-          "comment": "Provide to Michael B / Michael M this week."
+          "comment": "Roles Tcodes to Apps mappings"
         },
         {
           "name": "Business Roles Assignments ",
           "pct": 50,
-          "end": "2026-09-08",
-          "revised": "2026-11-30",
+          "end": "2026-12-11",
+          "revised": "",
           "status": "G",
-          "comment": "Treasury role assignments in progress."
+          "comment": "Treasury testing in progress"
         },
         {
           "name": "Business Roles Testing",
           "pct": 0,
-          "end": "2026-10-05",
-          "revised": "2027-01-31",
+          "end": "2027-02-26",
+          "revised": "",
           "status": "G",
           "comment": ""
         }
