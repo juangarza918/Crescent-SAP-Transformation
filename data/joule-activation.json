@@ -1,9 +1,9 @@
 {
   "meta": {
     "projectName": "Joule Activation",
-    "reportDate": "2026-10-25",
+    "reportDate": "2026-10-27",
     "overallStatus": "G",
-    "goLiveDate": "2026-10-23",
+    "goLiveDate": "2027-02-01",
     "goLiveLabel": "Joule Production Go-Live",
     "narrative": "SAP Joule (AI copilot) activation across Dev, Quality, and Production. Split out of the main Crescent SAP Transformation program to track independently."
   },
