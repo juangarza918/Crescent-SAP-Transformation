@@ -110,6 +110,20 @@
       "start": "2026-12-14",
       "end": "2027-01-29",
       "owner": ""
+    },
+    {
+      "project": "FIORI DO",
+      "task": "Assign DO Apps",
+      "start": "2026-11-30",
+      "end": "2026-12-11",
+      "owner": ""
+    },
+    {
+      "project": "FIORI DO",
+      "task": "DO UAT",
+      "start": "2026-12-14",
+      "end": "2027-01-29",
+      "owner": ""
     }
   ],
   "risks": [],
