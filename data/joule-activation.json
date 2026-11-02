@@ -5,13 +5,13 @@
     "overallStatus": "G",
     "goLiveDate": "2027-02-01",
     "goLiveLabel": "Joule Production Go-Live",
-    "narrative": "SAP Joule (AI copilot) activation across Dev, Quality, and Production. Split out of the main Crescent SAP Transformation program to track independently."
+    "narrative": "SAP Joule (AI copilot) activation across Dev, Quality, and Production. Split out of the main Crescent SAP Transformation program to track independently as requested by PPM team."
   },
   "workstreams": [
     {
       "name": "Joule Activation",
       "status": "G",
-      "summary": "Joule Connection to S4/HANA Dev completed. Starting Quality",
+      "summary": "Joule Connection to S4/HANA Dev completed, working on SSO. Quality in progress.",
       "milestones": [
         {
           "name": "Joule Activation in Dev",
@@ -60,7 +60,7 @@
       "project": "SAP Joule Activation",
       "task": "Test Joule in Dev",
       "start": "2026-08-03",
-      "end": "2026-08-28",
+      "end": "2026-09-28",
       "owner": "Crescent SAP"
     },
     {
