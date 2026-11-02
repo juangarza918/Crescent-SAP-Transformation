@@ -5,13 +5,13 @@
     "overallStatus": "G",
     "goLiveDate": "2027-02-01",
     "goLiveLabel": "Fiori Full Activation",
-    "narrative": "Fiori apps activation and business role assignments combined into one project. Covers both Fiori Business Roles and Fiori Apps Activation (catalogues, custom catalogues). Split out of the main Crescent SAP Transformation program. "
+    "narrative": "Fiori apps activation and business role assignments combined into one project. Covers both Fiori Business Roles and Fiori Apps Activation (catalogues, custom catalogues). Split out of the main Crescent SAP Transformation program at request from PPM team."
   },
   "workstreams": [
     {
       "name": "Fiori Apps Activation and Assignments",
       "status": "G",
-      "summary": "Assigned Treasury apps to test roles and in internal testing. Start testing with Treasury on 9th. AP and Corporate apps in progress and expected to be assigned by 6th. Will move to JIB and Revenue after.",
+      "summary": "Assigned Treasury apps to test roles and in internal testing. Start testing with Treasury on 9th. AP and Corporate apps in progress and expected to be assigned by 6th. Will move to JIB and Revenue after. ",
       "milestones": [
         {
           "name": "Apps Assignment Mappings",
