@@ -1,7 +1,7 @@
 {
   "meta": {
     "projectName": "Joule Activation",
-    "reportDate": "2026-10-27",
+    "reportDate": "2026-11-02",
     "overallStatus": "G",
     "goLiveDate": "2027-02-01",
     "goLiveLabel": "Joule Production Go-Live",
@@ -11,7 +11,7 @@
     {
       "name": "Joule Activation",
       "status": "G",
-      "summary": "Joule Connection to S4/HANA Dev completed, working on SSO. Quality in progress.",
+      "summary": "Joule Connection to S4/HANA Dev and Quality completed. SSO completed.",
       "milestones": [
         {
           "name": "Joule Activation in Dev",
@@ -30,9 +30,17 @@
           "comment": ""
         },
         {
-          "name": "Joule Activation & Testing in Quality",
-          "pct": 30,
+          "name": "Joule Activation in Quality",
+          "pct": 100,
           "end": "2026-11-20",
+          "revised": "",
+          "status": "G",
+          "comment": ""
+        },
+        {
+          "name": "Joule Testing in Quality",
+          "pct": 20,
+          "end": "2027-01-31",
           "revised": "",
           "status": "G",
           "comment": ""
